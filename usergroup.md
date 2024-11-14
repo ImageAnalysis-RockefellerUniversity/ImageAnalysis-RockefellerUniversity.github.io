@@ -17,9 +17,8 @@ Location/Time: 506 Greenberg Building (CRC), 2-3 pm
 
 - Spoke about scripting-based batch processing in [Fiji](https://imagej.net/software/fiji/) (macro) vs [QuPath](https://qupath.readthedocs.io/en/stable/) (Groovy)
 - With real user data, compared a Fiji [macro](https://imagej.net/scripting/macro) vs QuPath [Groovy](https://qupath.readthedocs.io/en/stable/docs/scripting/index.html) batch processing pipeline
-- Discussed how to decide the best software for batch processing in terms of time, effort and reproducibility.
-- Though QuPath Groovy scripting has a steep learning curve, ... 
-
+- Discussed how to decide the best software for batch processing.
+- Though QuPath Groovy scripting has a steep learning curve, it can provide most optimal batch processing expereience compared to Fiji macros in terms of time, effort and reproducibility.
 
 
 ### 5/23/2024 meeting  
