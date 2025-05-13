@@ -1,5 +1,5 @@
 ---
-title: "Training"
+title: "Image Analysis Seminar and Workshop"
 permalink: "/2022_IA_seminar_workshop/"
 layout: page
 ---
