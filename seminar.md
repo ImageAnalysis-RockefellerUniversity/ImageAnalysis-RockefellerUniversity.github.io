@@ -1,6 +1,6 @@
 ---
 title: "Image Analysis Seminar and Workshop"
-permalink: "/seminar/"
+permalink: /seminar/
 layout: page
 ---
 ## Seminar
