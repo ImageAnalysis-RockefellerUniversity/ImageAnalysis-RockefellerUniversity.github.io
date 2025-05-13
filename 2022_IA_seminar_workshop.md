@@ -1,6 +1,6 @@
 ---
 title: "Training"
-permalink: "/training/"
+permalink: "/2022_IA_seminar_workshop/"
 layout: page
 ---
 ## Seminar
