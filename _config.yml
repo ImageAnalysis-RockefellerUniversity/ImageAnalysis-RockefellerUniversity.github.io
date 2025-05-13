@@ -34,3 +34,5 @@ comments:
 
 plugins:
  - jekyll-feed
+
+ markdown: GFM
