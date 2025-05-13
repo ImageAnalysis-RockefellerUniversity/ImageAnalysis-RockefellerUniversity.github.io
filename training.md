@@ -5,6 +5,7 @@ layout: page
 ---
 
 ---
+
 | Date  | Event | Details and Resources |
 | ------------- | ------------- | ----|
 | 2025, April 16    | Co-localization Workshop             | [Link](https://imageanalysis-rockefelleruniversity.github.io/training/) |
@@ -13,7 +14,7 @@ layout: page
 | 2022, April 6     | Image Analysis Seminar + Workshop    |  [Link](https://imageanalysis-rockefelleruniversity.github.io/training/) |
 
 
----
+
 
 
 ---
