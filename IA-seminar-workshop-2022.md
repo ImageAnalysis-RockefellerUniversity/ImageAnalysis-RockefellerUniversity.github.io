@@ -1,6 +1,6 @@
 ---
 title: "Image Analysis Seminar and Workshop"
-permalink: "/IA-seminar-workshop-2022/"
+permalink: "/seminar/"
 layout: page
 ---
 ## Seminar
