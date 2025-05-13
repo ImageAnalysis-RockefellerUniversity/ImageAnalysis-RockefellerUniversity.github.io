@@ -21,7 +21,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 #  - {title: "About", file: "about.md"}
   - {title: "Training", file: "training.md"}
 #  - {title: "Training", file: "training.html"}
-  - {title: "IA_seminar_workshop_2022", file: "IA_seminar_workshop_2022.md"}
+  - {title: "IA-seminar-workshop-2022", file: "IA-seminar-workshop-2022.md"}
   
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
