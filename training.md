@@ -10,7 +10,7 @@ Work-in-progress...
 | ------------- | ------------- | ----|
 | 2025, April 16    | Co-localization Workshop             | [Link](https://imageanalysis-rockefelleruniversity.github.io/training/) |
 | 2024, March 27    | Huygens Image Analysis Workshop      |  [Link](https://imageanalysis-rockefelleruniversity.github.io/training/) |
-| 2023, October 20  | Northeast Bioimage Analysis Meeting  |  [Link](https://imageanalysis-rockefelleruniversity.github.io/training/) |
+| 2023, October 20  | Northeast Bioimage Analysis Meeting  |  [Link](_posts/2017-01-01-advanced-examples.md) |
 | 2022, April 6     | Image Analysis Seminar + Workshop    |  [Link](https://imageanalysis-rockefelleruniversity.github.io/seminar/) |
 
 
