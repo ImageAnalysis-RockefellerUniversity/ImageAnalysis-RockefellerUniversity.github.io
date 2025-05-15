@@ -3,7 +3,7 @@ title: "Training"
 permalink: "/training/"
 layout: page
 ---
-
+Work-in-progress...
 ---
 
 | Date  | Event | Details and Resources |
