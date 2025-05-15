@@ -21,7 +21,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 #  - {title: "About", file: "about.md"}
   - {title: "Training", file: "training.md"}
 #  - {title: "Training", file: "training.html"}
-  - {title: "User Group", file: "/_events/usergroup.md"}
+  - {title: "User Group", file: "usergroup.md"}
   
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
