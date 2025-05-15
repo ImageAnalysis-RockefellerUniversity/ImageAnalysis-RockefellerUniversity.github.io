@@ -1,4 +1,3 @@
-## Co-localization analysis
 Date: April 16, 2025  
 Location: Weiss 305  
 Guest lecturer – Pablo Ariel, University of North Carolina at Chapel Hill  
