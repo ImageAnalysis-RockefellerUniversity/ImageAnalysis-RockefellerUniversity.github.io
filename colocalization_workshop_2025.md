@@ -9,7 +9,7 @@ layout: page
 &emsp;Guest lecturer:&emsp;&emsp;&emsp;Pablo Ariel, University of North Carolina at Chapel Hill  
 &emsp;Additional speaker:&emsp;Alison North, The Rockefeller University, BIRC  
 &emsp;Workshop support:&emsp;&nbsp;Ved Sharma and Tao Tong, The Rockefeller University, BIRC  
-&emsp;Attendees:&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;35 Rockefeller reserachers from various labs  
+&emsp;Attendees:&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;35 Rockefeller researchers from various labs  
 
 Organized by the BIRC team, this was a seminar (2 h), followed by a hands-on workshop (2 h) on the co-localization analysis.  
 
