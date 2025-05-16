@@ -3,7 +3,7 @@ title: "Training"
 permalink: "/training/"
 layout: page
 ---
----
+
 
 | Date  | Event | Details and Resources |
 | ------------- | ------------- | ----|
