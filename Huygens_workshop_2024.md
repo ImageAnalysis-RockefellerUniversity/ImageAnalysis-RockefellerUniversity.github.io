@@ -9,7 +9,7 @@ layout: page
 &emsp;Presenters:&ensp;&nbsp;Vincent Schoonderwoert and Nicolaas van der Woort (Netherlands)  
 &emsp;Attendees:&emsp;approx. 40 Rockefeller and local reserachers from various labs
 
-Organized by the BIRC team, this was a 1-day workshop on the practical use of Huygens software, including introduction to the new Quality Control module.  
+Organized by the BIRC team, this was a 1-day workshop on the practical use of Huygens software, including introduction of the new Quality Control module.  
 
 Following topics were discussed:  
 - [Image Deconvolution and Restoration](https://svi.nl/Deconvolution)
