@@ -1,3 +1,9 @@
+---
+title: "Co-localization analysis Seminar and Workshop"
+permalink: /colocalization_workshop_2025/
+layout: page
+---
+
 ## Co-localization analysis  
 Date: April 16, 2025  
 Location: Weiss 305  
