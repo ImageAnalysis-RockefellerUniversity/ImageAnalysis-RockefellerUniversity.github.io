@@ -11,6 +11,7 @@ Please contact [Ved Sharma](mailto:vsharma01@rockefeller.edu) at the [Bio-Imagin
 
 ## User Group Meetings
 
+---
 ### 11/07/2024 meeting  
 Presenter: Ved Sharma, BIRC, The Rockefeller University  
 Location/Time: 506 Greenberg Building (CRC), 2-3 pm  
@@ -20,6 +21,7 @@ Location/Time: 506 Greenberg Building (CRC), 2-3 pm
 - Discussed how to decide the best software for batch processing.
 - Though QuPath Groovy scripting has a steep learning curve, it can provide most optimal batch processing expereience compared to Fiji macros in terms of time, effort and reproducibility.
 
+---
 
 ### 5/23/2024 meeting  
 Presenter: Ved Sharma, BIRC, The Rockefeller University  
@@ -39,10 +41,14 @@ Based on the user survery results during the registation, the top two topics wer
     - Discussed a user project on 3D segmentation of nuclei and coutning of colocalized and non-colocalized red and green particles inside and outside the nucleus
     - A custom image and data analysis pipeline was described, which was developed using a combination of commerical and open-source software: Huygens, Fiji, Cellpose, Imaris, Excel, GraphPad Prism  
 
+---
+
 ### 10/11/2023 meeting  
 Title: "Multiplexed image analysis using [QuPath](https://qupath.github.io/) and deep learning tools"  
 Presenter: Ved Sharma, BIRC, The Rockefeller University  
 Location/Time: 506 Greenberg Building (CRC), 3-4 pm  
+
+---
 
 ### 3/29/2023 meeting
 Title: "3D segmentation using Deep Learning"  
@@ -54,6 +60,8 @@ Location/Time: 506 Greenberg Building (CRC), 2-3 pm
 - Talked about 3D segmentation using commercial software - [Imaris](https://imaris.oxinst.com/) and its deep learning limitations
 - Discussed a few user examples of 3D segmentation (Orientia bacteria, neurons in zebrafish brain and glomeruli in ant brain) using open-source deep learning methods - [StarDist](https://github.com/stardist/stardist) and [Cellpose](https://github.com/MouseLand/cellpose)  
 
+---
+
 ### 11/17/2022 meeting
 Presenter: Ved Sharma, BIRC, The Rockefeller University  
 Location/Time: A Level Training/Classrom, Welch Hall, 2-3 pm
@@ -63,6 +71,8 @@ Location/Time: A Level Training/Classrom, Welch Hall, 2-3 pm
 - Batch processing options in ImageJ/Fiji
 - CellProfiler pipeline for batch processing
 - Discussed literature on [Cell Painting](https://www.nature.com/articles/nprot.2016.105) and how CellProfiler could be used to process high-content screening data  
+
+---
 
 ### 9/8/2022 meeting
 Title: "Image segmentation"  
@@ -74,6 +84,8 @@ Location/Time: 506 Greenberg Building (CRC), 2-3 pm
 - discussed how to train a custom model in Cellpose on user's data, for the case where the built-in Cellpose models were not good enough.
 - demonstrated the use to Cellpose on another user's fluorescence microcopy images, where cells were clustering together. Cellpose did an excellent job of identifing cells in not only areas where there were fewer cells, but also in areas where cells were clustering together.
 - demonstrated how to do 3D segmentation in Cellpose and then export the label image into Imaris for visualization and further analysis (e.g. filtering, cell/nuclei counting and other cellular measurements) 
+
+---
 
 ### 6/23/2022 meeting
 Title: "How do I do “X” in ImageJ/Fiji?"  
@@ -87,3 +99,5 @@ Following topics were discussed:
 - Automated cell counting in fluorescence and color (RGB) images
 - Described a pipeline for the quantification of nuclear and cytoplasmic localization of IF signal
 - Tips on figure generation such as savings files as PNG, using Overlay option to annotate images and described some plugins such as QuickFigures,  OMERO.figure and FigureJ
+
+---
