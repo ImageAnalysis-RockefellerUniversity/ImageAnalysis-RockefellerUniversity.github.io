@@ -12,7 +12,7 @@ layout: page
 
 This was a day-long meeting, where the speaker gave a presentation on deep learning-based 3D bacterial cell membrane segmentation and shape analysis.  
 
-Download <a href="/Northeast_meeting/NEBIA_meeting_Ved_Sharma_presentation_v4.pdf" download>Talk Slides<a/>    
+Download <a href="/Northeast_meeting/NEBIA_meeting_Ved_Sharma_presentation_v4.pdf" download>Talk Slides</a>    
 
 
 Check out the [publication](https://pubmed.ncbi.nlm.nih.gov/39651611/) for analysis details and supplementary movie    
