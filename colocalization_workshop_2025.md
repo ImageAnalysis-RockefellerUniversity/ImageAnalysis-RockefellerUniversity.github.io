@@ -3,7 +3,7 @@ title: "Co-localization analysis Seminar and Workshop"
 permalink: /colocalization_workshop_2025/
 layout: page
 ---
-
+---
 &emsp;Date:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;April 16, 2025  
 &emsp;Location:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Weiss 305  
 &emsp;Guest lecturer:&emsp;&emsp;&emsp;Pablo Ariel, University of North Carolina at Chapel Hill  
@@ -13,7 +13,7 @@ layout: page
 
 Organized by the BIRC team, this was a seminar (2 h), followed by a hands-on workshop (2 h) on the co-localization analysis.  
 
-## Links  
+## Resources  
 [Videos](https://youtube.com/playlist?list=PL_P0beEBCtVLwzO8RzZ19-rD3k8spDxH4&si=MZusTQ-ySNIgF_wr)  
 [Materials for exercises and downloadable videos](https://doi.org/10.17615/d372-5m24)
 
