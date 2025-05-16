@@ -5,13 +5,16 @@ layout: page
 ---
 
 
-&emsp;Date:&emsp;&emsp;&nbsp;October 20, 2023  
-&emsp;Location:&ensp;The Jackson Laboratory, Farmington, CT  
-&emsp;Speaker:&emsp;Ved Sharma  
+&emsp;Date:&emsp;&emsp;&emsp;&nbsp;October 20, 2023  
+&emsp;Location:&emsp;&ensp;The Jackson Laboratory, Farmington, CT  
+&emsp;Speaker:&emsp;&emsp;Ved Sharma  
+&emsp;Attendees:&emsp;approx. 30 researchers and bioimage analysts from the northeastern USA
 
-This was a day-long meeting, where the speaker gave a presentation on deep learning-based 3D cells shape analysis of baterial cells.
+This was a day-long meeting, where the speaker gave a presentation on deep learning-based 3D bacterial cell membrane segmentation and shape analysis.  
 
-Download <a href="/Northeast_meeting/NEBIA_meeting_Ved_Sharma_presentation_v4.pdf" download>Talk Slides<a/>
+Download <a href="/Northeast_meeting/NEBIA_meeting_Ved_Sharma_presentation_v4.pdf" download>Talk Slides<a/>  
+Check out the [publication](https://pubmed.ncbi.nlm.nih.gov/39651611/) for analysis details and supplementary movie    
+
 
 ![Slideshow](Northeast_meeting/NEBIA_meeting_Ved_Sharma_presentation_v4.gif)
 
