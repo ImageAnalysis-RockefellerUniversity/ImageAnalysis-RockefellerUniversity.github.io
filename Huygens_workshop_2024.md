@@ -4,10 +4,10 @@ permalink: "/Huygens_workshop_2024/"
 layout: page
 ---
 
-Date: March 27, 2024  
-Location: Weiss 305  
-Presenters – Vincent Schoonderwoert and Nicolaas van der Woort (Netherlands)  
-Attendees: approx. 40 Rockefeller and local reserachers from various labs
+&emsp;Date:&emsp;&emsp;&emsp;&nbsp;March 27, 2024  
+&emsp;Location:&emsp;&ensp;Weiss 305  
+&emsp;Presenters:&ensp;&nbsp;Vincent Schoonderwoert and Nicolaas van der Woort (Netherlands)  
+&emsp;Attendees:&emsp;approx. 40 Rockefeller and local reserachers from various labs
 
 Organized by the BIRC team, this was a 1-day workshop on the practical use of Huygens software, including introduction to the new Quality Control module.  
 
