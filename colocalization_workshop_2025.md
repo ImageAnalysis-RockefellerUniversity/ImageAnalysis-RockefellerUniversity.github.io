@@ -4,12 +4,12 @@ permalink: /colocalization_workshop_2025/
 layout: page
 ---
 
-Date: April 16, 2025  
-Location: Weiss 305  
-Guest lecturer – Pablo Ariel, University of North Carolina at Chapel Hill  
-Additional speaker – Alison North, The Rockefeller University, BIRC  
-Workshop support – Ved Sharma and Tao Tong, The Rockefeller University, BIRC  
-Attendees: 35 Rockefeller reserachers from various labs  
+Date:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;April 16, 2025  
+Location:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Weiss 305  
+Guest lecturer:&emsp;&emsp;&emsp;Pablo Ariel, University of North Carolina at Chapel Hill  
+Additional speaker:&emsp;Alison North, The Rockefeller University, BIRC  
+Workshop support:&emsp;Ved Sharma and Tao Tong, The Rockefeller University, BIRC  
+Attendees:&emsp;&emsp;&emsp;&emsp;&emsp;35 Rockefeller reserachers from various labs  
 
 Organized by the BIRC team, this was a seminar (2 h), followed by a hands-on workshop (2 h) on the co-localization analysis.  
 
