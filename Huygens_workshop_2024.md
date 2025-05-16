@@ -23,4 +23,4 @@ Following topics were discussed:
 - [Workflow Processor](https://svi.nl/Huygens-Workflow-Processor)
 - [Quality Control](https://svi.nl/Huygens-Quality-Control)
 
-Please reach out to the [BIRC](birc@rockefeller.edu), if you are interested in using any of these Huygens modules.
+Please reach out to [BIRC](mailto:birc@rockefeller.edu), if you are interested in using any of these Huygens modules.
