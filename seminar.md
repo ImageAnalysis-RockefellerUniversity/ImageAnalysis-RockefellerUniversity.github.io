@@ -4,6 +4,9 @@ permalink: /seminar/
 layout: page
 ---
 
+---  
+
+
 ## Seminar  
 We organized an image analysis seminar and a follow-up workshop on April 6th, 2022. 
 
@@ -13,6 +16,8 @@ We organized an image analysis seminar and a follow-up workshop on April 6th, 20
 Download <a href="/seminar_workkshop/Image analysis seminar_v10.pdf" download>Seminar Slides<a/>
 
 ---  
+
+
 
 ## Workshop
 In this workshop, we will work through the following exercises:
