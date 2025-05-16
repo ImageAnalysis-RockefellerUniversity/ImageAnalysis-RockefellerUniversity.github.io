@@ -6,7 +6,9 @@ layout: page
 
 ---  
 ## Seminar  
-We organized an image analysis seminar and a follow-up workshop on April 6th, 2022. 
+BIRC organized a hybrid (in-person and on Zoom) image analysis seminar, followed by a workshop on April 6th, 2022.  
+
+Attendees: approx. 20 Rockefeller researchers in-person + a similar number joined on Zoom.  
 
 ![seminar announcement](/seminar_workkshop/Seminar_flyer.png)
 
