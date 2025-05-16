@@ -11,7 +11,7 @@ We organized an image analysis seminar and a follow-up workshop on April 6th, 20
 ![seminar announcement](/seminar_workkshop/Seminar_flyer.png)
 
 
-Download <a href="/seminar_workkshop/Image analysis seminar_v10.pdf" download>Seminar Slides<a/>
+Download <a href="/seminar_workkshop/Image analysis seminar_v10.pdf" download>Seminar Slides<a/>  
 
 ---  
 ## Workshop
