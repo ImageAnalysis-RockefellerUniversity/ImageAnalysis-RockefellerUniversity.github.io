@@ -3,7 +3,7 @@ title: "Co-localization analysis Seminar and Workshop"
 permalink: /colocalization_workshop_2025/
 layout: page
 ---
----
+
 &emsp;Date:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;April 16, 2025  
 &emsp;Location:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Weiss 305  
 &emsp;Guest lecturer:&emsp;&emsp;&emsp;Pablo Ariel, University of North Carolina at Chapel Hill  
