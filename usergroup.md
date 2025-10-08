@@ -66,7 +66,7 @@ Location/Time: 506 Greenberg Building (CRC), 2-3 pm
 Presenter: Ved Sharma, BIRC, The Rockefeller University  
 Location/Time: A Level Training/Classrom, Welch Hall, 2-3 pm
 
-- Discueed a pipeline I worked out for a user for nuclei segmentation using Cellpose and colocalization of IF and FISH spots inside nuclei using Fiji plugin called [ComDet](https://imagej.net/plugins/spots-colocalization-comdet).
+- Discussed a pipeline I worked out for a user for nuclei segmentation using Cellpose and colocalization of IF and FISH spots inside nuclei using Fiji plugin called [ComDet](https://imagej.net/plugins/spots-colocalization-comdet).
 - Batch process a folder full of images using Cellpose by running a Python script in Jupyter notebook
 - Batch processing options in ImageJ/Fiji
 - CellProfiler pipeline for batch processing
