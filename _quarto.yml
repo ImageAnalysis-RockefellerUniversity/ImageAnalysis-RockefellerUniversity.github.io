@@ -51,7 +51,7 @@ website:
   #       icon: info-square
     tools:
       - icon: github
-        href: https://github.com
+        href: https://github.com/ImageAnalysis-RockefellerUniversity/ImageAnalysis-RockefellerUniversity.github.io
 
 
 format:
