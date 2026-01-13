@@ -1,0 +1,342 @@
+---
+title: New Image Analysis Resources at The Rockefeller University
+author: <br>Ved Sharma, PhD<br>Image Analyst
+institute: vsharma01@rockefeller.edu<br><br>Bio-Imaging Resource Center, The Rockefeller University
+date: 4/6/2022
+date-format: long
+# Description: Image Analyst
+# abstract: |
+#   Speaker: Ved Sharma, Ph.D.
+#   Image Analyst
+#   Bio-Imaging Resource Center, The Rockefeller University
+#   Email: vsharma01@rockefeller.edu`
+# title-slide-attributes: 
+#   data-background-size: "contain"
+#   data-background-opacity: "1.0"
+#   data-background-image: "dew-maple-leaf-1974425_cp_masks_drawn.jpg"
+
+
+format:
+  revealjs:
+    menu: 
+      numbers: true
+    width: 1280
+    height: 720
+    min-scale: 0.2
+    max-scale: 1.2
+    fig-cap-location: top
+    footer: "Bio-Imaging Resource Center, The Rockefeller University"
+    # theme: dark
+    css: styles_presentation.scss
+    slide-number: true
+    transition: slide
+    transition-speed: fast
+    chalkboard: 
+      buttons: true
+    preview-links: auto
+#     logo: images/quarto.png
+#     css: styles.css
+#     footer: '[https://{{< meta prerelease-subdomain >}}quarto.org](https://{{< meta prerelease-subdomain >}}quarto.org)'
+# resources:
+#   - demo.pdf
+---
+
+## New Image Analysis Resources at The Rockefeller University {visibility="hidden"}
+
+<hr>
+
+#### Ved Sharma, PhD  
+#### Image Analyst  
+<br>
+Bio-Imaging Resource Center, The Rockefeller University  
+Email: vsharma01@rockefeller.edu  
+<br>
+Date: Wednesday, April 6th, 2022  
+Seminar time: 10:00am – 11:00am  
+Workshop time: 11:00am – 12:30pm  
+Place: A Level Training/Classroom, Welch Hall, The Rockefeller University  
+
+## {.custom_indent3}
+
+Seminar slides and workshop material will be made available on our GitHub page:  
+<br>
+https://github.com/ImageAnalysis-RockefellerUniversity
+
+::: {.notes}
+Spearker notes go here.
+:::
+
+## Outline {.smaller .custom_indent2}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- Segmentation
+- Cell/particle Counting and Tracking
+- Image denoising
+:::
+
+::: {.column width="60%" .fragment}
+[Open-source Softwares]{.underline}  
+ImageJ/Fiji, QuPath, Napari, CellProfiler, Icy  
+<br>
+[Commercial Softwares]{.underline}  
+Imaris, Arivis, Aivia, Huygens, MetaMorph  
+<br>
+[Machine/Deep Learning frameworks]{.underline}  
+Weka, ilastik, Labkit
+StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic  
+:::
+
+::::
+
+## What is a Raster Image?
+
+::: {layout="[44,-1,55]" .smallerFont1}
+- Raster images are composed of a grid of pixels
+- Each pixel contains intensity information
+- Number of bits (N) determine the range of intensity levels
+
+|Image Type|Range of intensity levels (0 to 2^N^-1)|
+|:---:|:---:|
+|8-bit                 |0-255|
+|16-bit                |0-4095|
+|32-bit                |0-65,535|
+|RGB color (3 x 8 bits)|0-255 per channel|
+:::
+
+
+::: {layout="[15,40,20,25]" .smallerFont2}
+  
+![Histogram](images/dew-maple-leaf-1974425_BCwindow.jpg)
+
+<div class="img-overlay">
+  ![8-bit image (256 shades)](images/dew-maple-leaf-1974425.jpg)
+  <div class="red-square"></div>
+</div>  
+
+    
+![Zoomed-in view](images/dew-maple-leaf-1974425_crop.jpg)
+
+  
+![Image as a matrix of numbers (0-255)](images/dew-maple-leaf-1974425_crop_text.jpg)
+:::
+
+## Segmentation {.smaller .loose-lines .custom_indent}
+
+Identifying object(s) of interest in an image  
+&emsp;- cells, nuclei, membrane, transcription sites etc.
+
+Segmentation is usually followed by quantitative analysis of object(s)  
+&emsp;- number of cells/nuclei, mean fluorescence intensity, shape etc.
+
+
+Divide image into areas representing object(s) of interest and background  
+
+::: {.fragment}
+[Segmentation is not an easy task to solve in most practical cases]{.mark}  
+&emsp;- Signal variability throughout the image  
+&emsp;- Noise, blur and other distortions caused by the imperfect imaging conditions  
+:::
+
+## Segmentation tools {.smaller .loose-lines}
+::: {.custom_indent}
+- Global thresholding, local thresholding
+- Image processing filters – Gaussian, Median, Sobel etc.
+- Machine learning methods (supervised learning) - Weka, Labkit, ilastik 
+- Deep Learning methods - StarDist, Cellpose
+- 3D segmentation - Imaris, Arivis
+:::
+
+## Segmentation using global thresholding
+
+::: {layout="[28, 40]"}
+![Nuclei stained with Hoechst](images/AS_09125_050116000001_A24f00d0_slice2_channel1.png)
+
+![Threshold 1](images/global_Thr2.png)
+:::
+
+::: {.smallerFont0 .absolute top="670" left="0"}
+Human HT29 colon cancer cells,  Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods
+:::
+
+
+## Segmentation using global thresholding {transition="none"}
+
+::: {layout="[28, 40]"}
+![Nuclei stained with Hoechst](images/AS_09125_050116000001_A24f00d0_slice2_channel1.png)
+
+![Threshold 2](images/global_Thr1.png)
+:::
+
+::: {.smallerFont0 .absolute top="670" left="0"}
+Human HT29 colon cancer cells,  Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods
+:::
+
+
+## Segmentation with local thresholding
+
+![Nuclei stained with Hoechst](images/AS_09125_050116000001_A24f00d0_slice2_channel1.png){.absolute top="40" left="0" width="400" height="400"}
+
+:::{.smallerFont1 .absolute top="200" left="450"}
+Auto Local <br>Threshold <br>in Fiji
+:::
+
+![](images/arrow.png){.absolute top="320" left="450" width="120" height="40"}
+
+![](images/AS_09125_050116000001_A24f00d0_slice2_channel1_autoLocalThr.png){.absolute top="65" left="620" width="640" height="640"}
+
+::: {.smallerFont0 .absolute top="600" left="0"}
+Human HT29 colon cancer cells,  Image from Broad <br>Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods
+:::
+
+## Segmentation using Machine Learning {.smaller .loose-lines .custom_indent2}
+Supervised learning - pixel classification using Random Forest classifier
+
+Fiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler
+
+Requires orders of magnitude less training data/resources than Deep Learning methods
+
+## {transition="none"}
+![](images/labkit_1.png){fig-align="center"}
+
+:::{.smallerFont3 .absolute top="692" left="74"}
+Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
+:::
+
+## {transition="none"}
+![](images/labkit_2.png){fig-align="center"}
+
+:::{.smallerFont3 .absolute top="692" left="74"}
+Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
+:::
+
+## {transition="none"}
+![](images/labkit_3.png){fig-align="center"}
+
+:::{.smallerFont3 .absolute top="692" left="74"}
+Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
+:::
+
+## Segmentation using Deep Learning {.smallerFont1 .loose-lines}
+
+:::: {.columns}
+::: {.column width="2%"}
+:::
+::: {.column width="55%"}
+Most accurate methods available for cells/nuclei segmentation  
+[Step 1: Training]{.underline}  
+Generating a Deep Learning model is resource hungry:  
+- High-end workstation  
+- Large amounts of training data (images and annotations)  
+- Training could take hours to days  
+- Good programming knowledge required - Python  
+
+[Step 2: Prediction]{.underline}  
+Using the model from step 1 to predict the segmentation results :  
+- A regular laptop is just fine  
+- Prediction takes seconds to mins  
+- Little to no programming knowledge required  
+:::
+::: {.column width="2%"}
+:::
+
+::: {.column width="40%" .fragment}
+
+<br>
+
+![StarDist (2018)](images/stardist_paper_title.png)
+
+<br>
+
+![Cellpose (2021)](images/cellpose_paper_title.png)
+:::
+::::
+
+## Segmentation using Deep Learning
+<br>
+
+::: {layout="[1,1,1]" .smallerFont2}
+  
+![Original](images/Hoechst-C42-ARv7_Dox.jpg)
+
+![StarDist plugin in Fiji](images/Hoechst-C42-ARv7_Dox_Fiji_StarDist.png)
+  
+![Cellpose](images/Hoechst-C42-ARv7_Dox_cellpose.png)
+:::
+:::{.smallerFont0 .absolute top="610" left="0"}
+Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
+:::
+:::{.smallerFont1 .absolute top="660" left="200"}
+Workshop Exercise 1: StarDist based nuclear segmenation in a challenging image in Fiji
+:::
+
+## Segmentation using StarDist in Napari
+![](images/Hoechst-C42-ARv7_Dox_Napari_StarDist.png){fig-align="center"}
+
+## Segmentation using StarDist in Qupath
+![](images/Hoechst-C42-ARv7_Dox_QuPath_StarDist.png){fig-align="center"}
+
+## {.center}
+::: {.r-fit-text}
+[Segmentation – comparison of Deep Learning models]{style="color:#c00000;"}
+:::
+
+## {transition="none"}
+![](images/Fig%203%20-%20cellpose%20paper_cellpose%20seg.png){fig-align="center"}
+
+:::{.absolute top="20" left="50"}
+[Cellpose]{style="color:#c00000; font-size:1.2em"}
+:::
+
+:::{.smallerFont0 .absolute top="650" left="1000"}
+Stringer et al 2021, Nat Methods
+:::
+
+## {transition="none"}
+![](images/Fig%20S4%20-%20cellpose%20paper_stardist%20seg.png){fig-align="center"}
+
+:::{.absolute top="20" left="50"}
+[StarDist]{style="color:#c00000; font-size:1.2em"}
+:::
+
+:::{.smallerFont0 .absolute top="650" left="1000"}
+Stringer et al 2021, Nat Methods
+:::
+
+## {.center}
+::: {.r-fit-text}
+[&emsp;&emsp;&emsp;&emsp;Challenging cases&emsp;&emsp;&emsp;&emsp;]{style="color:#c00000;"}
+:::
+
+## 1. Cell crowding
+<br>
+
+::: {layout="[1,1]"}
+![Original image](images/022_img.png)
+
+![Cellpose segmentation](images/022_img_cp_masks_outlines.png){.fragment}
+:::
+:::{.smallerFont0 .absolute top="600" left="74"}
+Image from https://github.com/MouseLand/cellpose
+:::
+
+## 2. Cell crowding + noisy signal
+::: {layout="[1,1]"}
+![Original image](images/020_img.png)
+
+![Cellpose segmentation](images/020_img_cp_masks_outlines.png){.fragment}
+:::
+:::{.smallerFont0 .absolute top="650" left="74"}
+Image from https://github.com/MouseLand/cellpose
+:::
+
+## 3. Cell crowding + uneven illumination
+::: {layout="[1,1]"}
+![Original image](images/053_img_grey.png)
+
+![Cellpose segmentation](images/053_img_grey_cp_masks_outlines.png){.fragment}
+:::
+:::{.smallerFont0 .absolute top="710" left="25"}
+Image from https://github.com/MouseLand/cellpose
+:::

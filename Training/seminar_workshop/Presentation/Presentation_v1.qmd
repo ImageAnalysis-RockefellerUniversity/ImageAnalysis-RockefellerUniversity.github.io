@@ -1,0 +1,69 @@
+---
+title: "New Image Analysis Resources at The Rockefeller University"
+subtitle: ""
+author:
+  - name: Ved P. Sharma
+    degrees:
+      - PhD
+    roles: "Image Analyst"
+    affiliation:
+      - name: The Rockefeller University
+        department: BIRC
+    email: vedsh@sd.edu
+date: 2025-12-18
+
+format:
+  revealjs:
+    footer: "Bio-Imaging Resource Center, The Rockefeller University"
+    # theme: dark
+    title-slide-contents: |
+      <div class="speaker-block">
+        <p>
+          <strong>Speaker:</strong> Bla Bla, Ph.D.<br>
+          Staff Scientist<br>
+          Dept Center, University of NY<br>
+          Email: ved@example.edu
+      </p>
+      </div>
+    css: styles_presentation.css
+    slide-number: true
+    transition: slide
+    chalkboard: 
+      buttons: true
+    preview-links: auto
+#     logo: images/quarto.png
+#     css: styles.css
+#     footer: '[https://{{< meta prerelease-subdomain >}}quarto.org](https://{{< meta prerelease-subdomain >}}quarto.org)'
+# resources:
+#   - demo.pdf
+title-slide-attributes: 
+  data-background-size: "contain"
+  data-background-opacity: "0.5"
+  data-background-image: "dew-maple-leaf-1974425_cp_masks_drawn.jpg"
+
+# Description: Image Analyst
+# abstract: |
+#   Speaker: Ved Sharma, Ph.D.
+#   Image Analyst
+#   Bio-Imaging Resource Center, The Rockefeller University
+#   Email: vsharma01@rockefeller.edu`
+
+---
+
+## New Image Analysis Resources at The Rockefeller University
+
+<hr>
+
+
+#### Ved Sharma
+
+## 
+
+Seminar slides and workshop material will be made available on our GitHub page:  
+https://github.com/ImageAnalysis-RockefellerUniversity
+
+::: {.notes}
+Spearker notes go here.
+:::
+
+## Outline

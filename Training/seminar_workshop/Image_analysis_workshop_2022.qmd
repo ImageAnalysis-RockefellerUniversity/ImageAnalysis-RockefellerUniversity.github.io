@@ -1,0 +1,24 @@
+## Workshop
+In this workshop, we will work through the following exercises:  
+&emsp;1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)  
+&emsp;2. Cell tracking using StarDist and TrackMate  
+&emsp;3. Denoising using Noise2Void  
+&emsp;4. Bonus – 3D segmentation using StarDist and TrackMate  
+
+### Prerequisite - installing required plugins in Fiji
+We need to add the following three [updates sites](https://imagej.net/update-sites/following) in our Fiji to install all the required plugins for this workshop:   
+- [CSBDeep](https://imagej.net/plugins/csbdeep)  
+- [StarDist](https://imagej.net/plugins/stardist)  
+- [TrackMate-StarDist](https://imagej.net/plugins/trackmate/trackmate-stardist)  
+  
+Step 1: Start Fiji.  
+Step 2: Select Help > Update... from the menu bar.  
+Step 3: Click on the button "Manage update sites".  
+Step 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.  
+
+![CSBDeep update site](PNGs/CSBDeep_screenshot1.png)  
+
+Step 5: Click on "Apply changes" to install the plugins.  
+Step 6: Restart Fiji.  
+&emsp;&emsp;- StarDist plugin should now be available under `Plugins > StarDist > StarDist 2D`.  
+&emsp;&emsp;- Noise2Void plugin should be visible under `Plugins › CSBDeep › N2V`.

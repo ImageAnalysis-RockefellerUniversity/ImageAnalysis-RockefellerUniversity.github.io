@@ -1,0 +1,55 @@
+/* css styles */
+/* .sidebar .sidebar-section-title {
+    font-weight: bold;
+} */
+/* 
+.bold-text {
+    font-weight: bold;
+} */
+/* sidebar section titles — try multiple selectors & make it strong
+.sidebar .sidebar-section-title,
+.site-sidebar .sidebar-section-title,
+.quarto-sidebar .sidebar-section-title,
+.sidebar .section-title,
+.site-sidebar .section-title,
+.sidebar .nav-section-title {
+  font-weight: 700 !important;
+} */
+
+/* Bold only sidebar section titles */
+/* .sidebar-item.sidebar-item-section > .sidebar-item-container > .sidebar-item-text > .menu-text {
+    font-weight: bold;
+} */
+
+/* Bold only top-level (level 0) sidebar section titles */
+/* .sidebar-menu-container > ul > .sidebar-item.sidebar-item-section > .sidebar-item-container > .sidebar-item-text > .menu-text {
+    font-weight: bold;
+} */
+
+/* Bold Home + top-level sections */
+/* .sidebar-menu-container > ul > .sidebar-item:first-child > .sidebar-item-container > .sidebar-item-text > .menu-text,
+.sidebar-menu-container > ul > .sidebar-item.sidebar-item-section > .sidebar-item-container > .sidebar-item-text > .menu-text {
+    font-weight: bold;
+} */
+
+/* Bold Home and all top-level items */
+.sidebar-menu-container > ul > li.sidebar-item > .sidebar-item-container a.sidebar-item-text > .menu-text {
+  font-weight: bold;
+}
+
+.slide-deck {
+  border: 3px solid #dee2e6;
+  width: 100%;
+  height: 475px;
+}
+
+@media only screen and (max-width: 600px) {
+ .slide-deck {
+    height: 400px;
+  }
+}
+
+/* .quarto-layout-row .figure-caption {
+  text-align: center;
+} */
+

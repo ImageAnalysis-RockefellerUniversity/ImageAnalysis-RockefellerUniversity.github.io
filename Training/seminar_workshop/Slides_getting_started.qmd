@@ -1,0 +1,19 @@
+---
+title: "Habits"
+author: "John Doe"
+format: revealjs
+---
+::: {.nonincremental}
+
+- Turn off alarm
+- Get out of bed
+
+:::
+
+---
+::: {.incremental}
+
+- Get in bed
+- Count sheep
+
+:::

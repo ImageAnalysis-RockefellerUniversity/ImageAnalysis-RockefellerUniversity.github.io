@@ -1,0 +1,72 @@
+---
+title: "Image Analysis @ Bio-Imaging Resource Center"
+---
+
+The [Bio-Imaging Resource Center](https://www.rockefeller.edu/bioimaging/) provides a variety of image analysis resources/training to our users:
+
+- One-on-one user imaging data discussion, where we suggest the best software/method/pipeline for image analysis
+- Writing of custom image analysis scripts, pipelines, batch processing
+- Regular image analysis seminars and workshops
+- Image Analysis User Group meetings
+- One-on-one user training
+- Helpdesk session -- Wednesday, 3-5pm
+
+In addition, we encourage our users to contact us at the experimental design stage to have a discussion with our team of microscopy and image analysis experts, to ensure that the imaging data acquired will be appropriate for the planned analysis and research questions.
+
+
+## Software
+We have expertise in a variety of image analysis software/tools, which we use to help analyze our users' imaging data
+
+### Open-source software
+<!-- ::: {layout="[40,-20,40]"} -->
+::: {layout-nrow=1 layout-ncol=8}
+![ImageJ](PNGs/icons/imagej-icon.png){height=70}
+
+![Fiji](PNGs/icons/fiji-icon.png){height=70}
+
+![QuPath](PNGs/icons/qupath-icon.png){height=70}
+
+![Napari](PNGs/icons/napari-icon.png){height=70}
+
+![CellProfiler](PNGs/icons/cellprofiler-icon.png){height=70}
+
+![Icy](PNGs/icons/icy-icon.png){height=70}
+:::
+
+### Machine/Deep Learning frameworks
+
+::: {layout-nrow=1 layout-ncol=8}
+![Cellpose](PNGs/icons/cellpose-icon.png){height=70}
+
+![InstanSeg](PNGs/icons/instanseg-icon.png){height=70}
+
+![StarDist](PNGs/icons/stardist-icon.png){height=70}
+
+![ilastik](PNGs/icons/ilastik-icon.png){height=70}
+
+![Weka](PNGs/icons/weka-icon-2.png){height=70}
+
+![Labkit](PNGs/icons/labkit-logo.png){height=70}
+
+![DeepImageJ](PNGs/icons/deepimagej_logo.png){height=70}
+
+![ZeroCostDL4Mic](PNGs/icons/zerocostdl4mic-icon.png){height=70}
+:::
+
+### Commercial Software
+::: {layout-nrow=1 layout-ncol=8}
+![Imaris](PNGs/icons/imaris-icon-2.png){height=70}
+
+![Huygens](PNGs/icons/svi-icon.png){height=70}
+
+![Metamorph](PNGs/icons/metamorph-icon-2.png){height=70}
+
+![Arivis, Zeiss](PNGs/icons/arivis-icon-2.png){height=70}
+
+![Aivia](PNGs/icons/aivia-icon-4.png){height=70}
+:::
+
+### Brain registration of volumetric light-sheet data
+::: {layout-nrow=1 layout-ncol=8}
+![ClearMap](PNGs/icons/clearmap-icon.png){height=70}
+:::

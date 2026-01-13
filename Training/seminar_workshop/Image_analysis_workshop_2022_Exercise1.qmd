@@ -1,0 +1,48 @@
+---
+title: Exercise 1 - Nuclei segmentation
+---
+
+[Download TIF file](images/HT29_nuclei.tif)  
+
+![](PNGs/HT29_nuclei.png)  
+
+Human HT29 colon cancer cell nuclei,  image from [Broad Bioimage Benchmark Collection](https://bbbc.broadinstitute.org/BBBC008) 
+  
+### Global segmentation  
+* Open above image by dragging it into the Fiji window and run Threshold command: 
+  `Image > Adjust > Threshold...`
+
+* Choose different thresholding methods (such as Default, Huang, Otsu etc.) from the drop down list and check how well do they segment nuclei in the image.  
+![](PNGs/HT29_nuclei_thr_ss.png)  
+
+* Once satisfied with a particular method or by manually selecting the lower and upper threshold values (using sliders), click on the Apply button to generate a thresholded image.  
+
+:::{.callout-note}
+All thresholding methods (such as Default, Huang, Otsu etc.) can be tested at once by using `Image > Adjust > Auto Threshold`  
+:::
+
+### Local segmentation  
+Select your original image and run the command:  
+`Image > Adjust > Auto Local Threshold`  
+
+Run with "Try all" method to check which one gives the best result.
+
+For this image, the best segmentation is achieved with the `Phansalkar` method (bottom row, middle image).  
+
+![A 3x3 montage of thresholded images using 9 different local threshold methods. Method names can be seen below each thresholded image.](PNGs/HT29_nuclei_autoLocalThr.png)  
+
+### Deep Learning based segmentation using [StarDist](https://imagej.net/plugins/stardist)  
+* Select your original image and run the command:  
+  `Plugins › StarDist › StarDist 2D`  
+
+  In the follow up StarDist menu, choose Model: `Versatile (fluorescent nuclei)`,  
+  and click on the `Set optimized postprocessing thresholds` button at the bottom.  
+  Keep other settings as deafult. Click OK.  
+
+  ![StarDist settings](PNGs/HT29_nuclei_stardist_GUI_ss.png){width="300"}  
+
+  A segmentation label image will be generated with the nuclei ROIs added to the ROI Manager.  
+
+  ![StarDist segmentation results](PNGs/HT29_nuclei_stardist_results_ss.png)
+
+  This gives the best nuclei segmentation among all the methods tested so far.  

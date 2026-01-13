@@ -1,0 +1,24 @@
+---
+title: "Image Analysis seminar"
+---
+
+BIRC organized a hybrid (in-person and on Zoom) image analysis seminar, followed by a workshop.
+
+Attendees: approx. 20 Rockefeller researchers in-person + a similar number joined us via Zoom.  
+
+![Seminar announcement](PNGs/Seminar_flyer.png)
+
+Download <a href="Image analysis seminar_v10.pdf" download>Seminar Slides</a>  
+
+
+## Lab Meeting Slides
+
+<div>
+
+```{=html}
+<iframe class="slide-deck" src="Presentation/index.html"></iframe>
+```
+
+</div>
+
+If you prefer to view the demo in a standalone browser you can do that [here](Presentation/index.html){target="_blank"}. 

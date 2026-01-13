@@ -1,0 +1,17 @@
+### 5/23/2024 meeting  
+Presenter: Ved Sharma, BIRC, The Rockefeller University  
+Location/Time: 406 Greenberg Building (CRC), 2-3 pm  
+
+Based on the user survery results during the registation, the top two topics were discussed in this meeting:
+1. **How to use ImageJ/Fiji more effectively**  
+   Discussed different ImageJ/Fiji features for the efficient navigation and working with ROIs and multiple images simultaneously:
+   - Search bar (e.g. Split channels)
+   - Shortcuts: in-built and custom (often used commands, e.g. save as TIFF)
+   - [Action Bar](https://imagej.net/plugins/action-bar) plugin
+   - Control panel (demo w/ LUTs)
+   - Right click options
+   - Synchronize Windows, Tile
+   - Moving ROIs around using Synchronize Windows, Restore Selection and ROI Manager
+2. **Cell/particle segmentation and counting**  
+    - Discussed a user project on 3D segmentation of nuclei and coutning of colocalized and non-colocalized red and green particles inside and outside the nucleus
+    - A custom image and data analysis pipeline was described, which was developed using a combination of commerical and open-source software: Huygens, Fiji, Cellpose, Imaris, Excel, GraphPad Prism  

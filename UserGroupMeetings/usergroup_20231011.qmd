@@ -1,0 +1,4 @@
+### 10/11/2023 meeting  
+Title: "Multiplexed image analysis using [QuPath](https://qupath.github.io/) and deep learning tools"  
+Presenter: Ved Sharma, BIRC, The Rockefeller University  
+Location/Time: 506 Greenberg Building (CRC), 3-4 pm 

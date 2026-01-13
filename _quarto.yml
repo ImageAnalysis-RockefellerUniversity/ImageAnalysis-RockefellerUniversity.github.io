@@ -1,0 +1,81 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  search: 
+    location: sidebar
+  sidebar:
+    style: floating
+    logo: logo6.png
+    logo-href: https://www.rockefeller.edu/bioimaging/image-analysis-data-management/
+    border: true
+    collapse-level: 3
+    # search: true
+    contents:
+      - text: "Home"
+        href: index.qmd
+      - section: "Training"
+        contents: 
+          - text: "Image Analysis seminar"
+            file: Training/seminar_workshop/Image_analysis_seminar_2022.qmd
+          - text: "Image Analysis Workshop"
+            href: Training/seminar_workshop/Image_analysis_workshop_2022.qmd
+            contents: 
+              - text: "Exercise 1 - Nuclei segmentation"
+                file: Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.qmd
+              - text: "Exercise 2 - Cell tracking"
+                file: Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.qmd
+              - text: "Exercise 3 - Denoising"
+                file: Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.qmd
+              - text: "Exercise 4 - 3D segmentation in Fiji"
+                file: Training/seminar_workshop/Image_analysis_workshop_2022_Exercise4.qmd
+          - text: "Huygens Workshop"
+            file: Training/Huygens_workshop_2024.qmd
+          - text: "Co-localization Workshop"
+            file: Training/colocalization_workshop_2025.qmd
+          - text: "Northeast Bioimage Analysis Meeting"
+            file: Training/northeast_meeting_2023.qmd
+      - text: "User Group Meetings"
+        href: usergroup_meetings.qmd
+  page-navigation: true
+  # title: "nav bar title"
+  navbar:
+    background: secondary
+    # search: false
+  #   left:
+  #     - href: index.qmd
+  #       text: Home
+  #       icon: house
+  #     - href: about.qmd
+  #       icon: info-square
+    tools:
+      - icon: github
+        href: https://github.com
+
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+      # - brand
+    css: styles.css
+    toc: true
+    # toc-title: This is TOC title
+    # toc-expand: false
+    # title-block-style: none
+    fig-cap-location: bottom
+    # page-layout: full
+    
+editor: 
+  render-on-save: true
+
+
+        # contents: 
+        #   - text: "11/07/2024"
+        #     file: UserGroupMeetings/usergroup_20241107.qmd
+        #   - text: "05/23/2024"
+        #     file: UserGroupMeetings/usergroup_20240523.qmd
+        #   - text: "10/11/2023"
+        #     file: UserGroupMeetings/usergroup_20231011.qmd
