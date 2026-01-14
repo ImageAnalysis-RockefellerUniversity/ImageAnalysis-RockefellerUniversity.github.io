@@ -1,3 +1,3 @@
-Website for the Image Analysis at The Rockefeller University.
+Image Analysis website for the Bio-Imaging Resource Center at The Rockefeller University.
 
 https://ImageAnalysis-RockefellerUniversity.github.io/
