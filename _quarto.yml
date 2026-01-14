@@ -61,7 +61,7 @@ format:
       dark: darkly
       # - brand
     css: styles.css
-    toc: true
+    toc: false
     # toc-title: This is TOC title
     # toc-expand: false
     # title-block-style: none

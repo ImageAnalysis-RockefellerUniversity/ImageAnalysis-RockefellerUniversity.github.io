@@ -1,19 +1,21 @@
 ---
-title: New Image Analysis Resources at The Rockefeller University
-author: <br>Ved Sharma, PhD<br>Image Analyst
-institute: vsharma01@rockefeller.edu<br><br>Bio-Imaging Resource Center, The Rockefeller University
-date: 4/6/2022
-date-format: long
+# title: New Image Analysis Resources at The Rockefeller University
+# author: <br>Ved Sharma, PhD<br>Image Analyst
+# institute: vsharma01@rockefeller.edu<br><br>Bio-Imaging Resource Center, The Rockefeller University
+# date: 4/6/2022
+# date-format: long
+
 # Description: Image Analyst
 # abstract: |
 #   Speaker: Ved Sharma, Ph.D.
 #   Image Analyst
 #   Bio-Imaging Resource Center, The Rockefeller University
 #   Email: vsharma01@rockefeller.edu`
+
 # title-slide-attributes: 
 #   data-background-size: "contain"
 #   data-background-opacity: "1.0"
-#   data-background-image: "dew-maple-leaf-1974425_cp_masks_drawn.jpg"
+#   data-background-image: "images/title_slide.png"
 
 
 format:
@@ -34,9 +36,6 @@ format:
     chalkboard: 
       buttons: true
     preview-links: auto
-#     logo: images/quarto.png
-#     css: styles.css
-#     footer: '[https://{{< meta prerelease-subdomain >}}quarto.org](https://{{< meta prerelease-subdomain >}}quarto.org)'
 # resources:
 #   - demo.pdf
 ---
@@ -55,6 +54,9 @@ Date: Wednesday, April 6th, 2022
 Seminar time: 10:00am – 11:00am  
 Workshop time: 11:00am – 12:30pm  
 Place: A Level Training/Classroom, Welch Hall, The Rockefeller University  
+
+##
+![](images/title_slide.png){fig-align="center"}
 
 ## {.custom_indent3}
 

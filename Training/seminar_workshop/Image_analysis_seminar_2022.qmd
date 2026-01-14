@@ -6,11 +6,7 @@ BIRC organized a hybrid (in-person and on Zoom) image analysis seminar, followed
 
 Attendees: approx. 20 Rockefeller researchers in-person + a similar number joined us via Zoom.  
 
-![Seminar announcement](PNGs/Seminar_flyer.png)
-
-
-
-### Slide deck
+### Slides
 
 <div>
 
@@ -20,6 +16,8 @@ Attendees: approx. 20 Rockefeller researchers in-person + a similar number joine
 
 </div>
 
-Click [here](Presentation/index.html){target="_blank"} for viewing the slide deck in a standalone browser.
+Use the <kbd>Space</kbd> or <kbd>arrow</kbd> keys to navigate the slides.
+
+Click [here](Presentation/index.html){target="_blank"} to view slides in a standalone browser.
 
 Download <a href="Image analysis seminar_v10.pdf" download>Slides</a> as a PDF.  

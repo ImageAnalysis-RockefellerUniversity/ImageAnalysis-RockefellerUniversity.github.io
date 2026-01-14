@@ -71,7 +71,7 @@
     "href": "Training/seminar_workshop/Image_analysis_seminar_2022.html",
     "title": "Image Analysis seminar",
     "section": "",
-    "text": "BIRC organized a hybrid (in-person and on Zoom) image analysis seminar, followed by a workshop.\nAttendees: approx. 20 Rockefeller researchers in-person + a similar number joined us via Zoom.\n\n\n\nSeminar announcement\n\n\n\nSlide deck\n\n\n\nClick here for viewing the slide deck in a standalone browser.\nDownload Slides as a PDF.",
+    "text": "BIRC organized a hybrid (in-person and on Zoom) image analysis seminar, followed by a workshop.\nAttendees: approx. 20 Rockefeller researchers in-person + a similar number joined us via Zoom.\n\nSlides\n\n\n\nUse the Space or arrow keys to navigate the slides.\nClick here to view slides in a standalone browser.\nDownload Slides as a PDF.",
     "crumbs": [
       "Training",
       "Image Analysis seminar"
@@ -167,163 +167,163 @@
     ]
   },
   {
-    "objectID": "Training/seminar_workshop/Presentation/index.html#section",
-    "href": "Training/seminar_workshop/Presentation/index.html#section",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "objectID": "Training/seminar_workshop/Presentation/index.html#section-1",
+    "href": "Training/seminar_workshop/Presentation/index.html#section-1",
+    "title": "",
     "section": "",
     "text": "Seminar slides and workshop material will be made available on our GitHub page:\n https://github.com/ImageAnalysis-RockefellerUniversity\n\nSpeaker notes go here."
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#outline",
     "href": "Training/seminar_workshop/Presentation/index.html#outline",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Outline",
     "text": "Outline\n\n\n\nSegmentation\nCell/particle Counting and Tracking\nImage denoising\n\n\nOpen-source Softwares\nImageJ/Fiji, QuPath, Napari, CellProfiler, Icy\n Commercial Softwares\nImaris, Arivis, Aivia, Huygens, MetaMorph\n Machine/Deep Learning frameworks\nWeka, ilastik, Labkit StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#what-is-a-raster-image",
     "href": "Training/seminar_workshop/Presentation/index.html#what-is-a-raster-image",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "What is a Raster Image?",
     "text": "What is a Raster Image?\n\n\n\n\nRaster images are composed of a grid of pixels\nEach pixel contains intensity information\nNumber of bits (N) determine the range of intensity levels\n\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\n\nHistogram\n\n\n\n\n\n\n\n8-bit image (256 shades)\n\n\n\n\n\n\n\n\n\n\nZoomed-in view\n\n\n\n\n\n\n\nImage as a matrix of numbers (0-255)"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#segmentation",
     "href": "Training/seminar_workshop/Presentation/index.html#segmentation",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Segmentation",
     "text": "Segmentation\nIdentifying object(s) of interest in an image\n - cells, nuclei, membrane, transcription sites etc.\nSegmentation is usually followed by quantitative analysis of object(s)\n - number of cells/nuclei, mean fluorescence intensity, shape etc.\nDivide image into areas representing object(s) of interest and background\n\nSegmentation is not an easy task to solve in most practical cases\n - Signal variability throughout the image\n - Noise, blur and other distortions caused by the imperfect imaging conditions"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#segmentation-tools",
     "href": "Training/seminar_workshop/Presentation/index.html#segmentation-tools",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Segmentation tools",
     "text": "Segmentation tools\n\n\nGlobal thresholding, local thresholding\nImage processing filters – Gaussian, Median, Sobel etc.\nMachine learning methods (supervised learning) - Weka, Labkit, ilastik\nDeep Learning methods - StarDist, Cellpose\n3D segmentation - Imaris, Arivis"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#segmentation-using-global-thresholding",
     "href": "Training/seminar_workshop/Presentation/index.html#segmentation-using-global-thresholding",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Segmentation using global thresholding",
     "text": "Segmentation using global thresholding\n\n\n\n\n\nNuclei stained with Hoechst\n\n\n\n\n\n\n\nThreshold 1\n\n\n\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#segmentation-using-global-thresholding-1",
     "href": "Training/seminar_workshop/Presentation/index.html#segmentation-using-global-thresholding-1",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Segmentation using global thresholding",
     "text": "Segmentation using global thresholding\n\n\n\n\n\nNuclei stained with Hoechst\n\n\n\n\n\n\n\nThreshold 2\n\n\n\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#segmentation-with-local-thresholding",
     "href": "Training/seminar_workshop/Presentation/index.html#segmentation-with-local-thresholding",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Segmentation with local thresholding",
     "text": "Segmentation with local thresholding\n\n\nNuclei stained with Hoechst\n\n\n\n\nAuto Local Threshold in Fiji\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#segmentation-using-machine-learning",
     "href": "Training/seminar_workshop/Presentation/index.html#segmentation-using-machine-learning",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Segmentation using Machine Learning",
     "text": "Segmentation using Machine Learning\nSupervised learning - pixel classification using Random Forest classifier\nFiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler\nRequires orders of magnitude less training data/resources than Deep Learning methods"
   },
   {
-    "objectID": "Training/seminar_workshop/Presentation/index.html#section-1",
-    "href": "Training/seminar_workshop/Presentation/index.html#section-1",
-    "title": "New Image Analysis Resources at The Rockefeller University",
-    "section": "",
-    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
-  },
-  {
     "objectID": "Training/seminar_workshop/Presentation/index.html#section-2",
     "href": "Training/seminar_workshop/Presentation/index.html#section-2",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "",
     "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#section-3",
     "href": "Training/seminar_workshop/Presentation/index.html#section-3",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
+    "section": "",
+    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+  },
+  {
+    "objectID": "Training/seminar_workshop/Presentation/index.html#section-4",
+    "href": "Training/seminar_workshop/Presentation/index.html#section-4",
+    "title": "",
     "section": "",
     "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#segmentation-using-deep-learning",
     "href": "Training/seminar_workshop/Presentation/index.html#segmentation-using-deep-learning",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Segmentation using Deep Learning",
     "text": "Segmentation using Deep Learning\n\n\n\n\nMost accurate methods available for cells/nuclei segmentation\nStep 1: Training\nGenerating a Deep Learning model is resource hungry:\n- High-end workstation\n- Large amounts of training data (images and annotations)\n- Training could take hours to days\n- Good programming knowledge required - Python\nStep 2: Prediction\nUsing the model from step 1 to predict the segmentation results :\n- A regular laptop is just fine\n- Prediction takes seconds to mins\n- Little to no programming knowledge required\n\n\n\n\n\n\nStarDist (2018)\n\n\n\n\n\n\nCellpose (2021)"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#segmentation-using-deep-learning-1",
     "href": "Training/seminar_workshop/Presentation/index.html#segmentation-using-deep-learning-1",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Segmentation using Deep Learning",
     "text": "Segmentation using Deep Learning\n\n\n\n\n\n\nOriginal\n\n\n\n\n\n\n\nStarDist plugin in Fiji\n\n\n\n\n\n\n\nCellpose\n\n\n\n\n\n\n\nHoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine\n\n\nWorkshop Exercise 1: StarDist based nuclear segmenation in a challenging image in Fiji"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#segmentation-using-stardist-in-napari",
     "href": "Training/seminar_workshop/Presentation/index.html#segmentation-using-stardist-in-napari",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Segmentation using StarDist in Napari",
     "text": "Segmentation using StarDist in Napari"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#segmentation-using-stardist-in-qupath",
     "href": "Training/seminar_workshop/Presentation/index.html#segmentation-using-stardist-in-qupath",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "Segmentation using StarDist in Qupath",
     "text": "Segmentation using StarDist in Qupath"
   },
   {
-    "objectID": "Training/seminar_workshop/Presentation/index.html#section-4",
-    "href": "Training/seminar_workshop/Presentation/index.html#section-4",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "objectID": "Training/seminar_workshop/Presentation/index.html#section-5",
+    "href": "Training/seminar_workshop/Presentation/index.html#section-5",
+    "title": "",
     "section": "",
     "text": "Segmentation – comparison of Deep Learning models"
   },
   {
-    "objectID": "Training/seminar_workshop/Presentation/index.html#section-5",
-    "href": "Training/seminar_workshop/Presentation/index.html#section-5",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "objectID": "Training/seminar_workshop/Presentation/index.html#section-6",
+    "href": "Training/seminar_workshop/Presentation/index.html#section-6",
+    "title": "",
     "section": "",
     "text": "Cellpose\n\n\nStringer et al 2021, Nat Methods"
   },
   {
-    "objectID": "Training/seminar_workshop/Presentation/index.html#section-6",
-    "href": "Training/seminar_workshop/Presentation/index.html#section-6",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "objectID": "Training/seminar_workshop/Presentation/index.html#section-7",
+    "href": "Training/seminar_workshop/Presentation/index.html#section-7",
+    "title": "",
     "section": "",
     "text": "StarDist\n\n\nStringer et al 2021, Nat Methods"
   },
   {
-    "objectID": "Training/seminar_workshop/Presentation/index.html#section-7",
-    "href": "Training/seminar_workshop/Presentation/index.html#section-7",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "objectID": "Training/seminar_workshop/Presentation/index.html#section-8",
+    "href": "Training/seminar_workshop/Presentation/index.html#section-8",
+    "title": "",
     "section": "",
     "text": "Challenging cases"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#cell-crowding",
     "href": "Training/seminar_workshop/Presentation/index.html#cell-crowding",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "1. Cell crowding",
     "text": "1. Cell crowding\n\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#cell-crowding-noisy-signal",
     "href": "Training/seminar_workshop/Presentation/index.html#cell-crowding-noisy-signal",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "2. Cell crowding + noisy signal",
     "text": "2. Cell crowding + noisy signal\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#cell-crowding-uneven-illumination",
     "href": "Training/seminar_workshop/Presentation/index.html#cell-crowding-uneven-illumination",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "title": "",
     "section": "3. Cell crowding + uneven illumination",
     "text": "3. Cell crowding + uneven illumination\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
   },
