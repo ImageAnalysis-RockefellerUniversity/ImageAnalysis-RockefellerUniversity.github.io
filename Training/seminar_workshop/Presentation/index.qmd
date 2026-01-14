@@ -27,7 +27,7 @@ format:
     fig-cap-location: top
     footer: "Bio-Imaging Resource Center, The Rockefeller University"
     # theme: dark
-    css: styles_presentation.scss
+    theme: styles_presentation.scss # defining css/scss as theme: and not as a css: is imp for correct html rendering (quarto render)
     slide-number: true
     transition: slide
     transition-speed: fast
@@ -63,7 +63,7 @@ Seminar slides and workshop material will be made available on our GitHub page:
 https://github.com/ImageAnalysis-RockefellerUniversity
 
 ::: {.notes}
-Spearker notes go here.
+Speaker notes go here.
 :::
 
 ## Outline {.smaller .custom_indent2}

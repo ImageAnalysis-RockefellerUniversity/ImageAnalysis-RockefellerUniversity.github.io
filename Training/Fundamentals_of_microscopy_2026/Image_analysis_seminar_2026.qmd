@@ -1,0 +1,24 @@
+---
+title: "What Is an Image? Image capture, composition and basic analysis"
+---
+
+This is sesion 2 of the Fundamentals of Microscopy course organized by the Bio-Imaging Resource Center (BIRC) and the Miller Brain Observatory (MBO).
+
+The workshop sessions will be scheduled from 9.30 am till 12.30 pm once a month on a Thursday:  
+
+|#|Topic|Date|Speaker|
+|----|----|----|----|
+|1|Fundamentals of Fluorescence and the Fluorescence Microscope|January 29|Dr. Alison North, BIRC|
+|[2]{.mark}|[What Is an Image? Image capture, composition and basic analysis]{.mark}|[February 26]{.mark}|[Dr. Ved Sharma, BIRC]{.mark}|
+|3|Light Properties and Optical Principles|March 26|Dr. Behzad Khajavi, BIRC|
+|4|Confocal Microscopy|April 30|Dr. Ivan Rey Suarez, BIRC|
+|5|Light-Sheet Microscopy|May 28|Dr. Raghav Chhetri, MBO|
+
+: Session info {tbl-colwidths="[5,50,20,25]"}
+
+<br>
+
+## Presentation slides
+
+
+

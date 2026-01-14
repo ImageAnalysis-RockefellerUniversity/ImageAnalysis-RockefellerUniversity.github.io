@@ -11,105 +11,83 @@
     ]
   },
   {
-    "objectID": "Training/Huygens_workshop_2024.html",
-    "href": "Training/Huygens_workshop_2024.html",
-    "title": "SVI/Huygens workshop",
+    "objectID": "Training/colocalization_workshop_2025.html",
+    "href": "Training/colocalization_workshop_2025.html",
+    "title": "Co-localization analysis Seminar and Workshop",
     "section": "",
-    "text": "Date:    March 27, 2024\n Location:  Weiss 305\n Presenters:  Vincent Schoonderwoert and Nicolaas van der Woort (Netherlands)\n Attendees: approx. 40 Rockefeller and local reserachers from various labs\nOrganized by the BIRC team, this was a 1-day workshop on the practical use of Huygens software, including introduction of the new Quality Control module.\nFollowing topics were discussed:\n- Image Deconvolution and Restoration\n- Deconvolution Express and Twin Slicer\n- Object Stabilizer\n- Tile Stitcher\n- Chromatic Aberration Corrector\n- CrossTalk Corrector\n- Object Analyzer\n- Colocalization Analyzer\n- Workflow Processor\n- Quality Control\nPlease reach out to BIRC, if you are interested in using any of these Huygens modules.",
+    "text": "Date:\nApril 16, 2025\n\n\nLocation:\nWeiss 305\n\n\nGuest lecturer:\nPablo Ariel, UNC at Chapel Hill\n\n\nAdditional speaker:\nAlison North, The Rockefeller University, BIRC\n\n\nWorkshop support:\nVed Sharma and Tao Tong, The Rockefeller University, BIRC\n\n\nAttendees:\n35 Rockefeller researchers from various labs\nOrganized by the BIRC team, this was a seminar (2 h), followed by a hands-on workshop (2 h) on the co-localization analysis.",
     "crumbs": [
       "Training",
-      "Huygens Workshop"
+      "Co-localization Workshop"
     ]
   },
   {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise4.html",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise4.html",
-    "title": "Exercise 4 - 3D segmentation using TrackMate (StarDist)",
+    "objectID": "Training/colocalization_workshop_2025.html#resources",
+    "href": "Training/colocalization_workshop_2025.html#resources",
+    "title": "Co-localization analysis Seminar and Workshop",
+    "section": "Resources",
+    "text": "Resources\nVideos\nMaterials for exercises and downloadable videos",
+    "crumbs": [
+      "Training",
+      "Co-localization Workshop"
+    ]
+  },
+  {
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022.html",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022.html",
+    "title": "",
     "section": "",
-    "text": "Spheroid, Z-stack\n\n\n\n\n\n\n\nZ-stack segmentation\n\n\n\n\n\n\n\n3D rendering\n\n\n\n\n\n3D stack of cells in a spheroid from Zenodo.\nDownload TIF file\n\nOpen above Z-stack in Fiji and run the TrackMate plugin, just like in Exercise 2.\nSince this is a Z-stack and TrackMate works on a time-lapse sequence, we need to swap Z and T dimensions. TrackMate automatically detects it and asks for dimension swapping. Click Yes.\n\nFor the detector, choose StarDist detector from the drop-down menu.\n\nFor the tracker, choose Simple LAP tracker and the following tracking settings:\nLinking max distance=5 pixel (a lower value than in Exercise 2, since the cells are not moving)\nGap-closing max distance=10 pixel\nGap-closing max frame gap=0 (since cells are not disappearing from frame-to-frame)\n\nKeep clicking the next button until you reach the Display options window (image below). Choose:\nColor spots by: Track index\nUncheck Display tracks\n\nEvery cell will be outlined in a different color. Scroll through the stack to check the accuracy of the results. If results are not optimum, go back to the detection and/or tracker steps by clicking on the previous button (green left arrow) and changing the settings under detector and tracker.\nOn the last TrackMate window called Select an action, generate a label image by selecting Export label image from the drop-down list and clicking Execute. It will generate a grayscale Z-stack.\n\nApply colors to cells with an LUT: Image › Lookup Tables › glasbey_inverted\n\nFor creating a 3D rendering, swap Z and T dimensions back to the original values by selecting Image › Properties... and entering Z=64 and T=1. Click OK.\nGenerate 3D rendering by using 3D viewer plugin: Plugins › 3D Viewer. Select Resampling factor = 1.\nIf a window pops up asking to convert the Z-stack to 8-bit or RGB image, click Yes.\nIn the ImageJ 3D Viewer window, use left mouse click and drag to rotate and inspect the volume.\n\nWell done, if you finished all 4 exercises!",
+    "text": "In this workshop, we will work through the following exercises:\n 1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)\n 2. Cell tracking using StarDist and TrackMate\n 3. Denoising using Noise2Void\n 4. Bonus – 3D segmentation using StarDist and TrackMate\n\n\nWe need to add the following three updates sites in our Fiji to install all the required plugins for this workshop:\n- CSBDeep\n- StarDist\n- TrackMate-StarDist\nStep 1: Start Fiji.\nStep 2: Select Help &gt; Update… from the menu bar.\nStep 3: Click on the button “Manage update sites”.\nStep 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.\n\n\n\nCSBDeep update site\n\n\nStep 5: Click on “Apply changes” to install the plugins.\nStep 6: Restart Fiji.\n  - StarDist plugin should now be available under Plugins &gt; StarDist &gt; StarDist 2D.\n  - Noise2Void plugin should be visible under Plugins › CSBDeep › N2V.",
+    "crumbs": [
+      "Training",
+      "Image Analysis Workshop"
+    ]
+  },
+  {
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022.html#workshop",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022.html#workshop",
+    "title": "",
+    "section": "",
+    "text": "In this workshop, we will work through the following exercises:\n 1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)\n 2. Cell tracking using StarDist and TrackMate\n 3. Denoising using Noise2Void\n 4. Bonus – 3D segmentation using StarDist and TrackMate\n\n\nWe need to add the following three updates sites in our Fiji to install all the required plugins for this workshop:\n- CSBDeep\n- StarDist\n- TrackMate-StarDist\nStep 1: Start Fiji.\nStep 2: Select Help &gt; Update… from the menu bar.\nStep 3: Click on the button “Manage update sites”.\nStep 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.\n\n\n\nCSBDeep update site\n\n\nStep 5: Click on “Apply changes” to install the plugins.\nStep 6: Restart Fiji.\n  - StarDist plugin should now be available under Plugins &gt; StarDist &gt; StarDist 2D.\n  - Noise2Void plugin should be visible under Plugins › CSBDeep › N2V.",
+    "crumbs": [
+      "Training",
+      "Image Analysis Workshop"
+    ]
+  },
+  {
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.html",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.html",
+    "title": "Exercise 3 - Denoising using deep learning method (Noise2Void)",
+    "section": "",
+    "text": "Original\n\n\n\n\n\n\n\nAfter processing with trained Noise2Void model\n\n\n\n\n\nSpinning disk confocal image of FISH in C. elegans (image courtesy of ABRF/LMRG Image Analysis Study).\nDownload TIF file\n\nOpen the above Z-stack in Fiji and run the command: Plugins › CSBDeep › N2V › N2V train + predict\n\nYou will be presented with a N2V train + predict window. Choose the following options and click OK.\n\nAxes of prediction input: XYZ\nNumber of epochs: 10\nNumber of steps per epoch: 10\nBatch size per step: 64\nPatch shape: 64\nNeighborhood readius: 5\n\nA window showing the progress of different steps (Preparation, Training and Prediction) will open. As the training progresses, training loss (red) and validation loss (blue) curves are displayed in the window (see below). If training goes well, then both the red and blue curves will decrease with more cycles (epochs) of training and stabilize around a minimum loss value (~ 1.0 in the image below). Training loss goes down from the beginning but Validation loss (blue curve) usually goes up in the beginning and then comes down and approaches the red curve.\n\n\n\nTraining deep learning model\n\n\nIf by the end of the training, red and blue curves do not stabilize to a minimum loss value, then increase the number of epochs to 20 or 30 and then run the command N2V train + predict again.\nAfter program finishes, it generates a denoised Z-stack from the trained model. You might need to run Image › Adjust › Brightness/Contrast... and hit Reset to adjust the display of the denoised image.\nThe Deep Learning model you just trained could be saved as a .ZIP file (to be used for prediction in the future) by clicking on the File actions &gt; Save to...\n\n\n\nSaving deep learning model\n\n\nTrained model could also be applied immediately on a single noisy image or a folder full of noisy images by using Predict &gt; Single image or stack or Predict &gt; Folder of images of stacks, respectively.\n\n\n\nApplying deep learning model",
     "crumbs": [
       "Training",
       "Image Analysis Workshop",
-      "Exercise 4 - 3D segmentation in Fiji"
+      "Exercise 3 - Denoising"
     ]
   },
   {
-    "objectID": "Training/seminar_workshop/Presentation/Presentation_v1.html#new-image-analysis-resources-at-the-rockefeller-university",
-    "href": "Training/seminar_workshop/Presentation/Presentation_v1.html#new-image-analysis-resources-at-the-rockefeller-university",
-    "title": "New Image Analysis Resources at The Rockefeller University",
-    "section": "New Image Analysis Resources at The Rockefeller University",
-    "text": "New Image Analysis Resources at The Rockefeller University\n\nVed Sharma"
-  },
-  {
-    "objectID": "Training/seminar_workshop/Presentation/Presentation_v1.html#section",
-    "href": "Training/seminar_workshop/Presentation/Presentation_v1.html#section",
-    "title": "New Image Analysis Resources at The Rockefeller University",
+    "objectID": "Training/seminar_workshop/Image_analysis_seminar_2022.html",
+    "href": "Training/seminar_workshop/Image_analysis_seminar_2022.html",
+    "title": "Image Analysis seminar",
     "section": "",
-    "text": "Seminar slides and workshop material will be made available on our GitHub page:\nhttps://github.com/ImageAnalysis-RockefellerUniversity\n\nSpearker notes go here."
+    "text": "BIRC organized a hybrid (in-person and on Zoom) image analysis seminar, followed by a workshop.\nAttendees: approx. 20 Rockefeller researchers in-person + a similar number joined us via Zoom.\n\n\n\nSeminar announcement\n\n\n\nSlide deck\n\n\n\nClick here for viewing the slide deck in a standalone browser.\nDownload Slides as a PDF.",
+    "crumbs": [
+      "Training",
+      "Image Analysis seminar"
+    ]
   },
   {
-    "objectID": "Training/seminar_workshop/Presentation/Presentation_v1.html#outline",
-    "href": "Training/seminar_workshop/Presentation/Presentation_v1.html#outline",
-    "title": "New Image Analysis Resources at The Rockefeller University",
-    "section": "Outline",
-    "text": "Outline"
-  },
-  {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html",
-    "title": "Exercise 2 - Tracking cancer cell migration in time-lapse movies",
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.html",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.html",
+    "title": "Exercise 1 - Nuclei segmentation",
     "section": "",
-    "text": "Cancer cell migration, image from Zenodo.\nDownload TIF file\n\nOpen the above time-lapse sequence in Fiji and run the command: Plugins › Tracking › TrackMate\nYou will be presented with a TrackMate window. Click Next.\n\nSelect StarDist detector from the drop-down menu. Click Next.\n\n\n\nSegmentation detector\n\n\nYou can now click on the Preview tab, to check how well StarDist is detecting the nuclei on the current slice. If detections look fine, click next to detect nuclei in the whole time-lapse sequence.\n\nKeep clicking Next button until you reach the Select a tracker window. Select Simple LAP tracker and click Next.\nChoose settings as in the image below and click Next.\n\n\n\nSimple LAP tracker\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nIf you want to track splitting and/or merging events, then choose the LAP tracker, and tick the splitting/merging checkbox under settings.\n\n\n\nKeep clicking next until you reach the Display options window (see image below, left). Here, various display options for the tracks could be selected. Choose Show tracks backward in time. Play with different settings here and scroll through the stack to see the effect of these changes.\nPlease explore the three tabs at the bottom - TrackScheme, Tracks and Spots. A lot of statistics is hidden there, such as the raw values for each nuclei in each frame of the time-lapse. All the statistics could be exported to a CSV file.\n\nKeep clicking next until you reach the last window called Select an action (see image below, right). Select Capture overlay and click Execute to generate a time-lapse movie with spots and tracks overlaid on top of the original data.\n\nA label time-lapse movie could also be generated by selecting Export label image from the drop-down list and clicking Execute.\n\n\n\n\n\n\nDisplay options\n\n\n\n\n\n\n\nSelect an action\n\n\n\n\n\n\nFinal result:\n\n\n\nCell migration with tracks",
+    "text": "Download TIF file\n\nHuman HT29 colon cancer cell nuclei, image from Broad Bioimage Benchmark Collection\n\nGlobal segmentation\n\nOpen above image by dragging it into the Fiji window and run Threshold command: Image &gt; Adjust &gt; Threshold...\nChoose different thresholding methods (such as Default, Huang, Otsu etc.) from the drop down list and check how well do they segment nuclei in the image.\n\nOnce satisfied with a particular method or by manually selecting the lower and upper threshold values (using sliders), click on the Apply button to generate a thresholded image.\n\n\n\n\n\n\n\nNote\n\n\n\nAll thresholding methods (such as Default, Huang, Otsu etc.) can be tested at once by using Image &gt; Adjust &gt; Auto Threshold\n\n\n\n\nLocal segmentation\nSelect your original image and run the command:\nImage &gt; Adjust &gt; Auto Local Threshold\nRun with “Try all” method to check which one gives the best result.\nFor this image, the best segmentation is achieved with the Phansalkar method (bottom row, middle image).\n\n\n\nA 3x3 montage of thresholded images using 9 different local threshold methods. Method names can be seen below each thresholded image.\n\n\n\n\nDeep Learning based segmentation using StarDist\n\nSelect your original image and run the command:\nPlugins › StarDist › StarDist 2D\nIn the follow up StarDist menu, choose Model: Versatile (fluorescent nuclei),\nand click on the Set optimized postprocessing thresholds button at the bottom.\nKeep other settings as deafult. Click OK.\n\n\n\nStarDist settings\n\n\nA segmentation label image will be generated with the nuclei ROIs added to the ROI Manager.\n\n\n\nStarDist segmentation results\n\n\nThis gives the best nuclei segmentation among all the methods tested so far.",
     "crumbs": [
       "Training",
       "Image Analysis Workshop",
-      "Exercise 2 - Cell tracking"
+      "Exercise 1 - Nuclei segmentation"
     ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "usergroup_meetings.html",
-    "href": "usergroup_meetings.html",
-    "title": "User Group Meetings",
-    "section": "",
-    "text": "Image analysis user group consists of Rockefeller University researchers who are interested in sharing knowledge and learning from each other.\nWe meet regularly to discuss the latest image analysis methods, pipelines, softwares or a new paper.\nPlease contact Ved Sharma at the Bio-Imaging Resource Center, for more details.\n\n\n11/07/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about scripting-based batch processing in Fiji (macro) vs QuPath (Groovy)\nWith real user data, compared a Fiji macro vs QuPath Groovy batch processing pipeline\nDiscussed how to decide the best software for batch processing.\nThough QuPath Groovy scripting has a steep learning curve, it can provide most optimal batch processing experience compared to Fiji macros in terms of time, effort and reproducibility.\n\n\n\n5/23/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 406 Greenberg Building (CRC), 2-3 pm\nBased on the user survery results during the registation, the top two topics were discussed in this meeting: 1. How to use ImageJ/Fiji more effectively\nDiscussed different ImageJ/Fiji features for the efficient navigation and working with ROIs and multiple images simultaneously: - Search bar (e.g. Split channels) - Shortcuts: in-built and custom (often used commands, e.g. save as TIFF) - Action Bar plugin - Control panel (demo w/ LUTs) - Right click options - Synchronize Windows, Tile - Moving ROIs around using Synchronize Windows, Restore Selection and ROI Manager 2. Cell/particle segmentation and counting\n- Discussed a user project on 3D segmentation of nuclei and coutning of colocalized and non-colocalized red and green particles inside and outside the nucleus - A custom image and data analysis pipeline was described, which was developed using a combination of commerical and open-source software: Huygens, Fiji, Cellpose, Imaris, Excel, GraphPad Prism\n\n\n10/11/2023 meeting\nTitle: “Multiplexed image analysis using QuPath and deep learning tools”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 3-4 pm\n\n\n3/29/2023 meeting\nTitle: “3D segmentation using Deep Learning”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about checking the Z-stack voxel size and viewing it along all dimensions (XY, YZ, XZ) using orthogonal views or reslicing, before proceeding with 3D segmentation\nDiscussed a few 3D segmentation tools availbale in Fiji - 3D Objects Counter and 3D ROI Manager, and their limitations\nTalked about 3D segmentation using commercial software - Imaris and its deep learning limitations\nDiscussed a few user examples of 3D segmentation (Orientia bacteria, neurons in zebrafish brain and glomeruli in ant brain) using open-source deep learning methods - StarDist and Cellpose\n\n\n\n11/17/2022 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: A Level Training/Classrom, Welch Hall, 2-3 pm\n\nDiscussed a pipeline I worked out for a user for nuclei segmentation using Cellpose and colocalization of IF and FISH spots inside nuclei using Fiji plugin called ComDet.\nBatch process a folder full of images using Cellpose by running a Python script in Jupyter notebook\nBatch processing options in ImageJ/Fiji\nCellProfiler pipeline for batch processing\nDiscussed literature on Cell Painting and how CellProfiler could be used to process high-content screening data\n\n\n\n9/8/2022 meeting\nTitle: “Image segmentation”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nwent over the phase contrast microspoy images from one of our users and discussed the limits of classical segmentation techniques and the suitability of deep learning methods, such as Cellpose, for chanllenging segmentation problems.\ndiscussed how sometimes processing raw images with classical filters (gaussian, edge detection etc.) before feeding them into deep learning pipeline produces better restults, than using the raw images.\ndiscussed how to train a custom model in Cellpose on user’s data, for the case where the built-in Cellpose models were not good enough.\ndemonstrated the use to Cellpose on another user’s fluorescence microcopy images, where cells were clustering together. Cellpose did an excellent job of identifing cells in not only areas where there were fewer cells, but also in areas where cells were clustering together.\ndemonstrated how to do 3D segmentation in Cellpose and then export the label image into Imaris for visualization and further analysis (e.g. filtering, cell/nuclei counting and other cellular measurements)\n\n\n\n6/23/2022 meeting\nTitle: “How do I do “X” in ImageJ/Fiji?”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\nFollowing topics were discussed: - Efficient menu and commands nagivation in ImageJ/Fiji with search bar, shortcuts, Action bar plugin and control panel - Demonstrated “Synchronize Windows” feature for multichannel images; Wand tool for quickly outlining cells - Set Measurements options - Automated cell counting in fluorescence and color (RGB) images - Described a pipeline for the quantification of nuclear and cytoplasmic localization of IF signal - Tips on figure generation such as savings files as PNG, using Overlay option to annotate images and described some plugins such as QuickFigures, OMERO.figure and FigureJ",
-    "crumbs": [
-      "User Group Meetings"
-    ]
-  },
-  {
-    "objectID": "UserGroupMeetings/usergroup_20240523.html",
-    "href": "UserGroupMeetings/usergroup_20240523.html",
-    "title": "",
-    "section": "",
-    "text": "5/23/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 406 Greenberg Building (CRC), 2-3 pm\nBased on the user survery results during the registation, the top two topics were discussed in this meeting: 1. How to use ImageJ/Fiji more effectively\nDiscussed different ImageJ/Fiji features for the efficient navigation and working with ROIs and multiple images simultaneously: - Search bar (e.g. Split channels) - Shortcuts: in-built and custom (often used commands, e.g. save as TIFF) - Action Bar plugin - Control panel (demo w/ LUTs) - Right click options - Synchronize Windows, Tile - Moving ROIs around using Synchronize Windows, Restore Selection and ROI Manager 2. Cell/particle segmentation and counting\n- Discussed a user project on 3D segmentation of nuclei and coutning of colocalized and non-colocalized red and green particles inside and outside the nucleus - A custom image and data analysis pipeline was described, which was developed using a combination of commerical and open-source software: Huygens, Fiji, Cellpose, Imaris, Excel, GraphPad Prism"
-  },
-  {
-    "objectID": "UserGroupMeetings/usergroup_20241107.html",
-    "href": "UserGroupMeetings/usergroup_20241107.html",
-    "title": "",
-    "section": "",
-    "text": "11/07/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about scripting-based batch processing in Fiji (macro) vs QuPath (Groovy)\nWith real user data, compared a Fiji macro vs QuPath Groovy batch processing pipeline\nDiscussed how to decide the best software for batch processing.\nThough QuPath Groovy scripting has a steep learning curve, it can provide most optimal batch processing experience compared to Fiji macros in terms of time, effort and reproducibility."
-  },
-  {
-    "objectID": "UserGroupMeetings/usergroup_20231011.html",
-    "href": "UserGroupMeetings/usergroup_20231011.html",
-    "title": "",
-    "section": "",
-    "text": "10/11/2023 meeting\nTitle: “Multiplexed image analysis using QuPath and deep learning tools”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 3-4 pm"
-  },
-  {
-    "objectID": "UserGroupMeetings/usergroup_meetings.html",
-    "href": "UserGroupMeetings/usergroup_meetings.html",
-    "title": "",
-    "section": "",
-    "text": "User Group Meetings\nImage analysis user group consists of Rockefeller University researchers who are interested in sharing knowledge and learning from each other.\nWe meet regularly to discuss the latest image analysis methods, pipelines, softwares or a new paper.\nPlease contact Ved Sharma at the Bio-Imaging Resource Center, for more details."
   },
   {
     "objectID": "index.html",
@@ -132,37 +110,60 @@
     ]
   },
   {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.html",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.html",
-    "title": "Exercise 1 - Nuclei segmentation",
+    "objectID": "UserGroupMeetings/usergroup_meetings.html",
+    "href": "UserGroupMeetings/usergroup_meetings.html",
+    "title": "",
     "section": "",
-    "text": "Download TIF file\n\nHuman HT29 colon cancer cell nuclei, image from Broad Bioimage Benchmark Collection\n\nGlobal segmentation\n\nOpen above image by dragging it into the Fiji window and run Threshold command: Image &gt; Adjust &gt; Threshold...\nChoose different thresholding methods (such as Default, Huang, Otsu etc.) from the drop down list and check how well do they segment nuclei in the image.\n\nOnce satisfied with a particular method or by manually selecting the lower and upper threshold values (using sliders), click on the Apply button to generate a thresholded image.\n\n\n\n\n\n\n\nNote\n\n\n\nAll thresholding methods (such as Default, Huang, Otsu etc.) can be tested at once by using Image &gt; Adjust &gt; Auto Threshold\n\n\n\n\nLocal segmentation\nSelect your original image and run the command:\nImage &gt; Adjust &gt; Auto Local Threshold\nRun with “Try all” method to check which one gives the best result.\nFor this image, the best segmentation is achieved with the Phansalkar method (bottom row, middle image).\n\n\n\nA 3x3 montage of thresholded images using 9 different local threshold methods. Method names can be seen below each thresholded image.\n\n\n\n\nDeep Learning based segmentation using StarDist\n\nSelect your original image and run the command:\nPlugins › StarDist › StarDist 2D\nIn the follow up StarDist menu, choose Model: Versatile (fluorescent nuclei),\nand click on the Set optimized postprocessing thresholds button at the bottom.\nKeep other settings as deafult. Click OK.\n\n\n\nStarDist settings\n\n\nA segmentation label image will be generated with the nuclei ROIs added to the ROI Manager.\n\n\n\nStarDist segmentation results\n\n\nThis gives the best nuclei segmentation among all the methods tested so far.",
+    "text": "User Group Meetings\nImage analysis user group consists of Rockefeller University researchers who are interested in sharing knowledge and learning from each other.\nWe meet regularly to discuss the latest image analysis methods, pipelines, softwares or a new paper.\nPlease contact Ved Sharma at the Bio-Imaging Resource Center, for more details."
+  },
+  {
+    "objectID": "UserGroupMeetings/usergroup_20231011.html",
+    "href": "UserGroupMeetings/usergroup_20231011.html",
+    "title": "",
+    "section": "",
+    "text": "10/11/2023 meeting\nTitle: “Multiplexed image analysis using QuPath and deep learning tools”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 3-4 pm"
+  },
+  {
+    "objectID": "UserGroupMeetings/usergroup_20241107.html",
+    "href": "UserGroupMeetings/usergroup_20241107.html",
+    "title": "",
+    "section": "",
+    "text": "11/07/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about scripting-based batch processing in Fiji (macro) vs QuPath (Groovy)\nWith real user data, compared a Fiji macro vs QuPath Groovy batch processing pipeline\nDiscussed how to decide the best software for batch processing.\nThough QuPath Groovy scripting has a steep learning curve, it can provide most optimal batch processing experience compared to Fiji macros in terms of time, effort and reproducibility."
+  },
+  {
+    "objectID": "UserGroupMeetings/usergroup_20240523.html",
+    "href": "UserGroupMeetings/usergroup_20240523.html",
+    "title": "",
+    "section": "",
+    "text": "5/23/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 406 Greenberg Building (CRC), 2-3 pm\nBased on the user survery results during the registation, the top two topics were discussed in this meeting: 1. How to use ImageJ/Fiji more effectively\nDiscussed different ImageJ/Fiji features for the efficient navigation and working with ROIs and multiple images simultaneously: - Search bar (e.g. Split channels) - Shortcuts: in-built and custom (often used commands, e.g. save as TIFF) - Action Bar plugin - Control panel (demo w/ LUTs) - Right click options - Synchronize Windows, Tile - Moving ROIs around using Synchronize Windows, Restore Selection and ROI Manager 2. Cell/particle segmentation and counting\n- Discussed a user project on 3D segmentation of nuclei and coutning of colocalized and non-colocalized red and green particles inside and outside the nucleus - A custom image and data analysis pipeline was described, which was developed using a combination of commerical and open-source software: Huygens, Fiji, Cellpose, Imaris, Excel, GraphPad Prism"
+  },
+  {
+    "objectID": "usergroup_meetings.html",
+    "href": "usergroup_meetings.html",
+    "title": "User Group Meetings",
+    "section": "",
+    "text": "Image analysis user group consists of Rockefeller University researchers who are interested in sharing knowledge and learning from each other.\nWe meet regularly to discuss the latest image analysis methods, pipelines, softwares or a new paper.\nPlease contact Ved Sharma at the Bio-Imaging Resource Center, for more details.\n\n\n11/07/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about scripting-based batch processing in Fiji (macro) vs QuPath (Groovy)\nWith real user data, compared a Fiji macro vs QuPath Groovy batch processing pipeline\nDiscussed how to decide the best software for batch processing.\nThough QuPath Groovy scripting has a steep learning curve, it can provide most optimal batch processing experience compared to Fiji macros in terms of time, effort and reproducibility.\n\n\n\n5/23/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 406 Greenberg Building (CRC), 2-3 pm\nBased on the user survery results during the registation, the top two topics were discussed in this meeting: 1. How to use ImageJ/Fiji more effectively\nDiscussed different ImageJ/Fiji features for the efficient navigation and working with ROIs and multiple images simultaneously: - Search bar (e.g. Split channels) - Shortcuts: in-built and custom (often used commands, e.g. save as TIFF) - Action Bar plugin - Control panel (demo w/ LUTs) - Right click options - Synchronize Windows, Tile - Moving ROIs around using Synchronize Windows, Restore Selection and ROI Manager 2. Cell/particle segmentation and counting\n- Discussed a user project on 3D segmentation of nuclei and coutning of colocalized and non-colocalized red and green particles inside and outside the nucleus - A custom image and data analysis pipeline was described, which was developed using a combination of commerical and open-source software: Huygens, Fiji, Cellpose, Imaris, Excel, GraphPad Prism\n\n\n10/11/2023 meeting\nTitle: “Multiplexed image analysis using QuPath and deep learning tools”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 3-4 pm\n\n\n3/29/2023 meeting\nTitle: “3D segmentation using Deep Learning”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about checking the Z-stack voxel size and viewing it along all dimensions (XY, YZ, XZ) using orthogonal views or reslicing, before proceeding with 3D segmentation\nDiscussed a few 3D segmentation tools availbale in Fiji - 3D Objects Counter and 3D ROI Manager, and their limitations\nTalked about 3D segmentation using commercial software - Imaris and its deep learning limitations\nDiscussed a few user examples of 3D segmentation (Orientia bacteria, neurons in zebrafish brain and glomeruli in ant brain) using open-source deep learning methods - StarDist and Cellpose\n\n\n\n11/17/2022 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: A Level Training/Classrom, Welch Hall, 2-3 pm\n\nDiscussed a pipeline I worked out for a user for nuclei segmentation using Cellpose and colocalization of IF and FISH spots inside nuclei using Fiji plugin called ComDet.\nBatch process a folder full of images using Cellpose by running a Python script in Jupyter notebook\nBatch processing options in ImageJ/Fiji\nCellProfiler pipeline for batch processing\nDiscussed literature on Cell Painting and how CellProfiler could be used to process high-content screening data\n\n\n\n9/8/2022 meeting\nTitle: “Image segmentation”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nwent over the phase contrast microspoy images from one of our users and discussed the limits of classical segmentation techniques and the suitability of deep learning methods, such as Cellpose, for chanllenging segmentation problems.\ndiscussed how sometimes processing raw images with classical filters (gaussian, edge detection etc.) before feeding them into deep learning pipeline produces better restults, than using the raw images.\ndiscussed how to train a custom model in Cellpose on user’s data, for the case where the built-in Cellpose models were not good enough.\ndemonstrated the use to Cellpose on another user’s fluorescence microcopy images, where cells were clustering together. Cellpose did an excellent job of identifing cells in not only areas where there were fewer cells, but also in areas where cells were clustering together.\ndemonstrated how to do 3D segmentation in Cellpose and then export the label image into Imaris for visualization and further analysis (e.g. filtering, cell/nuclei counting and other cellular measurements)\n\n\n\n6/23/2022 meeting\nTitle: “How do I do “X” in ImageJ/Fiji?”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\nFollowing topics were discussed: - Efficient menu and commands nagivation in ImageJ/Fiji with search bar, shortcuts, Action bar plugin and control panel - Demonstrated “Synchronize Windows” feature for multichannel images; Wand tool for quickly outlining cells - Set Measurements options - Automated cell counting in fluorescence and color (RGB) images - Described a pipeline for the quantification of nuclear and cytoplasmic localization of IF signal - Tips on figure generation such as savings files as PNG, using Overlay option to annotate images and described some plugins such as QuickFigures, OMERO.figure and FigureJ",
+    "crumbs": [
+      "User Group Meetings"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html",
+    "title": "Exercise 2 - Tracking cancer cell migration in time-lapse movies",
+    "section": "",
+    "text": "Cancer cell migration, image from Zenodo.\nDownload TIF file\n\nOpen the above time-lapse sequence in Fiji and run the command: Plugins › Tracking › TrackMate\nYou will be presented with a TrackMate window. Click Next.\n\nSelect StarDist detector from the drop-down menu. Click Next.\n\n\n\nSegmentation detector\n\n\nYou can now click on the Preview tab, to check how well StarDist is detecting the nuclei on the current slice. If detections look fine, click next to detect nuclei in the whole time-lapse sequence.\n\nKeep clicking Next button until you reach the Select a tracker window. Select Simple LAP tracker and click Next.\nChoose settings as in the image below and click Next.\n\n\n\nSimple LAP tracker\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nIf you want to track splitting and/or merging events, then choose the LAP tracker, and tick the splitting/merging checkbox under settings.\n\n\n\nKeep clicking next until you reach the Display options window (see image below, left). Here, various display options for the tracks could be selected. Choose Show tracks backward in time. Play with different settings here and scroll through the stack to see the effect of these changes.\nPlease explore the three tabs at the bottom - TrackScheme, Tracks and Spots. A lot of statistics is hidden there, such as the raw values for each nuclei in each frame of the time-lapse. All the statistics could be exported to a CSV file.\n\nKeep clicking next until you reach the last window called Select an action (see image below, right). Select Capture overlay and click Execute to generate a time-lapse movie with spots and tracks overlaid on top of the original data.\n\nA label time-lapse movie could also be generated by selecting Export label image from the drop-down list and clicking Execute.\n\n\n\n\n\n\nDisplay options\n\n\n\n\n\n\n\nSelect an action\n\n\n\n\n\n\nFinal result:\n\n\n\nCell migration with tracks",
     "crumbs": [
       "Training",
       "Image Analysis Workshop",
-      "Exercise 1 - Nuclei segmentation"
-    ]
-  },
-  {
-    "objectID": "Training/seminar_workshop/Image_analysis_seminar_2022.html",
-    "href": "Training/seminar_workshop/Image_analysis_seminar_2022.html",
-    "title": "Image Analysis seminar",
-    "section": "",
-    "text": "BIRC organized a hybrid (in-person and on Zoom) image analysis seminar, followed by a workshop.\nAttendees: approx. 20 Rockefeller researchers in-person + a similar number joined us via Zoom.\nDownload Seminar Slides",
-    "crumbs": [
-      "Training",
-      "Image Analysis seminar"
-    ]
-  },
-  {
-    "objectID": "Training/seminar_workshop/Image_analysis_seminar_2022.html#lab-meeting-slides",
-    "href": "Training/seminar_workshop/Image_analysis_seminar_2022.html#lab-meeting-slides",
-    "title": "Image Analysis seminar",
-    "section": "Lab Meeting Slides",
-    "text": "Lab Meeting Slides\n\n\n\nIf you prefer to view the demo in a standalone browser you can do that here.",
-    "crumbs": [
-      "Training",
-      "Image Analysis seminar"
+      "Exercise 2 - Cell tracking"
     ]
   },
   {
@@ -170,7 +171,7 @@
     "href": "Training/seminar_workshop/Presentation/index.html#section",
     "title": "New Image Analysis Resources at The Rockefeller University",
     "section": "",
-    "text": "Seminar slides and workshop material will be made available on our GitHub page:\n https://github.com/ImageAnalysis-RockefellerUniversity\n\nSpearker notes go here."
+    "text": "Seminar slides and workshop material will be made available on our GitHub page:\n https://github.com/ImageAnalysis-RockefellerUniversity\n\nSpeaker notes go here."
   },
   {
     "objectID": "Training/seminar_workshop/Presentation/index.html#outline",
@@ -327,59 +328,40 @@
     "text": "3. Cell crowding + uneven illumination\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
   },
   {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.html",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.html",
-    "title": "Exercise 3 - Denoising using deep learning method (Noise2Void)",
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise4.html",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise4.html",
+    "title": "Exercise 4 - 3D segmentation using TrackMate (StarDist)",
     "section": "",
-    "text": "Original\n\n\n\n\n\n\n\nAfter processing with trained Noise2Void model\n\n\n\n\n\nSpinning disk confocal image of FISH in C. elegans (image courtesy of ABRF/LMRG Image Analysis Study).\nDownload TIF file\n\nOpen the above Z-stack in Fiji and run the command: Plugins › CSBDeep › N2V › N2V train + predict\n\nYou will be presented with a N2V train + predict window. Choose the following options and click OK.\n\nAxes of prediction input: XYZ\nNumber of epochs: 10\nNumber of steps per epoch: 10\nBatch size per step: 64\nPatch shape: 64\nNeighborhood readius: 5\n\nA window showing the progress of different steps (Preparation, Training and Prediction) will open. As the training progresses, training loss (red) and validation loss (blue) curves are displayed in the window (see below). If training goes well, then both the red and blue curves will decrease with more cycles (epochs) of training and stabilize around a minimum loss value (~ 1.0 in the image below). Training loss goes down from the beginning but Validation loss (blue curve) usually goes up in the beginning and then comes down and approaches the red curve.\n\n\n\nTraining deep learning model\n\n\nIf by the end of the training, red and blue curves do not stabilize to a minimum loss value, then increase the number of epochs to 20 or 30 and then run the command N2V train + predict again.\nAfter program finishes, it generates a denoised Z-stack from the trained model. You might need to run Image › Adjust › Brightness/Contrast... and hit Reset to adjust the display of the denoised image.\nThe Deep Learning model you just trained could be saved as a .ZIP file (to be used for prediction in the future) by clicking on the File actions &gt; Save to...\n\n\n\nSaving deep learning model\n\n\nTrained model could also be applied immediately on a single noisy image or a folder full of noisy images by using Predict &gt; Single image or stack or Predict &gt; Folder of images of stacks, respectively.\n\n\n\nApplying deep learning model",
+    "text": "Spheroid, Z-stack\n\n\n\n\n\n\n\nZ-stack segmentation\n\n\n\n\n\n\n\n3D rendering\n\n\n\n\n\n3D stack of cells in a spheroid from Zenodo.\nDownload TIF file\n\nOpen above Z-stack in Fiji and run the TrackMate plugin, just like in Exercise 2.\nSince this is a Z-stack and TrackMate works on a time-lapse sequence, we need to swap Z and T dimensions. TrackMate automatically detects it and asks for dimension swapping. Click Yes.\n\nFor the detector, choose StarDist detector from the drop-down menu.\n\nFor the tracker, choose Simple LAP tracker and the following tracking settings:\nLinking max distance=5 pixel (a lower value than in Exercise 2, since the cells are not moving)\nGap-closing max distance=10 pixel\nGap-closing max frame gap=0 (since cells are not disappearing from frame-to-frame)\n\nKeep clicking the next button until you reach the Display options window (image below). Choose:\nColor spots by: Track index\nUncheck Display tracks\n\nEvery cell will be outlined in a different color. Scroll through the stack to check the accuracy of the results. If results are not optimum, go back to the detection and/or tracker steps by clicking on the previous button (green left arrow) and changing the settings under detector and tracker.\nOn the last TrackMate window called Select an action, generate a label image by selecting Export label image from the drop-down list and clicking Execute. It will generate a grayscale Z-stack.\n\nApply colors to cells with an LUT: Image › Lookup Tables › glasbey_inverted\n\nFor creating a 3D rendering, swap Z and T dimensions back to the original values by selecting Image › Properties... and entering Z=64 and T=1. Click OK.\nGenerate 3D rendering by using 3D viewer plugin: Plugins › 3D Viewer. Select Resampling factor = 1.\nIf a window pops up asking to convert the Z-stack to 8-bit or RGB image, click Yes.\nIn the ImageJ 3D Viewer window, use left mouse click and drag to rotate and inspect the volume.\n\nWell done, if you finished all 4 exercises!",
     "crumbs": [
       "Training",
       "Image Analysis Workshop",
-      "Exercise 3 - Denoising"
+      "Exercise 4 - 3D segmentation in Fiji"
     ]
   },
   {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022.html",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022.html",
-    "title": "",
+    "objectID": "Training/Huygens_workshop_2024.html",
+    "href": "Training/Huygens_workshop_2024.html",
+    "title": "SVI/Huygens workshop",
     "section": "",
-    "text": "In this workshop, we will work through the following exercises:\n 1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)\n 2. Cell tracking using StarDist and TrackMate\n 3. Denoising using Noise2Void\n 4. Bonus – 3D segmentation using StarDist and TrackMate\n\n\nWe need to add the following three updates sites in our Fiji to install all the required plugins for this workshop:\n- CSBDeep\n- StarDist\n- TrackMate-StarDist\nStep 1: Start Fiji.\nStep 2: Select Help &gt; Update… from the menu bar.\nStep 3: Click on the button “Manage update sites”.\nStep 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.\n\n\n\nCSBDeep update site\n\n\nStep 5: Click on “Apply changes” to install the plugins.\nStep 6: Restart Fiji.\n  - StarDist plugin should now be available under Plugins &gt; StarDist &gt; StarDist 2D.\n  - Noise2Void plugin should be visible under Plugins › CSBDeep › N2V.",
+    "text": "Date:    March 27, 2024\n Location:  Weiss 305\n Presenters:  Vincent Schoonderwoert and Nicolaas van der Woort (Netherlands)\n Attendees: approx. 40 Rockefeller and local reserachers from various labs\nOrganized by the BIRC team, this was a 1-day workshop on the practical use of Huygens software, including introduction of the new Quality Control module.\nFollowing topics were discussed:\n- Image Deconvolution and Restoration\n- Deconvolution Express and Twin Slicer\n- Object Stabilizer\n- Tile Stitcher\n- Chromatic Aberration Corrector\n- CrossTalk Corrector\n- Object Analyzer\n- Colocalization Analyzer\n- Workflow Processor\n- Quality Control\nPlease reach out to BIRC, if you are interested in using any of these Huygens modules.",
     "crumbs": [
       "Training",
-      "Image Analysis Workshop"
+      "Huygens Workshop"
     ]
   },
   {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022.html#workshop",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022.html#workshop",
-    "title": "",
+    "objectID": "Training/Fundamentals_of_microscopy_2026/Image_analysis_seminar_2026.html",
+    "href": "Training/Fundamentals_of_microscopy_2026/Image_analysis_seminar_2026.html",
+    "title": "What Is an Image? Image capture, composition and basic analysis",
     "section": "",
-    "text": "In this workshop, we will work through the following exercises:\n 1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)\n 2. Cell tracking using StarDist and TrackMate\n 3. Denoising using Noise2Void\n 4. Bonus – 3D segmentation using StarDist and TrackMate\n\n\nWe need to add the following three updates sites in our Fiji to install all the required plugins for this workshop:\n- CSBDeep\n- StarDist\n- TrackMate-StarDist\nStep 1: Start Fiji.\nStep 2: Select Help &gt; Update… from the menu bar.\nStep 3: Click on the button “Manage update sites”.\nStep 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.\n\n\n\nCSBDeep update site\n\n\nStep 5: Click on “Apply changes” to install the plugins.\nStep 6: Restart Fiji.\n  - StarDist plugin should now be available under Plugins &gt; StarDist &gt; StarDist 2D.\n  - Noise2Void plugin should be visible under Plugins › CSBDeep › N2V.",
-    "crumbs": [
-      "Training",
-      "Image Analysis Workshop"
-    ]
+    "text": "This is sesion 2 of the Fundamentals of Microscopy course organized by the Bio-Imaging Resource Center (BIRC) and the Miller Brain Observatory (MBO).\nThe workshop sessions will be scheduled from 9.30 am till 12.30 pm once a month on a Thursday:"
   },
   {
-    "objectID": "Training/colocalization_workshop_2025.html",
-    "href": "Training/colocalization_workshop_2025.html",
-    "title": "Co-localization analysis Seminar and Workshop",
-    "section": "",
-    "text": "Date:\nApril 16, 2025\n\n\nLocation:\nWeiss 305\n\n\nGuest lecturer:\nPablo Ariel, UNC at Chapel Hill\n\n\nAdditional speaker:\nAlison North, The Rockefeller University, BIRC\n\n\nWorkshop support:\nVed Sharma and Tao Tong, The Rockefeller University, BIRC\n\n\nAttendees:\n35 Rockefeller researchers from various labs\nOrganized by the BIRC team, this was a seminar (2 h), followed by a hands-on workshop (2 h) on the co-localization analysis.",
-    "crumbs": [
-      "Training",
-      "Co-localization Workshop"
-    ]
-  },
-  {
-    "objectID": "Training/colocalization_workshop_2025.html#resources",
-    "href": "Training/colocalization_workshop_2025.html#resources",
-    "title": "Co-localization analysis Seminar and Workshop",
-    "section": "Resources",
-    "text": "Resources\nVideos\nMaterials for exercises and downloadable videos",
-    "crumbs": [
-      "Training",
-      "Co-localization Workshop"
-    ]
+    "objectID": "Training/Fundamentals_of_microscopy_2026/Image_analysis_seminar_2026.html#presentation-slides",
+    "href": "Training/Fundamentals_of_microscopy_2026/Image_analysis_seminar_2026.html#presentation-slides",
+    "title": "What Is an Image? Image capture, composition and basic analysis",
+    "section": "Presentation slides",
+    "text": "Presentation slides"
   }
 ]

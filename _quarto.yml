@@ -7,7 +7,7 @@ website:
     location: sidebar
   sidebar:
     style: floating
-    logo: logo6.png
+    logo: PNGs/logo6.png
     logo-href: https://www.rockefeller.edu/bioimaging/image-analysis-data-management/
     border: true
     collapse-level: 3

@@ -8,10 +8,9 @@ Attendees: approx. 20 Rockefeller researchers in-person + a similar number joine
 
 ![Seminar announcement](PNGs/Seminar_flyer.png)
 
-Download <a href="Image analysis seminar_v10.pdf" download>Seminar Slides</a>  
 
 
-## Lab Meeting Slides
+### Slide deck
 
 <div>
 
@@ -21,4 +20,6 @@ Download <a href="Image analysis seminar_v10.pdf" download>Seminar Slides</a>
 
 </div>
 
-If you prefer to view the demo in a standalone browser you can do that [here](Presentation/index.html){target="_blank"}. 
+Click [here](Presentation/index.html){target="_blank"} for viewing the slide deck in a standalone browser.
+
+Download <a href="Image analysis seminar_v10.pdf" download>Slides</a> as a PDF.  
