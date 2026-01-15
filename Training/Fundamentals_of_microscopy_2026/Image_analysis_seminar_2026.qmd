@@ -1,8 +1,9 @@
 ---
-title: "What Is an Image? Image capture, composition and basic analysis"
+title: "What Is an Image?"
+subtitle: "Image capture, composition and basic analysis"
 ---
 
-This is sesion 2 of the Fundamentals of Microscopy course organized by the Bio-Imaging Resource Center (BIRC) and the Miller Brain Observatory (MBO).
+This is session #2 of the `Fundamentals of Microscopy` 2026 course organized by the [Bio-Imaging Resource Center](https://www.rockefeller.edu/bioimaging/) (BIRC) and the [Miller Brain Observatory](https://mbo.rockefeller.edu/) (MBO).
 
 The workshop sessions will be scheduled from 9.30 am till 12.30 pm once a month on a Thursday:  
 
@@ -14,7 +15,7 @@ The workshop sessions will be scheduled from 9.30 am till 12.30 pm once a month 
 |4|Confocal Microscopy|April 30|Dr. Ivan Rey Suarez, BIRC|
 |5|Light-Sheet Microscopy|May 28|Dr. Raghav Chhetri, MBO|
 
-: Session info {tbl-colwidths="[5,50,20,25]"}
+: Session info {tbl-colwidths="[3,51,16,30]"}
 
 <br>
 
