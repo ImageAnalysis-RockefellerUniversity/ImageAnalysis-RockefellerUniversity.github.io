@@ -11,7 +11,7 @@ Additional speaker:|Alison North, The Rockefeller University, BIRC
 Workshop support:|Ved Sharma and Tao Tong, The Rockefeller University, BIRC  
 Attendees:|35 Rockefeller researchers from various labs  
 
-
+<br>
 Organized by the BIRC team, this was a seminar (2 h), followed by a hands-on workshop (2 h) on the co-localization analysis.  
 
 ## Resources  

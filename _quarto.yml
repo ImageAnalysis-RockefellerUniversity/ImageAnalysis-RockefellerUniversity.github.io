@@ -17,9 +17,18 @@ website:
         href: index.qmd
       - section: "Training"
         contents: 
-          - text: "Image Analysis seminar"
+          # - text: "---"
+          - text: "Fundamentals of Microscopy workshop"
+            href: Training/Fundamentals_of_microscopy/index.qmd
+            contents: 
+              - text: "Session 2 - Image formation and Analysis"
+                file: Training/Fundamentals_of_microscopy/What_is_an_image.qmd
+              - text: "Session 2 - Image analysis workshop"
+                file: Training/Fundamentals_of_microscopy/Image_analysis_workshop.qmd
+          - text: "&nbsp;"
+          - text: "Image Analysis seminar - 2022"
             file: Training/seminar_workshop/Image_analysis_seminar_2022.qmd
-          - text: "Image Analysis Workshop"
+          - text: "Image Analysis Workshop - 2022"
             href: Training/seminar_workshop/Image_analysis_workshop_2022.qmd
             contents: 
               - text: "Exercise 1 - Nuclei segmentation"
@@ -30,12 +39,16 @@ website:
                 file: Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.qmd
               - text: "Exercise 4 - 3D segmentation in Fiji"
                 file: Training/seminar_workshop/Image_analysis_workshop_2022_Exercise4.qmd
+          - text: "&nbsp;"
           - text: "Huygens Workshop"
             file: Training/Huygens_workshop_2024.qmd
+          - text: "&nbsp;"
           - text: "Co-localization Workshop"
             file: Training/colocalization_workshop_2025.qmd
+          - text: "&nbsp;"
           - text: "Northeast Bioimage Analysis Meeting"
             file: Training/northeast_meeting_2023.qmd
+          - text: "&nbsp;"
       - text: "User Group Meetings"
         href: usergroup_meetings.qmd
   page-navigation: true
