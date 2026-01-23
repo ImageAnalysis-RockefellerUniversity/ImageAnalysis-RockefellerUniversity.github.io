@@ -1,0 +1,61 @@
+---
+title: "Image analysis workshop"
+---
+
+Participants will learn the fundamentals of microscopy image analysis using ImageJ/Fiji.
+
+Target audience:   
+&emsp;- beginners in image analysis  
+&emsp;- people with a few years of image analysis experience
+
+## Learning objectives
+
+- Understand image bit depth, file formats and metadata
+- Working with multi-dimensional images (channels, time series)
+- Perform common image processing tasks in Fiji more effectively:
+  - adjusting brightness/contrast
+  - Adding scale bar
+  - ROIs
+  - Intensity measurements
+- Understand when to use image processing filters (Gaussian, Edge detection etc.) to help with cell/nucleus segmentation.
+
+## Prerequisite
+Participants are recommended to bring their own laptops with the latest [Fiji](https://imagej.net/software/fiji/downloads) installed.
+
+## Opening images, Image file formats, bit-depth, metadata
+
+drag and drop - TIFF, PNG  
+Bio-Formats for others  
+Opening large images with different resolutions  
+Bio-Formats - crop on import  
+
+### bit-depth
+dynamic range - https://svi.nl/DynamicRange
+
+converting between bit depths - scale when converting (image clipping https://svi.nl/Image-Clipping)
+
+
+
+
+## Working with multidimensional images (Channels, time series)
+
+
+## Brightness/Contrast, Histogram
+
+
+## Scale bar
+
+
+## Thresholding - binary and label images
+
+
+
+## ROIs, overlays
+
+
+## Intensity measurements
+
+
+## Image processing filters and Deep Learning
+- Gaussian
+- Edge detection (Canny)

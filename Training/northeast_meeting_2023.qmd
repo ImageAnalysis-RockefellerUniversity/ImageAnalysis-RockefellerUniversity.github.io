@@ -9,6 +9,7 @@ title: "Northeast Bioimage Analysis Meeting"
 |Speaker:|Ved Sharma, BIRC, The Rockefeller University|
 |Attendees:|approx. 30 researchers and bioimage analysts from the northeastern USA|
 
+<br>
 This was a day-long meeting, where the speaker gave a presentation on deep learning-based 3D bacterial cell membrane segmentation and shape analysis.  
 
 Download <a href="/Northeast_meeting/NEBIA_meeting_Ved_Sharma_presentation_v4.pdf" download>Talk Slides</a>    

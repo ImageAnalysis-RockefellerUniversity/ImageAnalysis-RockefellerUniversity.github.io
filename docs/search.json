@@ -1,13 +1,158 @@
 [
   {
-    "objectID": "Training/northeast_meeting_2023.html",
-    "href": "Training/northeast_meeting_2023.html",
-    "title": "Northeast Bioimage Analysis Meeting",
+    "objectID": "Training/Fundamentals_of_microscopy/What_is_an_image.html",
+    "href": "Training/Fundamentals_of_microscopy/What_is_an_image.html",
+    "title": "What Is an Image?",
     "section": "",
-    "text": "Date:\nOctober 20, 2023\n\n\nLocation:\nThe Jackson Laboratory, Farmington, CT\n\n\nSpeaker:\nVed Sharma, BIRC, The Rockefeller University\n\n\nAttendees:\napprox. 30 researchers and bioimage analysts from the northeastern USA\n\n\n\nThis was a day-long meeting, where the speaker gave a presentation on deep learning-based 3D bacterial cell membrane segmentation and shape analysis.\nDownload Talk Slides\nCheck out the publication for analysis details and supplementary movie\n\n\n\nSlideshow\n\n\nPlease reach out to BIRC, if you are interested in a similar analysis.",
+    "text": "This is session #2 of the Fundamentals of Microscopy 2026 course.",
     "crumbs": [
       "Training",
-      "Northeast Bioimage Analysis Meeting"
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image formation and Analysis"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/What_is_an_image.html#presentation-slides",
+    "href": "Training/Fundamentals_of_microscopy/What_is_an_image.html#presentation-slides",
+    "title": "What Is an Image?",
+    "section": "Presentation slides",
+    "text": "Presentation slides\nTBD",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image formation and Analysis"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html",
+    "title": "Image analysis workshop",
+    "section": "",
+    "text": "Participants will learn the fundamentals of microscopy image analysis using ImageJ/Fiji.\nTarget audience:\n - beginners in image analysis\n - people with a few years of image analysis experience",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#learning-objectives",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#learning-objectives",
+    "title": "Image analysis workshop",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nUnderstand image bit depth, file formats and metadata\nWorking with multi-dimensional images (channels, time series)\nPerform common image processing tasks in Fiji more effectively:\n\nadjusting brightness/contrast\nAdding scale bar\nROIs\nIntensity measurements\n\nUnderstand when to use image processing filters (Gaussian, Edge detection etc.) to help with cell/nucleus segmentation.",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#prerequisite",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#prerequisite",
+    "title": "Image analysis workshop",
+    "section": "Prerequisite",
+    "text": "Prerequisite\nParticipants are recommended to bring their own laptops with the latest Fiji installed.",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#opening-images-image-file-formats-bit-depth-metadata",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#opening-images-image-file-formats-bit-depth-metadata",
+    "title": "Image analysis workshop",
+    "section": "Opening images, Image file formats, bit-depth, metadata",
+    "text": "Opening images, Image file formats, bit-depth, metadata\ndrag and drop - TIFF, PNG\nBio-Formats for others\nOpening large images with different resolutions\nBio-Formats - crop on import\n\nbit-depth\ndynamic range - https://svi.nl/DynamicRange\nconverting between bit depths - scale when converting (image clipping https://svi.nl/Image-Clipping)",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#working-with-multidimensional-images-channels-time-series",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#working-with-multidimensional-images-channels-time-series",
+    "title": "Image analysis workshop",
+    "section": "Working with multidimensional images (Channels, time series)",
+    "text": "Working with multidimensional images (Channels, time series)",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#brightnesscontrast-histogram",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#brightnesscontrast-histogram",
+    "title": "Image analysis workshop",
+    "section": "Brightness/Contrast, Histogram",
+    "text": "Brightness/Contrast, Histogram",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#scale-bar",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#scale-bar",
+    "title": "Image analysis workshop",
+    "section": "Scale bar",
+    "text": "Scale bar",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#thresholding---binary-and-label-images",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#thresholding---binary-and-label-images",
+    "title": "Image analysis workshop",
+    "section": "Thresholding - binary and label images",
+    "text": "Thresholding - binary and label images",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#rois-overlays",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#rois-overlays",
+    "title": "Image analysis workshop",
+    "section": "ROIs, overlays",
+    "text": "ROIs, overlays",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#intensity-measurements",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#intensity-measurements",
+    "title": "Image analysis workshop",
+    "section": "Intensity measurements",
+    "text": "Intensity measurements",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#image-processing-filters-and-deep-learning",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#image-processing-filters-and-deep-learning",
+    "title": "Image analysis workshop",
+    "section": "Image processing filters and Deep Learning",
+    "text": "Image processing filters and Deep Learning\n\nGaussian\nEdge detection (Canny)",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
     ]
   },
   {
@@ -40,7 +185,7 @@
     "text": "In this workshop, we will work through the following exercises:\n 1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)\n 2. Cell tracking using StarDist and TrackMate\n 3. Denoising using Noise2Void\n 4. Bonus – 3D segmentation using StarDist and TrackMate\n\n\nWe need to add the following three updates sites in our Fiji to install all the required plugins for this workshop:\n- CSBDeep\n- StarDist\n- TrackMate-StarDist\nStep 1: Start Fiji.\nStep 2: Select Help &gt; Update… from the menu bar.\nStep 3: Click on the button “Manage update sites”.\nStep 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.\n\n\n\nCSBDeep update site\n\n\nStep 5: Click on “Apply changes” to install the plugins.\nStep 6: Restart Fiji.\n  - StarDist plugin should now be available under Plugins &gt; StarDist &gt; StarDist 2D.\n  - Noise2Void plugin should be visible under Plugins › CSBDeep › N2V.",
     "crumbs": [
       "Training",
-      "Image Analysis Workshop"
+      "Image Analysis Workshop - 2022"
     ]
   },
   {
@@ -51,7 +196,7 @@
     "text": "In this workshop, we will work through the following exercises:\n 1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)\n 2. Cell tracking using StarDist and TrackMate\n 3. Denoising using Noise2Void\n 4. Bonus – 3D segmentation using StarDist and TrackMate\n\n\nWe need to add the following three updates sites in our Fiji to install all the required plugins for this workshop:\n- CSBDeep\n- StarDist\n- TrackMate-StarDist\nStep 1: Start Fiji.\nStep 2: Select Help &gt; Update… from the menu bar.\nStep 3: Click on the button “Manage update sites”.\nStep 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.\n\n\n\nCSBDeep update site\n\n\nStep 5: Click on “Apply changes” to install the plugins.\nStep 6: Restart Fiji.\n  - StarDist plugin should now be available under Plugins &gt; StarDist &gt; StarDist 2D.\n  - Noise2Void plugin should be visible under Plugins › CSBDeep › N2V.",
     "crumbs": [
       "Training",
-      "Image Analysis Workshop"
+      "Image Analysis Workshop - 2022"
     ]
   },
   {
@@ -62,7 +207,7 @@
     "text": "Original\n\n\n\n\n\n\n\nAfter processing with trained Noise2Void model\n\n\n\n\n\nSpinning disk confocal image of FISH in C. elegans (image courtesy of ABRF/LMRG Image Analysis Study).\nDownload TIF file\n\nOpen the above Z-stack in Fiji and run the command: Plugins › CSBDeep › N2V › N2V train + predict\n\nYou will be presented with a N2V train + predict window. Choose the following options and click OK.\n\nAxes of prediction input: XYZ\nNumber of epochs: 10\nNumber of steps per epoch: 10\nBatch size per step: 64\nPatch shape: 64\nNeighborhood readius: 5\n\nA window showing the progress of different steps (Preparation, Training and Prediction) will open. As the training progresses, training loss (red) and validation loss (blue) curves are displayed in the window (see below). If training goes well, then both the red and blue curves will decrease with more cycles (epochs) of training and stabilize around a minimum loss value (~ 1.0 in the image below). Training loss goes down from the beginning but Validation loss (blue curve) usually goes up in the beginning and then comes down and approaches the red curve.\n\n\n\nTraining deep learning model\n\n\nIf by the end of the training, red and blue curves do not stabilize to a minimum loss value, then increase the number of epochs to 20 or 30 and then run the command N2V train + predict again.\nAfter program finishes, it generates a denoised Z-stack from the trained model. You might need to run Image › Adjust › Brightness/Contrast... and hit Reset to adjust the display of the denoised image.\nThe Deep Learning model you just trained could be saved as a .ZIP file (to be used for prediction in the future) by clicking on the File actions &gt; Save to...\n\n\n\nSaving deep learning model\n\n\nTrained model could also be applied immediately on a single noisy image or a folder full of noisy images by using Predict &gt; Single image or stack or Predict &gt; Folder of images of stacks, respectively.\n\n\n\nApplying deep learning model",
     "crumbs": [
       "Training",
-      "Image Analysis Workshop",
+      "Image Analysis Workshop - 2022",
       "Exercise 3 - Denoising"
     ]
   },
@@ -74,7 +219,7 @@
     "text": "BIRC organized a hybrid (in-person and on Zoom) image analysis seminar, followed by a workshop.\nAttendees: approx. 20 Rockefeller researchers in-person + a similar number joined us via Zoom.\n\nSlides\n\n\n\nUse the Space or arrow keys to navigate the slides.\nClick here to view slides in a standalone browser.\nDownload Slides as a PDF.",
     "crumbs": [
       "Training",
-      "Image Analysis seminar"
+      "Image Analysis seminar - 2022"
     ]
   },
   {
@@ -85,7 +230,7 @@
     "text": "Download TIF file\n\nHuman HT29 colon cancer cell nuclei, image from Broad Bioimage Benchmark Collection\n\nGlobal segmentation\n\nOpen above image by dragging it into the Fiji window and run Threshold command: Image &gt; Adjust &gt; Threshold...\nChoose different thresholding methods (such as Default, Huang, Otsu etc.) from the drop down list and check how well do they segment nuclei in the image.\n\nOnce satisfied with a particular method or by manually selecting the lower and upper threshold values (using sliders), click on the Apply button to generate a thresholded image.\n\n\n\n\n\n\n\nNote\n\n\n\nAll thresholding methods (such as Default, Huang, Otsu etc.) can be tested at once by using Image &gt; Adjust &gt; Auto Threshold\n\n\n\n\nLocal segmentation\nSelect your original image and run the command:\nImage &gt; Adjust &gt; Auto Local Threshold\nRun with “Try all” method to check which one gives the best result.\nFor this image, the best segmentation is achieved with the Phansalkar method (bottom row, middle image).\n\n\n\nA 3x3 montage of thresholded images using 9 different local threshold methods. Method names can be seen below each thresholded image.\n\n\n\n\nDeep Learning based segmentation using StarDist\n\nSelect your original image and run the command:\nPlugins › StarDist › StarDist 2D\nIn the follow up StarDist menu, choose Model: Versatile (fluorescent nuclei),\nand click on the Set optimized postprocessing thresholds button at the bottom.\nKeep other settings as deafult. Click OK.\n\n\n\nStarDist settings\n\n\nA segmentation label image will be generated with the nuclei ROIs added to the ROI Manager.\n\n\n\nStarDist segmentation results\n\n\nThis gives the best nuclei segmentation among all the methods tested so far.",
     "crumbs": [
       "Training",
-      "Image Analysis Workshop",
+      "Image Analysis Workshop - 2022",
       "Exercise 1 - Nuclei segmentation"
     ]
   },
@@ -162,7 +307,7 @@
     "text": "Cancer cell migration, image from Zenodo.\nDownload TIF file\n\nOpen the above time-lapse sequence in Fiji and run the command: Plugins › Tracking › TrackMate\nYou will be presented with a TrackMate window. Click Next.\n\nSelect StarDist detector from the drop-down menu. Click Next.\n\n\n\nSegmentation detector\n\n\nYou can now click on the Preview tab, to check how well StarDist is detecting the nuclei on the current slice. If detections look fine, click next to detect nuclei in the whole time-lapse sequence.\n\nKeep clicking Next button until you reach the Select a tracker window. Select Simple LAP tracker and click Next.\nChoose settings as in the image below and click Next.\n\n\n\nSimple LAP tracker\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nIf you want to track splitting and/or merging events, then choose the LAP tracker, and tick the splitting/merging checkbox under settings.\n\n\n\nKeep clicking next until you reach the Display options window (see image below, left). Here, various display options for the tracks could be selected. Choose Show tracks backward in time. Play with different settings here and scroll through the stack to see the effect of these changes.\nPlease explore the three tabs at the bottom - TrackScheme, Tracks and Spots. A lot of statistics is hidden there, such as the raw values for each nuclei in each frame of the time-lapse. All the statistics could be exported to a CSV file.\n\nKeep clicking next until you reach the last window called Select an action (see image below, right). Select Capture overlay and click Execute to generate a time-lapse movie with spots and tracks overlaid on top of the original data.\n\nA label time-lapse movie could also be generated by selecting Export label image from the drop-down list and clicking Execute.\n\n\n\n\n\n\nDisplay options\n\n\n\n\n\n\n\nSelect an action\n\n\n\n\n\n\nFinal result:\n\n\n\nCell migration with tracks",
     "crumbs": [
       "Training",
-      "Image Analysis Workshop",
+      "Image Analysis Workshop - 2022",
       "Exercise 2 - Cell tracking"
     ]
   },
@@ -335,7 +480,7 @@
     "text": "Spheroid, Z-stack\n\n\n\n\n\n\n\nZ-stack segmentation\n\n\n\n\n\n\n\n3D rendering\n\n\n\n\n\n3D stack of cells in a spheroid from Zenodo.\nDownload TIF file\n\nOpen above Z-stack in Fiji and run the TrackMate plugin, just like in Exercise 2.\nSince this is a Z-stack and TrackMate works on a time-lapse sequence, we need to swap Z and T dimensions. TrackMate automatically detects it and asks for dimension swapping. Click Yes.\n\nFor the detector, choose StarDist detector from the drop-down menu.\n\nFor the tracker, choose Simple LAP tracker and the following tracking settings:\nLinking max distance=5 pixel (a lower value than in Exercise 2, since the cells are not moving)\nGap-closing max distance=10 pixel\nGap-closing max frame gap=0 (since cells are not disappearing from frame-to-frame)\n\nKeep clicking the next button until you reach the Display options window (image below). Choose:\nColor spots by: Track index\nUncheck Display tracks\n\nEvery cell will be outlined in a different color. Scroll through the stack to check the accuracy of the results. If results are not optimum, go back to the detection and/or tracker steps by clicking on the previous button (green left arrow) and changing the settings under detector and tracker.\nOn the last TrackMate window called Select an action, generate a label image by selecting Export label image from the drop-down list and clicking Execute. It will generate a grayscale Z-stack.\n\nApply colors to cells with an LUT: Image › Lookup Tables › glasbey_inverted\n\nFor creating a 3D rendering, swap Z and T dimensions back to the original values by selecting Image › Properties... and entering Z=64 and T=1. Click OK.\nGenerate 3D rendering by using 3D viewer plugin: Plugins › 3D Viewer. Select Resampling factor = 1.\nIf a window pops up asking to convert the Z-stack to 8-bit or RGB image, click Yes.\nIn the ImageJ 3D Viewer window, use left mouse click and drag to rotate and inspect the volume.\n\nWell done, if you finished all 4 exercises!",
     "crumbs": [
       "Training",
-      "Image Analysis Workshop",
+      "Image Analysis Workshop - 2022",
       "Exercise 4 - 3D segmentation in Fiji"
     ]
   },
@@ -344,24 +489,43 @@
     "href": "Training/Huygens_workshop_2024.html",
     "title": "SVI/Huygens workshop",
     "section": "",
-    "text": "Date:    March 27, 2024\n Location:  Weiss 305\n Presenters:  Vincent Schoonderwoert and Nicolaas van der Woort (Netherlands)\n Attendees: approx. 40 Rockefeller and local reserachers from various labs\nOrganized by the BIRC team, this was a 1-day workshop on the practical use of Huygens software, including introduction of the new Quality Control module.\nFollowing topics were discussed:\n- Image Deconvolution and Restoration\n- Deconvolution Express and Twin Slicer\n- Object Stabilizer\n- Tile Stitcher\n- Chromatic Aberration Corrector\n- CrossTalk Corrector\n- Object Analyzer\n- Colocalization Analyzer\n- Workflow Processor\n- Quality Control\nPlease reach out to BIRC, if you are interested in using any of these Huygens modules.",
+    "text": "Date:\nMarch 27, 2024\n\n\nLocation:\nWeiss 305\n\n\nPresenters:\nVincent Schoonderwoert and Nicolaas van der Woort (Netherlands)\n\n\nAttendees:\napprox. 40 Rockefeller and local reserachers from various labs\n\n\n\n Organized by the BIRC team, this was a 1-day workshop on the practical use of Huygens software, including introduction of the new Quality Control module.\nFollowing topics were discussed:\n\nImage Deconvolution and Restoration\n\nDeconvolution Express and Twin Slicer\n\nObject Stabilizer\n\nTile Stitcher\n\nChromatic Aberration Corrector\n\nCrossTalk Corrector\n\nObject Analyzer\n\nColocalization Analyzer\n\nWorkflow Processor\n\nQuality Control\n\nPlease reach out to BIRC, if you are interested in using any of these Huygens modules.",
     "crumbs": [
       "Training",
       "Huygens Workshop"
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy_2026/Image_analysis_seminar_2026.html",
-    "href": "Training/Fundamentals_of_microscopy_2026/Image_analysis_seminar_2026.html",
-    "title": "What Is an Image?",
+    "objectID": "Training/northeast_meeting_2023.html",
+    "href": "Training/northeast_meeting_2023.html",
+    "title": "Northeast Bioimage Analysis Meeting",
     "section": "",
-    "text": "This is session #2 of the Fundamentals of Microscopy 2026 course organized by the Bio-Imaging Resource Center (BIRC) and the Miller Brain Observatory (MBO).\nThe workshop sessions will be scheduled from 9.30 am till 12.30 pm once a month on a Thursday:"
+    "text": "Date:\nOctober 20, 2023\n\n\nLocation:\nThe Jackson Laboratory, Farmington, CT\n\n\nSpeaker:\nVed Sharma, BIRC, The Rockefeller University\n\n\nAttendees:\napprox. 30 researchers and bioimage analysts from the northeastern USA\n\n\n\n This was a day-long meeting, where the speaker gave a presentation on deep learning-based 3D bacterial cell membrane segmentation and shape analysis.\nDownload Talk Slides\nCheck out the publication for analysis details and supplementary movie\n\n\n\nSlideshow\n\n\nPlease reach out to BIRC, if you are interested in a similar analysis.",
+    "crumbs": [
+      "Training",
+      "Northeast Bioimage Analysis Meeting"
+    ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy_2026/Image_analysis_seminar_2026.html#presentation-slides",
-    "href": "Training/Fundamentals_of_microscopy_2026/Image_analysis_seminar_2026.html#presentation-slides",
-    "title": "What Is an Image?",
-    "section": "Presentation slides",
-    "text": "Presentation slides"
+    "objectID": "Training/Fundamentals_of_microscopy/index.html",
+    "href": "Training/Fundamentals_of_microscopy/index.html",
+    "title": "Fundamentals of Microscopy workshop",
+    "section": "",
+    "text": "The Bio-Imaging Resource Center (BIRC) and the Miller Brain Observatory (MBO) are pleased to invite you to a Fundamentals of Microscopy workshop series designed to help you take your imaging to the next level. This workshop will be suitable for people using the microscopes in our centers or in their own laboratories.\nThis series will consist of five sessions, most of which will comprise:\nThe workshop sessions will be scheduled from 9.30 am till 12.30 pm once a month on a Thursday, (with coffee and cookies provided at the start!):\nAttendees will be expected to attend all 5 sessions if possible, to ensure continuity of learning. The cost of the registration will be $250 in total for the 5 sessions (partial registrations will not be permitted), and the workshop will be capped at 30 participants to ensure access to all microscopes during the practical rotations.\nThe deadline for registration is Thursday January 22, 2026.\nAfter registration, you will receive a confirmation email. We will follow up closer to the date with additional information.\nIf the attendance is sufficiently high, we will follow up with a second series on more advanced techniques, such as super-resolution, multiphoton, single molecule techniques, F-techniques, and advanced image analysis methods. We look forward to your participation and hope you will join us for this engaging and practical series.",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/index.html#learning-objectives",
+    "href": "Training/Fundamentals_of_microscopy/index.html#learning-objectives",
+    "title": "Fundamentals of Microscopy workshop",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nAfter successful completion of this workshop, participants should be able to:\n\nUnderstand the different properties of light (reflection, refraction, diffraction etc.) that are utilized to generate an optical microscopy image;\nBe familiar with the components and design of both basic and more advanced microscopes;\nKnow how to pick the most suitable objective lens on the microscope for a given sample and application, including what determines - and limits - the attainable resolution;\nUnderstand the physical principles behind fluorescence and how to choose a specific fluorochrome or combination of dyes for a biological experiment, including properties of an ideal fluorochrome and the advantages and disadvantages of using shorter or longer wavelength dyes;\nBe capable of picking or ordering a suitable filter set to use with a given combination of fluorophores;\nUnderstand how photons from the specimen are turned into digital images and factors affecting the image quality (camera noise, pixel size etc.);\nLearn how to avoid common pitfalls such as saturation or undersampling that can prevent your data from being quantitative;\nKnow when confocal microscopy is required and when widefield microscopy is more appropriate, based on the biological question and sample characteristics;\nUnderstand and predict the impact of key confocal parameters—including pinhole size, scan area, zoom/magnification, laser power, and related settings—on image resolution, contrast, signal-to-noise ratio, and photobleaching;\nBe familiar with alternative optical sectioning methods such as light-sheet microscopy, and appreciate the benefits of light-sheet vs. confocal for a given specimen and biological question;\nBe aware of the myriad of different light-sheet microscope designs and configurations, applicable to distinct research questions;\nUnderstand image bit depth, file formats, metadata and multidimensional images (channels, time series);\nPerform common image processing tasks (adjusting brightness/contrast, scale bar, ROIs, intensity measurements) in ImageJ/Fiji more effectively and understand when to use image processing filters (Gaussian, Edge detection etc.) to help with cell/nucleus segmentation.",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop"
+    ]
   }
 ]
