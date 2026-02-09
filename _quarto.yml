@@ -83,12 +83,3 @@ format:
     
 editor: 
   render-on-save: true
-
-
-        # contents: 
-        #   - text: "11/07/2024"
-        #     file: UserGroupMeetings/usergroup_20241107.qmd
-        #   - text: "05/23/2024"
-        #     file: UserGroupMeetings/usergroup_20240523.qmd
-        #   - text: "10/11/2023"
-        #     file: UserGroupMeetings/usergroup_20231011.qmd
