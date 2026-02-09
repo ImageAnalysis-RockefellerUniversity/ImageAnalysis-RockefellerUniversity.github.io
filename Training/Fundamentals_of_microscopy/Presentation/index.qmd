@@ -1,0 +1,528 @@
+---
+title: What Is an Image?
+subtitle: Image capture, composition and basic analysis <br><br>Session 2 of the Fundamentals of Microscopy workshop 2026
+
+author: <br>Ved Sharma, PhD
+institute: <br>vsharma01@rockefeller.edu<br><br>Bio-Imaging Resource Center, The Rockefeller University
+date: 2/26/2026
+date-format: long
+
+Description: Image Analyst
+abstract: |
+  Speaker: Ved Sharma, Ph.D.
+  Image Analyst
+  Bio-Imaging Resource Center, The Rockefeller University
+  Email: vsharma01@rockefeller.edu`
+
+# title-slide-attributes: 
+#   data-background-color: "#333333"
+#   data-background-size: "contain"
+#   data-background-opacity: "1.0"
+#   data-background-image: "images/title_slide.png"
+
+format:
+  revealjs:
+    menu: 
+      numbers: true
+    width: 1280
+    height: 720
+    
+    min-scale: 0.2
+    max-scale: 1.2
+    fig-cap-location: top
+    footer: "Bio-Imaging Resource Center, The Rockefeller University"
+    # theme: dark
+    theme: styles_presentation.scss # defining css/scss as theme: and not as a css: is imp for correct html rendering (quarto render)
+    slide-number: 'c'
+    transition: slide
+    transition-speed: fast
+    chalkboard: 
+      buttons: true
+    preview-links: auto
+# resources:
+#   - demo.pdf
+---
+
+## 
+
+::: {.center-block}
+<span class="line1">Fundamentals of Microscopy workshop, Session 2</span>
+<!-- <span class="line1">Session 2</span> -->
+<span class="line2">What Is an Image?</span>
+<span class="line3">Image capture, composition and basic analysis</span>
+<span class="line4">February 26, 2026</span><br>
+<span class="line5">Ved Sharma, PhD</span><br>
+<span class="line6">vsharma01@rockefeller.edu</span><span class="line6">Bio-Imaging Resource Center, The Rockefeller University</span>
+
+
+:::
+
+## Image Analysis @ Bio-Imaging Resource Center
+
+::: {.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.5em; width: 100%; text-align: center;"}
+[Click here to go to our website!](https://imageanalysis-rockefelleruniversity.github.io/){preview="true" style="padding: 15px 30px; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px; font-size: 0.8em; font-weight: normal; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"}  
+
+::: {.smallerFont0}
+<br>
+https://imageanalysis-rockefelleruniversity.github.io/
+:::
+:::
+
+## How are images formed in a microscope
+
+:::{.smallerFont0 .absolute top="670" left="10"}
+https://morgridge.org/feature/fluorescence-imaging-primer/
+:::
+
+::: {layout="[-5, 55, -10, 30]"}
+
+::: {.img-overlay}
+![](/Training/Fundamentals_of_microscopy/Presentation/images/fluorescence-illumination-highres.webp)
+<div class="red-rectangle fragment"></div>
+
+::: 
+::: {.fragment}
+![](images/IA_flowchart3.png)  
+[Image Analysis workflow]{.smallerFont1 .underline}
+:::
+:::
+
+::: {.hidden}
+page 1 drawing from
+/mnt/bircdata08/home-birc/BIRC/OMIBS Course Binder/08_16_2024_Friday/Luke Lavis/OMIBS_2024_Lavis_Lecture_1.pdf
+
+noise, FFT, PSF: OMIBS_LaRiviere2024.pdf
+PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf
+:::
+
+## Sensor vs Detector vs Camera {.smallerFont1}
+
+### Sensor
+The fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal
+
+- A Passive Infrared (PIR) sensor detects body heat
+- the light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)
+
+### Detector
+A broader term that includes sensors and other components to detect signal
+
+- A motion detector may use PIR sensors to detect movement
+- A heat detector uses temperature sensors to measure heat levels
+- Camera is a type of detector which captures light to form images
+
+### Camera
+A complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing
+
+## Microscopy cameras
+
+- Color cameras
+  - used for visual inspection
+  - used for stains and dyes (histology)
+    
+- Monochrome cameras
+  - for fluorescence imaging
+  - higher sensitivity than color cameras
+  - used with emission filters to capture specific wavelength ranges
+
+## Microscopy cameras
+
+- color cameras
+  - Phone cameras
+    - CCD
+    - CMOS (reduced power consumption than CCD)
+    - CMOS back-illuminated (use even less power than CMOS; higher price)
+  - microscope color cameras
+    - used for visual inspection
+    - used for stains and dyes (histology)
+    
+- monochrome cameras
+  - for fluorescence imaging
+  - higher sensitivity than color cameras
+  - used with emission filters to capture specific wavelength ranges
+
+- Cameras – CCDs, EMCCDs and sCMOS;
+- PMTs – newer GaAsP, Hybrid and SilVIR detectors ;
+- Avalanche Photodiodes (APDs).
+
+::: {.hidden}
+Question for Behzad/Alison
+1. termionology difference between sensor, detector and camera.
+2. Phone color cameras vs microscope color cameras.
+
+:::
+
+
+## CCD vs EMCCD vs sCMOS
+:::{.hidden}
+https://camera.hamamatsu.com/jp/en/learn/technical_information/thechnical_guide/visual_guide.html
+SilVIR detector:
+https://evidentscientific.com/en/learn/white-papers/silvir-detector-system-for-the-fv4000-laser-confocal-microscope
+:::
+
+## Images as pixels
+
+- Images are composed of a grid of pixels
+- Each pixel contains intensity information
+- Number of bits (N) determine the range of intensity levels
+
+## Image histogram, display settings
+Display range - adjusting brightness and contrast
+
+histogram
+
+## Bit depth
+
+::: {layout="[44,-1,55]" .smallerFont1}
+- Images are composed of a grid of pixels
+- Each pixel contains intensity information
+- Number of bits (N) determine the range of intensity levels
+
+|Image Type|Range of intensity levels (0 to 2^N^-1)|
+|:---:|:---:|
+|8-bit                 |0-255|
+|16-bit                |0-4095|
+|32-bit                |0-65,535|
+|RGB color (3 x 8 bits)|0-255 per channel|
+:::
+
+
+::: {.smallerFont1}
+
+|Bit depth (N)|# shades (2^N^)| Lookup table (LUT) |
+|:---:|:---:|:---:|
+|1  |2    | ![](images/shades_1bit.png)  |
+|2  |4    | ![](images/shades_2bit.png)  |
+|3  |8    | ![](images/shades_3bit.png)  |
+|4  |16   | ![](images/shades_4bit.png)  |
+|5  |32   | ![](images/shades_5bit.png)  |
+|6  |64   | ![](images/shades_6bit.png)  |
+|7  |128  | ![](images/shades_7bit.png)  |
+|8  |256  | ![](images/shades_8bit.png)  |
+  
+<!-- ![Bit depth shades](images/bit_depth_shades.png) -->
+
+:::
+
+## Changing image bit depths
+conversion
+
+## Image Metadata
+
+Image with an arrow towards the subtitle (animate)  
+In Fiji  
+Image > Properties  
+
+::: {layout="[-5, 55, -10, 30]"}
+
+![](images/F-actin_phalloidin_MTLn3_MEF/Screenshot_MEF_02_actin_z18.png)
+
+![](images/F-actin_phalloidin_MTLn3_MEF/Screenshot_Properties_MEF_02_actin_z18.png)
+
+:::
+
+## Image Metadata
+Screenshots
+
+- bioformats importer
+- metadata
+- ome-xml
+
+## Noise reduction - Deonvolution vs AI-Denoising
+:::{.hidden}
+concept of deconvolution
+https://zeiss-campus.magnet.fsu.edu/articles/basics/psf.html
+:::
+
+sample x psf = image
+
+
+
+
+
+
+
+
+## {.custom_indent3}
+
+Seminar slides and workshop material will be made available on our GitHub page:  
+<br>
+https://github.com/ImageAnalysis-RockefellerUniversity
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+## Outline {.smaller .custom_indent2}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- Segmentation
+- Cell/particle Counting and Tracking
+- Image denoising
+:::
+
+::: {.column width="60%" .fragment}
+[Open-source Softwares]{.underline}  
+ImageJ/Fiji, QuPath, Napari, CellProfiler, Icy  
+<br>
+[Commercial Softwares]{.underline}  
+Imaris, Arivis, Aivia, Huygens, MetaMorph  
+<br>
+[Machine/Deep Learning frameworks]{.underline}  
+Weka, ilastik, Labkit
+StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic  
+:::
+
+::::
+
+## What is a Raster Image?
+
+::: {layout="[44,-1,55]" .smallerFont1}
+- Raster images are composed of a grid of pixels
+- Each pixel contains intensity information
+- Number of bits (N) determine the range of intensity levels
+
+|Image Type|Range of intensity levels (0 to 2^N^-1)|
+|:---:|:---:|
+|8-bit                 |0-255|
+|16-bit                |0-4095|
+|32-bit                |0-65,535|
+|RGB color (3 x 8 bits)|0-255 per channel|
+:::
+
+
+::: {layout="[15,40,20,25]" .smallerFont2}
+  
+![Histogram](images/dew-maple-leaf-1974425_BCwindow.jpg)
+
+<div class="img-overlay">
+  ![8-bit image (256 shades)](images/dew-maple-leaf-1974425.jpg)
+  <div class="red-square"></div>
+</div>  
+
+    
+![Zoomed-in view](images/dew-maple-leaf-1974425_crop.jpg)
+
+  
+![Image as a matrix of numbers (0-255)](images/dew-maple-leaf-1974425_crop_text.jpg)
+:::
+
+## Segmentation {.smaller .loose-lines .custom_indent}
+
+Identifying object(s) of interest in an image  
+&emsp;- cells, nuclei, membrane, transcription sites etc.
+
+Segmentation is usually followed by quantitative analysis of object(s)  
+&emsp;- number of cells/nuclei, mean fluorescence intensity, shape etc.
+
+
+Divide image into areas representing object(s) of interest and background  
+
+::: {.fragment}
+[Segmentation is not an easy task to solve in most practical cases]{.mark}  
+&emsp;- Signal variability throughout the image  
+&emsp;- Noise, blur and other distortions caused by the imperfect imaging conditions  
+:::
+
+## Segmentation tools {.smaller .loose-lines}
+::: {.custom_indent}
+- Global thresholding, local thresholding
+- Image processing filters – Gaussian, Median, Sobel etc.
+- Machine learning methods (supervised learning) - Weka, Labkit, ilastik 
+- Deep Learning methods - StarDist, Cellpose
+- 3D segmentation - Imaris, Arivis
+:::
+
+## Segmentation using global thresholding
+
+::: {layout="[28, 40]"}
+![Nuclei stained with Hoechst](images/AS_09125_050116000001_A24f00d0_slice2_channel1.png)
+
+![Threshold 1](images/global_Thr2.png)
+:::
+
+::: {.smallerFont0 .absolute top="670" left="0"}
+Human HT29 colon cancer cells,  Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods
+:::
+
+
+## Segmentation using global thresholding {transition="none"}
+
+::: {layout="[28, 40]"}
+![Nuclei stained with Hoechst](images/AS_09125_050116000001_A24f00d0_slice2_channel1.png)
+
+![Threshold 2](images/global_Thr1.png)
+:::
+
+::: {.smallerFont0 .absolute top="670" left="0"}
+Human HT29 colon cancer cells,  Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods
+:::
+
+
+## Segmentation with local thresholding
+
+![Nuclei stained with Hoechst](images/AS_09125_050116000001_A24f00d0_slice2_channel1.png){.absolute top="40" left="0" width="400" height="400"}
+
+:::{.smallerFont1 .absolute top="200" left="450"}
+Auto Local <br>Threshold <br>in Fiji
+:::
+
+![](images/arrow.png){.absolute top="320" left="450" width="120" height="40"}
+
+![](images/AS_09125_050116000001_A24f00d0_slice2_channel1_autoLocalThr.png){.absolute top="65" left="620" width="640" height="640"}
+
+::: {.smallerFont0 .absolute top="600" left="0"}
+Human HT29 colon cancer cells,  Image from Broad <br>Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods
+:::
+
+## Segmentation using Machine Learning {.smaller .loose-lines .custom_indent2}
+Supervised learning - pixel classification using Random Forest classifier
+
+Fiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler
+
+Requires orders of magnitude less training data/resources than Deep Learning methods
+
+## {transition="none"}
+![](images/labkit_1.png){fig-align="center"}
+
+:::{.smallerFont3 .absolute top="692" left="74"}
+Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
+:::
+
+## {transition="none"}
+![](images/labkit_2.png){fig-align="center"}
+
+:::{.smallerFont3 .absolute top="692" left="74"}
+Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
+:::
+
+## {transition="none"}
+![](images/labkit_3.png){fig-align="center"}
+
+:::{.smallerFont3 .absolute top="692" left="74"}
+Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
+:::
+
+## Segmentation using Deep Learning {.smallerFont1 .loose-lines}
+
+:::: {.columns}
+::: {.column width="2%"}
+:::
+::: {.column width="55%"}
+Most accurate methods available for cells/nuclei segmentation  
+[Step 1: Training]{.underline}  
+Generating a Deep Learning model is resource hungry:  
+- High-end workstation  
+- Large amounts of training data (images and annotations)  
+- Training could take hours to days  
+- Good programming knowledge required - Python  
+
+[Step 2: Prediction]{.underline}  
+Using the model from step 1 to predict the segmentation results :  
+- A regular laptop is just fine  
+- Prediction takes seconds to mins  
+- Little to no programming knowledge required  
+:::
+::: {.column width="2%"}
+:::
+
+::: {.column width="40%" .fragment}
+
+<br>
+
+![StarDist (2018)](images/stardist_paper_title.png)
+
+<br>
+
+![Cellpose (2021)](images/cellpose_paper_title.png)
+:::
+::::
+
+## Segmentation using Deep Learning
+<br>
+
+::: {layout="[1,1,1]" .smallerFont2}
+  
+![Original](images/Hoechst-C42-ARv7_Dox.jpg)
+
+![StarDist plugin in Fiji](images/Hoechst-C42-ARv7_Dox_Fiji_StarDist.png)
+  
+![Cellpose](images/Hoechst-C42-ARv7_Dox_cellpose.png)
+:::
+:::{.smallerFont0 .absolute top="610" left="0"}
+Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
+:::
+:::{.smallerFont1 .absolute top="660" left="200"}
+Workshop Exercise 1: StarDist based nuclear segmenation in a challenging image in Fiji
+:::
+
+## Segmentation using StarDist in Napari
+![](images/Hoechst-C42-ARv7_Dox_Napari_StarDist.png){fig-align="center"}
+
+## Segmentation using StarDist in Qupath
+![](images/Hoechst-C42-ARv7_Dox_QuPath_StarDist.png){fig-align="center"}
+
+## {.center}
+::: {.r-fit-text}
+[Segmentation – comparison of Deep Learning models]{style="color:#c00000;"}
+:::
+
+## {transition="none"}
+![](images/Fig%203%20-%20cellpose%20paper_cellpose%20seg.png){fig-align="center"}
+
+:::{.absolute top="20" left="50"}
+[Cellpose]{style="color:#c00000; font-size:1.2em"}
+:::
+
+:::{.smallerFont0 .absolute top="650" left="1000"}
+Stringer et al 2021, Nat Methods
+:::
+
+## {transition="none"}
+![](images/Fig%20S4%20-%20cellpose%20paper_stardist%20seg.png){fig-align="center"}
+
+:::{.absolute top="20" left="50"}
+[StarDist]{style="color:#c00000; font-size:1.2em"}
+:::
+
+:::{.smallerFont0 .absolute top="650" left="1000"}
+Stringer et al 2021, Nat Methods
+:::
+
+## {.center}
+::: {.r-fit-text}
+[&emsp;&emsp;&emsp;&emsp;Challenging cases&emsp;&emsp;&emsp;&emsp;]{style="color:#c00000;"}
+:::
+
+## 1. Cell crowding
+<br>
+
+::: {layout="[1,1]"}
+![Original image](images/022_img.png)
+
+![Cellpose segmentation](images/022_img_cp_masks_outlines.png){.fragment}
+:::
+:::{.smallerFont0 .absolute top="600" left="74"}
+Image from https://github.com/MouseLand/cellpose
+:::
+
+## 2. Cell crowding + noisy signal
+::: {layout="[1,1]"}
+![Original image](images/020_img.png)
+
+![Cellpose segmentation](images/020_img_cp_masks_outlines.png){.fragment}
+:::
+:::{.smallerFont0 .absolute top="650" left="74"}
+Image from https://github.com/MouseLand/cellpose
+:::
+
+## 3. Cell crowding + uneven illumination
+::: {layout="[1,1]"}
+![Original image](images/053_img_grey.png)
+
+![Cellpose segmentation](images/053_img_grey_cp_masks_outlines.png){.fragment}
+:::
+:::{.smallerFont0 .absolute top="710" left="25"}
+Image from https://github.com/MouseLand/cellpose
+:::

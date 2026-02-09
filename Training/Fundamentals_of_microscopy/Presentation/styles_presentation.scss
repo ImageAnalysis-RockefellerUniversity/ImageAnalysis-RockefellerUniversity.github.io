@@ -1,0 +1,175 @@
+/*-- scss:rules --*/
+
+/* Title (very first slide) */
+.reveal .title {
+  font-size: 1.5em;
+  color: #002fff;
+  background-color: #ffffff;
+  // color: #ffbc2d;
+  // background-color: #333333;
+  /* font-family: "Helvetica", sans-serif;
+  font-weight: 700; */
+}
+
+/* Subtitle */
+.reveal .subtitle {
+  font-size: 1em;
+  color: #002fff;
+  background-color: #ffffff;
+}
+
+.reveal .date {
+  font-size: 0.8em;
+}
+
+// slide title
+// .reveal h2 {
+//   text-align: center !important;
+//   // outline: 3px solid red;
+// }
+
+// .reveal {
+//   // font-family: "Helvetica", sans-serif;
+//   // font-weight: 400;
+//   // font-size: 28px;
+//   color: white;
+//   background-color: #333333;
+// }
+
+.reveal h2 {
+  // display: block;
+  // width: 100%;
+  text-align: center !important;
+  color: #002fff;
+  // background-color: #eeeeee;
+  font-weight: normal;
+}
+
+/* Draw a border around each slide */
+.reveal .slides section {
+  border: 1px solid rgba(0,0,0,0.2);
+  // border: 1px dashed rgba(0,0,0,0.2);
+  // border: 3px solid #333;
+  // box-sizing: border-box;
+}
+
+.img-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.img-overlay img {
+  display: block;
+}
+
+.red-rectangle {
+  position: absolute;
+  top: 4%;
+  left: 40%;
+  width: 370px;
+  height: 100px;
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+.reveal .slides section.center-slide {
+  display: flex;
+  align-items: center;      /* vertical */
+  justify-content: center;  /* horizontal */
+}
+
+.center-block {
+  text-align: center;
+}
+
+.center-block span {
+  display: block;
+}
+
+/* per-line styling */
+.line1 {font-size: 1.5em;  color: #414141; margin-top: 0.3em;
+    // font-weight: 700;
+    }
+.line2 {  font-size: 1.7em;  color: #002fff;  margin-top: 0.5em;}
+.line3 {  font-size: 1.4em;  color: #002fff;}
+.line4 {  font-size: 1em;  color: #414141;  margin-top: 0.8em;}
+.line5 {  font-size: 1.2em;  color: #414141;  margin-top: 0.4em;}
+.line6 {  font-size: 0.8em;  color: #414141;  margin-top: 0.2em;}
+
+// .reveal figure figcaption {
+//   display: table;        // allows shrink-to-fit width
+//   margin: 0 auto;        // centers the figcaption box
+//   text-align: center;    // centers the text inside
+// }
+
+.reveal figure figcaption {
+  text-align: center;
+  // text-decoration-line: underline;
+  // text-underline-offset: 25%;
+  // font-weight: bolder;
+  // font-size: 24px;
+}
+
+.smallerFont0 {
+  font-size: 0.55em;       /* bullets and paragraph text */
+}
+.smallerFont1 {
+  font-size: 0.65em;       /* bullets and paragraph text */
+}
+
+.smallerFont2 {
+  font-size: 0.8em;       /* bullets and paragraph text */
+}
+
+.smallerFont3 {
+  font-size: 0.35em;       /* bullets and paragraph text */
+}
+
+.loose-lines p,
+.loose-lines li {
+  line-height: 1.6;
+}
+
+.custom_indent p,
+.custom_indent ul,
+.custom_indent ol {
+  margin-left: 8em;
+  margin-top: 2em;
+}
+
+.custom_indent2 p,
+.custom_indent2 ul,
+.custom_indent2 ol {
+  margin-left: 4em;
+  margin-top: 2em;
+}
+
+.custom_indent3 p {
+  margin-left: 0.5em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+
+// .bottom-align > * {
+//   display: flex;
+//   align-items: flex-end;
+// }
+
+// .smaller table {
+//   font-size: 0.75em;      /* table font smaller */
+// }
+
+// custom variables
+// $main-color: #ffffff;
+
+// .custom-title {
+//   .slide-background-content {
+//       // background-image: url("https://github.com/sebastiandres/talk_2024_05_pycon_us/blob/main/assets/main_image_16x9.png?raw=true") !important;
+//       background-image: "./dew-maple-leaf-1974425_cp_masks_drawn.jpg" !important;
+//       background-position: right !important;
+//       background-size: contain !important;
+//       background-color: $main-color !important;
+//       color: green !important;   
+//       }
+// }

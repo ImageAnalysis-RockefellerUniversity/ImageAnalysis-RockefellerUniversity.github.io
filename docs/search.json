@@ -24,6 +24,13 @@
     ]
   },
   {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/images/F-actin_phalloidin_MTLn3_MEF/info.html",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/images/F-actin_phalloidin_MTLn3_MEF/info.html",
+    "title": "",
+    "section": "",
+    "text": "original image location: /mnt/bircdata08/home-birc/vsharma01/Einstein_Backup_20211015/Condeelis Lab/Data/1D nanofiber project_Dec2018Backup/2016.01.28_actinCaps_MEF_MTLn3_2D\nFigure S4 from Sharma et al. nanofiber paper MTLn3 and MEF cells stained with phalloidin"
+  },
+  {
     "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html",
     "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html",
     "title": "Image analysis workshop",
@@ -505,6 +512,265 @@
       "Training",
       "Northeast Bioimage Analysis Meeting"
     ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Fundamentals of Microscopy workshop, Session 2  What Is an Image? Image capture, composition and basic analysis February 26, 2026 Ved Sharma, PhD vsharma01@rockefeller.eduBio-Imaging Resource Center, The Rockefeller University"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-analysis-bio-imaging-resource-center",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-analysis-bio-imaging-resource-center",
+    "title": "What Is an Image?",
+    "section": "Image Analysis @ Bio-Imaging Resource Center",
+    "text": "Image Analysis @ Bio-Imaging Resource Center\n\nClick here to go to our website!\n\n https://imageanalysis-rockefelleruniversity.github.io/"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#how-are-images-formed-in-a-microscope",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#how-are-images-formed-in-a-microscope",
+    "title": "What Is an Image?",
+    "section": "How are images formed in a microscope",
+    "text": "How are images formed in a microscope\n\nhttps://morgridge.org/feature/fluorescence-imaging-primer/\n\n\n\n\n \n\n\n\n\n\n\n\n\n \n\n\n\nImage Analysis workflow\n\n\n\n\npage 1 drawing from /mnt/bircdata08/home-birc/BIRC/OMIBS Course Binder/08_16_2024_Friday/Luke Lavis/OMIBS_2024_Lavis_Lecture_1.pdf\nnoise, FFT, PSF: OMIBS_LaRiviere2024.pdf PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
+    "title": "What Is an Image?",
+    "section": "Sensor vs Detector vs Camera",
+    "text": "Sensor vs Detector vs Camera\nSensor\nThe fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal\n\nA Passive Infrared (PIR) sensor detects body heat\nthe light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)\n\nDetector\nA broader term that includes sensors and other components to detect signal\n\nA motion detector may use PIR sensors to detect movement\nA heat detector uses temperature sensors to measure heat levels\nCamera is a type of detector which captures light to form images\n\nCamera\nA complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
+    "title": "What Is an Image?",
+    "section": "Microscopy cameras",
+    "text": "Microscopy cameras\n\nColor cameras\n\nused for visual inspection\nused for stains and dyes (histology)\n\nMonochrome cameras\n\nfor fluorescence imaging\nhigher sensitivity than color cameras\nused with emission filters to capture specific wavelength ranges"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras-1",
+    "title": "What Is an Image?",
+    "section": "Microscopy cameras",
+    "text": "Microscopy cameras\n\ncolor cameras\n\nPhone cameras\n\nCCD\nCMOS (reduced power consumption than CCD)\nCMOS back-illuminated (use even less power than CMOS; higher price)\n\nmicroscope color cameras\n\nused for visual inspection\nused for stains and dyes (histology)\n\n\nmonochrome cameras\n\nfor fluorescence imaging\nhigher sensitivity than color cameras\nused with emission filters to capture specific wavelength ranges\n\nCameras – CCDs, EMCCDs and sCMOS;\nPMTs – newer GaAsP, Hybrid and SilVIR detectors ;\nAvalanche Photodiodes (APDs).\n\n\nQuestion for Behzad/Alison 1. termionology difference between sensor, detector and camera. 2. Phone color cameras vs microscope color cameras."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-vs-emccd-vs-scmos",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-vs-emccd-vs-scmos",
+    "title": "What Is an Image?",
+    "section": "CCD vs EMCCD vs sCMOS",
+    "text": "CCD vs EMCCD vs sCMOS\n\nhttps://camera.hamamatsu.com/jp/en/learn/technical_information/thechnical_guide/visual_guide.html SilVIR detector: https://evidentscientific.com/en/learn/white-papers/silvir-detector-system-for-the-fv4000-laser-confocal-microscope"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#images-as-pixels",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#images-as-pixels",
+    "title": "What Is an Image?",
+    "section": "Images as pixels",
+    "text": "Images as pixels\n\nImages are composed of a grid of pixels\nEach pixel contains intensity information\nNumber of bits (N) determine the range of intensity levels"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-histogram-display-settings",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-histogram-display-settings",
+    "title": "What Is an Image?",
+    "section": "Image histogram, display settings",
+    "text": "Image histogram, display settings\nDisplay range - adjusting brightness and contrast\nhistogram"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#bit-depth",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#bit-depth",
+    "title": "What Is an Image?",
+    "section": "Bit depth",
+    "text": "Bit depth\n\n\n\n\nImages are composed of a grid of pixels\nEach pixel contains intensity information\nNumber of bits (N) determine the range of intensity levels\n\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\nBit depth (N)\n# shades (2N)\nLookup table (LUT)\n\n\n\n\n1\n2\n\n\n\n2\n4\n\n\n\n3\n8\n\n\n\n4\n16\n\n\n\n5\n32\n\n\n\n6\n64\n\n\n\n7\n128\n\n\n\n8\n256"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depths",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depths",
+    "title": "What Is an Image?",
+    "section": "Changing image bit depths",
+    "text": "Changing image bit depths\nconversion"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",
+    "title": "What Is an Image?",
+    "section": "Image Metadata",
+    "text": "Image Metadata\nImage with an arrow towards the subtitle (animate)\nIn Fiji\nImage &gt; Properties"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-1",
+    "title": "What Is an Image?",
+    "section": "Image Metadata",
+    "text": "Image Metadata\nScreenshots\n\nbioformats importer\nmetadata\nome-xml"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction---deonvolution-vs-ai-denoising",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction---deonvolution-vs-ai-denoising",
+    "title": "What Is an Image?",
+    "section": "Noise reduction - Deonvolution vs AI-Denoising",
+    "text": "Noise reduction - Deonvolution vs AI-Denoising\n\nconcept of deconvolution https://zeiss-campus.magnet.fsu.edu/articles/basics/psf.html\n\nsample x psf = image"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-1",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Seminar slides and workshop material will be made available on our GitHub page:\n https://github.com/ImageAnalysis-RockefellerUniversity\n\nSpeaker notes go here."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline",
+    "title": "What Is an Image?",
+    "section": "Outline",
+    "text": "Outline\n\n\n\nSegmentation\nCell/particle Counting and Tracking\nImage denoising\n\n\nOpen-source Softwares\nImageJ/Fiji, QuPath, Napari, CellProfiler, Icy\n Commercial Softwares\nImaris, Arivis, Aivia, Huygens, MetaMorph\n Machine/Deep Learning frameworks\nWeka, ilastik, Labkit StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#what-is-a-raster-image",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#what-is-a-raster-image",
+    "title": "What Is an Image?",
+    "section": "What is a Raster Image?",
+    "text": "What is a Raster Image?\n\n\n\n\nRaster images are composed of a grid of pixels\nEach pixel contains intensity information\nNumber of bits (N) determine the range of intensity levels\n\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\n\nHistogram\n\n\n\n\n\n\n\n8-bit image (256 shades)\n\n\n\n\n\n\n\n\n\n\nZoomed-in view\n\n\n\n\n\n\n\nImage as a matrix of numbers (0-255)"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation",
+    "title": "What Is an Image?",
+    "section": "Segmentation",
+    "text": "Segmentation\nIdentifying object(s) of interest in an image\n - cells, nuclei, membrane, transcription sites etc.\nSegmentation is usually followed by quantitative analysis of object(s)\n - number of cells/nuclei, mean fluorescence intensity, shape etc.\nDivide image into areas representing object(s) of interest and background\n\nSegmentation is not an easy task to solve in most practical cases\n - Signal variability throughout the image\n - Noise, blur and other distortions caused by the imperfect imaging conditions"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-tools",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-tools",
+    "title": "What Is an Image?",
+    "section": "Segmentation tools",
+    "text": "Segmentation tools\n\n\nGlobal thresholding, local thresholding\nImage processing filters – Gaussian, Median, Sobel etc.\nMachine learning methods (supervised learning) - Weka, Labkit, ilastik\nDeep Learning methods - StarDist, Cellpose\n3D segmentation - Imaris, Arivis"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding",
+    "title": "What Is an Image?",
+    "section": "Segmentation using global thresholding",
+    "text": "Segmentation using global thresholding\n\n\n\n\n\nNuclei stained with Hoechst\n\n\n\n\n\n\n\nThreshold 1\n\n\n\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding-1",
+    "title": "What Is an Image?",
+    "section": "Segmentation using global thresholding",
+    "text": "Segmentation using global thresholding\n\n\n\n\n\nNuclei stained with Hoechst\n\n\n\n\n\n\n\nThreshold 2\n\n\n\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-with-local-thresholding",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-with-local-thresholding",
+    "title": "What Is an Image?",
+    "section": "Segmentation with local thresholding",
+    "text": "Segmentation with local thresholding\n\n\nNuclei stained with Hoechst\n\n\n\n\nAuto Local Threshold in Fiji\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-machine-learning",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-machine-learning",
+    "title": "What Is an Image?",
+    "section": "Segmentation using Machine Learning",
+    "text": "Segmentation using Machine Learning\nSupervised learning - pixel classification using Random Forest classifier\nFiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler\nRequires orders of magnitude less training data/resources than Deep Learning methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-4",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-4",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning",
+    "title": "What Is an Image?",
+    "section": "Segmentation using Deep Learning",
+    "text": "Segmentation using Deep Learning\n\n\n\n\nMost accurate methods available for cells/nuclei segmentation\nStep 1: Training\nGenerating a Deep Learning model is resource hungry:\n- High-end workstation\n- Large amounts of training data (images and annotations)\n- Training could take hours to days\n- Good programming knowledge required - Python\nStep 2: Prediction\nUsing the model from step 1 to predict the segmentation results :\n- A regular laptop is just fine\n- Prediction takes seconds to mins\n- Little to no programming knowledge required\n\n\n\n\n\n\nStarDist (2018)\n\n\n\n\n\n\nCellpose (2021)"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning-1",
+    "title": "What Is an Image?",
+    "section": "Segmentation using Deep Learning",
+    "text": "Segmentation using Deep Learning\n\n\n\n\n\n\nOriginal\n\n\n\n\n\n\n\nStarDist plugin in Fiji\n\n\n\n\n\n\n\nCellpose\n\n\n\n\n\n\n\nHoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine\n\n\nWorkshop Exercise 1: StarDist based nuclear segmenation in a challenging image in Fiji"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-napari",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-napari",
+    "title": "What Is an Image?",
+    "section": "Segmentation using StarDist in Napari",
+    "text": "Segmentation using StarDist in Napari"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-qupath",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-qupath",
+    "title": "What Is an Image?",
+    "section": "Segmentation using StarDist in Qupath",
+    "text": "Segmentation using StarDist in Qupath"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-5",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-5",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Segmentation – comparison of Deep Learning models"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Cellpose\n\n\nStringer et al 2021, Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-7",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-7",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "StarDist\n\n\nStringer et al 2021, Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-8",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-8",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Challenging cases"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding",
+    "title": "What Is an Image?",
+    "section": "1. Cell crowding",
+    "text": "1. Cell crowding\n\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-noisy-signal",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-noisy-signal",
+    "title": "What Is an Image?",
+    "section": "2. Cell crowding + noisy signal",
+    "text": "2. Cell crowding + noisy signal\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-uneven-illumination",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-uneven-illumination",
+    "title": "What Is an Image?",
+    "section": "3. Cell crowding + uneven illumination",
+    "text": "3. Cell crowding + uneven illumination\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/index.html",
