@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-c084fdffc2d8559194b060343adb06cc.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-a26449a448a87fc45a43ee5400e6b4bf.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -129,7 +129,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-visibility="hidden" class="quarto-title-block center">
   <h1 class="title">What Is an Image?</h1>
   <p class="subtitle">Image capture, composition and basic analysis <br><br>Session 2 of the Fundamentals of Microscopy workshop 2026</p>
 
@@ -149,7 +149,9 @@
 <section id="section" class="slide level2">
 <h2></h2>
 <div class="center-block">
-<p><span class="line1">Fundamentals of Microscopy workshop, Session 2</span> <!-- <span class="line1">Session 2</span> --> <span class="line2">What Is an Image?</span> <span class="line3">Image capture, composition and basic analysis</span> <span class="line4">February 26, 2026</span><br> <span class="line5">Ved Sharma, PhD</span><br> <span class="line6">vsharma01@rockefeller.edu</span><span class="line6">Bio-Imaging Resource Center, The Rockefeller University</span></p>
+<p><span class="line1">Fundamentals of Microscopy workshop - Session 2</span> <!-- <span class="line1">Session 2</span> --> <span class="line2">What Is an Image?</span> <span class="line3">Image capture, composition and basic analysis</span><br></p>
+<p><span class="line5">Ved Sharma, PhD</span><br> <span class="line6">Advanced Image Analyst</span> <span class="line6">Bio-Imaging Resource Center, The Rockefeller University</span></p>
+<p><img data-src="images/Prostate_tissue_image/snapshot_crop_pixelation_transition.png"></p>
 </div>
 </section>
 <section id="image-analysis-bio-imaging-resource-center" class="slide level2">
@@ -189,6 +191,25 @@
 <div class="hidden">
 <p>page 1 drawing from /mnt/bircdata08/home-birc/BIRC/OMIBS Course Binder/08_16_2024_Friday/Luke Lavis/OMIBS_2024_Lavis_Lecture_1.pdf</p>
 <p>noise, FFT, PSF: OMIBS_LaRiviere2024.pdf PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf</p>
+</div>
+</section>
+<section id="outline" class="slide level2">
+<h2>Outline</h2>
+<div class="smallerFont2 custom_indent4">
+<h3 id="part-1---how-cameras-generate-an-image.">Part 1 - How cameras generate an image.</h3>
+<ul>
+<li>camera types (CCD, CMOS)</li>
+<li>camera noise</li>
+</ul>
+<h3 id="part-2---what-is-an-image-and-how-to-work-with-it.">Part 2 - What is an image and how to work with it.</h3>
+<ul>
+<li>bit depth</li>
+<li>metadata</li>
+<li>histogram</li>
+<li>display settings</li>
+<li>deconvolution vs AI-denoising</li>
+<li>image processing filters</li>
+</ul>
 </div>
 </section>
 <section id="sensor-vs-detector-vs-camera" class="slide level2 smallerFont1">
@@ -262,29 +283,85 @@
 <p>https://camera.hamamatsu.com/jp/en/learn/technical_information/thechnical_guide/visual_guide.html SilVIR detector: https://evidentscientific.com/en/learn/white-papers/silvir-detector-system-for-the-fv4000-laser-confocal-microscope</p>
 </div>
 </section>
-<section id="images-as-pixels" class="slide level2">
+<section id="camera-noise" class="slide level2">
+<h2>Camera noise</h2>
+<ul>
+<li>Read noise</li>
+<li>Dark noise</li>
+<li>Shot noise</li>
+</ul>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="absolute" style="transform: translate(-50%, -50%); font-size: 1.8em; width: 100%; color: #002fff; text-align: center;top: 50%; left: 50%; ">
+<p>Part 2<br><br>What is an image and how to analyze it.</p>
+</div>
+</section>
+<section id="why-should-i-learn-about-images-and-analysis-in-an-era-of-ai-and-deep-learning" class="slide level2">
+<h2>Why should I learn about images and analysis in an era of AI and Deep Learning?</h2>
+<p><br> <img data-src="images/AIDeBlur2.jpg" class="quarto-figure quarto-figure-center"></p>
+<div class="smallerFont0 absolute" style="top: 670px; left: 20px; ">
+<p>https://forum.image.sc/</p>
+</div>
+<aside class="notes">
+<p>Hallucinations in AI image processing are common and can be very misleading. Understanding the basics of how images are formed and how they can be manipulated is crucial for interpreting results correctly and avoiding pitfalls in analysis.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="images-as-pixels" class="slide level2 smaller">
 <h2>Images as pixels</h2>
 <ul>
 <li>Images are composed of a grid of pixels</li>
 <li>Each pixel contains intensity information</li>
-<li>Number of bits (N) determine the range of intensity levels</li>
 </ul>
+<div class="quarto-layout-panel" data-layout="[1,1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<figcaption>Mouse embryonic fibroblast, F-actin</figcaption>
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF_02_actin_z18_pxInspect.png"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<figcaption>Zoomed-in view</figcaption>
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF_02_actin_z18_zoom_pxInspect.png"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<figcaption>Image as a matrix of numbers (intensity values)</figcaption>
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF_02_actin_z18_zoom_pxInspect_table.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="image-histogram-display-settings" class="slide level2">
-<h2>Image histogram, display settings</h2>
-<p>Display range - adjusting brightness and contrast</p>
-<p>histogram</p>
-</section>
-<section id="bit-depth" class="slide level2">
+<section id="bit-depth" class="slide level2 scrollable">
 <h2>Bit depth</h2>
 <div class="smallerFont1 quarto-layout-panel" data-layout="[44,-1,55]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 44.0%;justify-content: flex-start;">
-<ul>
-<li>Images are composed of a grid of pixels</li>
-<li>Each pixel contains intensity information</li>
-<li>Number of bits (N) determine the range of intensity levels</li>
-</ul>
+<p>Number of bits (N) determine the range of intensity levels</p>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 1.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
@@ -314,12 +391,16 @@
 <td style="text-align: center;">RGB color (3 x 8 bits)</td>
 <td style="text-align: center;">0-255 per channel</td>
 </tr>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
-<div class="smallerFont1">
+<div class="smallerFont1 fragment">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -374,39 +455,130 @@
 <!-- ![Bit depth shades](images/bit_depth_shades.png) -->
 </div>
 </section>
-<section id="changing-image-bit-depths" class="slide level2">
-<h2>Changing image bit depths</h2>
-<p>conversion</p>
-</section>
-<section id="image-metadata" class="slide level2">
-<h2>Image Metadata</h2>
-<p>Image with an arrow towards the subtitle (animate)<br>
-In Fiji<br>
-Image &gt; Properties</p>
-<div class="quarto-layout-panel" data-layout="[-5, 55, -10, 30]">
+<section id="image-display-vs-intensity-measurements" class="slide level2">
+<h2>Image display vs intensity measurements</h2>
+<p>Histogram Brightness and Contrast LUT</p>
+<p>Are these images different?</p>
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img data-src="images/dew-maple-leaf-1974425.jpg" alt="Image 1"> <img data-src="images/dew-maple-leaf-1974425_BCwindow.jpg" alt="Image 2"></p>
+</div>
+</div>
+</div>
+<p>Display wise: YES Intensity measurement wise: NO</p>
+<p>Left image is good for making figure panel. Both images are identical in terms of pixel intensity values, so any of those can be used for intensity measurement and quantitative analysis.</p>
+</section>
+<section id="changing-image-bit-depths" class="slide level2 smaller">
+<h2>Changing image bit depths</h2>
+<h4 id="why-would-you-want-to-change-the-bit-depth-of-an-image">Why would you want to change the bit depth of an image?</h4>
+<ul>
+<li>to save space (rarely)</li>
+<li>Because a particular plugin only works on 8/16/32-bit images (most common reason)</li>
+<li>so that a large image could be loaded into RAM/opened and I can quickly take a look at it.</li>
+</ul>
+<p><span class="fragment">in Fiji, go to <code>Edit &gt; Options &gt; Conversions...</code></span></p>
+<div class="quarto-layout-panel" data-layout="[-2, 20, -10, 30, 30]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.2%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 55.0%;justify-content: center;">
-<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/Screenshot_MEF_02_actin_z18.png"></p>
+<div class="smallerFont2 fragment quarto-layout-cell" data-fig-cap-location="bottom" style="flex-basis: 21.7%;justify-content: center;">
+<p><img data-src="images/Fiji_Conversion_options_settings.png"></p>
+<p>By default this setting is checked ON.</p>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 10.0%;justify-content: flex-start;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 10.9%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
-<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/Screenshot_Properties_MEF_02_actin_z18.png"></p>
+<div class="quarto-layout-cell" style="flex-basis: 32.6%;justify-content: center;">
+<p><img data-src="images/bit_depth_change1.png" class="fragment"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 32.6%;justify-content: center;">
+<p><img data-src="images/bit_depth_change2.png" class="fragment"></p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>there are many old imageJ plugins that only work on 8-bit images.</li>
+<li>If you process your images in Huygens (e.g.&nbsp;deconvolution), it first convert your images to 32 bit in the background</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="image-metadata" class="slide level2 smaller">
+<h2>Image Metadata</h2>
+<div class="quarto-layout-panel" data-layout="[-2, 55, 45]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="img-overlay quarto-layout-cell" style="flex-basis: 53.9%;justify-content: flex-start;">
+<span class="fragment">Some metadata is displayed under the image title.</span> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/Screenshot_MEF_02_actin_z18.png">
+<div class="red-rectangle2 fragment">
+
+</div>
+</div>
+<div class="fragment quarto-layout-cell" style="flex-basis: 44.1%;justify-content: flex-start;">
+<p>A bit more metadata could be found under:<br>
+<code>Image &gt; Properties</code><br>
+<img data-src="images/F-actin_phalloidin_MTLn3_MEF/Screenshot_Properties_MEF_02_actin_z18.png"></p>
 </div>
 </div>
 </div>
 </section>
-<section id="image-metadata-1" class="slide level2">
-<h2>Image Metadata</h2>
-<p>Screenshots</p>
+
+<section id="image-metadata-detailed" class="slide level2 smaller">
+<h2>Image Metadata (detailed)</h2>
+<div class="quarto-layout-panel" data-layout="[-15, 70, -15]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 15.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="img-overlay quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-start;">
+<code>Plugins &gt; Bio-Formats &gt; Bio-Formats Importer</code> <img data-src="images/Screenshot_Bio-Formats_Import_Options.png">
+<div class="red-rectangle3 fragment">
+
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 15.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</section>
+<section id="image-metadata-detailed-1" class="slide level2 smaller center-x">
+<h2>Image Metadata (detailed)</h2>
+<p>metadata as key/value pairs<br>
+<img data-src="images/Screenshot_metadata.png"></p>
+</section>
+<section id="image-metadata-detailed-2" class="slide level2 smaller center-x">
+<h2>Image Metadata (detailed)</h2>
+<p><br> metadata in OME-XML format <img data-src="images/Screenshot_OME-XML_metadata.png"></p>
+</section>
+<section id="signal-to-noise-ratio-snr" class="slide level2 smaller loose-lines">
+<h2>Signal-to-noise ratio (SNR)</h2>
 <ul>
-<li>bioformats importer</li>
-<li>metadata</li>
-<li>ome-xml</li>
+<li>SNR is a measure of signal strength relative to background noise</li>
+<li>Higher SNR indicates clearer images with less noise</li>
+<li>SNR can be improved by optimizing imaging conditions, using better cameras, and applying image processing techniques</li>
+</ul>
+</section>
+<section id="signal-to-background-ratio-sbr" class="slide level2 smaller loose-lines">
+<h2>Signal-to-background ratio (SBR)</h2>
+<ul>
+<li>SBR is a measure of signal strength relative to background signal</li>
+<li>Higher SBR indicates better contrast between the object of interest and the background</li>
+<li>SBR can be improved by using specific stains, optimizing imaging conditions, and applying image processing techniques</li>
 </ul>
 </section>
 <section id="noise-reduction---deonvolution-vs-ai-denoising" class="slide level2">
@@ -416,7 +588,23 @@ Image &gt; Properties</p>
 </div>
 <p>sample x psf = image</p>
 </section>
-<section id="section-1" class="slide level2 custom_indent3">
+<section id="file-format" class="slide level2">
+<h2>File format</h2>
+<p>It is important to save images in a format that preserves the original pixel intensity values and metadata for accurate analysis.<br>
+<br> Common microscopy file formats: TIFF, OME-TIFF, CZI (Zeiss), ND2 (Nikon), LIF (Leica), etc.<br>
+<br> What is the difference between TIFF, PNG and JPEG?</p>
+<p>What is compression and how it affects image quality and analysis?</p>
+</section>
+<section id="resources" class="slide level2 smaller">
+<h2>Resources</h2>
+<ul>
+<li><a href="https://imagej.net/imaging/principles#Pre-processing">Principles of Scientific Imaging - imagej.net</a>
+<ul>
+<li>JPEG artifacts</li>
+</ul></li>
+</ul>
+</section>
+<section id="section-2" class="slide level2 custom_indent3">
 <h2></h2>
 <p>Seminar slides and workshop material will be made available on our GitHub page:<br>
 <br> https://github.com/ImageAnalysis-RockefellerUniversity</p>
@@ -434,7 +622,7 @@ Image &gt; Properties</p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="outline" class="slide level2 smaller custom_indent2">
+<section id="outline-1" class="slide level2 smaller custom_indent2">
 <h2>Outline</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -636,21 +824,21 @@ Weka, ilastik, Labkit StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic</p>
 <p>Fiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler</p>
 <p>Requires orders of magnitude less training data/resources than Deep Learning methods</p>
 </section>
-<section id="section-2" class="slide level2" data-transition="none">
+<section id="section-3" class="slide level2" data-transition="none">
 <h2></h2>
 
 <img data-src="images/labkit_1.png" class="quarto-figure quarto-figure-center r-stretch"><div class="smallerFont3 absolute" style="top: 692px; left: 74px; ">
 <p>Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine</p>
 </div>
 </section>
-<section id="section-3" class="slide level2" data-transition="none">
+<section id="section-4" class="slide level2" data-transition="none">
 <h2></h2>
 
 <img data-src="images/labkit_2.png" class="quarto-figure quarto-figure-center r-stretch"><div class="smallerFont3 absolute" style="top: 692px; left: 74px; ">
 <p>Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine</p>
 </div>
 </section>
-<section id="section-4" class="slide level2" data-transition="none">
+<section id="section-5" class="slide level2" data-transition="none">
 <h2></h2>
 
 <img data-src="images/labkit_3.png" class="quarto-figure quarto-figure-center r-stretch"><div class="smallerFont3 absolute" style="top: 692px; left: 74px; ">
@@ -740,13 +928,13 @@ Using the model from step 1 to predict the segmentation results :<br>
 <h2>Segmentation using StarDist in Qupath</h2>
 
 <img data-src="images/Hoechst-C42-ARv7_Dox_QuPath_StarDist.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-5" class="slide level2 center">
+<section id="section-6" class="slide level2 center">
 <h2></h2>
 <div class="r-fit-text">
 <p><span style="color:#c00000;">Segmentation – comparison of Deep Learning models</span></p>
 </div>
 </section>
-<section id="section-6" class="slide level2" data-transition="none">
+<section id="section-7" class="slide level2" data-transition="none">
 <h2></h2>
 
 <img data-src="images/Fig 3 - cellpose paper_cellpose seg.png" class="quarto-figure quarto-figure-center r-stretch"><div class="absolute" style="top: 20px; left: 50px; ">
@@ -756,7 +944,7 @@ Using the model from step 1 to predict the segmentation results :<br>
 <p>Stringer et al 2021, Nat Methods</p>
 </div>
 </section>
-<section id="section-7" class="slide level2" data-transition="none">
+<section id="section-8" class="slide level2" data-transition="none">
 <h2></h2>
 
 <img data-src="images/Fig S4 - cellpose paper_stardist seg.png" class="quarto-figure quarto-figure-center r-stretch"><div class="absolute" style="top: 20px; left: 50px; ">
@@ -766,7 +954,7 @@ Using the model from step 1 to predict the segmentation results :<br>
 <p>Stringer et al 2021, Nat Methods</p>
 </div>
 </section>
-<section id="section-8" class="slide level2 center">
+<section id="section-9" class="slide level2 center">
 <h2></h2>
 <div class="r-fit-text">
 <p><span style="color:#c00000;">    Challenging cases    </span></p>
@@ -1029,7 +1217,7 @@ Using the model from step 1 to predict the segmentation results :<br>
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'fade',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -1081,6 +1269,44 @@ Using the model from step 1 to predict the segmentation results :<br>
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

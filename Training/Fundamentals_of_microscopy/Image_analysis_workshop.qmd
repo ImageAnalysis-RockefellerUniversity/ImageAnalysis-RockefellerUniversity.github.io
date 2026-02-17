@@ -6,11 +6,11 @@ Participants will learn the fundamentals of microscopy image analysis using Imag
 
 Target audience:   
 &emsp;- beginners in image analysis  
-&emsp;- people with a few years of image analysis experience
+&emsp;- people with some image analysis experience
 
 ## Learning objectives
 
-- Understand image bit depth, file formats and metadata
+- Understand image file formats, bit depth and metadata
 - Working with multi-dimensional images (channels, time series)
 - Perform common image processing tasks in Fiji more effectively:
   - adjusting brightness/contrast
