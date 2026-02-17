@@ -7,18 +7,10 @@ institute: <br>vsharma01@rockefeller.edu<br><br>Bio-Imaging Resource Center, The
 date: 2/26/2026
 date-format: long
 
-Description: Image Analyst
-abstract: |
-  Speaker: Ved Sharma, Ph.D.
-  Image Analyst
-  Bio-Imaging Resource Center, The Rockefeller University
-  Email: vsharma01@rockefeller.edu`
-
-# title-slide-attributes: 
-#   data-background-color: "#333333"
-#   data-background-size: "contain"
-#   data-background-opacity: "1.0"
+title-slide-attributes:
+  data-visibility: "hidden"
 #   data-background-image: "images/title_slide.png"
+
 
 format:
   revealjs:
@@ -35,6 +27,7 @@ format:
     theme: styles_presentation.scss # defining css/scss as theme: and not as a css: is imp for correct html rendering (quarto render)
     slide-number: 'c'
     transition: slide
+    background-transition: fade
     transition-speed: fast
     chalkboard: 
       buttons: true
@@ -44,16 +37,17 @@ format:
 ---
 
 ## 
-
 ::: {.center-block}
-<span class="line1">Fundamentals of Microscopy workshop, Session 2</span>
+<span class="line1">Fundamentals of Microscopy workshop - Session 2</span>
 <!-- <span class="line1">Session 2</span> -->
 <span class="line2">What Is an Image?</span>
-<span class="line3">Image capture, composition and basic analysis</span>
-<span class="line4">February 26, 2026</span><br>
-<span class="line5">Ved Sharma, PhD</span><br>
-<span class="line6">vsharma01@rockefeller.edu</span><span class="line6">Bio-Imaging Resource Center, The Rockefeller University</span>
+<span class="line3">Image capture, composition and basic analysis</span><br>
 
+<span class="line5">Ved Sharma, PhD</span><br>
+<span class="line6">Advanced Image Analyst</span>
+<span class="line6">Bio-Imaging Resource Center, The Rockefeller University</span>
+
+![](images/Prostate_tissue_image/snapshot_crop_pixelation_transition.png)
 
 :::
 
@@ -93,6 +87,24 @@ page 1 drawing from
 
 noise, FFT, PSF: OMIBS_LaRiviere2024.pdf
 PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf
+:::
+
+## Outline 
+
+:::{.smallerFont2 .custom_indent4}
+### Part 1 - How cameras generate an image.
+
+- camera types (CCD, CMOS)
+- camera noise
+
+### Part 2 - What is an image and how to work with it.
+
+- bit depth
+- metadata
+- histogram
+- display settings
+- deconvolution vs AI-denoising
+- image processing filters
 :::
 
 ## Sensor vs Detector vs Camera {.smallerFont1}
@@ -159,23 +171,47 @@ SilVIR detector:
 https://evidentscientific.com/en/learn/white-papers/silvir-detector-system-for-the-fv4000-laser-confocal-microscope
 :::
 
-## Images as pixels
+## Camera noise
+- Read noise
+- Dark noise
+- Shot noise
+
+## 
+:::{.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.8em; width: 100%; color: #002fff; text-align: center;"}
+Part 2<br><br>What is an image and how to analyze it.
+:::
+
+## Why should I learn about images and analysis in an era of AI and Deep Learning?
+
+<br>
+![](images/AIDeBlur2.jpg){fig-align="center"}
+
+:::{.smallerFont0 .absolute top="670" left="20"}
+https://forum.image.sc/
+:::
+
+::: {.notes}
+Hallucinations in AI image processing are common and can be very misleading. Understanding the basics of how images are formed and how they can be manipulated is crucial for interpreting results correctly and avoiding pitfalls in analysis.
+:::
+
+
+## Images as pixels {.smaller}
 
 - Images are composed of a grid of pixels
 - Each pixel contains intensity information
-- Number of bits (N) determine the range of intensity levels
 
-## Image histogram, display settings
-Display range - adjusting brightness and contrast
+::: {layout="[1,1,1]"}
+![Mouse embryonic fibroblast, F-actin](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF_02_actin_z18_pxInspect.png)
 
-histogram
+![Zoomed-in view](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF_02_actin_z18_zoom_pxInspect.png){.fragment}
 
-## Bit depth
+![Image as a matrix of numbers (intensity values)](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF_02_actin_z18_zoom_pxInspect_table.png){.fragment}
+:::
+
+## Bit depth {.scrollable}
 
 ::: {layout="[44,-1,55]" .smallerFont1}
-- Images are composed of a grid of pixels
-- Each pixel contains intensity information
-- Number of bits (N) determine the range of intensity levels
+Number of bits (N) determine the range of intensity levels
 
 |Image Type|Range of intensity levels (0 to 2^N^-1)|
 |:---:|:---:|
@@ -183,10 +219,11 @@ histogram
 |16-bit                |0-4095|
 |32-bit                |0-65,535|
 |RGB color (3 x 8 bits)|0-255 per channel|
+|||
 :::
 
 
-::: {.smallerFont1}
+::: {.smallerFont1 .fragment}
 
 |Bit depth (N)|# shades (2^N^)| Lookup table (LUT) |
 |:---:|:---:|:---:|
@@ -203,44 +240,137 @@ histogram
 
 :::
 
-## Changing image bit depths
-conversion
+## Image display vs intensity measurements
+Histogram Brightness and Contrast LUT
 
-## Image Metadata
+Are these images different?
 
-Image with an arrow towards the subtitle (animate)  
-In Fiji  
-Image > Properties  
+::: {layout="[1,1]"}
+![Image 1](images/dew-maple-leaf-1974425.jpg)
+![Image 2](images/dew-maple-leaf-1974425_BCwindow.jpg)
+:::
 
-::: {layout="[-5, 55, -10, 30]"}
+Display wise: YES
+Intensity measurement wise: NO
 
+Left image is good for making figure panel.
+Both images are identical in terms of pixel intensity values, so any of those can be used for intensity measurement and  quantitative analysis.
+
+## Changing image bit depths {.smaller}
+
+#### Why would you want to change the bit depth of an image?
+
+- to save space (rarely)
+- Because a particular plugin only works on 8/16/32-bit images (most common reason)
+- so that a large image could be loaded into RAM/opened  and I can quickly take a look at it.   
+
+[in Fiji, go to `Edit > Options > Conversions...`]{.fragment}
+
+::: {layout="[-2, 20, -10, 30, 30]"}
+
+::: {fig-cap-location="bottom" .smallerFont2 .fragment}
+![](images/Fiji_Conversion_options_settings.png)
+
+By default this setting is checked ON.
+:::
+
+![](images/bit_depth_change1.png){.fragment width="110%"}
+
+![](images/bit_depth_change2.png){.fragment width="110%"}
+:::
+
+::: {.notes}
+- there are many old imageJ plugins that only work on 8-bit images.
+- If you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background
+:::
+
+
+## Image Metadata {.smaller}
+
+::: {layout="[-2, 55, 45]"}
+
+::: {.img-overlay}
+[Some metadata is displayed under the image title.]{.fragment}
 ![](images/F-actin_phalloidin_MTLn3_MEF/Screenshot_MEF_02_actin_z18.png)
+<div class="red-rectangle2 fragment"></div>
+:::
 
-![](images/F-actin_phalloidin_MTLn3_MEF/Screenshot_Properties_MEF_02_actin_z18.png)
+::: {.fragment}
+A bit more metadata could be found under:  
+```Image > Properties```  
+![](images/F-actin_phalloidin_MTLn3_MEF/Screenshot_Properties_MEF_02_actin_z18.png)  
+:::
 
 :::
 
-## Image Metadata
-Screenshots
+## Test {visibility="hidden"}
+testing...
+```{r}
+getwd()
+list.files()
+```
 
-- bioformats importer
-- metadata
-- ome-xml
+## Image Metadata (detailed) {.smaller}
+
+::: {layout="[-15, 70, -15]"}
+::: {.img-overlay}
+
+```Plugins > Bio-Formats > Bio-Formats Importer```
+![](images/Screenshot_Bio-Formats_Import_Options.png)
+<div class="red-rectangle3 fragment"></div>
+
+:::
+:::
+
+## Image Metadata (detailed) {.smaller .center-x}
+
+metadata as key/value pairs  
+![](images/Screenshot_metadata.png)
+
+## Image Metadata (detailed) {.smaller .center-x}
+
+<br>
+metadata in OME-XML format
+![](images/Screenshot_OME-XML_metadata.png)
+
+
+## Signal-to-noise ratio (SNR) {.smaller .loose-lines}
+- SNR is a measure of signal strength relative to background noise
+- Higher SNR indicates clearer images with less noise
+- SNR can be improved by optimizing imaging conditions, using better cameras, and applying image processing techniques
+
+## Signal-to-background ratio (SBR) {.smaller .loose-lines}
+- SBR is a measure of signal strength relative to background signal
+- Higher SBR indicates better contrast between the object of interest and the background
+- SBR can be improved by using specific stains, optimizing imaging conditions, and applying image processing techniques
 
 ## Noise reduction - Deonvolution vs AI-Denoising
 :::{.hidden}
+
 concept of deconvolution
 https://zeiss-campus.magnet.fsu.edu/articles/basics/psf.html
 :::
 
 sample x psf = image
 
+## File format
+
+It is important to save images in a format that preserves the original pixel intensity values and metadata for accurate analysis.  
+<br>
+Common microscopy file formats: TIFF, OME-TIFF, CZI (Zeiss), ND2 (Nikon), LIF (Leica), etc.  
+<br>
+What is the difference between TIFF, PNG and JPEG?
+
+What is compression and how it affects image quality and analysis?
 
 
 
 
 
+## Resources {.smaller}
 
+- [Principles of Scientific Imaging - imagej.net](https://imagej.net/imaging/principles#Pre-processing)
+  - JPEG artifacts
 
 ## {.custom_indent3}
 

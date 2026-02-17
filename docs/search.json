@@ -12,11 +12,11 @@
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/What_is_an_image.html#presentation-slides",
-    "href": "Training/Fundamentals_of_microscopy/What_is_an_image.html#presentation-slides",
+    "objectID": "Training/Fundamentals_of_microscopy/What_is_an_image.html#presentation",
+    "href": "Training/Fundamentals_of_microscopy/What_is_an_image.html#presentation",
     "title": "What Is an Image?",
-    "section": "Presentation slides",
-    "text": "Presentation slides\nTBD",
+    "section": "Presentation",
+    "text": "Presentation\nTo be added…",
     "crumbs": [
       "Training",
       "Fundamentals of Microscopy workshop",
@@ -24,298 +24,373 @@
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/images/F-actin_phalloidin_MTLn3_MEF/info.html",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/images/F-actin_phalloidin_MTLn3_MEF/info.html",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/images/Prostate_tissue_image/info.html",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/images/Prostate_tissue_image/info.html",
     "title": "",
     "section": "",
-    "text": "original image location: /mnt/bircdata08/home-birc/vsharma01/Einstein_Backup_20211015/Condeelis Lab/Data/1D nanofiber project_Dec2018Backup/2016.01.28_actinCaps_MEF_MTLn3_2D\nFigure S4 from Sharma et al. nanofiber paper MTLn3 and MEF cells stained with phalloidin"
+    "text": "Prostate tissue from Lucas (Ravetch Lab) from image TUMOR P1.qptiff qupath project in: /mnt/bircdata08/home-birc/vsharma01/Projects/Lucas_RavetchLab/Prostate_ChrisGaffney/Rep_image_for_presentations"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html",
-    "title": "Image analysis workshop",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section",
+    "title": "What Is an Image?",
     "section": "",
-    "text": "Participants will learn the fundamentals of microscopy image analysis using ImageJ/Fiji.\nTarget audience:\n - beginners in image analysis\n - people with a few years of image analysis experience",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
+    "text": "Fundamentals of Microscopy workshop - Session 2  What Is an Image? Image capture, composition and basic analysis\nVed Sharma, PhD Advanced Image Analyst Bio-Imaging Resource Center, The Rockefeller University"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#learning-objectives",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#learning-objectives",
-    "title": "Image analysis workshop",
-    "section": "Learning objectives",
-    "text": "Learning objectives\n\nUnderstand image bit depth, file formats and metadata\nWorking with multi-dimensional images (channels, time series)\nPerform common image processing tasks in Fiji more effectively:\n\nadjusting brightness/contrast\nAdding scale bar\nROIs\nIntensity measurements\n\nUnderstand when to use image processing filters (Gaussian, Edge detection etc.) to help with cell/nucleus segmentation.",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-analysis-bio-imaging-resource-center",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-analysis-bio-imaging-resource-center",
+    "title": "What Is an Image?",
+    "section": "Image Analysis @ Bio-Imaging Resource Center",
+    "text": "Image Analysis @ Bio-Imaging Resource Center\n\nClick here to go to our website!\n\n https://imageanalysis-rockefelleruniversity.github.io/"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#prerequisite",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#prerequisite",
-    "title": "Image analysis workshop",
-    "section": "Prerequisite",
-    "text": "Prerequisite\nParticipants are recommended to bring their own laptops with the latest Fiji installed.",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#how-are-images-formed-in-a-microscope",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#how-are-images-formed-in-a-microscope",
+    "title": "What Is an Image?",
+    "section": "How are images formed in a microscope",
+    "text": "How are images formed in a microscope\n\nhttps://morgridge.org/feature/fluorescence-imaging-primer/\n\n\n\n\n \n\n\n\n\n\n\n\n\n \n\n\n\nImage Analysis workflow\n\n\n\n\npage 1 drawing from /mnt/bircdata08/home-birc/BIRC/OMIBS Course Binder/08_16_2024_Friday/Luke Lavis/OMIBS_2024_Lavis_Lecture_1.pdf\nnoise, FFT, PSF: OMIBS_LaRiviere2024.pdf PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#opening-images-image-file-formats-bit-depth-metadata",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#opening-images-image-file-formats-bit-depth-metadata",
-    "title": "Image analysis workshop",
-    "section": "Opening images, Image file formats, bit-depth, metadata",
-    "text": "Opening images, Image file formats, bit-depth, metadata\ndrag and drop - TIFF, PNG\nBio-Formats for others\nOpening large images with different resolutions\nBio-Formats - crop on import\n\nbit-depth\ndynamic range - https://svi.nl/DynamicRange\nconverting between bit depths - scale when converting (image clipping https://svi.nl/Image-Clipping)",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline",
+    "title": "What Is an Image?",
+    "section": "Outline",
+    "text": "Outline\n\nPart 1 - How cameras generate an image.\n\ncamera types (CCD, CMOS)\ncamera noise\n\nPart 2 - What is an image and how to work with it.\n\nbit depth\nmetadata\nhistogram\ndisplay settings\ndeconvolution vs AI-denoising\nimage processing filters"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#working-with-multidimensional-images-channels-time-series",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#working-with-multidimensional-images-channels-time-series",
-    "title": "Image analysis workshop",
-    "section": "Working with multidimensional images (Channels, time series)",
-    "text": "Working with multidimensional images (Channels, time series)",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
+    "title": "What Is an Image?",
+    "section": "Sensor vs Detector vs Camera",
+    "text": "Sensor vs Detector vs Camera\nSensor\nThe fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal\n\nA Passive Infrared (PIR) sensor detects body heat\nthe light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)\n\nDetector\nA broader term that includes sensors and other components to detect signal\n\nA motion detector may use PIR sensors to detect movement\nA heat detector uses temperature sensors to measure heat levels\nCamera is a type of detector which captures light to form images\n\nCamera\nA complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#brightnesscontrast-histogram",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#brightnesscontrast-histogram",
-    "title": "Image analysis workshop",
-    "section": "Brightness/Contrast, Histogram",
-    "text": "Brightness/Contrast, Histogram",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
+    "title": "What Is an Image?",
+    "section": "Microscopy cameras",
+    "text": "Microscopy cameras\n\nColor cameras\n\nused for visual inspection\nused for stains and dyes (histology)\n\nMonochrome cameras\n\nfor fluorescence imaging\nhigher sensitivity than color cameras\nused with emission filters to capture specific wavelength ranges"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#scale-bar",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#scale-bar",
-    "title": "Image analysis workshop",
-    "section": "Scale bar",
-    "text": "Scale bar",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras-1",
+    "title": "What Is an Image?",
+    "section": "Microscopy cameras",
+    "text": "Microscopy cameras\n\ncolor cameras\n\nPhone cameras\n\nCCD\nCMOS (reduced power consumption than CCD)\nCMOS back-illuminated (use even less power than CMOS; higher price)\n\nmicroscope color cameras\n\nused for visual inspection\nused for stains and dyes (histology)\n\n\nmonochrome cameras\n\nfor fluorescence imaging\nhigher sensitivity than color cameras\nused with emission filters to capture specific wavelength ranges\n\nCameras – CCDs, EMCCDs and sCMOS;\nPMTs – newer GaAsP, Hybrid and SilVIR detectors ;\nAvalanche Photodiodes (APDs).\n\n\nQuestion for Behzad/Alison 1. termionology difference between sensor, detector and camera. 2. Phone color cameras vs microscope color cameras."
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#thresholding---binary-and-label-images",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#thresholding---binary-and-label-images",
-    "title": "Image analysis workshop",
-    "section": "Thresholding - binary and label images",
-    "text": "Thresholding - binary and label images",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-vs-emccd-vs-scmos",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-vs-emccd-vs-scmos",
+    "title": "What Is an Image?",
+    "section": "CCD vs EMCCD vs sCMOS",
+    "text": "CCD vs EMCCD vs sCMOS\n\nhttps://camera.hamamatsu.com/jp/en/learn/technical_information/thechnical_guide/visual_guide.html SilVIR detector: https://evidentscientific.com/en/learn/white-papers/silvir-detector-system-for-the-fv4000-laser-confocal-microscope"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#rois-overlays",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#rois-overlays",
-    "title": "Image analysis workshop",
-    "section": "ROIs, overlays",
-    "text": "ROIs, overlays",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#camera-noise",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#camera-noise",
+    "title": "What Is an Image?",
+    "section": "Camera noise",
+    "text": "Camera noise\n\nRead noise\nDark noise\nShot noise"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#intensity-measurements",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#intensity-measurements",
-    "title": "Image analysis workshop",
-    "section": "Intensity measurements",
-    "text": "Intensity measurements",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#image-processing-filters-and-deep-learning",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#image-processing-filters-and-deep-learning",
-    "title": "Image analysis workshop",
-    "section": "Image processing filters and Deep Learning",
-    "text": "Image processing filters and Deep Learning\n\nGaussian\nEdge detection (Canny)",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
-  },
-  {
-    "objectID": "Training/colocalization_workshop_2025.html",
-    "href": "Training/colocalization_workshop_2025.html",
-    "title": "Co-localization analysis Seminar and Workshop",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-1",
+    "title": "What Is an Image?",
     "section": "",
-    "text": "Date:\nApril 16, 2025\n\n\nLocation:\nWeiss 305\n\n\nGuest lecturer:\nPablo Ariel, UNC at Chapel Hill\n\n\nAdditional speaker:\nAlison North, The Rockefeller University, BIRC\n\n\nWorkshop support:\nVed Sharma and Tao Tong, The Rockefeller University, BIRC\n\n\nAttendees:\n35 Rockefeller researchers from various labs\nOrganized by the BIRC team, this was a seminar (2 h), followed by a hands-on workshop (2 h) on the co-localization analysis.",
-    "crumbs": [
-      "Training",
-      "Co-localization Workshop"
-    ]
+    "text": "Part 2What is an image and how to analyze it."
   },
   {
-    "objectID": "Training/colocalization_workshop_2025.html#resources",
-    "href": "Training/colocalization_workshop_2025.html#resources",
-    "title": "Co-localization analysis Seminar and Workshop",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#why-should-i-learn-about-images-and-analysis-in-an-era-of-ai-and-deep-learning",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#why-should-i-learn-about-images-and-analysis-in-an-era-of-ai-and-deep-learning",
+    "title": "What Is an Image?",
+    "section": "Why should I learn about images and analysis in an era of AI and Deep Learning?",
+    "text": "Why should I learn about images and analysis in an era of AI and Deep Learning?\n \n\nhttps://forum.image.sc/\n\n\nHallucinations in AI image processing are common and can be very misleading. Understanding the basics of how images are formed and how they can be manipulated is crucial for interpreting results correctly and avoiding pitfalls in analysis."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#images-as-pixels",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#images-as-pixels",
+    "title": "What Is an Image?",
+    "section": "Images as pixels",
+    "text": "Images as pixels\n\nImages are composed of a grid of pixels\nEach pixel contains intensity information\n\n\n\n\n\n\nMouse embryonic fibroblast, F-actin\n\n\n\n\n\n\n\n\nZoomed-in view\n\n\n\n\n\n\n\n\n\nImage as a matrix of numbers (intensity values)"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#bit-depth",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#bit-depth",
+    "title": "What Is an Image?",
+    "section": "Bit depth",
+    "text": "Bit depth\n\n\n\nNumber of bits (N) determine the range of intensity levels\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBit depth (N)\n# shades (2N)\nLookup table (LUT)\n\n\n\n\n1\n2\n\n\n\n2\n4\n\n\n\n3\n8\n\n\n\n4\n16\n\n\n\n5\n32\n\n\n\n6\n64\n\n\n\n7\n128\n\n\n\n8\n256"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-intensity-measurements",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-intensity-measurements",
+    "title": "What Is an Image?",
+    "section": "Image display vs intensity measurements",
+    "text": "Image display vs intensity measurements\nHistogram Brightness and Contrast LUT\nAre these images different?\n\n\n\n \n\n\n\nDisplay wise: YES Intensity measurement wise: NO\nLeft image is good for making figure panel. Both images are identical in terms of pixel intensity values, so any of those can be used for intensity measurement and quantitative analysis."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depths",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depths",
+    "title": "What Is an Image?",
+    "section": "Changing image bit depths",
+    "text": "Changing image bit depths\nWhy would you want to change the bit depth of an image?\n\nto save space (rarely)\nBecause a particular plugin only works on 8/16/32-bit images (most common reason)\nso that a large image could be loaded into RAM/opened and I can quickly take a look at it.\n\nin Fiji, go to Edit &gt; Options &gt; Conversions...\n\n\n\n \n\n\n\nBy default this setting is checked ON.\n\n\n \n\n\n\n\n\n\n\n\n\n\n\nthere are many old imageJ plugins that only work on 8-bit images.\nIf you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",
+    "title": "What Is an Image?",
+    "section": "Image Metadata",
+    "text": "Image Metadata\n\n\n\n \n\n\nSome metadata is displayed under the image title. \n\n\n\n\n\nA bit more metadata could be found under:\nImage &gt; Properties"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-detailed",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-detailed",
+    "title": "What Is an Image?",
+    "section": "Image Metadata (detailed)",
+    "text": "Image Metadata (detailed)\n\n\n\n \n\n\nPlugins &gt; Bio-Formats &gt; Bio-Formats Importer"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-detailed-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-detailed-1",
+    "title": "What Is an Image?",
+    "section": "Image Metadata (detailed)",
+    "text": "Image Metadata (detailed)\nmetadata as key/value pairs"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-detailed-2",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-detailed-2",
+    "title": "What Is an Image?",
+    "section": "Image Metadata (detailed)",
+    "text": "Image Metadata (detailed)\n metadata in OME-XML format"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-noise-ratio-snr",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-noise-ratio-snr",
+    "title": "What Is an Image?",
+    "section": "Signal-to-noise ratio (SNR)",
+    "text": "Signal-to-noise ratio (SNR)\n\nSNR is a measure of signal strength relative to background noise\nHigher SNR indicates clearer images with less noise\nSNR can be improved by optimizing imaging conditions, using better cameras, and applying image processing techniques"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-background-ratio-sbr",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-background-ratio-sbr",
+    "title": "What Is an Image?",
+    "section": "Signal-to-background ratio (SBR)",
+    "text": "Signal-to-background ratio (SBR)\n\nSBR is a measure of signal strength relative to background signal\nHigher SBR indicates better contrast between the object of interest and the background\nSBR can be improved by using specific stains, optimizing imaging conditions, and applying image processing techniques"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction---deonvolution-vs-ai-denoising",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction---deonvolution-vs-ai-denoising",
+    "title": "What Is an Image?",
+    "section": "Noise reduction - Deonvolution vs AI-Denoising",
+    "text": "Noise reduction - Deonvolution vs AI-Denoising\n\nconcept of deconvolution https://zeiss-campus.magnet.fsu.edu/articles/basics/psf.html\n\nsample x psf = image"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#file-format",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#file-format",
+    "title": "What Is an Image?",
+    "section": "File format",
+    "text": "File format\nIt is important to save images in a format that preserves the original pixel intensity values and metadata for accurate analysis.\n Common microscopy file formats: TIFF, OME-TIFF, CZI (Zeiss), ND2 (Nikon), LIF (Leica), etc.\n What is the difference between TIFF, PNG and JPEG?\nWhat is compression and how it affects image quality and analysis?"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources",
+    "title": "What Is an Image?",
     "section": "Resources",
-    "text": "Resources\nVideos\nMaterials for exercises and downloadable videos",
+    "text": "Resources\n\nPrinciples of Scientific Imaging - imagej.net\n\nJPEG artifacts"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Seminar slides and workshop material will be made available on our GitHub page:\n https://github.com/ImageAnalysis-RockefellerUniversity\n\nSpeaker notes go here."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline-1",
+    "title": "What Is an Image?",
+    "section": "Outline",
+    "text": "Outline\n\n\n\nSegmentation\nCell/particle Counting and Tracking\nImage denoising\n\n\nOpen-source Softwares\nImageJ/Fiji, QuPath, Napari, CellProfiler, Icy\n Commercial Softwares\nImaris, Arivis, Aivia, Huygens, MetaMorph\n Machine/Deep Learning frameworks\nWeka, ilastik, Labkit StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#what-is-a-raster-image",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#what-is-a-raster-image",
+    "title": "What Is an Image?",
+    "section": "What is a Raster Image?",
+    "text": "What is a Raster Image?\n\n\n\n\nRaster images are composed of a grid of pixels\nEach pixel contains intensity information\nNumber of bits (N) determine the range of intensity levels\n\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\n\nHistogram\n\n\n\n\n\n\n\n8-bit image (256 shades)\n\n\n\n\n\n\n\n\n\n\nZoomed-in view\n\n\n\n\n\n\n\nImage as a matrix of numbers (0-255)"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation",
+    "title": "What Is an Image?",
+    "section": "Segmentation",
+    "text": "Segmentation\nIdentifying object(s) of interest in an image\n - cells, nuclei, membrane, transcription sites etc.\nSegmentation is usually followed by quantitative analysis of object(s)\n - number of cells/nuclei, mean fluorescence intensity, shape etc.\nDivide image into areas representing object(s) of interest and background\n\nSegmentation is not an easy task to solve in most practical cases\n - Signal variability throughout the image\n - Noise, blur and other distortions caused by the imperfect imaging conditions"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-tools",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-tools",
+    "title": "What Is an Image?",
+    "section": "Segmentation tools",
+    "text": "Segmentation tools\n\n\nGlobal thresholding, local thresholding\nImage processing filters – Gaussian, Median, Sobel etc.\nMachine learning methods (supervised learning) - Weka, Labkit, ilastik\nDeep Learning methods - StarDist, Cellpose\n3D segmentation - Imaris, Arivis"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding",
+    "title": "What Is an Image?",
+    "section": "Segmentation using global thresholding",
+    "text": "Segmentation using global thresholding\n\n\n\n\n\nNuclei stained with Hoechst\n\n\n\n\n\n\n\nThreshold 1\n\n\n\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding-1",
+    "title": "What Is an Image?",
+    "section": "Segmentation using global thresholding",
+    "text": "Segmentation using global thresholding\n\n\n\n\n\nNuclei stained with Hoechst\n\n\n\n\n\n\n\nThreshold 2\n\n\n\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-with-local-thresholding",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-with-local-thresholding",
+    "title": "What Is an Image?",
+    "section": "Segmentation with local thresholding",
+    "text": "Segmentation with local thresholding\n\n\nNuclei stained with Hoechst\n\n\n\n\nAuto Local Threshold in Fiji\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-machine-learning",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-machine-learning",
+    "title": "What Is an Image?",
+    "section": "Segmentation using Machine Learning",
+    "text": "Segmentation using Machine Learning\nSupervised learning - pixel classification using Random Forest classifier\nFiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler\nRequires orders of magnitude less training data/resources than Deep Learning methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-4",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-4",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-5",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-5",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning",
+    "title": "What Is an Image?",
+    "section": "Segmentation using Deep Learning",
+    "text": "Segmentation using Deep Learning\n\n\n\n\nMost accurate methods available for cells/nuclei segmentation\nStep 1: Training\nGenerating a Deep Learning model is resource hungry:\n- High-end workstation\n- Large amounts of training data (images and annotations)\n- Training could take hours to days\n- Good programming knowledge required - Python\nStep 2: Prediction\nUsing the model from step 1 to predict the segmentation results :\n- A regular laptop is just fine\n- Prediction takes seconds to mins\n- Little to no programming knowledge required\n\n\n\n\n\n\nStarDist (2018)\n\n\n\n\n\n\nCellpose (2021)"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning-1",
+    "title": "What Is an Image?",
+    "section": "Segmentation using Deep Learning",
+    "text": "Segmentation using Deep Learning\n\n\n\n\n\n\nOriginal\n\n\n\n\n\n\n\nStarDist plugin in Fiji\n\n\n\n\n\n\n\nCellpose\n\n\n\n\n\n\n\nHoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine\n\n\nWorkshop Exercise 1: StarDist based nuclear segmenation in a challenging image in Fiji"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-napari",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-napari",
+    "title": "What Is an Image?",
+    "section": "Segmentation using StarDist in Napari",
+    "text": "Segmentation using StarDist in Napari"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-qupath",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-qupath",
+    "title": "What Is an Image?",
+    "section": "Segmentation using StarDist in Qupath",
+    "text": "Segmentation using StarDist in Qupath"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Segmentation – comparison of Deep Learning models"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-7",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-7",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Cellpose\n\n\nStringer et al 2021, Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-8",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-8",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "StarDist\n\n\nStringer et al 2021, Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-9",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-9",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Challenging cases"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding",
+    "title": "What Is an Image?",
+    "section": "1. Cell crowding",
+    "text": "1. Cell crowding\n\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-noisy-signal",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-noisy-signal",
+    "title": "What Is an Image?",
+    "section": "2. Cell crowding + noisy signal",
+    "text": "2. Cell crowding + noisy signal\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-uneven-illumination",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-uneven-illumination",
+    "title": "What Is an Image?",
+    "section": "3. Cell crowding + uneven illumination",
+    "text": "3. Cell crowding + uneven illumination\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
+  },
+  {
+    "objectID": "Training/northeast_meeting_2023.html",
+    "href": "Training/northeast_meeting_2023.html",
+    "title": "Northeast Bioimage Analysis Meeting",
+    "section": "",
+    "text": "Date:\nOctober 20, 2023\n\n\nLocation:\nThe Jackson Laboratory, Farmington, CT\n\n\nSpeaker:\nVed Sharma, BIRC, The Rockefeller University\n\n\nAttendees:\napprox. 30 researchers and bioimage analysts from the northeastern USA\n\n\n\n This was a day-long meeting, where the speaker gave a presentation on deep learning-based 3D bacterial cell membrane segmentation and shape analysis.\nDownload Talk Slides\nCheck out the publication for analysis details and supplementary movie\n\n\n\nSlideshow\n\n\nPlease reach out to BIRC, if you are interested in a similar analysis.",
     "crumbs": [
       "Training",
-      "Co-localization Workshop"
+      "Northeast Bioimage Analysis Meeting"
     ]
   },
   {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022.html",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022.html",
-    "title": "",
+    "objectID": "Training/Huygens_workshop_2024.html",
+    "href": "Training/Huygens_workshop_2024.html",
+    "title": "SVI/Huygens workshop",
     "section": "",
-    "text": "In this workshop, we will work through the following exercises:\n 1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)\n 2. Cell tracking using StarDist and TrackMate\n 3. Denoising using Noise2Void\n 4. Bonus – 3D segmentation using StarDist and TrackMate\n\n\nWe need to add the following three updates sites in our Fiji to install all the required plugins for this workshop:\n- CSBDeep\n- StarDist\n- TrackMate-StarDist\nStep 1: Start Fiji.\nStep 2: Select Help &gt; Update… from the menu bar.\nStep 3: Click on the button “Manage update sites”.\nStep 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.\n\n\n\nCSBDeep update site\n\n\nStep 5: Click on “Apply changes” to install the plugins.\nStep 6: Restart Fiji.\n  - StarDist plugin should now be available under Plugins &gt; StarDist &gt; StarDist 2D.\n  - Noise2Void plugin should be visible under Plugins › CSBDeep › N2V.",
+    "text": "Date:\nMarch 27, 2024\n\n\nLocation:\nWeiss 305\n\n\nPresenters:\nVincent Schoonderwoert and Nicolaas van der Woort (Netherlands)\n\n\nAttendees:\napprox. 40 Rockefeller and local reserachers from various labs\n\n\n\n Organized by the BIRC team, this was a 1-day workshop on the practical use of Huygens software, including introduction of the new Quality Control module.\nFollowing topics were discussed:\n\nImage Deconvolution and Restoration\n\nDeconvolution Express and Twin Slicer\n\nObject Stabilizer\n\nTile Stitcher\n\nChromatic Aberration Corrector\n\nCrossTalk Corrector\n\nObject Analyzer\n\nColocalization Analyzer\n\nWorkflow Processor\n\nQuality Control\n\nPlease reach out to BIRC, if you are interested in using any of these Huygens modules.",
     "crumbs": [
       "Training",
-      "Image Analysis Workshop - 2022"
+      "Huygens Workshop"
     ]
   },
   {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022.html#workshop",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022.html#workshop",
-    "title": "",
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise4.html",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise4.html",
+    "title": "Exercise 4 - 3D segmentation using TrackMate (StarDist)",
     "section": "",
-    "text": "In this workshop, we will work through the following exercises:\n 1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)\n 2. Cell tracking using StarDist and TrackMate\n 3. Denoising using Noise2Void\n 4. Bonus – 3D segmentation using StarDist and TrackMate\n\n\nWe need to add the following three updates sites in our Fiji to install all the required plugins for this workshop:\n- CSBDeep\n- StarDist\n- TrackMate-StarDist\nStep 1: Start Fiji.\nStep 2: Select Help &gt; Update… from the menu bar.\nStep 3: Click on the button “Manage update sites”.\nStep 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.\n\n\n\nCSBDeep update site\n\n\nStep 5: Click on “Apply changes” to install the plugins.\nStep 6: Restart Fiji.\n  - StarDist plugin should now be available under Plugins &gt; StarDist &gt; StarDist 2D.\n  - Noise2Void plugin should be visible under Plugins › CSBDeep › N2V.",
-    "crumbs": [
-      "Training",
-      "Image Analysis Workshop - 2022"
-    ]
-  },
-  {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.html",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.html",
-    "title": "Exercise 3 - Denoising using deep learning method (Noise2Void)",
-    "section": "",
-    "text": "Original\n\n\n\n\n\n\n\nAfter processing with trained Noise2Void model\n\n\n\n\n\nSpinning disk confocal image of FISH in C. elegans (image courtesy of ABRF/LMRG Image Analysis Study).\nDownload TIF file\n\nOpen the above Z-stack in Fiji and run the command: Plugins › CSBDeep › N2V › N2V train + predict\n\nYou will be presented with a N2V train + predict window. Choose the following options and click OK.\n\nAxes of prediction input: XYZ\nNumber of epochs: 10\nNumber of steps per epoch: 10\nBatch size per step: 64\nPatch shape: 64\nNeighborhood readius: 5\n\nA window showing the progress of different steps (Preparation, Training and Prediction) will open. As the training progresses, training loss (red) and validation loss (blue) curves are displayed in the window (see below). If training goes well, then both the red and blue curves will decrease with more cycles (epochs) of training and stabilize around a minimum loss value (~ 1.0 in the image below). Training loss goes down from the beginning but Validation loss (blue curve) usually goes up in the beginning and then comes down and approaches the red curve.\n\n\n\nTraining deep learning model\n\n\nIf by the end of the training, red and blue curves do not stabilize to a minimum loss value, then increase the number of epochs to 20 or 30 and then run the command N2V train + predict again.\nAfter program finishes, it generates a denoised Z-stack from the trained model. You might need to run Image › Adjust › Brightness/Contrast... and hit Reset to adjust the display of the denoised image.\nThe Deep Learning model you just trained could be saved as a .ZIP file (to be used for prediction in the future) by clicking on the File actions &gt; Save to...\n\n\n\nSaving deep learning model\n\n\nTrained model could also be applied immediately on a single noisy image or a folder full of noisy images by using Predict &gt; Single image or stack or Predict &gt; Folder of images of stacks, respectively.\n\n\n\nApplying deep learning model",
+    "text": "Spheroid, Z-stack\n\n\n\n\n\n\n\nZ-stack segmentation\n\n\n\n\n\n\n\n3D rendering\n\n\n\n\n\n3D stack of cells in a spheroid from Zenodo.\nDownload TIF file\n\nOpen above Z-stack in Fiji and run the TrackMate plugin, just like in Exercise 2.\nSince this is a Z-stack and TrackMate works on a time-lapse sequence, we need to swap Z and T dimensions. TrackMate automatically detects it and asks for dimension swapping. Click Yes.\n\nFor the detector, choose StarDist detector from the drop-down menu.\n\nFor the tracker, choose Simple LAP tracker and the following tracking settings:\nLinking max distance=5 pixel (a lower value than in Exercise 2, since the cells are not moving)\nGap-closing max distance=10 pixel\nGap-closing max frame gap=0 (since cells are not disappearing from frame-to-frame)\n\nKeep clicking the next button until you reach the Display options window (image below). Choose:\nColor spots by: Track index\nUncheck Display tracks\n\nEvery cell will be outlined in a different color. Scroll through the stack to check the accuracy of the results. If results are not optimum, go back to the detection and/or tracker steps by clicking on the previous button (green left arrow) and changing the settings under detector and tracker.\nOn the last TrackMate window called Select an action, generate a label image by selecting Export label image from the drop-down list and clicking Execute. It will generate a grayscale Z-stack.\n\nApply colors to cells with an LUT: Image › Lookup Tables › glasbey_inverted\n\nFor creating a 3D rendering, swap Z and T dimensions back to the original values by selecting Image › Properties... and entering Z=64 and T=1. Click OK.\nGenerate 3D rendering by using 3D viewer plugin: Plugins › 3D Viewer. Select Resampling factor = 1.\nIf a window pops up asking to convert the Z-stack to 8-bit or RGB image, click Yes.\nIn the ImageJ 3D Viewer window, use left mouse click and drag to rotate and inspect the volume.\n\nWell done, if you finished all 4 exercises!",
     "crumbs": [
       "Training",
       "Image Analysis Workshop - 2022",
-      "Exercise 3 - Denoising"
-    ]
-  },
-  {
-    "objectID": "Training/seminar_workshop/Image_analysis_seminar_2022.html",
-    "href": "Training/seminar_workshop/Image_analysis_seminar_2022.html",
-    "title": "Image Analysis seminar",
-    "section": "",
-    "text": "BIRC organized a hybrid (in-person and on Zoom) image analysis seminar, followed by a workshop.\nAttendees: approx. 20 Rockefeller researchers in-person + a similar number joined us via Zoom.\n\nSlides\n\n\n\nUse the Space or arrow keys to navigate the slides.\nClick here to view slides in a standalone browser.\nDownload Slides as a PDF.",
-    "crumbs": [
-      "Training",
-      "Image Analysis seminar - 2022"
-    ]
-  },
-  {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.html",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.html",
-    "title": "Exercise 1 - Nuclei segmentation",
-    "section": "",
-    "text": "Download TIF file\n\nHuman HT29 colon cancer cell nuclei, image from Broad Bioimage Benchmark Collection\n\nGlobal segmentation\n\nOpen above image by dragging it into the Fiji window and run Threshold command: Image &gt; Adjust &gt; Threshold...\nChoose different thresholding methods (such as Default, Huang, Otsu etc.) from the drop down list and check how well do they segment nuclei in the image.\n\nOnce satisfied with a particular method or by manually selecting the lower and upper threshold values (using sliders), click on the Apply button to generate a thresholded image.\n\n\n\n\n\n\n\nNote\n\n\n\nAll thresholding methods (such as Default, Huang, Otsu etc.) can be tested at once by using Image &gt; Adjust &gt; Auto Threshold\n\n\n\n\nLocal segmentation\nSelect your original image and run the command:\nImage &gt; Adjust &gt; Auto Local Threshold\nRun with “Try all” method to check which one gives the best result.\nFor this image, the best segmentation is achieved with the Phansalkar method (bottom row, middle image).\n\n\n\nA 3x3 montage of thresholded images using 9 different local threshold methods. Method names can be seen below each thresholded image.\n\n\n\n\nDeep Learning based segmentation using StarDist\n\nSelect your original image and run the command:\nPlugins › StarDist › StarDist 2D\nIn the follow up StarDist menu, choose Model: Versatile (fluorescent nuclei),\nand click on the Set optimized postprocessing thresholds button at the bottom.\nKeep other settings as deafult. Click OK.\n\n\n\nStarDist settings\n\n\nA segmentation label image will be generated with the nuclei ROIs added to the ROI Manager.\n\n\n\nStarDist segmentation results\n\n\nThis gives the best nuclei segmentation among all the methods tested so far.",
-    "crumbs": [
-      "Training",
-      "Image Analysis Workshop - 2022",
-      "Exercise 1 - Nuclei segmentation"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Image Analysis @ Bio-Imaging Resource Center",
-    "section": "",
-    "text": "The Bio-Imaging Resource Center provides a variety of image analysis resources/training to our users:\nIn addition, we encourage our users to contact us at the experimental design stage to have a discussion with our team of microscopy and image analysis experts, to ensure that the imaging data acquired will be appropriate for the planned analysis and research questions.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#software",
-    "href": "index.html#software",
-    "title": "Image Analysis @ Bio-Imaging Resource Center",
-    "section": "Software",
-    "text": "Software\nWe have expertise in a variety of image analysis software/tools, which we use to help analyze our users’ imaging data\n\nOpen-source software\n\n\n\n\n\n\n\nImageJ\n\n\n\n\n\n\n\nFiji\n\n\n\n\n\n\n\nQuPath\n\n\n\n\n\n\n\nNapari\n\n\n\n\n\n\n\nCellProfiler\n\n\n\n\n\n\n\nIcy\n\n\n\n\n\n\n\nMachine/Deep Learning frameworks\n\n\n\n\n\n\nCellpose\n\n\n\n\n\n\n\nInstanSeg\n\n\n\n\n\n\n\nStarDist\n\n\n\n\n\n\n\nilastik\n\n\n\n\n\n\n\nWeka\n\n\n\n\n\n\n\nLabkit\n\n\n\n\n\n\n\nDeepImageJ\n\n\n\n\n\n\n\nZeroCostDL4Mic\n\n\n\n\n\n\n\nCommercial Software\n\n\n\n\n\n\nImaris\n\n\n\n\n\n\n\nHuygens\n\n\n\n\n\n\n\nMetamorph\n\n\n\n\n\n\n\nArivis, Zeiss\n\n\n\n\n\n\n\nAivia\n\n\n\n\n\n\n\nBrain registration of volumetric light-sheet data\n\n\n\n\n\n\nClearMap",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "UserGroupMeetings/usergroup_meetings.html",
-    "href": "UserGroupMeetings/usergroup_meetings.html",
-    "title": "",
-    "section": "",
-    "text": "User Group Meetings\nImage analysis user group consists of Rockefeller University researchers who are interested in sharing knowledge and learning from each other.\nWe meet regularly to discuss the latest image analysis methods, pipelines, softwares or a new paper.\nPlease contact Ved Sharma at the Bio-Imaging Resource Center, for more details."
-  },
-  {
-    "objectID": "UserGroupMeetings/usergroup_20231011.html",
-    "href": "UserGroupMeetings/usergroup_20231011.html",
-    "title": "",
-    "section": "",
-    "text": "10/11/2023 meeting\nTitle: “Multiplexed image analysis using QuPath and deep learning tools”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 3-4 pm"
-  },
-  {
-    "objectID": "UserGroupMeetings/usergroup_20241107.html",
-    "href": "UserGroupMeetings/usergroup_20241107.html",
-    "title": "",
-    "section": "",
-    "text": "11/07/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about scripting-based batch processing in Fiji (macro) vs QuPath (Groovy)\nWith real user data, compared a Fiji macro vs QuPath Groovy batch processing pipeline\nDiscussed how to decide the best software for batch processing.\nThough QuPath Groovy scripting has a steep learning curve, it can provide most optimal batch processing experience compared to Fiji macros in terms of time, effort and reproducibility."
-  },
-  {
-    "objectID": "UserGroupMeetings/usergroup_20240523.html",
-    "href": "UserGroupMeetings/usergroup_20240523.html",
-    "title": "",
-    "section": "",
-    "text": "5/23/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 406 Greenberg Building (CRC), 2-3 pm\nBased on the user survery results during the registation, the top two topics were discussed in this meeting: 1. How to use ImageJ/Fiji more effectively\nDiscussed different ImageJ/Fiji features for the efficient navigation and working with ROIs and multiple images simultaneously: - Search bar (e.g. Split channels) - Shortcuts: in-built and custom (often used commands, e.g. save as TIFF) - Action Bar plugin - Control panel (demo w/ LUTs) - Right click options - Synchronize Windows, Tile - Moving ROIs around using Synchronize Windows, Restore Selection and ROI Manager 2. Cell/particle segmentation and counting\n- Discussed a user project on 3D segmentation of nuclei and coutning of colocalized and non-colocalized red and green particles inside and outside the nucleus - A custom image and data analysis pipeline was described, which was developed using a combination of commerical and open-source software: Huygens, Fiji, Cellpose, Imaris, Excel, GraphPad Prism"
-  },
-  {
-    "objectID": "usergroup_meetings.html",
-    "href": "usergroup_meetings.html",
-    "title": "User Group Meetings",
-    "section": "",
-    "text": "Image analysis user group consists of Rockefeller University researchers who are interested in sharing knowledge and learning from each other.\nWe meet regularly to discuss the latest image analysis methods, pipelines, softwares or a new paper.\nPlease contact Ved Sharma at the Bio-Imaging Resource Center, for more details.\n\n\n11/07/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about scripting-based batch processing in Fiji (macro) vs QuPath (Groovy)\nWith real user data, compared a Fiji macro vs QuPath Groovy batch processing pipeline\nDiscussed how to decide the best software for batch processing.\nThough QuPath Groovy scripting has a steep learning curve, it can provide most optimal batch processing experience compared to Fiji macros in terms of time, effort and reproducibility.\n\n\n\n5/23/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 406 Greenberg Building (CRC), 2-3 pm\nBased on the user survery results during the registation, the top two topics were discussed in this meeting: 1. How to use ImageJ/Fiji more effectively\nDiscussed different ImageJ/Fiji features for the efficient navigation and working with ROIs and multiple images simultaneously: - Search bar (e.g. Split channels) - Shortcuts: in-built and custom (often used commands, e.g. save as TIFF) - Action Bar plugin - Control panel (demo w/ LUTs) - Right click options - Synchronize Windows, Tile - Moving ROIs around using Synchronize Windows, Restore Selection and ROI Manager 2. Cell/particle segmentation and counting\n- Discussed a user project on 3D segmentation of nuclei and coutning of colocalized and non-colocalized red and green particles inside and outside the nucleus - A custom image and data analysis pipeline was described, which was developed using a combination of commerical and open-source software: Huygens, Fiji, Cellpose, Imaris, Excel, GraphPad Prism\n\n\n10/11/2023 meeting\nTitle: “Multiplexed image analysis using QuPath and deep learning tools”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 3-4 pm\n\n\n3/29/2023 meeting\nTitle: “3D segmentation using Deep Learning”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about checking the Z-stack voxel size and viewing it along all dimensions (XY, YZ, XZ) using orthogonal views or reslicing, before proceeding with 3D segmentation\nDiscussed a few 3D segmentation tools availbale in Fiji - 3D Objects Counter and 3D ROI Manager, and their limitations\nTalked about 3D segmentation using commercial software - Imaris and its deep learning limitations\nDiscussed a few user examples of 3D segmentation (Orientia bacteria, neurons in zebrafish brain and glomeruli in ant brain) using open-source deep learning methods - StarDist and Cellpose\n\n\n\n11/17/2022 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: A Level Training/Classrom, Welch Hall, 2-3 pm\n\nDiscussed a pipeline I worked out for a user for nuclei segmentation using Cellpose and colocalization of IF and FISH spots inside nuclei using Fiji plugin called ComDet.\nBatch process a folder full of images using Cellpose by running a Python script in Jupyter notebook\nBatch processing options in ImageJ/Fiji\nCellProfiler pipeline for batch processing\nDiscussed literature on Cell Painting and how CellProfiler could be used to process high-content screening data\n\n\n\n9/8/2022 meeting\nTitle: “Image segmentation”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nwent over the phase contrast microspoy images from one of our users and discussed the limits of classical segmentation techniques and the suitability of deep learning methods, such as Cellpose, for chanllenging segmentation problems.\ndiscussed how sometimes processing raw images with classical filters (gaussian, edge detection etc.) before feeding them into deep learning pipeline produces better restults, than using the raw images.\ndiscussed how to train a custom model in Cellpose on user’s data, for the case where the built-in Cellpose models were not good enough.\ndemonstrated the use to Cellpose on another user’s fluorescence microcopy images, where cells were clustering together. Cellpose did an excellent job of identifing cells in not only areas where there were fewer cells, but also in areas where cells were clustering together.\ndemonstrated how to do 3D segmentation in Cellpose and then export the label image into Imaris for visualization and further analysis (e.g. filtering, cell/nuclei counting and other cellular measurements)\n\n\n\n6/23/2022 meeting\nTitle: “How do I do “X” in ImageJ/Fiji?”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\nFollowing topics were discussed: - Efficient menu and commands nagivation in ImageJ/Fiji with search bar, shortcuts, Action bar plugin and control panel - Demonstrated “Synchronize Windows” feature for multichannel images; Wand tool for quickly outlining cells - Set Measurements options - Automated cell counting in fluorescence and color (RGB) images - Described a pipeline for the quantification of nuclear and cytoplasmic localization of IF signal - Tips on figure generation such as savings files as PNG, using Overlay option to annotate images and described some plugins such as QuickFigures, OMERO.figure and FigureJ",
-    "crumbs": [
-      "User Group Meetings"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html",
-    "title": "Exercise 2 - Tracking cancer cell migration in time-lapse movies",
-    "section": "",
-    "text": "Cancer cell migration, image from Zenodo.\nDownload TIF file\n\nOpen the above time-lapse sequence in Fiji and run the command: Plugins › Tracking › TrackMate\nYou will be presented with a TrackMate window. Click Next.\n\nSelect StarDist detector from the drop-down menu. Click Next.\n\n\n\nSegmentation detector\n\n\nYou can now click on the Preview tab, to check how well StarDist is detecting the nuclei on the current slice. If detections look fine, click next to detect nuclei in the whole time-lapse sequence.\n\nKeep clicking Next button until you reach the Select a tracker window. Select Simple LAP tracker and click Next.\nChoose settings as in the image below and click Next.\n\n\n\nSimple LAP tracker\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nIf you want to track splitting and/or merging events, then choose the LAP tracker, and tick the splitting/merging checkbox under settings.\n\n\n\nKeep clicking next until you reach the Display options window (see image below, left). Here, various display options for the tracks could be selected. Choose Show tracks backward in time. Play with different settings here and scroll through the stack to see the effect of these changes.\nPlease explore the three tabs at the bottom - TrackScheme, Tracks and Spots. A lot of statistics is hidden there, such as the raw values for each nuclei in each frame of the time-lapse. All the statistics could be exported to a CSV file.\n\nKeep clicking next until you reach the last window called Select an action (see image below, right). Select Capture overlay and click Execute to generate a time-lapse movie with spots and tracks overlaid on top of the original data.\n\nA label time-lapse movie could also be generated by selecting Export label image from the drop-down list and clicking Execute.\n\n\n\n\n\n\nDisplay options\n\n\n\n\n\n\n\nSelect an action\n\n\n\n\n\n\nFinal result:\n\n\n\nCell migration with tracks",
-    "crumbs": [
-      "Training",
-      "Image Analysis Workshop - 2022",
-      "Exercise 2 - Cell tracking"
+      "Exercise 4 - 3D segmentation in Fiji"
     ]
   },
   {
@@ -480,297 +555,299 @@
     "text": "3. Cell crowding + uneven illumination\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
   },
   {
-    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise4.html",
-    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise4.html",
-    "title": "Exercise 4 - 3D segmentation using TrackMate (StarDist)",
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html",
+    "title": "Exercise 2 - Tracking cancer cell migration in time-lapse movies",
     "section": "",
-    "text": "Spheroid, Z-stack\n\n\n\n\n\n\n\nZ-stack segmentation\n\n\n\n\n\n\n\n3D rendering\n\n\n\n\n\n3D stack of cells in a spheroid from Zenodo.\nDownload TIF file\n\nOpen above Z-stack in Fiji and run the TrackMate plugin, just like in Exercise 2.\nSince this is a Z-stack and TrackMate works on a time-lapse sequence, we need to swap Z and T dimensions. TrackMate automatically detects it and asks for dimension swapping. Click Yes.\n\nFor the detector, choose StarDist detector from the drop-down menu.\n\nFor the tracker, choose Simple LAP tracker and the following tracking settings:\nLinking max distance=5 pixel (a lower value than in Exercise 2, since the cells are not moving)\nGap-closing max distance=10 pixel\nGap-closing max frame gap=0 (since cells are not disappearing from frame-to-frame)\n\nKeep clicking the next button until you reach the Display options window (image below). Choose:\nColor spots by: Track index\nUncheck Display tracks\n\nEvery cell will be outlined in a different color. Scroll through the stack to check the accuracy of the results. If results are not optimum, go back to the detection and/or tracker steps by clicking on the previous button (green left arrow) and changing the settings under detector and tracker.\nOn the last TrackMate window called Select an action, generate a label image by selecting Export label image from the drop-down list and clicking Execute. It will generate a grayscale Z-stack.\n\nApply colors to cells with an LUT: Image › Lookup Tables › glasbey_inverted\n\nFor creating a 3D rendering, swap Z and T dimensions back to the original values by selecting Image › Properties... and entering Z=64 and T=1. Click OK.\nGenerate 3D rendering by using 3D viewer plugin: Plugins › 3D Viewer. Select Resampling factor = 1.\nIf a window pops up asking to convert the Z-stack to 8-bit or RGB image, click Yes.\nIn the ImageJ 3D Viewer window, use left mouse click and drag to rotate and inspect the volume.\n\nWell done, if you finished all 4 exercises!",
+    "text": "Cancer cell migration, image from Zenodo.\nDownload TIF file\n\nOpen the above time-lapse sequence in Fiji and run the command: Plugins › Tracking › TrackMate\nYou will be presented with a TrackMate window. Click Next.\n\nSelect StarDist detector from the drop-down menu. Click Next.\n\n\n\nSegmentation detector\n\n\nYou can now click on the Preview tab, to check how well StarDist is detecting the nuclei on the current slice. If detections look fine, click next to detect nuclei in the whole time-lapse sequence.\n\nKeep clicking Next button until you reach the Select a tracker window. Select Simple LAP tracker and click Next.\nChoose settings as in the image below and click Next.\n\n\n\nSimple LAP tracker\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nIf you want to track splitting and/or merging events, then choose the LAP tracker, and tick the splitting/merging checkbox under settings.\n\n\n\nKeep clicking next until you reach the Display options window (see image below, left). Here, various display options for the tracks could be selected. Choose Show tracks backward in time. Play with different settings here and scroll through the stack to see the effect of these changes.\nPlease explore the three tabs at the bottom - TrackScheme, Tracks and Spots. A lot of statistics is hidden there, such as the raw values for each nuclei in each frame of the time-lapse. All the statistics could be exported to a CSV file.\n\nKeep clicking next until you reach the last window called Select an action (see image below, right). Select Capture overlay and click Execute to generate a time-lapse movie with spots and tracks overlaid on top of the original data.\n\nA label time-lapse movie could also be generated by selecting Export label image from the drop-down list and clicking Execute.\n\n\n\n\n\n\nDisplay options\n\n\n\n\n\n\n\nSelect an action\n\n\n\n\n\n\nFinal result:\n\n\n\nCell migration with tracks",
     "crumbs": [
       "Training",
       "Image Analysis Workshop - 2022",
-      "Exercise 4 - 3D segmentation in Fiji"
+      "Exercise 2 - Cell tracking"
     ]
   },
   {
-    "objectID": "Training/Huygens_workshop_2024.html",
-    "href": "Training/Huygens_workshop_2024.html",
-    "title": "SVI/Huygens workshop",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Date:\nMarch 27, 2024\n\n\nLocation:\nWeiss 305\n\n\nPresenters:\nVincent Schoonderwoert and Nicolaas van der Woort (Netherlands)\n\n\nAttendees:\napprox. 40 Rockefeller and local reserachers from various labs\n\n\n\n Organized by the BIRC team, this was a 1-day workshop on the practical use of Huygens software, including introduction of the new Quality Control module.\nFollowing topics were discussed:\n\nImage Deconvolution and Restoration\n\nDeconvolution Express and Twin Slicer\n\nObject Stabilizer\n\nTile Stitcher\n\nChromatic Aberration Corrector\n\nCrossTalk Corrector\n\nObject Analyzer\n\nColocalization Analyzer\n\nWorkflow Processor\n\nQuality Control\n\nPlease reach out to BIRC, if you are interested in using any of these Huygens modules.",
+    "text": "About this site"
+  },
+  {
+    "objectID": "usergroup_meetings.html",
+    "href": "usergroup_meetings.html",
+    "title": "User Group Meetings",
+    "section": "",
+    "text": "Image analysis user group consists of Rockefeller University researchers who are interested in sharing knowledge and learning from each other.\nWe meet regularly to discuss the latest image analysis methods, pipelines, softwares or a new paper.\nPlease contact Ved Sharma at the Bio-Imaging Resource Center, for more details.\n\n\n11/07/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about scripting-based batch processing in Fiji (macro) vs QuPath (Groovy)\nWith real user data, compared a Fiji macro vs QuPath Groovy batch processing pipeline\nDiscussed how to decide the best software for batch processing.\nThough QuPath Groovy scripting has a steep learning curve, it can provide most optimal batch processing experience compared to Fiji macros in terms of time, effort and reproducibility.\n\n\n\n5/23/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 406 Greenberg Building (CRC), 2-3 pm\nBased on the user survery results during the registation, the top two topics were discussed in this meeting:\n1. How to use ImageJ/Fiji more effectively\nDiscussed different ImageJ/Fiji features for the efficient navigation and working with ROIs and multiple images simultaneously:\n\nSearch bar (e.g. Split channels)\nShortcuts: in-built and custom (often used commands, e.g. save as TIFF)\nAction Bar plugin\nControl panel (demo w/ LUTs)\nRight click options\nSynchronize Windows, Tile\nMoving ROIs around using Synchronize Windows, Restore Selection and ROI Manager\n\n2. Cell/particle segmentation and counting\n\nDiscussed a user project on 3D segmentation of nuclei and coutning of colocalized and non-colocalized red and green particles inside and outside the nucleus\nA custom image and data analysis pipeline was described, which was developed using a combination of commerical and open-source software: Huygens, Fiji, Cellpose, Imaris, Excel, GraphPad Prism\n\n\n\n10/11/2023 meeting\nTitle: “Multiplexed image analysis using QuPath and deep learning tools”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 3-4 pm\n\n\n3/29/2023 meeting\nTitle: “3D segmentation using Deep Learning”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about checking the Z-stack voxel size and viewing it along all dimensions (XY, YZ, XZ) using orthogonal views or reslicing, before proceeding with 3D segmentation\nDiscussed a few 3D segmentation tools availbale in Fiji - 3D Objects Counter and 3D ROI Manager, and their limitations\nTalked about 3D segmentation using commercial software - Imaris and its deep learning limitations\nDiscussed a few user examples of 3D segmentation (Orientia bacteria, neurons in zebrafish brain and glomeruli in ant brain) using open-source deep learning methods - StarDist and Cellpose\n\n\n\n11/17/2022 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: A Level Training/Classrom, Welch Hall, 2-3 pm\n\nDiscussed a pipeline I worked out for a user for nuclei segmentation using Cellpose and colocalization of IF and FISH spots inside nuclei using Fiji plugin called ComDet.\nBatch process a folder full of images using Cellpose by running a Python script in Jupyter notebook\nBatch processing options in ImageJ/Fiji\nCellProfiler pipeline for batch processing\nDiscussed literature on Cell Painting and how CellProfiler could be used to process high-content screening data\n\n\n\n9/8/2022 meeting\nTitle: “Image segmentation”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nwent over the phase contrast microspoy images from one of our users and discussed the limits of classical segmentation techniques and the suitability of deep learning methods, such as Cellpose, for chanllenging segmentation problems.\ndiscussed how sometimes processing raw images with classical filters (gaussian, edge detection etc.) before feeding them into deep learning pipeline produces better restults, than using the raw images.\ndiscussed how to train a custom model in Cellpose on user’s data, for the case where the built-in Cellpose models were not good enough.\ndemonstrated the use to Cellpose on another user’s fluorescence microcopy images, where cells were clustering together. Cellpose did an excellent job of identifing cells in not only areas where there were fewer cells, but also in areas where cells were clustering together.\ndemonstrated how to do 3D segmentation in Cellpose and then export the label image into Imaris for visualization and further analysis (e.g. filtering, cell/nuclei counting and other cellular measurements)\n\n\n\n6/23/2022 meeting\nTitle: “How do I do “X” in ImageJ/Fiji?”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\nFollowing topics were discussed:\n\nEfficient menu and commands nagivation in ImageJ/Fiji with search bar, shortcuts, Action bar plugin and control panel\nDemonstrated “Synchronize Windows” feature for multichannel images; Wand tool for quickly outlining cells\nSet Measurements options\nAutomated cell counting in fluorescence and color (RGB) images\nDescribed a pipeline for the quantification of nuclear and cytoplasmic localization of IF signal\nTips on figure generation such as savings files as PNG, using Overlay option to annotate images and described some plugins such as QuickFigures, OMERO.figure and FigureJ",
+    "crumbs": [
+      "User Group Meetings"
+    ]
+  },
+  {
+    "objectID": "UserGroupMeetings/usergroup_20240523.html",
+    "href": "UserGroupMeetings/usergroup_20240523.html",
+    "title": "",
+    "section": "",
+    "text": "5/23/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 406 Greenberg Building (CRC), 2-3 pm\nBased on the user survery results during the registation, the top two topics were discussed in this meeting: 1. How to use ImageJ/Fiji more effectively\nDiscussed different ImageJ/Fiji features for the efficient navigation and working with ROIs and multiple images simultaneously: - Search bar (e.g. Split channels) - Shortcuts: in-built and custom (often used commands, e.g. save as TIFF) - Action Bar plugin - Control panel (demo w/ LUTs) - Right click options - Synchronize Windows, Tile - Moving ROIs around using Synchronize Windows, Restore Selection and ROI Manager 2. Cell/particle segmentation and counting\n- Discussed a user project on 3D segmentation of nuclei and coutning of colocalized and non-colocalized red and green particles inside and outside the nucleus - A custom image and data analysis pipeline was described, which was developed using a combination of commerical and open-source software: Huygens, Fiji, Cellpose, Imaris, Excel, GraphPad Prism"
+  },
+  {
+    "objectID": "UserGroupMeetings/usergroup_20241107.html",
+    "href": "UserGroupMeetings/usergroup_20241107.html",
+    "title": "",
+    "section": "",
+    "text": "11/07/2024 meeting\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 2-3 pm\n\nSpoke about scripting-based batch processing in Fiji (macro) vs QuPath (Groovy)\nWith real user data, compared a Fiji macro vs QuPath Groovy batch processing pipeline\nDiscussed how to decide the best software for batch processing.\nThough QuPath Groovy scripting has a steep learning curve, it can provide most optimal batch processing experience compared to Fiji macros in terms of time, effort and reproducibility."
+  },
+  {
+    "objectID": "UserGroupMeetings/usergroup_20231011.html",
+    "href": "UserGroupMeetings/usergroup_20231011.html",
+    "title": "",
+    "section": "",
+    "text": "10/11/2023 meeting\nTitle: “Multiplexed image analysis using QuPath and deep learning tools”\nPresenter: Ved Sharma, BIRC, The Rockefeller University\nLocation/Time: 506 Greenberg Building (CRC), 3-4 pm"
+  },
+  {
+    "objectID": "UserGroupMeetings/usergroup_meetings.html",
+    "href": "UserGroupMeetings/usergroup_meetings.html",
+    "title": "",
+    "section": "",
+    "text": "User Group Meetings\nImage analysis user group consists of Rockefeller University researchers who are interested in sharing knowledge and learning from each other.\nWe meet regularly to discuss the latest image analysis methods, pipelines, softwares or a new paper.\nPlease contact Ved Sharma at the Bio-Imaging Resource Center, for more details."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Image Analysis @ Bio-Imaging Resource Center",
+    "section": "",
+    "text": "The Bio-Imaging Resource Center provides a variety of image analysis resources/training to our users:\nIn addition, we encourage our users to contact us at the experimental design stage to have a discussion with our team of microscopy and image analysis experts, to ensure that the imaging data acquired will be appropriate for the planned analysis and research questions.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#software",
+    "href": "index.html#software",
+    "title": "Image Analysis @ Bio-Imaging Resource Center",
+    "section": "Software",
+    "text": "Software\nWe have expertise in a variety of image analysis software/tools, which we use to help analyze our users’ imaging data\n\nOpen-source software\n\n\n\n\n\n\n\nImageJ\n\n\n\n\n\n\n\nFiji\n\n\n\n\n\n\n\nQuPath\n\n\n\n\n\n\n\nNapari\n\n\n\n\n\n\n\nCellProfiler\n\n\n\n\n\n\n\nIcy\n\n\n\n\n\n\n\nMachine/Deep Learning frameworks\n\n\n\n\n\n\nCellpose\n\n\n\n\n\n\n\nInstanSeg\n\n\n\n\n\n\n\nStarDist\n\n\n\n\n\n\n\nilastik\n\n\n\n\n\n\n\nWeka\n\n\n\n\n\n\n\nLabkit\n\n\n\n\n\n\n\nDeepImageJ\n\n\n\n\n\n\n\nZeroCostDL4Mic\n\n\n\n\n\n\n\nCommercial Software\n\n\n\n\n\n\nImaris\n\n\n\n\n\n\n\nHuygens\n\n\n\n\n\n\n\nMetamorph\n\n\n\n\n\n\n\nArivis, Zeiss\n\n\n\n\n\n\n\nAivia\n\n\n\n\n\n\n\nBrain registration of volumetric light-sheet data\n\n\n\n\n\n\nClearMap",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.html",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.html",
+    "title": "Exercise 1 - Nuclei segmentation",
+    "section": "",
+    "text": "Download TIF file\n\nHuman HT29 colon cancer cell nuclei, image from Broad Bioimage Benchmark Collection\n\nGlobal segmentation\n\nOpen above image by dragging it into the Fiji window and run Threshold command: Image &gt; Adjust &gt; Threshold...\nChoose different thresholding methods (such as Default, Huang, Otsu etc.) from the drop down list and check how well do they segment nuclei in the image.\n\nOnce satisfied with a particular method or by manually selecting the lower and upper threshold values (using sliders), click on the Apply button to generate a thresholded image.\n\n\n\n\n\n\n\nNote\n\n\n\nAll thresholding methods (such as Default, Huang, Otsu etc.) can be tested at once by using Image &gt; Adjust &gt; Auto Threshold\n\n\n\n\nLocal segmentation\nSelect your original image and run the command:\nImage &gt; Adjust &gt; Auto Local Threshold\nRun with “Try all” method to check which one gives the best result.\nFor this image, the best segmentation is achieved with the Phansalkar method (bottom row, middle image).\n\n\n\nA 3x3 montage of thresholded images using 9 different local threshold methods. Method names can be seen below each thresholded image.\n\n\n\n\nDeep Learning based segmentation using StarDist\n\nSelect your original image and run the command:\nPlugins › StarDist › StarDist 2D\nIn the follow up StarDist menu, choose Model: Versatile (fluorescent nuclei),\nand click on the Set optimized postprocessing thresholds button at the bottom.\nKeep other settings as deafult. Click OK.\n\n\n\nStarDist settings\n\n\nA segmentation label image will be generated with the nuclei ROIs added to the ROI Manager.\n\n\n\nStarDist segmentation results\n\n\nThis gives the best nuclei segmentation among all the methods tested so far.",
     "crumbs": [
       "Training",
-      "Huygens Workshop"
+      "Image Analysis Workshop - 2022",
+      "Exercise 1 - Nuclei segmentation"
     ]
   },
   {
-    "objectID": "Training/northeast_meeting_2023.html",
-    "href": "Training/northeast_meeting_2023.html",
-    "title": "Northeast Bioimage Analysis Meeting",
+    "objectID": "Training/seminar_workshop/Image_analysis_seminar_2022.html",
+    "href": "Training/seminar_workshop/Image_analysis_seminar_2022.html",
+    "title": "Image Analysis seminar",
     "section": "",
-    "text": "Date:\nOctober 20, 2023\n\n\nLocation:\nThe Jackson Laboratory, Farmington, CT\n\n\nSpeaker:\nVed Sharma, BIRC, The Rockefeller University\n\n\nAttendees:\napprox. 30 researchers and bioimage analysts from the northeastern USA\n\n\n\n This was a day-long meeting, where the speaker gave a presentation on deep learning-based 3D bacterial cell membrane segmentation and shape analysis.\nDownload Talk Slides\nCheck out the publication for analysis details and supplementary movie\n\n\n\nSlideshow\n\n\nPlease reach out to BIRC, if you are interested in a similar analysis.",
+    "text": "BIRC organized a hybrid (in-person and on Zoom) image analysis seminar, followed by a workshop.\nAttendees: approx. 20 Rockefeller researchers in-person + a similar number joined us via Zoom.\n\nSlides\n\n\n\nUse the Space or arrow keys to navigate the slides.\nClick here to view slides in a standalone browser.\nDownload Slides as a PDF.",
     "crumbs": [
       "Training",
-      "Northeast Bioimage Analysis Meeting"
+      "Image Analysis seminar - 2022"
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section",
-    "title": "What Is an Image?",
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.html",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.html",
+    "title": "Exercise 3 - Denoising using deep learning method (Noise2Void)",
     "section": "",
-    "text": "Fundamentals of Microscopy workshop, Session 2  What Is an Image? Image capture, composition and basic analysis February 26, 2026 Ved Sharma, PhD vsharma01@rockefeller.eduBio-Imaging Resource Center, The Rockefeller University"
+    "text": "Original\n\n\n\n\n\n\n\nAfter processing with trained Noise2Void model\n\n\n\n\n\nSpinning disk confocal image of FISH in C. elegans (image courtesy of ABRF/LMRG Image Analysis Study).\nDownload TIF file\n\nOpen the above Z-stack in Fiji and run the command: Plugins › CSBDeep › N2V › N2V train + predict\n\nYou will be presented with a N2V train + predict window. Choose the following options and click OK.\n\nAxes of prediction input: XYZ\nNumber of epochs: 10\nNumber of steps per epoch: 10\nBatch size per step: 64\nPatch shape: 64\nNeighborhood readius: 5\n\nA window showing the progress of different steps (Preparation, Training and Prediction) will open. As the training progresses, training loss (red) and validation loss (blue) curves are displayed in the window (see below). If training goes well, then both the red and blue curves will decrease with more cycles (epochs) of training and stabilize around a minimum loss value (~ 1.0 in the image below). Training loss goes down from the beginning but Validation loss (blue curve) usually goes up in the beginning and then comes down and approaches the red curve.\n\n\n\nTraining deep learning model\n\n\nIf by the end of the training, red and blue curves do not stabilize to a minimum loss value, then increase the number of epochs to 20 or 30 and then run the command N2V train + predict again.\nAfter program finishes, it generates a denoised Z-stack from the trained model. You might need to run Image › Adjust › Brightness/Contrast... and hit Reset to adjust the display of the denoised image.\nThe Deep Learning model you just trained could be saved as a .ZIP file (to be used for prediction in the future) by clicking on the File actions &gt; Save to...\n\n\n\nSaving deep learning model\n\n\nTrained model could also be applied immediately on a single noisy image or a folder full of noisy images by using Predict &gt; Single image or stack or Predict &gt; Folder of images of stacks, respectively.\n\n\n\nApplying deep learning model",
+    "crumbs": [
+      "Training",
+      "Image Analysis Workshop - 2022",
+      "Exercise 3 - Denoising"
+    ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-analysis-bio-imaging-resource-center",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-analysis-bio-imaging-resource-center",
-    "title": "What Is an Image?",
-    "section": "Image Analysis @ Bio-Imaging Resource Center",
-    "text": "Image Analysis @ Bio-Imaging Resource Center\n\nClick here to go to our website!\n\n https://imageanalysis-rockefelleruniversity.github.io/"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#how-are-images-formed-in-a-microscope",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#how-are-images-formed-in-a-microscope",
-    "title": "What Is an Image?",
-    "section": "How are images formed in a microscope",
-    "text": "How are images formed in a microscope\n\nhttps://morgridge.org/feature/fluorescence-imaging-primer/\n\n\n\n\n \n\n\n\n\n\n\n\n\n \n\n\n\nImage Analysis workflow\n\n\n\n\npage 1 drawing from /mnt/bircdata08/home-birc/BIRC/OMIBS Course Binder/08_16_2024_Friday/Luke Lavis/OMIBS_2024_Lavis_Lecture_1.pdf\nnoise, FFT, PSF: OMIBS_LaRiviere2024.pdf PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
-    "title": "What Is an Image?",
-    "section": "Sensor vs Detector vs Camera",
-    "text": "Sensor vs Detector vs Camera\nSensor\nThe fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal\n\nA Passive Infrared (PIR) sensor detects body heat\nthe light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)\n\nDetector\nA broader term that includes sensors and other components to detect signal\n\nA motion detector may use PIR sensors to detect movement\nA heat detector uses temperature sensors to measure heat levels\nCamera is a type of detector which captures light to form images\n\nCamera\nA complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
-    "title": "What Is an Image?",
-    "section": "Microscopy cameras",
-    "text": "Microscopy cameras\n\nColor cameras\n\nused for visual inspection\nused for stains and dyes (histology)\n\nMonochrome cameras\n\nfor fluorescence imaging\nhigher sensitivity than color cameras\nused with emission filters to capture specific wavelength ranges"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras-1",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras-1",
-    "title": "What Is an Image?",
-    "section": "Microscopy cameras",
-    "text": "Microscopy cameras\n\ncolor cameras\n\nPhone cameras\n\nCCD\nCMOS (reduced power consumption than CCD)\nCMOS back-illuminated (use even less power than CMOS; higher price)\n\nmicroscope color cameras\n\nused for visual inspection\nused for stains and dyes (histology)\n\n\nmonochrome cameras\n\nfor fluorescence imaging\nhigher sensitivity than color cameras\nused with emission filters to capture specific wavelength ranges\n\nCameras – CCDs, EMCCDs and sCMOS;\nPMTs – newer GaAsP, Hybrid and SilVIR detectors ;\nAvalanche Photodiodes (APDs).\n\n\nQuestion for Behzad/Alison 1. termionology difference between sensor, detector and camera. 2. Phone color cameras vs microscope color cameras."
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-vs-emccd-vs-scmos",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-vs-emccd-vs-scmos",
-    "title": "What Is an Image?",
-    "section": "CCD vs EMCCD vs sCMOS",
-    "text": "CCD vs EMCCD vs sCMOS\n\nhttps://camera.hamamatsu.com/jp/en/learn/technical_information/thechnical_guide/visual_guide.html SilVIR detector: https://evidentscientific.com/en/learn/white-papers/silvir-detector-system-for-the-fv4000-laser-confocal-microscope"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#images-as-pixels",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#images-as-pixels",
-    "title": "What Is an Image?",
-    "section": "Images as pixels",
-    "text": "Images as pixels\n\nImages are composed of a grid of pixels\nEach pixel contains intensity information\nNumber of bits (N) determine the range of intensity levels"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-histogram-display-settings",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-histogram-display-settings",
-    "title": "What Is an Image?",
-    "section": "Image histogram, display settings",
-    "text": "Image histogram, display settings\nDisplay range - adjusting brightness and contrast\nhistogram"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#bit-depth",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#bit-depth",
-    "title": "What Is an Image?",
-    "section": "Bit depth",
-    "text": "Bit depth\n\n\n\n\nImages are composed of a grid of pixels\nEach pixel contains intensity information\nNumber of bits (N) determine the range of intensity levels\n\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\nBit depth (N)\n# shades (2N)\nLookup table (LUT)\n\n\n\n\n1\n2\n\n\n\n2\n4\n\n\n\n3\n8\n\n\n\n4\n16\n\n\n\n5\n32\n\n\n\n6\n64\n\n\n\n7\n128\n\n\n\n8\n256"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depths",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depths",
-    "title": "What Is an Image?",
-    "section": "Changing image bit depths",
-    "text": "Changing image bit depths\nconversion"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",
-    "title": "What Is an Image?",
-    "section": "Image Metadata",
-    "text": "Image Metadata\nImage with an arrow towards the subtitle (animate)\nIn Fiji\nImage &gt; Properties"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-1",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-1",
-    "title": "What Is an Image?",
-    "section": "Image Metadata",
-    "text": "Image Metadata\nScreenshots\n\nbioformats importer\nmetadata\nome-xml"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction---deonvolution-vs-ai-denoising",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction---deonvolution-vs-ai-denoising",
-    "title": "What Is an Image?",
-    "section": "Noise reduction - Deonvolution vs AI-Denoising",
-    "text": "Noise reduction - Deonvolution vs AI-Denoising\n\nconcept of deconvolution https://zeiss-campus.magnet.fsu.edu/articles/basics/psf.html\n\nsample x psf = image"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-1",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-1",
-    "title": "What Is an Image?",
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022.html",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022.html",
+    "title": "",
     "section": "",
-    "text": "Seminar slides and workshop material will be made available on our GitHub page:\n https://github.com/ImageAnalysis-RockefellerUniversity\n\nSpeaker notes go here."
+    "text": "In this workshop, we will work through the following exercises:\n 1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)\n 2. Cell tracking using StarDist and TrackMate\n 3. Denoising using Noise2Void\n 4. Bonus – 3D segmentation using StarDist and TrackMate\n\n\nWe need to add the following three updates sites in our Fiji to install all the required plugins for this workshop:\n- CSBDeep\n- StarDist\n- TrackMate-StarDist\nStep 1: Start Fiji.\nStep 2: Select Help &gt; Update… from the menu bar.\nStep 3: Click on the button “Manage update sites”.\nStep 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.\n\n\n\nCSBDeep update site\n\n\nStep 5: Click on “Apply changes” to install the plugins.\nStep 6: Restart Fiji.\n  - StarDist plugin should now be available under Plugins &gt; StarDist &gt; StarDist 2D.\n  - Noise2Void plugin should be visible under Plugins › CSBDeep › N2V.",
+    "crumbs": [
+      "Training",
+      "Image Analysis Workshop - 2022"
+    ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline",
-    "title": "What Is an Image?",
-    "section": "Outline",
-    "text": "Outline\n\n\n\nSegmentation\nCell/particle Counting and Tracking\nImage denoising\n\n\nOpen-source Softwares\nImageJ/Fiji, QuPath, Napari, CellProfiler, Icy\n Commercial Softwares\nImaris, Arivis, Aivia, Huygens, MetaMorph\n Machine/Deep Learning frameworks\nWeka, ilastik, Labkit StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#what-is-a-raster-image",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#what-is-a-raster-image",
-    "title": "What Is an Image?",
-    "section": "What is a Raster Image?",
-    "text": "What is a Raster Image?\n\n\n\n\nRaster images are composed of a grid of pixels\nEach pixel contains intensity information\nNumber of bits (N) determine the range of intensity levels\n\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\n\nHistogram\n\n\n\n\n\n\n\n8-bit image (256 shades)\n\n\n\n\n\n\n\n\n\n\nZoomed-in view\n\n\n\n\n\n\n\nImage as a matrix of numbers (0-255)"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation",
-    "title": "What Is an Image?",
-    "section": "Segmentation",
-    "text": "Segmentation\nIdentifying object(s) of interest in an image\n - cells, nuclei, membrane, transcription sites etc.\nSegmentation is usually followed by quantitative analysis of object(s)\n - number of cells/nuclei, mean fluorescence intensity, shape etc.\nDivide image into areas representing object(s) of interest and background\n\nSegmentation is not an easy task to solve in most practical cases\n - Signal variability throughout the image\n - Noise, blur and other distortions caused by the imperfect imaging conditions"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-tools",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-tools",
-    "title": "What Is an Image?",
-    "section": "Segmentation tools",
-    "text": "Segmentation tools\n\n\nGlobal thresholding, local thresholding\nImage processing filters – Gaussian, Median, Sobel etc.\nMachine learning methods (supervised learning) - Weka, Labkit, ilastik\nDeep Learning methods - StarDist, Cellpose\n3D segmentation - Imaris, Arivis"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding",
-    "title": "What Is an Image?",
-    "section": "Segmentation using global thresholding",
-    "text": "Segmentation using global thresholding\n\n\n\n\n\nNuclei stained with Hoechst\n\n\n\n\n\n\n\nThreshold 1\n\n\n\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding-1",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding-1",
-    "title": "What Is an Image?",
-    "section": "Segmentation using global thresholding",
-    "text": "Segmentation using global thresholding\n\n\n\n\n\nNuclei stained with Hoechst\n\n\n\n\n\n\n\nThreshold 2\n\n\n\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-with-local-thresholding",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-with-local-thresholding",
-    "title": "What Is an Image?",
-    "section": "Segmentation with local thresholding",
-    "text": "Segmentation with local thresholding\n\n\nNuclei stained with Hoechst\n\n\n\n\nAuto Local Threshold in Fiji\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-machine-learning",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-machine-learning",
-    "title": "What Is an Image?",
-    "section": "Segmentation using Machine Learning",
-    "text": "Segmentation using Machine Learning\nSupervised learning - pixel classification using Random Forest classifier\nFiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler\nRequires orders of magnitude less training data/resources than Deep Learning methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
-    "title": "What Is an Image?",
+    "objectID": "Training/seminar_workshop/Image_analysis_workshop_2022.html#workshop",
+    "href": "Training/seminar_workshop/Image_analysis_workshop_2022.html#workshop",
+    "title": "",
     "section": "",
-    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+    "text": "In this workshop, we will work through the following exercises:\n 1. Segmentation using global threshold, local threshold and Deep Learning (StarDist)\n 2. Cell tracking using StarDist and TrackMate\n 3. Denoising using Noise2Void\n 4. Bonus – 3D segmentation using StarDist and TrackMate\n\n\nWe need to add the following three updates sites in our Fiji to install all the required plugins for this workshop:\n- CSBDeep\n- StarDist\n- TrackMate-StarDist\nStep 1: Start Fiji.\nStep 2: Select Help &gt; Update… from the menu bar.\nStep 3: Click on the button “Manage update sites”.\nStep 4: Scroll down the list and tick the checkboxes for update sites: CSBDeep (shown below), StarDist and TrackMate-StarDist, then click the Close button.\n\n\n\nCSBDeep update site\n\n\nStep 5: Click on “Apply changes” to install the plugins.\nStep 6: Restart Fiji.\n  - StarDist plugin should now be available under Plugins &gt; StarDist &gt; StarDist 2D.\n  - Noise2Void plugin should be visible under Plugins › CSBDeep › N2V.",
+    "crumbs": [
+      "Training",
+      "Image Analysis Workshop - 2022"
+    ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
-    "title": "What Is an Image?",
+    "objectID": "Training/colocalization_workshop_2025.html",
+    "href": "Training/colocalization_workshop_2025.html",
+    "title": "Co-localization analysis Seminar and Workshop",
     "section": "",
-    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+    "text": "Date:\nApril 16, 2025\n\n\nLocation:\nWeiss 305\n\n\nGuest lecturer:\nPablo Ariel, UNC at Chapel Hill\n\n\nAdditional speaker:\nAlison North, The Rockefeller University, BIRC\n\n\nWorkshop support:\nVed Sharma and Tao Tong, The Rockefeller University, BIRC\n\n\nAttendees:\n35 Rockefeller researchers from various labs\nOrganized by the BIRC team, this was a seminar (2 h), followed by a hands-on workshop (2 h) on the co-localization analysis.",
+    "crumbs": [
+      "Training",
+      "Co-localization Workshop"
+    ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-4",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-4",
-    "title": "What Is an Image?",
+    "objectID": "Training/colocalization_workshop_2025.html#resources",
+    "href": "Training/colocalization_workshop_2025.html#resources",
+    "title": "Co-localization analysis Seminar and Workshop",
+    "section": "Resources",
+    "text": "Resources\nVideos\nMaterials for exercises and downloadable videos",
+    "crumbs": [
+      "Training",
+      "Co-localization Workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html",
+    "title": "Image analysis workshop",
     "section": "",
-    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+    "text": "Participants will learn the fundamentals of microscopy image analysis using ImageJ/Fiji.\nTarget audience:\n - beginners in image analysis\n - people with some image analysis experience",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning",
-    "title": "What Is an Image?",
-    "section": "Segmentation using Deep Learning",
-    "text": "Segmentation using Deep Learning\n\n\n\n\nMost accurate methods available for cells/nuclei segmentation\nStep 1: Training\nGenerating a Deep Learning model is resource hungry:\n- High-end workstation\n- Large amounts of training data (images and annotations)\n- Training could take hours to days\n- Good programming knowledge required - Python\nStep 2: Prediction\nUsing the model from step 1 to predict the segmentation results :\n- A regular laptop is just fine\n- Prediction takes seconds to mins\n- Little to no programming knowledge required\n\n\n\n\n\n\nStarDist (2018)\n\n\n\n\n\n\nCellpose (2021)"
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#learning-objectives",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#learning-objectives",
+    "title": "Image analysis workshop",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nUnderstand image file formats, bit depth and metadata\nWorking with multi-dimensional images (channels, time series)\nPerform common image processing tasks in Fiji more effectively:\n\nadjusting brightness/contrast\nAdding scale bar\nROIs\nIntensity measurements\n\nUnderstand when to use image processing filters (Gaussian, Edge detection etc.) to help with cell/nucleus segmentation.",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning-1",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning-1",
-    "title": "What Is an Image?",
-    "section": "Segmentation using Deep Learning",
-    "text": "Segmentation using Deep Learning\n\n\n\n\n\n\nOriginal\n\n\n\n\n\n\n\nStarDist plugin in Fiji\n\n\n\n\n\n\n\nCellpose\n\n\n\n\n\n\n\nHoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine\n\n\nWorkshop Exercise 1: StarDist based nuclear segmenation in a challenging image in Fiji"
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#prerequisite",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#prerequisite",
+    "title": "Image analysis workshop",
+    "section": "Prerequisite",
+    "text": "Prerequisite\nParticipants are recommended to bring their own laptops with the latest Fiji installed.",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-napari",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-napari",
-    "title": "What Is an Image?",
-    "section": "Segmentation using StarDist in Napari",
-    "text": "Segmentation using StarDist in Napari"
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#opening-images-image-file-formats-bit-depth-metadata",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#opening-images-image-file-formats-bit-depth-metadata",
+    "title": "Image analysis workshop",
+    "section": "Opening images, Image file formats, bit-depth, metadata",
+    "text": "Opening images, Image file formats, bit-depth, metadata\ndrag and drop - TIFF, PNG\nBio-Formats for others\nOpening large images with different resolutions\nBio-Formats - crop on import\n\nbit-depth\ndynamic range - https://svi.nl/DynamicRange\nconverting between bit depths - scale when converting (image clipping https://svi.nl/Image-Clipping)",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-qupath",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-qupath",
-    "title": "What Is an Image?",
-    "section": "Segmentation using StarDist in Qupath",
-    "text": "Segmentation using StarDist in Qupath"
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#working-with-multidimensional-images-channels-time-series",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#working-with-multidimensional-images-channels-time-series",
+    "title": "Image analysis workshop",
+    "section": "Working with multidimensional images (Channels, time series)",
+    "text": "Working with multidimensional images (Channels, time series)",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-5",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-5",
-    "title": "What Is an Image?",
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#brightnesscontrast-histogram",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#brightnesscontrast-histogram",
+    "title": "Image analysis workshop",
+    "section": "Brightness/Contrast, Histogram",
+    "text": "Brightness/Contrast, Histogram",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#scale-bar",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#scale-bar",
+    "title": "Image analysis workshop",
+    "section": "Scale bar",
+    "text": "Scale bar",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#thresholding---binary-and-label-images",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#thresholding---binary-and-label-images",
+    "title": "Image analysis workshop",
+    "section": "Thresholding - binary and label images",
+    "text": "Thresholding - binary and label images",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#rois-overlays",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#rois-overlays",
+    "title": "Image analysis workshop",
+    "section": "ROIs, overlays",
+    "text": "ROIs, overlays",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#intensity-measurements",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#intensity-measurements",
+    "title": "Image analysis workshop",
+    "section": "Intensity measurements",
+    "text": "Intensity measurements",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#image-processing-filters-and-deep-learning",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#image-processing-filters-and-deep-learning",
+    "title": "Image analysis workshop",
+    "section": "Image processing filters and Deep Learning",
+    "text": "Image processing filters and Deep Learning\n\nGaussian\nEdge detection (Canny)",
+    "crumbs": [
+      "Training",
+      "Fundamentals of Microscopy workshop",
+      "Session 2 - Image analysis workshop"
+    ]
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/images/F-actin_phalloidin_MTLn3_MEF/info.html",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/images/F-actin_phalloidin_MTLn3_MEF/info.html",
+    "title": "",
     "section": "",
-    "text": "Segmentation – comparison of Deep Learning models"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Cellpose\n\n\nStringer et al 2021, Nat Methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-7",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-7",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "StarDist\n\n\nStringer et al 2021, Nat Methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-8",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-8",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Challenging cases"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding",
-    "title": "What Is an Image?",
-    "section": "1. Cell crowding",
-    "text": "1. Cell crowding\n\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-noisy-signal",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-noisy-signal",
-    "title": "What Is an Image?",
-    "section": "2. Cell crowding + noisy signal",
-    "text": "2. Cell crowding + noisy signal\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-uneven-illumination",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-uneven-illumination",
-    "title": "What Is an Image?",
-    "section": "3. Cell crowding + uneven illumination",
-    "text": "3. Cell crowding + uneven illumination\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
+    "text": "original image location: /mnt/bircdata08/home-birc/vsharma01/Einstein_Backup_20211015/Condeelis Lab/Data/1D nanofiber project_Dec2018Backup/2016.01.28_actinCaps_MEF_MTLn3_2D\nFigure S4 from Sharma et al. nanofiber paper MTLn3 and MEF cells stained with phalloidin"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/index.html",
