@@ -1,7 +1,7 @@
 /*-- scss:rules --*/
 
 /* Title (very first slide) */
-.reveal .title {  font-size: 1.5em;  color: #002fff;  background-color: #ffffff;
+.reveal .title {  font-size: 1.5em;  color: blue;  background-color: #ffffff;
   // color: #ffbc2d;
   // background-color: #333333;
   /* font-family: "Helvetica", sans-serif;
@@ -9,7 +9,7 @@
 }
 
 /* Subtitle */
-.reveal .subtitle {  font-size: 1em;  color: #002fff;  background-color: #ffffff;}
+.reveal .subtitle {  font-size: 1em;  color: blue;  background-color: #ffffff;}
 
 .reveal .date {  font-size: 0.8em;}
 
@@ -31,7 +31,8 @@
   // display: block;
   // width: 100%;
   text-align: center !important;
-  color: #002fff;
+  color: blue;
+  // color: #002fff;
   // background-color: #eeeeee;
   font-weight: normal;
 }
@@ -54,17 +55,38 @@
 .img-overlay {  position: relative;  display: inline-block;
   // margin: 0 auto;  text-align: center;
 }
-
 .img-overlay img {  display: block;}
 
+/* The container for each pair */
+.img-stack {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* The base image */
+.base-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay image */
+.overlay-img {
+  position: absolute;
+  bottom: 10px;    /* Distance from top */
+  left: 10px;   /* Distance from left */
+  width: 30%;   /* Adjust size of the smaller image */
+  z-index: 10;  /* Ensures it sits on top */
+}
 // ------------------------------------------------------------
 
 .red-rectangle {
   position: absolute;  top: 4%;  left: 40%;  width: 370px;  height: 100px;
-  border: 2px solid red;  box-sizing: border-box;
+  border: 4px solid red;  box-sizing: border-box;
 }
 .red-rectangle2 {
-  position: absolute;  top: 13%;  left: 1%;  width: 300px;  height: 30px;
+  position: absolute;  top: 14%;  left: 2%;  width: 300px;  height: 30px;
   border: 4px solid red;  box-sizing: border-box;
 }
 .red-rectangle3 {
@@ -98,11 +120,14 @@
   // padding-top: 0 !important;
     // font-weight: 700;
     }
-.line2 {  font-size: 1.6em;  color: #002fff;  margin-top: 0.3em;}
-.line3 {  font-size: 1.2em;  color: #002fff;}
+.line2 {  font-size: 1.6em;  color: blue;  margin-top: 0.3em;}
+.line3 {  font-size: 1.2em;  color: blue;}
 .line4 {  font-size: 0.8em;  color: #414141;  margin-top: 0.2em;}
 .line5 {  font-size: 1em;  color: #414141;  margin-top: 0; margin-bottom: 0;}
 .line6 {  font-size: 0.8em;  color: #414141;  margin-top: 0;}
+
+.text-red {  color: red;}
+.text-blue {  color: blue !important;}
 
 // ------------------------------------------------------------
 
@@ -122,9 +147,7 @@
 // ------------------------------------------------------------
 .smallerFont0 {  font-size: 0.55em;}
 .smallerFont1 {  font-size: 0.65em;}
-
 .smallerFont2 {  font-size: 0.8em;}
-
 .smallerFont3 {  font-size: 0.35em;}
 
 .loose-lines p,
@@ -178,6 +201,37 @@
   vertical-align: middle;
   max-height: 80px; /* Adjust based on your needs */
 }
+// ------------------------------------------------------------
+
+.tight-grid img {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.tight-grid .quarto-layout-cell {
+  padding: 0px !important; /* Adjust this for the exact "tightness" you want */
+}
+
+
+/* This targets the container and every cell inside a Quarto layout */
+.quarto-layout-panel, .quarto-layout-cell {
+  border: 2px solid red !important;
+}
+
+/* This draws a blue border specifically around the image itself */
+.quarto-layout-cell img {
+  border: 2px solid blue !important;
+}
+
+.element-center .quarto-layout-cell img {
+  border: 2px solid blue !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 // ------------------------------------------------------------
 
 // .bottom-align > * {

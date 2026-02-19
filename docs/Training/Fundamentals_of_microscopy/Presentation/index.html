@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-a26449a448a87fc45a43ee5400e6b4bf.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-2325505f75a996e4036c7d52b347b927.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -214,37 +214,37 @@
 </section>
 <section id="sensor-vs-detector-vs-camera" class="slide level2 smallerFont1">
 <h2>Sensor vs Detector vs Camera</h2>
-<h3 id="sensor">Sensor</h3>
+<div class="fragment">
+<h3 class="text-blue" id="sensor">Sensor</h3>
 <p>The fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal</p>
 <ul>
 <li>A Passive Infrared (PIR) sensor detects body heat</li>
 <li>the light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)</li>
 </ul>
-<h3 id="detector">Detector</h3>
+</div>
+<div class="fragment">
+<h3 class="text-blue" id="detector">Detector</h3>
 <p>A broader term that includes sensors and other components to detect signal</p>
 <ul>
 <li>A motion detector may use PIR sensors to detect movement</li>
 <li>A heat detector uses temperature sensors to measure heat levels</li>
 <li>Camera is a type of detector which captures light to form images</li>
 </ul>
-<h3 id="camera">Camera</h3>
+</div>
+<div class="fragment">
+<h3 class="text-blue" id="camera">Camera</h3>
 <p>A complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing</p>
+</div>
 </section>
 <section id="microscopy-cameras" class="slide level2">
 <h2>Microscopy cameras</h2>
-<ul>
-<li>Color cameras
-<ul>
-<li>used for visual inspection</li>
-<li>used for stains and dyes (histology)</li>
-</ul></li>
-<li>Monochrome cameras
-<ul>
-<li>for fluorescence imaging</li>
-<li>higher sensitivity than color cameras</li>
-<li>used with emission filters to capture specific wavelength ranges</li>
-</ul></li>
-</ul>
+<p><br> <span class="text-blue">Color cameras</span><br>
+- used for visual inspection<br>
+- used for stains and dyes (histology)</p>
+<p><br> <span class="text-blue">Monochrome cameras</span><br>
+- for fluorescence imaging<br>
+- higher sensitivity than color cameras<br>
+- used with emission filters to capture specific wavelength ranges</p>
 </section>
 <section id="microscopy-cameras-1" class="slide level2">
 <h2>Microscopy cameras</h2>
@@ -299,9 +299,16 @@
 </section>
 <section id="why-should-i-learn-about-images-and-analysis-in-an-era-of-ai-and-deep-learning" class="slide level2">
 <h2>Why should I learn about images and analysis in an era of AI and Deep Learning?</h2>
-<p><br> <img data-src="images/AIDeBlur2.jpg" class="quarto-figure quarto-figure-center"></p>
+<p><br></p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/AIDeBlur2.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 <div class="smallerFont0 absolute" style="top: 670px; left: 20px; ">
 <p>https://forum.image.sc/</p>
+</div>
 </div>
 <aside class="notes">
 <p>Hallucinations in AI image processing are common and can be very misleading. Understanding the basics of how images are formed and how they can be manipulated is crucial for interpreting results correctly and avoiding pitfalls in analysis.</p>
@@ -455,29 +462,142 @@
 <!-- ![Bit depth shades](images/bit_depth_shades.png) -->
 </div>
 </section>
-<section id="image-display-vs-intensity-measurements" class="slide level2">
-<h2>Image display vs intensity measurements</h2>
-<p>Histogram Brightness and Contrast LUT</p>
-<p>Are these images different?</p>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img data-src="images/dew-maple-leaf-1974425.jpg" alt="Image 1"> <img data-src="images/dew-maple-leaf-1974425_BCwindow.jpg" alt="Image 2"></p>
+<section id="image-display-vs-image-analysis" class="slide level2">
+<h2>Image display vs image analysis</h2>
+<h4 class="text-blue fragment" id="image-display">Image display</h4>
+<div class="fragment smallerFont2">
+<ul>
+<li>Images are usually enhanced for better visualization (human eye) of features of interest</li>
+<li>qualitative assessment of the features of interest in the image</li>
+<li>typically figure panels for publications, presentations etc.</li>
+<li>Tools:
+<ul>
+<li>brightness/contrast</li>
+<li>Lookup table (LUT)</li>
+<li>Converting image (16/32 bit) to RGB</li>
+</ul></li>
+</ul>
 </div>
-</div>
-</div>
-<p>Display wise: YES Intensity measurement wise: NO</p>
-<p>Left image is good for making figure panel. Both images are identical in terms of pixel intensity values, so any of those can be used for intensity measurement and quantitative analysis.</p>
 </section>
-<section id="changing-image-bit-depths" class="slide level2 smaller">
-<h2>Changing image bit depths</h2>
-<h4 id="why-would-you-want-to-change-the-bit-depth-of-an-image">Why would you want to change the bit depth of an image?</h4>
+<section id="image-display-vs-image-analysis-1" class="slide level2">
+<h2>Image display vs image analysis</h2>
+<h4 class="text-blue" id="image-analysis">Image analysis</h4>
+<div class="smallerFont2">
+<ul>
+<li>quantitative measurement of features of interest
+<ul>
+<li>Cell/nuclei counting, fluorescence intensity, shape etc.</li>
+</ul></li>
+<li>It’s best to avoid any photo editing software (Photoshop, GIMP etc.)</li>
+<li>Any visual enhancement (pixel value change) is prohibited, except…</li>
+<li>Caveats: certain image enhancements are allowed:
+<ul>
+<li>image processing filters (e.g.&nbsp;Gaussian blur, median filter etc.). Original image must be used for intensity measurement.</li>
+<li>deconvolution, de-noising</li>
+</ul></li>
+<li>make sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias</li>
+</ul>
+</div>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="absolute" style="transform: translate(-50%, -50%); font-size: 1.6em; width: 100%; color: #002fff; text-align: center;top: 50%; left: 50%; ">
+<p>Can you tell which images are the <span class="text-red">same</span> and which are <span class="text-red">different</span>?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<!-- ::: {layout="[[1,1,1], [1,1,1]]" layout-column-gap="0" layout-row-gap="0"} -->
+<!-- ::: {layout-ncol="3" layout-nrow="2" layout-row-gap="0" layout-column-gap="0"} -->
+<div class="tight-grid quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-2.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3.png"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-4.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-5.png"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-6.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="tight-grid element-center quarto-layout-panel" data-layout-nrow="1" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="img-stack quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_BC.png" class="overlay-img fragment"></p>
+</div>
+<div class="img-stack quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3_BC.png" class="overlay-img fragment"></p>
+</div>
+</div>
+</div>
+<p><span class="smallerFont1 fragment">Brightness and contrast settings are different for the two images, but the pixel values are identical.</span></p>
+<p><span class="smallerFont1 fragment">Next: let’s checkout the histograms of all 6 images. In Fiji, go to: <code>Analyze &gt; Histogram</code> (or Press <code>H</code>)</span></p>
+</section>
+<section class="slide level2">
+
+<div class="tight-grid quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="img-stack quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_histo_v2.png" class="overlay-img fragment"></p>
+</div>
+<div class="img-stack quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-2.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-2_histo_v2.png" class="overlay-img fragment"></p>
+</div>
+<div class="img-stack quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3_histo_v2.png" class="overlay-img fragment"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="img-stack quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-4.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-4_histo_v2.png" class="overlay-img fragment"></p>
+</div>
+<div class="img-stack quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-5.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-5_histo_v2.png" class="overlay-img fragment"></p>
+</div>
+<div class="img-stack quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-6.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-6_histo_v2.png" class="overlay-img fragment"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="image-display-vs-image-analysis-2" class="slide level2">
+<h2>Image display vs image analysis</h2>
+<p>Images that <span class="text-red">look the same</span> may have <span class="text-red">different</span> pixel values.</p>
+<p>Images that <span class="text-red">look different</span> may have <span class="text-red">identical</span> pixel values. <br><br>
+When in doubt, check:</p>
+<ul>
+<li>Histogram</li>
+<li>Brightness and Contrast</li>
+<li>Lookup table (LUT)</li>
+</ul>
+</section>
+<section id="changing-image-bit-depth" class="slide level2 smaller">
+<h2>Changing image bit-depth</h2>
+<h4 id="why-would-you-want-to-change-the-bit-depth-of-an-image">Why would you want to change the bit-depth of an image?</h4>
 <ul>
 <li>to save space (rarely)</li>
 <li>Because a particular plugin only works on 8/16/32-bit images (most common reason)</li>
 <li>so that a large image could be loaded into RAM/opened and I can quickly take a look at it.</li>
 </ul>
-<p><span class="fragment">in Fiji, go to <code>Edit &gt; Options &gt; Conversions...</code></span></p>
+<div class="fragment">
+<p>in Fiji, go to <code>Edit &gt; Options &gt; Conversions...</code></p>
+</div>
 <div class="quarto-layout-panel" data-layout="[-2, 20, -10, 30, 30]">
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.2%;justify-content: flex-start;">
@@ -523,7 +643,10 @@
 <p>&nbsp;</p>
 </div>
 <div class="img-overlay quarto-layout-cell" style="flex-basis: 53.9%;justify-content: flex-start;">
-<span class="fragment">Some metadata is displayed under the image title.</span> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/Screenshot_MEF_02_actin_z18.png">
+<p><span class="fragment">Some metadata is displayed under the image title.</span> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF_02_actin_z18.png"></p>
+<div class="smallerFont0 absolute" style="top: 595px; left: 20px; ">
+<p>Mouse embryonic fibroblast stained with Phalloidin</p>
+</div>
 <div class="red-rectangle2 fragment">
 
 </div>
@@ -531,7 +654,7 @@
 <div class="fragment quarto-layout-cell" style="flex-basis: 44.1%;justify-content: flex-start;">
 <p>A bit more metadata could be found under:<br>
 <code>Image &gt; Properties</code><br>
-<img data-src="images/F-actin_phalloidin_MTLn3_MEF/Screenshot_Properties_MEF_02_actin_z18.png"></p>
+<img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF_02_actin_z18_Properties_v2.png"></p>
 </div>
 </div>
 </div>
@@ -603,8 +726,9 @@
 <li>JPEG artifacts</li>
 </ul></li>
 </ul>
+<p>Pete Bankhead book https://petebankhead.gitbooks.io/imagej-intro/content/chapters/bit_depths/bit_depths.html</p>
 </section>
-<section id="section-2" class="slide level2 custom_indent3">
+<section id="section-3" class="slide level2 custom_indent3">
 <h2></h2>
 <p>Seminar slides and workshop material will be made available on our GitHub page:<br>
 <br> https://github.com/ImageAnalysis-RockefellerUniversity</p>
@@ -824,21 +948,21 @@ Weka, ilastik, Labkit StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic</p>
 <p>Fiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler</p>
 <p>Requires orders of magnitude less training data/resources than Deep Learning methods</p>
 </section>
-<section id="section-3" class="slide level2" data-transition="none">
+<section id="section-4" class="slide level2" data-transition="none">
 <h2></h2>
 
 <img data-src="images/labkit_1.png" class="quarto-figure quarto-figure-center r-stretch"><div class="smallerFont3 absolute" style="top: 692px; left: 74px; ">
 <p>Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine</p>
 </div>
 </section>
-<section id="section-4" class="slide level2" data-transition="none">
+<section id="section-5" class="slide level2" data-transition="none">
 <h2></h2>
 
 <img data-src="images/labkit_2.png" class="quarto-figure quarto-figure-center r-stretch"><div class="smallerFont3 absolute" style="top: 692px; left: 74px; ">
 <p>Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine</p>
 </div>
 </section>
-<section id="section-5" class="slide level2" data-transition="none">
+<section id="section-6" class="slide level2" data-transition="none">
 <h2></h2>
 
 <img data-src="images/labkit_3.png" class="quarto-figure quarto-figure-center r-stretch"><div class="smallerFont3 absolute" style="top: 692px; left: 74px; ">
@@ -928,13 +1052,13 @@ Using the model from step 1 to predict the segmentation results :<br>
 <h2>Segmentation using StarDist in Qupath</h2>
 
 <img data-src="images/Hoechst-C42-ARv7_Dox_QuPath_StarDist.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-6" class="slide level2 center">
+<section id="section-7" class="slide level2 center">
 <h2></h2>
 <div class="r-fit-text">
 <p><span style="color:#c00000;">Segmentation – comparison of Deep Learning models</span></p>
 </div>
 </section>
-<section id="section-7" class="slide level2" data-transition="none">
+<section id="section-8" class="slide level2" data-transition="none">
 <h2></h2>
 
 <img data-src="images/Fig 3 - cellpose paper_cellpose seg.png" class="quarto-figure quarto-figure-center r-stretch"><div class="absolute" style="top: 20px; left: 50px; ">
@@ -944,7 +1068,7 @@ Using the model from step 1 to predict the segmentation results :<br>
 <p>Stringer et al 2021, Nat Methods</p>
 </div>
 </section>
-<section id="section-8" class="slide level2" data-transition="none">
+<section id="section-9" class="slide level2" data-transition="none">
 <h2></h2>
 
 <img data-src="images/Fig S4 - cellpose paper_stardist seg.png" class="quarto-figure quarto-figure-center r-stretch"><div class="absolute" style="top: 20px; left: 50px; ">
@@ -954,7 +1078,7 @@ Using the model from step 1 to predict the segmentation results :<br>
 <p>Stringer et al 2021, Nat Methods</p>
 </div>
 </section>
-<section id="section-9" class="slide level2 center">
+<section id="section-10" class="slide level2 center">
 <h2></h2>
 <div class="r-fit-text">
 <p><span style="color:#c00000;">    Challenging cases    </span></p>
@@ -1076,7 +1200,7 @@ Using the model from step 1 to predict the segmentation results :<br>
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
@@ -1088,7 +1212,7 @@ Using the model from step 1 to predict the segmentation results :<br>
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
