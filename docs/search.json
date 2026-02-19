@@ -63,14 +63,14 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
     "title": "What Is an Image?",
     "section": "Sensor vs Detector vs Camera",
-    "text": "Sensor vs Detector vs Camera\nSensor\nThe fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal\n\nA Passive Infrared (PIR) sensor detects body heat\nthe light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)\n\nDetector\nA broader term that includes sensors and other components to detect signal\n\nA motion detector may use PIR sensors to detect movement\nA heat detector uses temperature sensors to measure heat levels\nCamera is a type of detector which captures light to form images\n\nCamera\nA complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing"
+    "text": "Sensor vs Detector vs Camera\n\nSensor\nThe fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal\n\nA Passive Infrared (PIR) sensor detects body heat\nthe light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)\n\n\n\nDetector\nA broader term that includes sensors and other components to detect signal\n\nA motion detector may use PIR sensors to detect movement\nA heat detector uses temperature sensors to measure heat levels\nCamera is a type of detector which captures light to form images\n\n\n\nCamera\nA complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
     "title": "What Is an Image?",
     "section": "Microscopy cameras",
-    "text": "Microscopy cameras\n\nColor cameras\n\nused for visual inspection\nused for stains and dyes (histology)\n\nMonochrome cameras\n\nfor fluorescence imaging\nhigher sensitivity than color cameras\nused with emission filters to capture specific wavelength ranges"
+    "text": "Microscopy cameras\n Color cameras\n- used for visual inspection\n- used for stains and dyes (histology)\n Monochrome cameras\n- for fluorescence imaging\n- higher sensitivity than color cameras\n- used with emission filters to capture specific wavelength ranges"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras-1",
@@ -105,7 +105,7 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#why-should-i-learn-about-images-and-analysis-in-an-era-of-ai-and-deep-learning",
     "title": "What Is an Image?",
     "section": "Why should I learn about images and analysis in an era of AI and Deep Learning?",
-    "text": "Why should I learn about images and analysis in an era of AI and Deep Learning?\n \n\nhttps://forum.image.sc/\n\n\nHallucinations in AI image processing are common and can be very misleading. Understanding the basics of how images are formed and how they can be manipulated is crucial for interpreting results correctly and avoiding pitfalls in analysis."
+    "text": "Why should I learn about images and analysis in an era of AI and Deep Learning?\n\n\n\n\n\n\n\n\nhttps://forum.image.sc/\n\n\n\nHallucinations in AI image processing are common and can be very misleading. Understanding the basics of how images are formed and how they can be manipulated is crucial for interpreting results correctly and avoiding pitfalls in analysis."
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#images-as-pixels",
@@ -122,25 +122,46 @@
     "text": "Bit depth\n\n\n\nNumber of bits (N) determine the range of intensity levels\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBit depth (N)\n# shades (2N)\nLookup table (LUT)\n\n\n\n\n1\n2\n\n\n\n2\n4\n\n\n\n3\n8\n\n\n\n4\n16\n\n\n\n5\n32\n\n\n\n6\n64\n\n\n\n7\n128\n\n\n\n8\n256"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-intensity-measurements",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-intensity-measurements",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis",
     "title": "What Is an Image?",
-    "section": "Image display vs intensity measurements",
-    "text": "Image display vs intensity measurements\nHistogram Brightness and Contrast LUT\nAre these images different?\n\n\n\n \n\n\n\nDisplay wise: YES Intensity measurement wise: NO\nLeft image is good for making figure panel. Both images are identical in terms of pixel intensity values, so any of those can be used for intensity measurement and quantitative analysis."
+    "section": "Image display vs image analysis",
+    "text": "Image display vs image analysis\nImage display\n\n\nImages are usually enhanced for better visualization (human eye) of features of interest\nqualitative assessment of the features of interest in the image\ntypically figure panels for publications, presentations etc.\nTools:\n\nbrightness/contrast\nLookup table (LUT)\nConverting image (16/32 bit) to RGB"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depths",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depths",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis-1",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis-1",
     "title": "What Is an Image?",
-    "section": "Changing image bit depths",
-    "text": "Changing image bit depths\nWhy would you want to change the bit depth of an image?\n\nto save space (rarely)\nBecause a particular plugin only works on 8/16/32-bit images (most common reason)\nso that a large image could be loaded into RAM/opened and I can quickly take a look at it.\n\nin Fiji, go to Edit &gt; Options &gt; Conversions...\n\n\n\n \n\n\n\nBy default this setting is checked ON.\n\n\n \n\n\n\n\n\n\n\n\n\n\n\nthere are many old imageJ plugins that only work on 8-bit images.\nIf you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background"
+    "section": "Image display vs image analysis",
+    "text": "Image display vs image analysis\nImage analysis\n\n\nquantitative measurement of features of interest\n\nCell/nuclei counting, fluorescence intensity, shape etc.\n\nIt’s best to avoid any photo editing software (Photoshop, GIMP etc.)\nAny visual enhancement (pixel value change) is prohibited, except…\nCaveats: certain image enhancements are allowed:\n\nimage processing filters (e.g. Gaussian blur, median filter etc.). Original image must be used for intensity measurement.\ndeconvolution, de-noising\n\nmake sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Can you tell which images are the same and which are different?"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis-2",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis-2",
+    "title": "What Is an Image?",
+    "section": "Image display vs image analysis",
+    "text": "Image display vs image analysis\nImages that look the same may have different pixel values.\nImages that look different may have identical pixel values. \nWhen in doubt, check:\n\nHistogram\nBrightness and Contrast\nLookup table (LUT)"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depth",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depth",
+    "title": "What Is an Image?",
+    "section": "Changing image bit-depth",
+    "text": "Changing image bit-depth\nWhy would you want to change the bit-depth of an image?\n\nto save space (rarely)\nBecause a particular plugin only works on 8/16/32-bit images (most common reason)\nso that a large image could be loaded into RAM/opened and I can quickly take a look at it.\n\n\nin Fiji, go to Edit &gt; Options &gt; Conversions...\n\n\n\n\n \n\n\n\nBy default this setting is checked ON.\n\n\n \n\n\n\n\n\n\n\n\n\n\n\nthere are many old imageJ plugins that only work on 8-bit images.\nIf you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",
     "title": "What Is an Image?",
     "section": "Image Metadata",
-    "text": "Image Metadata\n\n\n\n \n\n\nSome metadata is displayed under the image title. \n\n\n\n\n\nA bit more metadata could be found under:\nImage &gt; Properties"
+    "text": "Image Metadata\n\n\n\n \n\n\nSome metadata is displayed under the image title. \n\nMouse embryonic fibroblast stained with Phalloidin\n\n\n\n\n\n\nA bit more metadata could be found under:\nImage &gt; Properties"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata-detailed",
@@ -196,11 +217,11 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources",
     "title": "What Is an Image?",
     "section": "Resources",
-    "text": "Resources\n\nPrinciples of Scientific Imaging - imagej.net\n\nJPEG artifacts"
+    "text": "Resources\n\nPrinciples of Scientific Imaging - imagej.net\n\nJPEG artifacts\n\n\nPete Bankhead book https://petebankhead.gitbooks.io/imagej-intro/content/chapters/bit_depths/bit_depths.html"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
     "title": "What Is an Image?",
     "section": "",
     "text": "Seminar slides and workshop material will be made available on our GitHub page:\n https://github.com/ImageAnalysis-RockefellerUniversity\n\nSpeaker notes go here."
@@ -262,13 +283,6 @@
     "text": "Segmentation using Machine Learning\nSupervised learning - pixel classification using Random Forest classifier\nFiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler\nRequires orders of magnitude less training data/resources than Deep Learning methods"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
-  },
-  {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-4",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-4",
     "title": "What Is an Image?",
@@ -278,6 +292,13 @@
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-5",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-5",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
     "title": "What Is an Image?",
     "section": "",
     "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
@@ -311,29 +332,29 @@
     "text": "Segmentation using StarDist in Qupath"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Segmentation – comparison of Deep Learning models"
-  },
-  {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-7",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-7",
     "title": "What Is an Image?",
     "section": "",
-    "text": "Cellpose\n\n\nStringer et al 2021, Nat Methods"
+    "text": "Segmentation – comparison of Deep Learning models"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-8",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-8",
     "title": "What Is an Image?",
     "section": "",
-    "text": "StarDist\n\n\nStringer et al 2021, Nat Methods"
+    "text": "Cellpose\n\n\nStringer et al 2021, Nat Methods"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-9",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-9",
+    "title": "What Is an Image?",
+    "section": "",
+    "text": "StarDist\n\n\nStringer et al 2021, Nat Methods"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-10",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-10",
     "title": "What Is an Image?",
     "section": "",
     "text": "Challenging cases"

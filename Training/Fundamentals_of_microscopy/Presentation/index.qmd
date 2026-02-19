@@ -14,6 +14,8 @@ title-slide-attributes:
 
 format:
   revealjs:
+    controls: true
+    controls-layout: edges
     menu: 
       numbers: true
     width: 1280
@@ -109,32 +111,40 @@ PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf
 
 ## Sensor vs Detector vs Camera {.smallerFont1}
 
-### Sensor
+::: {.fragment}
+### Sensor{.text-blue}
 The fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal
 
 - A Passive Infrared (PIR) sensor detects body heat
 - the light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)
+:::
 
-### Detector
+::: {.fragment}
+### Detector{.text-blue}
 A broader term that includes sensors and other components to detect signal
 
 - A motion detector may use PIR sensors to detect movement
 - A heat detector uses temperature sensors to measure heat levels
 - Camera is a type of detector which captures light to form images
+:::
 
-### Camera
+::: {.fragment}
+### Camera{.text-blue}
 A complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing
+:::
 
 ## Microscopy cameras
 
-- Color cameras
-  - used for visual inspection
-  - used for stains and dyes (histology)
+<br>
+[Color cameras]{.text-blue}  
+- used for visual inspection  
+- used for stains and dyes (histology)
     
-- Monochrome cameras
-  - for fluorescence imaging
-  - higher sensitivity than color cameras
-  - used with emission filters to capture specific wavelength ranges
+<br>
+[Monochrome cameras]{.text-blue}  
+- for fluorescence imaging  
+- higher sensitivity than color cameras  
+- used with emission filters to capture specific wavelength ranges  
 
 ## Microscopy cameras
 
@@ -184,10 +194,13 @@ Part 2<br><br>What is an image and how to analyze it.
 ## Why should I learn about images and analysis in an era of AI and Deep Learning?
 
 <br>
+
+::: {.fragment}
 ![](images/AIDeBlur2.jpg){fig-align="center"}
 
 :::{.smallerFont0 .absolute top="670" left="20"}
 https://forum.image.sc/
+:::
 :::
 
 ::: {.notes}
@@ -240,31 +253,135 @@ Number of bits (N) determine the range of intensity levels
 
 :::
 
-## Image display vs intensity measurements
-Histogram Brightness and Contrast LUT
+## Image display vs image analysis
 
-Are these images different?
+#### Image display{.text-blue .fragment}
 
-::: {layout="[1,1]"}
-![Image 1](images/dew-maple-leaf-1974425.jpg)
-![Image 2](images/dew-maple-leaf-1974425_BCwindow.jpg)
+::: {.fragment .smallerFont2}
+- Images are usually enhanced for better visualization (human eye) of features of interest
+- qualitative assessment of the features of interest in the image
+- typically figure panels for publications, presentations etc.
+- Tools:
+  - brightness/contrast
+  - Lookup table (LUT)
+  - Converting image (16/32 bit) to RGB
 :::
 
-Display wise: YES
-Intensity measurement wise: NO
+## Image display vs image analysis
+#### Image analysis{.text-blue}
 
-Left image is good for making figure panel.
-Both images are identical in terms of pixel intensity values, so any of those can be used for intensity measurement and  quantitative analysis.
+::: {.smallerFont2}
+- quantitative measurement of features of interest
+  - Cell/nuclei counting, fluorescence intensity, shape etc.
+- It's best to avoid any photo editing software (Photoshop, GIMP etc.)
+- Any visual enhancement (pixel value change) is prohibited, except...
+- Caveats: certain image enhancements are allowed:
+  - image processing filters (e.g. Gaussian blur, median filter etc.). Original image must be used for intensity measurement.
+  - deconvolution, de-noising
+- make sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias
+:::
 
-## Changing image bit depths {.smaller}
+## 
+:::{.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.6em; width: 100%; color: #002fff; text-align: center;"}
+Can you tell which images are the [same]{.text-red} and which are [different]{.text-red}?
+:::
 
-#### Why would you want to change the bit depth of an image?
+--- 
+
+<!-- ::: {layout="[[1,1,1], [1,1,1]]" layout-column-gap="0" layout-row-gap="0"} -->
+<!-- ::: {layout-ncol="3" layout-nrow="2" layout-row-gap="0" layout-column-gap="0"} -->
+
+::: {.tight-grid layout-ncol="3" layout-nrow="2"}
+
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png)
+
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-2.png)
+
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3.png)
+
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-4.png)
+
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-5.png)
+
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-6.png)
+
+:::
+
+--- 
+
+::: {.tight-grid layout-ncol="2" layout-nrow="1" .element-center}
+
+::: {.img-stack}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png){.base-img}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_BC.png){.overlay-img .fragment}
+:::
+
+::: {.img-stack}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3.png){.base-img}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3_BC.png){.overlay-img .fragment}
+:::
+
+:::
+
+[Brightness and contrast settings are different for the two images, but the pixel values are identical.]{.smallerFont1 .fragment}
+
+[Next: let's checkout the histograms of all 6 images. In Fiji, go to: `Analyze > Histogram` (or Press `H`)]{.smallerFont1 .fragment}
+
+
+--- 
+
+::: {.tight-grid layout-ncol="3" layout-nrow="2"}
+
+::: {.img-stack}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png){.base-img}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_histo_v2.png){.overlay-img .fragment}
+:::
+
+::: {.img-stack}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-2.png){.base-img}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-2_histo_v2.png){.overlay-img .fragment}
+:::
+::: {.img-stack}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3.png){.base-img}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3_histo_v2.png){.overlay-img .fragment}
+:::
+::: {.img-stack}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-4.png){.base-img}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-4_histo_v2.png){.overlay-img .fragment}
+:::
+::: {.img-stack}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-5.png){.base-img}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-5_histo_v2.png){.overlay-img .fragment}
+:::
+::: {.img-stack}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-6.png){.base-img}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-6_histo_v2.png){.overlay-img .fragment}
+:::
+
+:::
+
+## Image display vs image analysis
+Images that [look the same]{.text-red} may have [different]{.text-red} pixel values.
+
+Images that [look different]{.text-red} may have [identical]{.text-red} pixel values.
+<br>  
+When in doubt, check:
+
+- Histogram
+- Brightness and Contrast
+- Lookup table (LUT)
+
+## Changing image bit-depth {.smaller}
+
+#### Why would you want to change the bit-depth of an image?
 
 - to save space (rarely)
 - Because a particular plugin only works on 8/16/32-bit images (most common reason)
 - so that a large image could be loaded into RAM/opened  and I can quickly take a look at it.   
 
-[in Fiji, go to `Edit > Options > Conversions...`]{.fragment}
+::: {.fragment}
+in Fiji, go to `Edit > Options > Conversions...`
+:::
 
 ::: {layout="[-2, 20, -10, 30, 30]"}
 
@@ -284,21 +401,26 @@ By default this setting is checked ON.
 - If you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background
 :::
 
-
 ## Image Metadata {.smaller}
 
 ::: {layout="[-2, 55, 45]"}
 
 ::: {.img-overlay}
 [Some metadata is displayed under the image title.]{.fragment}
-![](images/F-actin_phalloidin_MTLn3_MEF/Screenshot_MEF_02_actin_z18.png)
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF_02_actin_z18.png)
+
+:::{.smallerFont0 .absolute top="595" left="20"}
+Mouse embryonic fibroblast stained with Phalloidin
+:::
+
 <div class="red-rectangle2 fragment"></div>
+
 :::
 
 ::: {.fragment}
 A bit more metadata could be found under:  
 ```Image > Properties```  
-![](images/F-actin_phalloidin_MTLn3_MEF/Screenshot_Properties_MEF_02_actin_z18.png)  
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF_02_actin_z18_Properties_v2.png)  
 :::
 
 :::
@@ -371,6 +493,10 @@ What is compression and how it affects image quality and analysis?
 
 - [Principles of Scientific Imaging - imagej.net](https://imagej.net/imaging/principles#Pre-processing)
   - JPEG artifacts
+
+Pete Bankhead book
+https://petebankhead.gitbooks.io/imagej-intro/content/chapters/bit_depths/bit_depths.html
+
 
 ## {.custom_indent3}
 
