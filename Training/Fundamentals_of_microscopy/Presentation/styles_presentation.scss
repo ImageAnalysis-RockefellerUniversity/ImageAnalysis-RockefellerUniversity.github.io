@@ -1,7 +1,7 @@
 /*-- scss:rules --*/
 
 /* Title (very first slide) */
-.reveal .title {  font-size: 1.5em;  color: blue;  background-color: #ffffff;
+.reveal .title {  font-size: 1.6em;  color: blue;  background-color: #ffffff;
   // color: #ffbc2d;
   // background-color: #333333;
   /* font-family: "Helvetica", sans-serif;
@@ -13,11 +13,7 @@
 
 .reveal .date {  font-size: 0.8em;}
 
-// slide title
-// .reveal h2 {
-//   text-align: center !important;
-//   // outline: 3px solid red;
-// }
+// .reveal h2 {  outline: 3px solid red;}
 
 // .reveal {
 //   // font-family: "Helvetica", sans-serif;
@@ -35,7 +31,12 @@
   // color: #002fff;
   // background-color: #eeeeee;
   font-weight: normal;
+  font-size: 1.4em;
 }
+
+.reveal h3 {
+  // font-size: 1.4em;
+  margin-left: 1em;  margin-top: 0em; font-weight: normal;}
 
 /* Draw a border around each slide */
 .reveal .slides > section {
@@ -74,9 +75,17 @@
 /* The overlay image */
 .overlay-img {
   position: absolute;
-  bottom: 10px;    /* Distance from top */
-  left: 10px;   /* Distance from left */
-  width: 30%;   /* Adjust size of the smaller image */
+  bottom: 5px;    /* Distance from top */
+  left: 5px;   /* Distance from left */
+  width: 60% !important;   /* Adjust size of the smaller image */
+  z-index: 10;  /* Ensures it sits on top */
+}
+
+.overlay-img2 {
+  position: absolute;
+  bottom: 0px;    /* Distance from top */
+  left: 0px;   /* Distance from left */
+  width: 30% !important;   /* Adjust size of the smaller image */
   z-index: 10;  /* Ensures it sits on top */
 }
 // ------------------------------------------------------------
@@ -127,6 +136,7 @@
 .line6 {  font-size: 0.8em;  color: #414141;  margin-top: 0;}
 
 .text-red {  color: red;}
+.text-green {  color: green;}
 .text-blue {  color: blue !important;}
 
 // ------------------------------------------------------------
@@ -159,7 +169,7 @@
 
 .custom_indent2 p,
 .custom_indent2 ul,
-.custom_indent2 ol {  margin-left: 4em;  margin-top: 2em;}
+.custom_indent2 ol {  margin-left: 2em;  margin-top: 0em;}
 
 .custom_indent3 p {  margin-left: 0.5em;  margin-top: 2em;  text-align: center;}
 
@@ -204,7 +214,7 @@
 // ------------------------------------------------------------
 
 .tight-grid img {
-  width: auto;
+  width: 80%;
   height: auto;
   display: block;
   margin: 0 !important;
