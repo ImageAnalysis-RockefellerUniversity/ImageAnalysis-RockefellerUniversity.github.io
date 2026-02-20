@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-2325505f75a996e4036c7d52b347b927.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-c54038a94b102abe5161287ccd792bd0.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -156,8 +156,8 @@
 </section>
 <section id="image-analysis-bio-imaging-resource-center" class="slide level2">
 <h2>Image Analysis @ Bio-Imaging Resource Center</h2>
-<div class="absolute" style="transform: translate(-50%, -50%); font-size: 1.5em; width: 100%; text-align: center;top: 50%; left: 50%; ">
-<p><a href="https://imageanalysis-rockefelleruniversity.github.io/" data-preview="true" style="padding: 15px 30px; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px; font-size: 0.8em; font-weight: normal; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Click here to go to our website!</a></p>
+<div class="absolute" style="transform: translate(-40%, -40%); font-size: 1.2em; width: 100%; text-align: center;top: 40%; left: 40%; ">
+<p><a href="https://imageanalysis-rockefelleruniversity.github.io/" data-preview="true" style="padding: 15px 30px; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px; font-size: 0.8em; font-weight: normal; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">BIRC Image analysis website!</a></p>
 <div class="smallerFont0">
 <p><br> https://imageanalysis-rockefelleruniversity.github.io/</p>
 </div>
@@ -212,9 +212,9 @@
 </ul>
 </div>
 </section>
-<section id="sensor-vs-detector-vs-camera" class="slide level2 smallerFont1">
+<section id="sensor-vs-detector-vs-camera" class="slide level2 custom_indent4">
 <h2>Sensor vs Detector vs Camera</h2>
-<div class="fragment">
+<div class="fragment smallerFont1">
 <h3 class="text-blue" id="sensor">Sensor</h3>
 <p>The fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal</p>
 <ul>
@@ -222,7 +222,7 @@
 <li>the light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)</li>
 </ul>
 </div>
-<div class="fragment">
+<div class="fragment smallerFont1">
 <h3 class="text-blue" id="detector">Detector</h3>
 <p>A broader term that includes sensors and other components to detect signal</p>
 <ul>
@@ -231,52 +231,100 @@
 <li>Camera is a type of detector which captures light to form images</li>
 </ul>
 </div>
-<div class="fragment">
+<div class="fragment smallerFont1">
 <h3 class="text-blue" id="camera">Camera</h3>
 <p>A complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing</p>
 </div>
 </section>
-<section id="microscopy-cameras" class="slide level2">
+<section id="microscopy-cameras" class="slide level2 custom_indent4">
 <h2>Microscopy cameras</h2>
-<p><br> <span class="text-blue">Color cameras</span><br>
-- used for visual inspection<br>
-- used for stains and dyes (histology)</p>
-<p><br> <span class="text-blue">Monochrome cameras</span><br>
-- for fluorescence imaging<br>
-- higher sensitivity than color cameras<br>
-- used with emission filters to capture specific wavelength ranges</p>
-</section>
-<section id="microscopy-cameras-1" class="slide level2">
-<h2>Microscopy cameras</h2>
+<div class="smallerFont2">
+<h3 class="text-blue" id="color-cameras">Color cameras</h3>
 <ul>
-<li>color cameras
-<ul>
-<li>Phone cameras
-<ul>
-<li>CCD</li>
-<li>CMOS (reduced power consumption than CCD)</li>
-<li>CMOS back-illuminated (use even less power than CMOS; higher price)</li>
-</ul></li>
-<li>microscope color cameras
-<ul>
-<li>used for visual inspection</li>
+<li>used for visual inspection<br>
+</li>
 <li>used for stains and dyes (histology)</li>
-</ul></li>
-</ul></li>
-<li>monochrome cameras
-<ul>
-<li>for fluorescence imaging</li>
-<li>higher sensitivity than color cameras</li>
-<li>used with emission filters to capture specific wavelength ranges</li>
-</ul></li>
-<li>Cameras – CCDs, EMCCDs and sCMOS;</li>
-<li>PMTs – newer GaAsP, Hybrid and SilVIR detectors ;</li>
-<li>Avalanche Photodiodes (APDs).</li>
 </ul>
-<div class="hidden">
-<p>Question for Behzad/Alison 1. termionology difference between sensor, detector and camera. 2. Phone color cameras vs microscope color cameras.</p>
+<p><br></p>
+<h3 class="text-blue" id="monochrome-cameras">Monochrome cameras</h3>
+<ul>
+<li>for fluorescence imaging<br>
+</li>
+<li>higher sensitivity than color cameras<br>
+</li>
+<li>used with emission filters to capture specific wavelength ranges</li>
+</ul>
 </div>
 </section>
+<section id="color-camera---bayer-filter-array-bfa" class="slide level2 custom_indent2">
+<h2>Color camera - Bayer filter array (BFA)</h2>
+<div class="smallerFont1">
+<ul>
+<li>Bayer filter array (BFA) is a color filter pattern to capture color information.</li>
+<li>It consists of a grid of <span class="text-red">red</span>, <span class="text-green">green</span>, and <span class="text-blue">blue</span> filters arranged in a specific pattern over the camera’s sensor.</li>
+<li>Each pixel on the sensor captures light filtered through one of these colored filters</li>
+<li>Interpolation of neighboring pixels generates a smooth representation of a colored field of view.</li>
+</ul>
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<figcaption>Bayer filter array</figcaption>
+<p><img data-src="images/Bayer_pattern_on_sensor.svg.png"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<figcaption>Bayer2</figcaption>
+<p><img data-src="images/Bayer_pattern_on_sensor_profile.svg.png"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<figcaption>Color interpolation</figcaption>
+<p><img data-src="images/demosaic3.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="color-camera---limitations" class="slide level2 custom_indent2">
+<h2>Color camera - limitations</h2>
+<div class="smallerFont1">
+<ul>
+<li>Each pixel effectively captures only 1/3 of incoming light, leading to reduced sensitivity compared to monochrome cameras</li>
+<li>The color information is not directly captured but rather inferred through interpolation, so cannot accurately extract the precise intensity values for further image analysis.</li>
+</ul>
+</div>
+</section>
+<section id="monochrome-camera" class="slide level2 custom_indent2">
+<h2>Monochrome camera</h2>
+<div class="quarto-layout-panel" data-layout="[50,30]">
+<div class="quarto-layout-row">
+<div class="smallerFont1 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
+<ul>
+<li>Each pixel captures the full intensity of incoming light, resulting in higher sensitivity and better signal-to-noise ratio (SNR) compared to color cameras.</li>
+<li>Monochrome cameras are <span class="text-blue">used for fluorescence imaging</span> and quantitative analysis, as they provide more accurate intensity measurements without the need for interpolation.</li>
+<li>Monochrome cameras are used with emission filters to capture specific wavelength ranges, allowing for multi-channel imaging and analysis of different fluorophores.</li>
+<li>Monochrome cameras are also used in brightfield imaging for better contrast and resolution.</li>
+<li>Monochrome cameras are often used in scientific research and applications where accurate intensity measurements are critical, such as in cell biology, neuroscience, and materials science.</li>
+<li>Monochrome cameras can be used in combination with color filters or dichroic mirrors to capture multi-channel images for analysis of multiple fluorophores or stains in the same sample.</li>
+</ul>
+</div>
+<div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: flex-start;">
+<p><br><br> <img data-src="images/color-sensor-vs-monochrom-sensor-640w_v2.png"></p>
+</div>
+</div>
+</div>
+</section>
+
 <section id="ccd-vs-emccd-vs-scmos" class="slide level2">
 <h2>CCD vs EMCCD vs sCMOS</h2>
 <div class="hidden">
@@ -293,8 +341,8 @@
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
-<div class="absolute" style="transform: translate(-50%, -50%); font-size: 1.8em; width: 100%; color: #002fff; text-align: center;top: 50%; left: 50%; ">
-<p>Part 2<br><br>What is an image and how to analyze it.</p>
+<div class="absolute" style="transform: translate(-50%, -50%); font-size: 1.4em; width: 100%; color: blue; text-align: center;top: 50%; left: 50%; ">
+<p>Part 2<br>What is an image and how to analyze it.</p>
 </div>
 </section>
 <section id="why-should-i-learn-about-images-and-analysis-in-an-era-of-ai-and-deep-learning" class="slide level2">
@@ -303,7 +351,7 @@
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/AIDeBlur2.jpg" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/AIDeBlur2.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
 <div class="smallerFont0 absolute" style="top: 670px; left: 20px; ">
@@ -501,15 +549,16 @@
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
-<div class="absolute" style="transform: translate(-50%, -50%); font-size: 1.6em; width: 100%; color: #002fff; text-align: center;top: 50%; left: 50%; ">
-<p>Can you tell which images are the <span class="text-red">same</span> and which are <span class="text-red">different</span>?</p>
+<div class="absolute" style="transform: translate(-50%, -50%); font-size: 1.2em; width: 100%; color: blue; text-align: center;top: 50%; left: 50%; ">
+<p>Can you tell which images are the <span class="text-red">same</span></p>
+<p>and which are <span class="text-red">different</span>?</p>
 </div>
 </section>
 <section class="slide level2">
 
 <!-- ::: {layout="[[1,1,1], [1,1,1]]" layout-column-gap="0" layout-row-gap="0"} -->
 <!-- ::: {layout-ncol="3" layout-nrow="2" layout-row-gap="0" layout-column-gap="0"} -->
-<div class="tight-grid quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="3">
+<div class="tight-grid element-center quarto-layout-panel" data-layout-ncol="3" data-layout-nrow="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png"></p>
@@ -536,13 +585,13 @@
 </section>
 <section class="slide level2">
 
-<div class="tight-grid element-center quarto-layout-panel" data-layout-nrow="1" data-layout-ncol="2">
+<div class="tight-grid element-center quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="1">
 <div class="quarto-layout-row">
 <div class="img-stack quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_BC.png" class="overlay-img fragment"></p>
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_BC.png" class="overlay-img2 fragment"></p>
 </div>
 <div class="img-stack quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3_BC.png" class="overlay-img fragment"></p>
+<p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3_BC.png" class="overlay-img2 fragment"></p>
 </div>
 </div>
 </div>
@@ -551,7 +600,7 @@
 </section>
 <section class="slide level2">
 
-<div class="tight-grid quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="3">
+<div class="tight-grid element-center quarto-layout-panel" data-layout-ncol="3" data-layout-nrow="2">
 <div class="quarto-layout-row">
 <div class="img-stack quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_histo_v2.png" class="overlay-img fragment"></p>
@@ -578,18 +627,22 @@
 </section>
 <section id="image-display-vs-image-analysis-2" class="slide level2">
 <h2>Image display vs image analysis</h2>
-<p>Images that <span class="text-red">look the same</span> may have <span class="text-red">different</span> pixel values.</p>
-<p>Images that <span class="text-red">look different</span> may have <span class="text-red">identical</span> pixel values. <br><br>
-When in doubt, check:</p>
+<p><br> Images that <span class="text-red">look the same</span> may have <span class="text-red">different</span> pixel values.</p>
+<p>Images that <span class="text-red">look different</span> may have <span class="text-red">identical</span> pixel values.</p>
+<p><br></p>
+<div class="fragment">
+<p>When in doubt, check:</p>
 <ul>
 <li>Histogram</li>
 <li>Brightness and Contrast</li>
 <li>Lookup table (LUT)</li>
 </ul>
+</div>
 </section>
-<section id="changing-image-bit-depth" class="slide level2 smaller">
+<section id="changing-image-bit-depth" class="slide level2">
 <h2>Changing image bit-depth</h2>
-<h4 id="why-would-you-want-to-change-the-bit-depth-of-an-image">Why would you want to change the bit-depth of an image?</h4>
+<section id="why-would-you-want-to-change-the-bit-depth-of-an-image" class="smaller">
+<h4>Why would you want to change the bit-depth of an image?</h4>
 <ul>
 <li>to save space (rarely)</li>
 <li>Because a particular plugin only works on 8/16/32-bit images (most common reason)</li>
@@ -634,6 +687,7 @@ When in doubt, check:</p>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
 </section>
 <section id="image-metadata" class="slide level2 smaller">
 <h2>Image Metadata</h2>
@@ -1359,12 +1413,12 @@ Using the model from step 1 to predict the segmentation results :<br>
         height: 720,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 5.0e-2,
 
         // Bounds for smallest/largest possible scale to apply to content
         minScale: 0.2,
 
-        maxScale: 1.2,
+        maxScale: 2,
 
         math: {
           mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',

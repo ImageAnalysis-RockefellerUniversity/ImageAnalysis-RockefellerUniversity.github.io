@@ -42,7 +42,7 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-analysis-bio-imaging-resource-center",
     "title": "What Is an Image?",
     "section": "Image Analysis @ Bio-Imaging Resource Center",
-    "text": "Image Analysis @ Bio-Imaging Resource Center\n\nClick here to go to our website!\n\n https://imageanalysis-rockefelleruniversity.github.io/"
+    "text": "Image Analysis @ Bio-Imaging Resource Center\n\nBIRC Image analysis website!\n\n https://imageanalysis-rockefelleruniversity.github.io/"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#how-are-images-formed-in-a-microscope",
@@ -70,14 +70,28 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
     "title": "What Is an Image?",
     "section": "Microscopy cameras",
-    "text": "Microscopy cameras\n Color cameras\n- used for visual inspection\n- used for stains and dyes (histology)\n Monochrome cameras\n- for fluorescence imaging\n- higher sensitivity than color cameras\n- used with emission filters to capture specific wavelength ranges"
+    "text": "Microscopy cameras\n\nColor cameras\n\nused for visual inspection\n\nused for stains and dyes (histology)\n\n\nMonochrome cameras\n\nfor fluorescence imaging\n\nhigher sensitivity than color cameras\n\nused with emission filters to capture specific wavelength ranges"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras-1",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras-1",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#color-camera---bayer-filter-array-bfa",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#color-camera---bayer-filter-array-bfa",
     "title": "What Is an Image?",
-    "section": "Microscopy cameras",
-    "text": "Microscopy cameras\n\ncolor cameras\n\nPhone cameras\n\nCCD\nCMOS (reduced power consumption than CCD)\nCMOS back-illuminated (use even less power than CMOS; higher price)\n\nmicroscope color cameras\n\nused for visual inspection\nused for stains and dyes (histology)\n\n\nmonochrome cameras\n\nfor fluorescence imaging\nhigher sensitivity than color cameras\nused with emission filters to capture specific wavelength ranges\n\nCameras – CCDs, EMCCDs and sCMOS;\nPMTs – newer GaAsP, Hybrid and SilVIR detectors ;\nAvalanche Photodiodes (APDs).\n\n\nQuestion for Behzad/Alison 1. termionology difference between sensor, detector and camera. 2. Phone color cameras vs microscope color cameras."
+    "section": "Color camera - Bayer filter array (BFA)",
+    "text": "Color camera - Bayer filter array (BFA)\n\n\nBayer filter array (BFA) is a color filter pattern to capture color information.\nIt consists of a grid of red, green, and blue filters arranged in a specific pattern over the camera’s sensor.\nEach pixel on the sensor captures light filtered through one of these colored filters\nInterpolation of neighboring pixels generates a smooth representation of a colored field of view.\n\n\n\n\n\n\n\nBayer filter array\n\n\n\n\n\n\n\nBayer2\n\n\n\n\n\n\n\nColor interpolation"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#color-camera---limitations",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#color-camera---limitations",
+    "title": "What Is an Image?",
+    "section": "Color camera - limitations",
+    "text": "Color camera - limitations\n\n\nEach pixel effectively captures only 1/3 of incoming light, leading to reduced sensitivity compared to monochrome cameras\nThe color information is not directly captured but rather inferred through interpolation, so cannot accurately extract the precise intensity values for further image analysis."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#monochrome-camera",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#monochrome-camera",
+    "title": "What Is an Image?",
+    "section": "Monochrome camera",
+    "text": "Monochrome camera\n\n\n\n\nEach pixel captures the full intensity of incoming light, resulting in higher sensitivity and better signal-to-noise ratio (SNR) compared to color cameras.\nMonochrome cameras are used for fluorescence imaging and quantitative analysis, as they provide more accurate intensity measurements without the need for interpolation.\nMonochrome cameras are used with emission filters to capture specific wavelength ranges, allowing for multi-channel imaging and analysis of different fluorophores.\nMonochrome cameras are also used in brightfield imaging for better contrast and resolution.\nMonochrome cameras are often used in scientific research and applications where accurate intensity measurements are critical, such as in cell biology, neuroscience, and materials science.\nMonochrome cameras can be used in combination with color filters or dichroic mirrors to capture multi-channel images for analysis of multiple fluorophores or stains in the same sample."
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-vs-emccd-vs-scmos",
@@ -140,21 +154,21 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
     "title": "What Is an Image?",
     "section": "",
-    "text": "Can you tell which images are the same and which are different?"
+    "text": "Can you tell which images are the same\nand which are different?"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis-2",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis-2",
     "title": "What Is an Image?",
     "section": "Image display vs image analysis",
-    "text": "Image display vs image analysis\nImages that look the same may have different pixel values.\nImages that look different may have identical pixel values. \nWhen in doubt, check:\n\nHistogram\nBrightness and Contrast\nLookup table (LUT)"
+    "text": "Image display vs image analysis\n Images that look the same may have different pixel values.\nImages that look different may have identical pixel values.\n\n\nWhen in doubt, check:\n\nHistogram\nBrightness and Contrast\nLookup table (LUT)"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depth",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depth",
     "title": "What Is an Image?",
     "section": "Changing image bit-depth",
-    "text": "Changing image bit-depth\nWhy would you want to change the bit-depth of an image?\n\nto save space (rarely)\nBecause a particular plugin only works on 8/16/32-bit images (most common reason)\nso that a large image could be loaded into RAM/opened and I can quickly take a look at it.\n\n\nin Fiji, go to Edit &gt; Options &gt; Conversions...\n\n\n\n\n \n\n\n\nBy default this setting is checked ON.\n\n\n \n\n\n\n\n\n\n\n\n\n\n\nthere are many old imageJ plugins that only work on 8-bit images.\nIf you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background"
+    "text": "Changing image bit-depth\n\nWhy would you want to change the bit-depth of an image?\n\nto save space (rarely)\nBecause a particular plugin only works on 8/16/32-bit images (most common reason)\nso that a large image could be loaded into RAM/opened and I can quickly take a look at it.\n\n\nin Fiji, go to Edit &gt; Options &gt; Conversions...\n\n\n\n\n \n\n\n\nBy default this setting is checked ON.\n\n\n \n\n\n\n\n\n\n\n\n\n\n\nthere are many old imageJ plugins that only work on 8-bit images.\nIf you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",

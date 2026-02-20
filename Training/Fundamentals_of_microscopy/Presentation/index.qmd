@@ -14,6 +14,7 @@ title-slide-attributes:
 
 format:
   revealjs:
+    margin: 0.05
     controls: true
     controls-layout: edges
     menu: 
@@ -22,7 +23,7 @@ format:
     height: 720
     
     min-scale: 0.2
-    max-scale: 1.2
+    max-scale: 2.0
     fig-cap-location: top
     footer: "Bio-Imaging Resource Center, The Rockefeller University"
     # theme: dark
@@ -55,8 +56,8 @@ format:
 
 ## Image Analysis @ Bio-Imaging Resource Center
 
-::: {.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.5em; width: 100%; text-align: center;"}
-[Click here to go to our website!](https://imageanalysis-rockefelleruniversity.github.io/){preview="true" style="padding: 15px 30px; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px; font-size: 0.8em; font-weight: normal; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"}  
+::: {.absolute top="40%" left="40%" style="transform: translate(-40%, -40%); font-size: 1.2em; width: 100%; text-align: center;"}
+[BIRC Image analysis website!](https://imageanalysis-rockefelleruniversity.github.io/){preview="true" style="padding: 15px 30px; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px; font-size: 0.8em; font-weight: normal; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"}  
 
 ::: {.smallerFont0}
 <br>
@@ -109,17 +110,17 @@ PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf
 - image processing filters
 :::
 
-## Sensor vs Detector vs Camera {.smallerFont1}
+## Sensor vs Detector vs Camera {.custom_indent4}
 
-::: {.fragment}
+::: {.fragment .smallerFont1}
 ### Sensor{.text-blue}
 The fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal
 
-- A Passive Infrared (PIR) sensor detects body heat
-- the light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)
+  - A Passive Infrared (PIR) sensor detects body heat
+  - the light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)
 :::
 
-::: {.fragment}
+::: {.fragment .smallerFont1}
 ### Detector{.text-blue}
 A broader term that includes sensors and other components to detect signal
 
@@ -128,25 +129,78 @@ A broader term that includes sensors and other components to detect signal
 - Camera is a type of detector which captures light to form images
 :::
 
-::: {.fragment}
+::: {.fragment .smallerFont1}
 ### Camera{.text-blue}
 A complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing
 :::
 
-## Microscopy cameras
+## Microscopy cameras {.custom_indent4}
 
-<br>
-[Color cameras]{.text-blue}  
+::: {.smallerFont2}
+### Color cameras{.text-blue}
+
 - used for visual inspection  
 - used for stains and dyes (histology)
     
 <br>
-[Monochrome cameras]{.text-blue}  
+
+### Monochrome cameras{.text-blue}  
+
 - for fluorescence imaging  
 - higher sensitivity than color cameras  
 - used with emission filters to capture specific wavelength ranges  
 
-## Microscopy cameras
+:::
+
+## Color camera - Bayer filter array (BFA) {.custom_indent2}
+
+::: {.smallerFont1}
+- Bayer filter array (BFA) is a color filter pattern to capture color information. 
+- It consists of a grid of [red]{.text-red}, [green]{.text-green}, and [blue]{.text-blue} filters arranged in a specific pattern over the camera's sensor. 
+- Each pixel on the sensor captures light filtered through one of these colored filters
+- Interpolation of neighboring pixels generates a smooth representation of a colored field of view.
+:::
+
+::: {layout="[1,1,1]"}
+
+![Bayer filter array](images/Bayer_pattern_on_sensor.svg.png)
+
+![Bayer2](images/Bayer_pattern_on_sensor_profile.svg.png)
+
+![Color interpolation](images/demosaic3.png)
+
+:::
+
+## Color camera - limitations {.custom_indent2}
+
+::: {.smallerFont1}
+- Each pixel effectively captures only 1/3 of incoming light, leading to reduced sensitivity compared to monochrome cameras
+- The color information is not directly captured but rather inferred through interpolation, so cannot accurately extract the precise intensity values for further image analysis.
+ 
+:::
+
+## Monochrome camera {.custom_indent2}
+
+::: {layout="[50,30]"}
+::: {.smallerFont1}
+- Each pixel captures the full intensity of incoming light, resulting in higher sensitivity and better signal-to-noise ratio (SNR) compared to color cameras.
+- Monochrome cameras are [used for fluorescence imaging]{.text-blue} and quantitative analysis, as they provide more accurate intensity measurements without the need for interpolation.
+- Monochrome cameras are used with emission filters to capture specific wavelength ranges, allowing for multi-channel imaging and analysis of different fluorophores.
+- Monochrome cameras are also used in brightfield imaging for better contrast and resolution.
+- Monochrome cameras are often used in scientific research and applications where accurate intensity measurements are critical, such as in cell biology, neuroscience, and materials science.
+- Monochrome cameras can be used in combination with color filters or dichroic mirrors to capture multi-channel images for analysis of multiple fluorophores or stains in the same sample.
+:::
+
+
+::: {.element-center}
+<br><br>
+![](images/color-sensor-vs-monochrom-sensor-640w_v2.png)
+
+:::
+
+:::
+
+## Microscopy cameras {.smallerFont1 visibility="hidden"}
 
 - color cameras
   - Phone cameras
@@ -187,8 +241,8 @@ https://evidentscientific.com/en/learn/white-papers/silvir-detector-system-for-t
 - Shot noise
 
 ## 
-:::{.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.8em; width: 100%; color: #002fff; text-align: center;"}
-Part 2<br><br>What is an image and how to analyze it.
+:::{.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.4em; width: 100%; color: blue; text-align: center;"}
+Part 2<br>What is an image and how to analyze it.
 :::
 
 ## Why should I learn about images and analysis in an era of AI and Deep Learning?
@@ -196,7 +250,7 @@ Part 2<br><br>What is an image and how to analyze it.
 <br>
 
 ::: {.fragment}
-![](images/AIDeBlur2.jpg){fig-align="center"}
+![](images/AIDeBlur2.jpg){fig-align="center" width="80%"}
 
 :::{.smallerFont0 .absolute top="670" left="20"}
 https://forum.image.sc/
@@ -282,8 +336,10 @@ Number of bits (N) determine the range of intensity levels
 :::
 
 ## 
-:::{.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.6em; width: 100%; color: #002fff; text-align: center;"}
-Can you tell which images are the [same]{.text-red} and which are [different]{.text-red}?
+:::{.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.2em; width: 100%; color: blue; text-align: center;"}
+Can you tell which images are the [same]{.text-red} 
+
+and which are [different]{.text-red}?
 :::
 
 --- 
@@ -291,7 +347,7 @@ Can you tell which images are the [same]{.text-red} and which are [different]{.t
 <!-- ::: {layout="[[1,1,1], [1,1,1]]" layout-column-gap="0" layout-row-gap="0"} -->
 <!-- ::: {layout-ncol="3" layout-nrow="2" layout-row-gap="0" layout-column-gap="0"} -->
 
-::: {.tight-grid layout-ncol="3" layout-nrow="2"}
+::: {.tight-grid layout-ncol="3" layout-nrow="2" .element-center} 
 
 ![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png)
 
@@ -313,12 +369,12 @@ Can you tell which images are the [same]{.text-red} and which are [different]{.t
 
 ::: {.img-stack}
 ![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png){.base-img}
-![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_BC.png){.overlay-img .fragment}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_BC.png){.overlay-img2 .fragment}
 :::
 
 ::: {.img-stack}
 ![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3.png){.base-img}
-![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3_BC.png){.overlay-img .fragment}
+![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-3_BC.png){.overlay-img2 .fragment}
 :::
 
 :::
@@ -330,7 +386,7 @@ Can you tell which images are the [same]{.text-red} and which are [different]{.t
 
 --- 
 
-::: {.tight-grid layout-ncol="3" layout-nrow="2"}
+::: {.tight-grid layout-ncol="3" layout-nrow="2" .element-center}
 
 ::: {.img-stack}
 ![](images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png){.base-img}
@@ -361,17 +417,23 @@ Can you tell which images are the [same]{.text-red} and which are [different]{.t
 :::
 
 ## Image display vs image analysis
+<br>
 Images that [look the same]{.text-red} may have [different]{.text-red} pixel values.
 
 Images that [look different]{.text-red} may have [identical]{.text-red} pixel values.
+
 <br>  
+
+::: {.fragment}
 When in doubt, check:
 
 - Histogram
 - Brightness and Contrast
 - Lookup table (LUT)
+:::
 
-## Changing image bit-depth {.smaller}
+## Changing image bit-depth 
+::: {.smaller}
 
 #### Why would you want to change the bit-depth of an image?
 
@@ -399,6 +461,8 @@ By default this setting is checked ON.
 ::: {.notes}
 - there are many old imageJ plugins that only work on 8-bit images.
 - If you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background
+:::
+
 :::
 
 ## Image Metadata {.smaller}
