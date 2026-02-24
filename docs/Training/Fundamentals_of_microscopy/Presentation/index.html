@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-c54038a94b102abe5161287ccd792bd0.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-5b9c7bc364fbd947e42abad66de11387.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -193,12 +193,23 @@
 <p>noise, FFT, PSF: OMIBS_LaRiviere2024.pdf PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf</p>
 </div>
 </section>
+<section id="confocal-detectors" class="slide level2">
+<h2>Confocal detectors</h2>
+<p>Detectors can be cameras or confocal-style detectors such as:</p>
+<ul>
+<li>PMTs (photomultiplier tubes)</li>
+<li>GaAsP</li>
+<li>APDs (Avalanche Photodiodes)</li>
+<li>SilVIR</li>
+</ul>
+<p>… will be discussed in session #4 on Confocal Microscopy</p>
+</section>
 <section id="outline" class="slide level2">
 <h2>Outline</h2>
 <div class="smallerFont2 custom_indent4">
 <h3 id="part-1---how-cameras-generate-an-image.">Part 1 - How cameras generate an image.</h3>
 <ul>
-<li>camera types (CCD, CMOS)</li>
+<li>camera types (CCD, EMCCD, CMOS)</li>
 <li>camera noise</li>
 </ul>
 <h3 id="part-2---what-is-an-image-and-how-to-work-with-it.">Part 2 - What is an image and how to work with it.</h3>
@@ -218,7 +229,6 @@
 <h3 class="text-blue" id="sensor">Sensor</h3>
 <p>The fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal</p>
 <ul>
-<li>A Passive Infrared (PIR) sensor detects body heat</li>
 <li>the light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)</li>
 </ul>
 </div>
@@ -226,8 +236,6 @@
 <h3 class="text-blue" id="detector">Detector</h3>
 <p>A broader term that includes sensors and other components to detect signal</p>
 <ul>
-<li>A motion detector may use PIR sensors to detect movement</li>
-<li>A heat detector uses temperature sensors to measure heat levels</li>
 <li>Camera is a type of detector which captures light to form images</li>
 </ul>
 </div>
@@ -243,7 +251,7 @@
 <ul>
 <li>used for visual inspection<br>
 </li>
-<li>used for stains and dyes (histology)</li>
+<li>used for stains and dyes (e.g.&nbsp;histology)</li>
 </ul>
 <p><br></p>
 <h3 class="text-blue" id="monochrome-cameras">Monochrome cameras</h3>
@@ -279,7 +287,7 @@
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<figcaption>Bayer2</figcaption>
+<figcaption>Mosaicing</figcaption>
 <p><img data-src="images/Bayer_pattern_on_sensor_profile.svg.png"></p>
 </figure>
 </div>
@@ -287,7 +295,7 @@
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<figcaption>Color interpolation</figcaption>
+<figcaption>Demosaicing: color interpolation</figcaption>
 <p><img data-src="images/demosaic3.png"></p>
 </figure>
 </div>
@@ -299,7 +307,7 @@
 <h2>Color camera - limitations</h2>
 <div class="smallerFont1">
 <ul>
-<li>Each pixel effectively captures only 1/3 of incoming light, leading to reduced sensitivity compared to monochrome cameras</li>
+<li>Each pixel effectively captures only 1/3 of incoming light, leading to <span class="text-red">reduced sensitivity</span> compared to monochrome cameras</li>
 <li>The color information is not directly captured but rather inferred through interpolation, so cannot accurately extract the precise intensity values for further image analysis.</li>
 </ul>
 </div>
@@ -310,12 +318,11 @@
 <div class="quarto-layout-row">
 <div class="smallerFont1 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
 <ul>
-<li>Each pixel captures the full intensity of incoming light, resulting in higher sensitivity and better signal-to-noise ratio (SNR) compared to color cameras.</li>
-<li>Monochrome cameras are <span class="text-blue">used for fluorescence imaging</span> and quantitative analysis, as they provide more accurate intensity measurements without the need for interpolation.</li>
-<li>Monochrome cameras are used with emission filters to capture specific wavelength ranges, allowing for multi-channel imaging and analysis of different fluorophores.</li>
-<li>Monochrome cameras are also used in brightfield imaging for better contrast and resolution.</li>
-<li>Monochrome cameras are often used in scientific research and applications where accurate intensity measurements are critical, such as in cell biology, neuroscience, and materials science.</li>
-<li>Monochrome cameras can be used in combination with color filters or dichroic mirrors to capture multi-channel images for analysis of multiple fluorophores or stains in the same sample.</li>
+<li>Each pixel captures the full intensity of incoming light, resulting in <span class="text-red">higher sensitivity</span> and <span class="text-red">better signal-to-noise ratio (SNR)</span> compared to color cameras.</li>
+<li>These cameras are <span class="text-red">used for fluorescence imaging</span> and <span class="text-red">quantitative analysis</span>, as they provide more accurate intensity measurements without the need for interpolation.</li>
+<li>Used in combinations with dichroic mirrors and emission filters to capture specific wavelength ranges, allowing for <span class="text-red">multi-channel imaging</span> and analysis of different fluorophores.</li>
+<li>Used in transmitted-light techniques for better contrast and resolution.</li>
+<li>Used in scientific research and applications where accurate intensity measurements are critical, such as in cell biology, neuroscience, and materials science.</li>
 </ul>
 </div>
 <div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: flex-start;">
@@ -325,19 +332,170 @@
 </div>
 </section>
 
-<section id="ccd-vs-emccd-vs-scmos" class="slide level2">
-<h2>CCD vs EMCCD vs sCMOS</h2>
-<div class="hidden">
-<p>https://camera.hamamatsu.com/jp/en/learn/technical_information/thechnical_guide/visual_guide.html SilVIR detector: https://evidentscientific.com/en/learn/white-papers/silvir-detector-system-for-the-fv4000-laser-confocal-microscope</p>
+<section id="camera-types" class="slide level2 custom_indent2">
+<h2>Camera types</h2>
+<ul>
+<li>CCD (Charge-Coupled Device)</li>
+<li>EMCCD (Electron Multiplying CCD)</li>
+<li>sCMOS (scientific Complementary Metal-Oxide-Semiconductor)</li>
+</ul>
+</section>
+<section id="ccd-camera" class="slide level2 custom_indent2">
+<h2>CCD camera</h2>
+<div class="smallerFont0 absolute" style="top: 670px; left: 10px; ">
+<p>from https://camera.hamamatsu.com</p>
+</div>
+<div class="quarto-layout-panel" data-layout="[50,30]">
+<div class="quarto-layout-row">
+<div class="smallerFont1 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
+<ul>
+<li>Each pixel of the CCD image sensor is composed of a photodiode and a potential well, which can be thought of as a bucket for photoelectrons.</li>
+<li>This wavelength dependent conversion of light to photoelectrons is specified as the quantum efficiency (QE).</li>
+<li>Photoelectrons accumulate in each bucket until it’s time for readout, when all of the photoelectrons are relayed from one bucket to the next down each row of pixels.</li>
+<li>The charge is gathered pixel-by-pixel—serially—into a container at the end of the relay.</li>
+<li>Once in the container, the photoelectrons are converted into voltage and processed into an image on the camera circuit board.</li>
+<li>Because the photoelectrons are converted into signal (voltage) at a common port, the speed of image acquisition is limited.</li>
+</ul>
+</div>
+<div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: flex-start;">
+<p><br><br> <img data-src="images/CCD_image sensor2.jpeg"></p>
+</div>
+</div>
 </div>
 </section>
-<section id="camera-noise" class="slide level2">
-<h2>Camera noise</h2>
+<section id="emccd-camera" class="slide level2 custom_indent2">
+<h2>EMCCD camera</h2>
+<div class="smallerFont0 absolute" style="top: 670px; left: 10px; ">
+<p>https://www.teledynevisionsolutions.com</p>
+</div>
+<div class="quarto-layout-panel" data-layout="[50,30]">
+<div class="quarto-layout-row">
+<div class="smallerFont1 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
 <ul>
-<li>Read noise</li>
-<li>Dark noise</li>
-<li>Shot noise</li>
+<li>Similar to CCD except that they have an on-chip electron <span class="text-red">multiplication register</span> that amplifies the signal before readout, allowing for <span class="text-red">detection of very low light levels</span>.</li>
+<li>Because the photoelectrons are converted into signal (voltage) at a common port, the speed of image acquisition is limited.</li>
 </ul>
+</div>
+<div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: center;">
+<p><img data-src="images/emccd_Teledyne.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="scmos-camera" class="slide level2 custom_indent2">
+<h2>sCMOS camera</h2>
+<div class="smallerFont0 absolute" style="top: 670px; left: 10px; ">
+<p>https://camera.hamamatsu.com</p>
+</div>
+<div class="quarto-layout-panel" data-layout="[50,30]">
+<div class="quarto-layout-row">
+<div class="smallerFont1 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
+<ul>
+<li>In contrast with CCD and EMCCD sensors, each pixel of a CMOS image sensor is composed of a photodiode-amplifier pair.</li>
+<li>Unlike a CCD sensor, photoelectrons are converted into voltage by each pixel’s photodiode-amplifier pair.</li>
+<li>Because conversion to voltage happens in parallel instead of serially (CCD), image acquisition can be much faster for CMOS sensors.</li>
+<li>scientific CMOS sensors combines high QE with fast frame rates and low noise, which translates into high speed, high-resolution biological images, even in low light situations.</li>
+<li>For almost all applications, newer sCMOS cameras are a great choice, but for ultra-low light (single fluorescent molecules) EMCCDs may still be better.</li>
+</ul>
+</div>
+<div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: flex-start;">
+<p><br><br> <img data-src="images/CMOS_image sensor.jpeg"></p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="camera-noise" class="slide level2 custom_indent2">
+<h2>Camera noise</h2>
+<p>Random degradation of any image due to the inherent uncertainty of photon detection.</p>
+<p><br> Mainly three types of noises in microscopy cameras:</p>
+<div class="custom_indent4">
+<ul>
+<li>Shot noise</li>
+<li>Dark noise</li>
+<li>Read noise</li>
+</ul>
+</div>
+</section>
+<section id="shot-noise" class="slide level2 custom_indent2">
+<h2>Shot noise</h2>
+<div class="quarto-layout-panel" data-layout="[50,30]">
+<div class="quarto-layout-row">
+<div class="smallerFont1 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
+<ul>
+<li>Uncertainty in the arrival of photons</li>
+<li>Arrival of any given photon is independent and cannot be precisely predicted</li>
+<li>The probability of its arrival is governed by a Poisson distribution</li>
+<li>It is most apparent at low signal levels, where the number of detected photons is small</li>
+<li>Shot noise can be reduced by collecting more photons, either with longer exposure times or by combining multiple frames, but this may not always be feasible due to photobleaching or phototoxicity in live samples.</li>
+</ul>
+</div>
+<div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: flex-start;">
+<p><br> <img data-src="images/SS_detector.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="dark-noise" class="slide level2 custom_indent2">
+<h2>Dark noise</h2>
+<div class="quarto-layout-panel" data-layout="[50,30]">
+<div class="quarto-layout-row">
+<div class="smallerFont1 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
+<ul>
+<li>Uncertainty in the photon-to-electron conversion process.</li>
+<li>Generated by thermal electrons in the camera sensor even in the absence of light.</li>
+<li>Also governed by a Poisson distribution.</li>
+<li>Becomes a problem for long exposure such as in bioluminescence imaging.</li>
+<li>Temperature-dependent: can be reduced by cooling the camera sensor.</li>
+</ul>
+</div>
+<div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: flex-start;">
+<p><br><br> <img data-src="images/SS_detector.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="read-noise" class="slide level2 custom_indent2">
+<h2>Read noise</h2>
+<div class="smallerFont1 absolute" style="top: 620px; left: 5px; ">
+<p><u>Resource</u><br>
+https://andor.oxinst.com/learning/view/article/sensitivity-and-noise-of-ccd-emccd-and-scmos-sensors</p>
+</div>
+<div class="quarto-layout-panel" data-layout="[50,30]">
+<div class="quarto-layout-row">
+<div class="smallerFont1 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: center;">
+<ul>
+<li>Uncertainty in the electronic readout process of the camera</li>
+<li>Inherent to the process of converting CCD charge into a voltage signal and the subsequent analog-to-digital conversion</li>
+<li>added uniformly to all pixels</li>
+<li>Can be reduced by using a camera with low read noise specifications and optimizing the readout settings</li>
+<li>Read noise is negligible in high signal applications</li>
+<li>EMCCD: signal amplification happens before readout, so read noise is effectively reduced to near zero, making EMCCD ideal for low-light imaging.</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;">CCD</th>
+<th style="text-align: center;">EMCCD</th>
+<th style="text-align: center;">sCMOS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Read noise</td>
+<td style="text-align: center;">2-6 e<sup>-</sup></td>
+<td style="text-align: center;">&lt;1 e<sup>-</sup></td>
+<td style="text-align: center;">1-2 e<sup>-</sup></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: flex-start;">
+<p><br><br> <img data-src="images/SS_detector.png"></p>
+</div>
+</div>
+</div>
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
@@ -413,10 +571,15 @@
 </section>
 <section id="bit-depth" class="slide level2 scrollable">
 <h2>Bit depth</h2>
-<div class="smallerFont1 quarto-layout-panel" data-layout="[44,-1,55]">
+<div class="smallerFont0 quarto-layout-panel" data-layout="[44,-1,55]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 44.0%;justify-content: flex-start;">
-<p>Number of bits (N) determine the range of intensity levels</p>
+<ul>
+<li>Number of available grey levels used the represent the signal intensity<br>
+</li>
+<li>Determines how “finely” the signal is slices into discrete intensity levels</li>
+<li>Number of bits (N) determine the range of intensity levels</li>
+</ul>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 1.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
@@ -510,13 +673,65 @@
 <!-- ![Bit depth shades](images/bit_depth_shades.png) -->
 </div>
 </section>
+<section id="dynamic-range-vs-bit-depth" class="slide level2">
+<h2>Dynamic range vs bit depth</h2>
+<div class="smallerFont0">
+<p>Dynamic range is the ratio between the maximum and minimum signals that can be measured by the camera</p>
+<p><span class="math display">\[\text{Dynamic Range} = \frac{\text{Full Well Capacity}}{\text{Read Noise}}\]</span></p>
+<ul>
+<li><span class="text-red">Full well capacity</span> is the maximum number of electrons a sensor can hold before saturation</li>
+<li><span class="text-red">Read noise</span> is the minimum detectable signal above the noise floor</li>
+</ul>
+<p><u>Dynamic range</u> is about the sensor’s ability to capture extreme differences in light.<br>
+<br> <u>Bit depth</u> is about the digital resolution used to display those differences.</p>
+<p><br></p>
+<h4 id="analogy">Analogy</h4>
+<div class="custom_indent2">
+<ul>
+<li>Think of Dynamic Range as the total height of a staircase (from the floor to the ceiling).<br>
+</li>
+<li>Think of Bit Depth as the number of steps in that staircase.<br>
+</li>
+<li>A higher bit depth means more steps, making the transition from floor to ceiling smoother, but it doesn’t necessarily make the ceiling any higher.</li>
+</ul>
+</div>
+<div class="smallerFont2 absolute fragment" style="top: 660px; left: 20px; ">
+<p><u>Resources</u><br>
+https://www.teledynevisionsolutions.com/learn/learning-center/imaging-fundamentals/bit-depth-full-well-and-dynamic-range/</p>
+</div>
+</div>
+</section>
+<section id="how-do-grey-intensity-values-relate-to-photons" class="slide level2">
+<h2>How do grey intensity values relate to photons</h2>
+<div class="smallerFont45 absolute fragment" style="top: 570px; left: 20px; ">
+<p><u>Resources</u><br>
+https://www.teledynevisionsolutions.com/learn/learning-center/imaging-fundamentals/camera-gain/<br>
+https://www.teledynevisionsolutions.com/learn/learning-center/imaging-fundamentals/camera-sensitivity/<br>
+https://www.azom.com/article.aspx?ArticleID=20215</p>
+</div>
+<div class="quarto-layout-panel" data-layout="[50,30]">
+<div class="quarto-layout-row">
+<div class="smallerFont1 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
+<p>Intensity values/grey levels/Analog-to-Digital Units (ADU) are proportional to the number of photons detected by the camera sensor</p>
+<ul>
+<li>Convert grey levels to electrons <span class="math display">\[\text{Photoelectrons} = (\text{Grey levels} - \text{Offset}) \times \text{Gain}\]</span></li>
+<li>Convert electrons to photons <span class="math display">\[\text{Photons} = \frac{\text{Photoelectrons}}{\text{QE}}\]</span></li>
+</ul>
+<p>need to know the <span class="text-red">camera offset, gain and quantum efficiency (QE)</span> of the camera sensor for the specific wavelength</p>
+</div>
+<div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: flex-start;">
+<p><br> <img data-src="images/SS_detector2b.png"></p>
+</div>
+</div>
+</div>
+</section>
 <section id="image-display-vs-image-analysis" class="slide level2">
 <h2>Image display vs image analysis</h2>
 <h4 class="text-blue fragment" id="image-display">Image display</h4>
 <div class="fragment smallerFont2">
 <ul>
 <li>Images are usually enhanced for better visualization (human eye) of features of interest</li>
-<li>qualitative assessment of the features of interest in the image</li>
+<li><span class="text-red">qualitative</span> assessment of the features of interest in the image</li>
 <li>typically figure panels for publications, presentations etc.</li>
 <li>Tools:
 <ul>
@@ -532,7 +747,7 @@
 <h4 class="text-blue" id="image-analysis">Image analysis</h4>
 <div class="smallerFont2">
 <ul>
-<li>quantitative measurement of features of interest
+<li><span class="text-red">quantitative</span> measurement of features of interest
 <ul>
 <li>Cell/nuclei counting, fluorescence intensity, shape etc.</li>
 </ul></li>
@@ -540,10 +755,11 @@
 <li>Any visual enhancement (pixel value change) is prohibited, except…</li>
 <li>Caveats: certain image enhancements are allowed:
 <ul>
-<li>image processing filters (e.g.&nbsp;Gaussian blur, median filter etc.). Original image must be used for intensity measurement.</li>
-<li>deconvolution, de-noising</li>
+<li>image processing filters (e.g.&nbsp;Gaussian blur, median filter, gamma etc.). Original image must be used for intensity measurement.</li>
+<li>deconvolution</li>
 </ul></li>
 <li>make sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias</li>
+<li>all this steps should be properly described in the methods section and/or fig legend of the paper.</li>
 </ul>
 </div>
 </section>
@@ -558,7 +774,7 @@
 
 <!-- ::: {layout="[[1,1,1], [1,1,1]]" layout-column-gap="0" layout-row-gap="0"} -->
 <!-- ::: {layout-ncol="3" layout-nrow="2" layout-row-gap="0" layout-column-gap="0"} -->
-<div class="tight-grid element-center quarto-layout-panel" data-layout-ncol="3" data-layout-nrow="2">
+<div class="tight-grid element-center quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png"></p>
@@ -585,7 +801,7 @@
 </section>
 <section class="slide level2">
 
-<div class="tight-grid element-center quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="1">
+<div class="tight-grid element-center quarto-layout-panel" data-layout-nrow="1" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="img-stack quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_BC.png" class="overlay-img2 fragment"></p>
@@ -600,7 +816,7 @@
 </section>
 <section class="slide level2">
 
-<div class="tight-grid element-center quarto-layout-panel" data-layout-ncol="3" data-layout-nrow="2">
+<div class="tight-grid element-center quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="img-stack quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_histo_v2.png" class="overlay-img fragment"></p>
@@ -645,7 +861,7 @@
 <h4>Why would you want to change the bit-depth of an image?</h4>
 <ul>
 <li>to save space (rarely)</li>
-<li>Because a particular plugin only works on 8/16/32-bit images (most common reason)</li>
+<li>Because a particular ImageJ/Fiji plugin only works with 8/16/32-bit images (most common reason!)</li>
 <li>so that a large image could be loaded into RAM/opened and I can quickly take a look at it.</li>
 </ul>
 <div class="fragment">
@@ -771,6 +987,31 @@
 <br> Common microscopy file formats: TIFF, OME-TIFF, CZI (Zeiss), ND2 (Nikon), LIF (Leica), etc.<br>
 <br> What is the difference between TIFF, PNG and JPEG?</p>
 <p>What is compression and how it affects image quality and analysis?</p>
+</section>
+<section id="resources---camera-websites" class="slide level2">
+<h2>Resources - camera websites</h2>
+
+<img data-src="images/SS_camera_resources.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="acknowledgements" class="slide level2 custom_indent4">
+<h2>Acknowledgements</h2>
+<div class="smallerFont2">
+<ul>
+<li>Alison North</li>
+<li>Tom Carroll</li>
+<li>James Hudspeth</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Tao Tong</li>
+<li>Behzad Khajavi</li>
+<li>Priyam Banerjee</li>
+<li>Maria Belen Harreguy Alfonso</li>
+<li>Ivan Rey Suarez</li>
+</ul>
+</div>
+</section>
+<section id="end" class="slide level2">
+<h2>END</h2>
 </section>
 <section id="resources" class="slide level2 smaller">
 <h2>Resources</h2>

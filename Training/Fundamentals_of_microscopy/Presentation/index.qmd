@@ -92,12 +92,23 @@ noise, FFT, PSF: OMIBS_LaRiviere2024.pdf
 PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf
 :::
 
+## Confocal detectors
+
+Detectors can be cameras or confocal-style detectors such as:
+
+- PMTs (photomultiplier tubes)
+- GaAsP
+- APDs (Avalanche Photodiodes)
+- SilVIR
+
+... will be discussed in session #4 on Confocal Microscopy
+
 ## Outline 
 
 :::{.smallerFont2 .custom_indent4}
 ### Part 1 - How cameras generate an image.
 
-- camera types (CCD, CMOS)
+- camera types (CCD, EMCCD, CMOS)
 - camera noise
 
 ### Part 2 - What is an image and how to work with it.
@@ -116,7 +127,6 @@ PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf
 ### Sensor{.text-blue}
 The fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal
 
-  - A Passive Infrared (PIR) sensor detects body heat
   - the light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)
 :::
 
@@ -124,8 +134,6 @@ The fundamental element that converts a physical stimulus (light, heat, sound) i
 ### Detector{.text-blue}
 A broader term that includes sensors and other components to detect signal
 
-- A motion detector may use PIR sensors to detect movement
-- A heat detector uses temperature sensors to measure heat levels
 - Camera is a type of detector which captures light to form images
 :::
 
@@ -140,7 +148,7 @@ A complete imaging device that includes a detector along with optics, housing, a
 ### Color cameras{.text-blue}
 
 - used for visual inspection  
-- used for stains and dyes (histology)
+- used for stains and dyes (e.g. histology)
     
 <br>
 
@@ -165,16 +173,16 @@ A complete imaging device that includes a detector along with optics, housing, a
 
 ![Bayer filter array](images/Bayer_pattern_on_sensor.svg.png)
 
-![Bayer2](images/Bayer_pattern_on_sensor_profile.svg.png)
+![Mosaicing](images/Bayer_pattern_on_sensor_profile.svg.png)
 
-![Color interpolation](images/demosaic3.png)
+![Demosaicing: color interpolation](images/demosaic3.png)
 
 :::
 
 ## Color camera - limitations {.custom_indent2}
 
 ::: {.smallerFont1}
-- Each pixel effectively captures only 1/3 of incoming light, leading to reduced sensitivity compared to monochrome cameras
+- Each pixel effectively captures only 1/3 of incoming light, leading to [reduced sensitivity]{.text-red} compared to monochrome cameras
 - The color information is not directly captured but rather inferred through interpolation, so cannot accurately extract the precise intensity values for further image analysis.
  
 :::
@@ -183,14 +191,13 @@ A complete imaging device that includes a detector along with optics, housing, a
 
 ::: {layout="[50,30]"}
 ::: {.smallerFont1}
-- Each pixel captures the full intensity of incoming light, resulting in higher sensitivity and better signal-to-noise ratio (SNR) compared to color cameras.
-- Monochrome cameras are [used for fluorescence imaging]{.text-blue} and quantitative analysis, as they provide more accurate intensity measurements without the need for interpolation.
-- Monochrome cameras are used with emission filters to capture specific wavelength ranges, allowing for multi-channel imaging and analysis of different fluorophores.
-- Monochrome cameras are also used in brightfield imaging for better contrast and resolution.
-- Monochrome cameras are often used in scientific research and applications where accurate intensity measurements are critical, such as in cell biology, neuroscience, and materials science.
-- Monochrome cameras can be used in combination with color filters or dichroic mirrors to capture multi-channel images for analysis of multiple fluorophores or stains in the same sample.
-:::
+- Each pixel captures the full intensity of incoming light, resulting in [higher sensitivity]{.text-red} and [better signal-to-noise ratio (SNR)]{.text-red} compared to color cameras.
+- These cameras are [used for fluorescence imaging]{.text-red} and [quantitative analysis]{.text-red}, as they provide more accurate intensity measurements without the need for interpolation.
+- Used in combinations with dichroic mirrors and emission filters to capture specific wavelength ranges, allowing for [multi-channel imaging]{.text-red} and analysis of different fluorophores.
+- Used in transmitted-light techniques for better contrast and resolution.
+- Used in scientific research and applications where accurate intensity measurements are critical, such as in cell biology, neuroscience, and materials science.
 
+:::
 
 ::: {.element-center}
 <br><br>
@@ -227,18 +234,168 @@ Question for Behzad/Alison
 
 :::
 
+## Camera types {.custom_indent2}
 
-## CCD vs EMCCD vs sCMOS
+- CCD (Charge-Coupled Device)
+- EMCCD (Electron Multiplying CCD)
+- sCMOS (scientific Complementary Metal-Oxide-Semiconductor)
+
+## CCD camera {.custom_indent2}
+
+:::{.smallerFont0 .absolute top="670" left="10"}
+from https://camera.hamamatsu.com
+:::
+
+::: {layout="[50,30]"}
+
+::: {.smallerFont1}
+
+- Each pixel of the CCD image sensor is composed of a photodiode and a potential well, which can be thought of as a bucket for photoelectrons.
+- This wavelength dependent conversion of light to photoelectrons is specified as  the quantum efficiency (QE).
+- Photoelectrons accumulate in each bucket until it’s time for readout, when all of the photoelectrons are relayed from one bucket to the next down each row of pixels.
+- The charge is gathered pixel-by-pixel—serially—into a container at the end of the relay.
+- Once in the container, the photoelectrons are converted into voltage and processed into an image on the camera circuit board.
+- Because the photoelectrons are converted into signal (voltage) at a common port, the speed of image acquisition is limited.
+:::
+
+::: {.element-center}
+<br><br>
+![](images/CCD_image%20sensor2.jpeg)
+
+:::
+:::
+
+## EMCCD camera {.custom_indent2}
+
+:::{.smallerFont0 .absolute top="670" left="10"}
+https://www.teledynevisionsolutions.com
+:::
+
+::: {layout="[50,30]"}
+
+::: {.smallerFont1}
+
+- Similar to CCD except that they have an on-chip electron [multiplication register]{.text-red} that amplifies the signal before readout, allowing for [detection of very low light levels]{.text-red}.
+-  Because the photoelectrons are converted into signal (voltage) at a common port, the speed of image acquisition is limited.
+:::
+
+::: {.element-center}
+
+![](images/emccd_Teledyne.png)
+
+:::
+:::
+
+## sCMOS camera {.custom_indent2}
+
+:::{.smallerFont0 .absolute top="670" left="10"}
+https://camera.hamamatsu.com
+:::
+
+::: {layout="[50,30]"}
+
+::: {.smallerFont1}
+
+- In contrast with CCD and EMCCD sensors, each pixel of a CMOS image sensor is composed of a photodiode-amplifier pair.
+- Unlike a CCD sensor, photoelectrons are converted into voltage by each pixel’s photodiode-amplifier pair.
+- Because conversion to voltage happens in parallel instead of serially (CCD), image acquisition can be much faster for CMOS sensors.
+- scientific CMOS sensors combines high QE with fast frame rates and low noise, which translates into high speed, high-resolution biological images, even in low light situations.
+- For almost all applications, newer sCMOS cameras are a great choice, but for ultra-low light (single fluorescent molecules) EMCCDs may still be better.
+:::
+
+::: {.element-center}
+<br><br>
+![](images/CMOS_image%20sensor.jpeg)
+
+:::
+:::
+
+## CCD vs EMCCD vs sCMOS {visibility="hidden"}
 :::{.hidden}
 https://camera.hamamatsu.com/jp/en/learn/technical_information/thechnical_guide/visual_guide.html
 SilVIR detector:
 https://evidentscientific.com/en/learn/white-papers/silvir-detector-system-for-the-fv4000-laser-confocal-microscope
 :::
 
-## Camera noise
-- Read noise
-- Dark noise
+## Camera noise {.custom_indent2}
+
+Random degradation of any image due to the inherent uncertainty of photon detection.
+
+<br>
+Mainly three types of noises in microscopy cameras:
+
+::: {.custom_indent4}
 - Shot noise
+- Dark noise
+- Read noise
+:::
+
+## Shot noise {.custom_indent2}
+
+::: {layout="[50,30]"}
+::: {.smallerFont1}
+- Uncertainty in the arrival of photons
+- Arrival of any given photon is independent and cannot be precisely predicted
+- The probability of its arrival is governed by a Poisson distribution
+- It is most apparent at low signal levels, where the number of detected photons is small
+- Shot noise can be reduced by collecting more photons, either with longer exposure times or by combining multiple frames, but this may not always be feasible due to photobleaching or phototoxicity in live samples.
+
+:::
+
+::: {.element-center}
+<br>
+![](images/SS_detector.png)
+
+:::
+:::
+
+## Dark noise {.custom_indent2}
+
+::: {layout="[50,30]"}
+::: {.smallerFont1}
+- Uncertainty in the photon-to-electron conversion process.
+- Generated by thermal electrons in the camera sensor even in the absence of light.
+- Also governed by a Poisson distribution.
+- Becomes a problem for long exposure such as in bioluminescence imaging.
+- Temperature-dependent: can be reduced by cooling the camera sensor.
+:::
+
+::: {.element-center}
+<br><br>
+![](images/SS_detector.png)
+
+:::
+
+:::
+
+## Read noise {.custom_indent2}
+
+::: {.smallerFont1 .absolute top="620" left="5"}
+[Resource]{.underline}  
+https://andor.oxinst.com/learning/view/article/sensitivity-and-noise-of-ccd-emccd-and-scmos-sensors
+:::
+
+::: {layout="[50,30]"}
+::: {.smallerFont1}
+- Uncertainty in the electronic readout process of the camera
+- Inherent to the process of converting CCD charge into a voltage signal and the subsequent analog-to-digital conversion
+- added uniformly to all pixels
+- Can be reduced by using a camera with low read noise specifications and optimizing the readout settings
+- Read noise is negligible in high signal applications
+- EMCCD: signal amplification happens before readout, so read noise is effectively reduced to near zero, making EMCCD ideal for low-light imaging.
+
+|  |CCD|EMCCD|sCMOS|
+|:---:|:---:|:---:|:---:|
+|Read noise|2-6 e^-^|<1 e^-^|1-2 e^-^|
+:::
+
+::: {.element-center}
+<br><br>
+![](images/SS_detector.png)
+
+:::
+
+:::
 
 ## 
 :::{.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.4em; width: 100%; color: blue; text-align: center;"}
@@ -277,8 +434,10 @@ Hallucinations in AI image processing are common and can be very misleading. Und
 
 ## Bit depth {.scrollable}
 
-::: {layout="[44,-1,55]" .smallerFont1}
-Number of bits (N) determine the range of intensity levels
+::: {layout="[44,-1,55]" .smallerFont0}
+- Number of available grey levels used the represent the signal intensity  
+- Determines how "finely" the signal is slices into discrete intensity levels
+- Number of bits (N) determine the range of intensity levels
 
 |Image Type|Range of intensity levels (0 to 2^N^-1)|
 |:---:|:---:|
@@ -307,13 +466,71 @@ Number of bits (N) determine the range of intensity levels
 
 :::
 
+## Dynamic range vs bit depth
+
+::: {.smallerFont0}
+Dynamic range is the ratio between the maximum and minimum signals that can be measured by the camera
+
+$$\text{Dynamic Range} = \frac{\text{Full Well Capacity}}{\text{Read Noise}}$$
+
+- [Full well capacity]{.text-red} is the maximum number of electrons a sensor can hold before saturation
+- [Read noise]{.text-red} is the minimum detectable signal above the noise floor
+
+[Dynamic range]{.underline} is about the sensor’s ability to capture extreme differences in light.   
+<br>
+[Bit depth]{.underline} is about the digital resolution used to display those differences.
+
+<br>
+
+#### Analogy
+::: {.custom_indent2}
+
+- Think of Dynamic Range as the total height of a staircase (from the floor to the ceiling).  
+- Think of Bit Depth as the number of steps in that staircase.  
+- A higher bit depth means more steps, making the transition from floor to ceiling smoother, but it doesn't necessarily make the ceiling any higher.
+:::
+
+::: {.smallerFont2 .absolute top="660" left="20" .fragment}
+[Resources]{.underline}  
+https://www.teledynevisionsolutions.com/learn/learning-center/imaging-fundamentals/bit-depth-full-well-and-dynamic-range/
+:::
+:::
+
+## How do grey intensity values relate to photons
+
+::: {.smallerFont45 .absolute top="570" left="20" .fragment}
+[Resources]{.underline}  
+https://www.teledynevisionsolutions.com/learn/learning-center/imaging-fundamentals/camera-gain/  
+https://www.teledynevisionsolutions.com/learn/learning-center/imaging-fundamentals/camera-sensitivity/  
+https://www.azom.com/article.aspx?ArticleID=20215  
+:::
+
+::: {layout="[50,30]"}
+::: {.smallerFont1}
+Intensity values/grey levels/Analog-to-Digital Units (ADU) are proportional to the number of photons detected by the camera sensor
+
+- Convert grey levels to electrons
+  $$\text{Photoelectrons} = (\text{Grey levels} - \text{Offset}) \times \text{Gain}$$
+- Convert electrons to photons
+  $$\text{Photons} = \frac{\text{Photoelectrons}}{\text{QE}}$$
+
+need to know the [camera offset, gain and quantum efficiency (QE)]{.text-red} of the camera sensor for the specific wavelength
+:::
+
+::: {.element-center}
+<br>
+![](images/SS_detector2b.png)
+
+:::
+:::
+
 ## Image display vs image analysis
 
 #### Image display{.text-blue .fragment}
 
 ::: {.fragment .smallerFont2}
 - Images are usually enhanced for better visualization (human eye) of features of interest
-- qualitative assessment of the features of interest in the image
+- [qualitative]{.text-red} assessment of the features of interest in the image
 - typically figure panels for publications, presentations etc.
 - Tools:
   - brightness/contrast
@@ -325,14 +542,15 @@ Number of bits (N) determine the range of intensity levels
 #### Image analysis{.text-blue}
 
 ::: {.smallerFont2}
-- quantitative measurement of features of interest
+- [quantitative]{.text-red} measurement of features of interest
   - Cell/nuclei counting, fluorescence intensity, shape etc.
 - It's best to avoid any photo editing software (Photoshop, GIMP etc.)
 - Any visual enhancement (pixel value change) is prohibited, except...
 - Caveats: certain image enhancements are allowed:
-  - image processing filters (e.g. Gaussian blur, median filter etc.). Original image must be used for intensity measurement.
-  - deconvolution, de-noising
+  - image processing filters (e.g. Gaussian blur, median filter, gamma etc.). Original image must be used for intensity measurement.
+  - deconvolution
 - make sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias
+- all this steps should be properly described in the methods section and/or fig legend of the paper.
 :::
 
 ## 
@@ -438,7 +656,7 @@ When in doubt, check:
 #### Why would you want to change the bit-depth of an image?
 
 - to save space (rarely)
-- Because a particular plugin only works on 8/16/32-bit images (most common reason)
+- Because a particular ImageJ/Fiji plugin only works with 8/16/32-bit images (most common reason!)
 - so that a large image could be loaded into RAM/opened  and I can quickly take a look at it.   
 
 ::: {.fragment}
@@ -519,7 +737,6 @@ metadata as key/value pairs
 metadata in OME-XML format
 ![](images/Screenshot_OME-XML_metadata.png)
 
-
 ## Signal-to-noise ratio (SNR) {.smaller .loose-lines}
 - SNR is a measure of signal strength relative to background noise
 - Higher SNR indicates clearer images with less noise
@@ -549,7 +766,30 @@ What is the difference between TIFF, PNG and JPEG?
 
 What is compression and how it affects image quality and analysis?
 
+## Resources - camera websites
 
+![](images/SS_camera_resources.png){fig-align="center"}
+
+
+## Acknowledgements {.custom_indent4}
+
+::: {.smallerFont2}
+- Alison North
+- Tom Carroll
+- James Hudspeth
+
+<br>
+
+- Tao Tong
+- Behzad Khajavi
+- Priyam Banerjee
+- Maria Belen Harreguy Alfonso
+- Ivan Rey Suarez
+:::
+
+
+
+## END
 
 
 

@@ -52,32 +52,39 @@
     "text": "How are images formed in a microscope\n\nhttps://morgridge.org/feature/fluorescence-imaging-primer/\n\n\n\n\n \n\n\n\n\n\n\n\n\n \n\n\n\nImage Analysis workflow\n\n\n\n\npage 1 drawing from /mnt/bircdata08/home-birc/BIRC/OMIBS Course Binder/08_16_2024_Friday/Luke Lavis/OMIBS_2024_Lavis_Lecture_1.pdf\nnoise, FFT, PSF: OMIBS_LaRiviere2024.pdf PSF: PSF Quality OMIBS 2024 Turnbull v2.pdf"
   },
   {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#confocal-detectors",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#confocal-detectors",
+    "title": "What Is an Image?",
+    "section": "Confocal detectors",
+    "text": "Confocal detectors\nDetectors can be cameras or confocal-style detectors such as:\n\nPMTs (photomultiplier tubes)\nGaAsP\nAPDs (Avalanche Photodiodes)\nSilVIR\n\n… will be discussed in session #4 on Confocal Microscopy"
+  },
+  {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline",
     "title": "What Is an Image?",
     "section": "Outline",
-    "text": "Outline\n\nPart 1 - How cameras generate an image.\n\ncamera types (CCD, CMOS)\ncamera noise\n\nPart 2 - What is an image and how to work with it.\n\nbit depth\nmetadata\nhistogram\ndisplay settings\ndeconvolution vs AI-denoising\nimage processing filters"
+    "text": "Outline\n\nPart 1 - How cameras generate an image.\n\ncamera types (CCD, EMCCD, CMOS)\ncamera noise\n\nPart 2 - What is an image and how to work with it.\n\nbit depth\nmetadata\nhistogram\ndisplay settings\ndeconvolution vs AI-denoising\nimage processing filters"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
     "title": "What Is an Image?",
     "section": "Sensor vs Detector vs Camera",
-    "text": "Sensor vs Detector vs Camera\n\nSensor\nThe fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal\n\nA Passive Infrared (PIR) sensor detects body heat\nthe light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)\n\n\n\nDetector\nA broader term that includes sensors and other components to detect signal\n\nA motion detector may use PIR sensors to detect movement\nA heat detector uses temperature sensors to measure heat levels\nCamera is a type of detector which captures light to form images\n\n\n\nCamera\nA complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing"
+    "text": "Sensor vs Detector vs Camera\n\nSensor\nThe fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal\n\nthe light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)\n\n\n\nDetector\nA broader term that includes sensors and other components to detect signal\n\nCamera is a type of detector which captures light to form images\n\n\n\nCamera\nA complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
     "title": "What Is an Image?",
     "section": "Microscopy cameras",
-    "text": "Microscopy cameras\n\nColor cameras\n\nused for visual inspection\n\nused for stains and dyes (histology)\n\n\nMonochrome cameras\n\nfor fluorescence imaging\n\nhigher sensitivity than color cameras\n\nused with emission filters to capture specific wavelength ranges"
+    "text": "Microscopy cameras\n\nColor cameras\n\nused for visual inspection\n\nused for stains and dyes (e.g. histology)\n\n\nMonochrome cameras\n\nfor fluorescence imaging\n\nhigher sensitivity than color cameras\n\nused with emission filters to capture specific wavelength ranges"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#color-camera---bayer-filter-array-bfa",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#color-camera---bayer-filter-array-bfa",
     "title": "What Is an Image?",
     "section": "Color camera - Bayer filter array (BFA)",
-    "text": "Color camera - Bayer filter array (BFA)\n\n\nBayer filter array (BFA) is a color filter pattern to capture color information.\nIt consists of a grid of red, green, and blue filters arranged in a specific pattern over the camera’s sensor.\nEach pixel on the sensor captures light filtered through one of these colored filters\nInterpolation of neighboring pixels generates a smooth representation of a colored field of view.\n\n\n\n\n\n\n\nBayer filter array\n\n\n\n\n\n\n\nBayer2\n\n\n\n\n\n\n\nColor interpolation"
+    "text": "Color camera - Bayer filter array (BFA)\n\n\nBayer filter array (BFA) is a color filter pattern to capture color information.\nIt consists of a grid of red, green, and blue filters arranged in a specific pattern over the camera’s sensor.\nEach pixel on the sensor captures light filtered through one of these colored filters\nInterpolation of neighboring pixels generates a smooth representation of a colored field of view.\n\n\n\n\n\n\n\nBayer filter array\n\n\n\n\n\n\n\nMosaicing\n\n\n\n\n\n\n\nDemosaicing: color interpolation"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#color-camera---limitations",
@@ -91,21 +98,63 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#monochrome-camera",
     "title": "What Is an Image?",
     "section": "Monochrome camera",
-    "text": "Monochrome camera\n\n\n\n\nEach pixel captures the full intensity of incoming light, resulting in higher sensitivity and better signal-to-noise ratio (SNR) compared to color cameras.\nMonochrome cameras are used for fluorescence imaging and quantitative analysis, as they provide more accurate intensity measurements without the need for interpolation.\nMonochrome cameras are used with emission filters to capture specific wavelength ranges, allowing for multi-channel imaging and analysis of different fluorophores.\nMonochrome cameras are also used in brightfield imaging for better contrast and resolution.\nMonochrome cameras are often used in scientific research and applications where accurate intensity measurements are critical, such as in cell biology, neuroscience, and materials science.\nMonochrome cameras can be used in combination with color filters or dichroic mirrors to capture multi-channel images for analysis of multiple fluorophores or stains in the same sample."
+    "text": "Monochrome camera\n\n\n\n\nEach pixel captures the full intensity of incoming light, resulting in higher sensitivity and better signal-to-noise ratio (SNR) compared to color cameras.\nThese cameras are used for fluorescence imaging and quantitative analysis, as they provide more accurate intensity measurements without the need for interpolation.\nUsed in combinations with dichroic mirrors and emission filters to capture specific wavelength ranges, allowing for multi-channel imaging and analysis of different fluorophores.\nUsed in transmitted-light techniques for better contrast and resolution.\nUsed in scientific research and applications where accurate intensity measurements are critical, such as in cell biology, neuroscience, and materials science."
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-vs-emccd-vs-scmos",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-vs-emccd-vs-scmos",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#camera-types",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#camera-types",
     "title": "What Is an Image?",
-    "section": "CCD vs EMCCD vs sCMOS",
-    "text": "CCD vs EMCCD vs sCMOS\n\nhttps://camera.hamamatsu.com/jp/en/learn/technical_information/thechnical_guide/visual_guide.html SilVIR detector: https://evidentscientific.com/en/learn/white-papers/silvir-detector-system-for-the-fv4000-laser-confocal-microscope"
+    "section": "Camera types",
+    "text": "Camera types\n\nCCD (Charge-Coupled Device)\nEMCCD (Electron Multiplying CCD)\nsCMOS (scientific Complementary Metal-Oxide-Semiconductor)"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-camera",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#ccd-camera",
+    "title": "What Is an Image?",
+    "section": "CCD camera",
+    "text": "CCD camera\n\nfrom https://camera.hamamatsu.com\n\n\n\n\n\nEach pixel of the CCD image sensor is composed of a photodiode and a potential well, which can be thought of as a bucket for photoelectrons.\nThis wavelength dependent conversion of light to photoelectrons is specified as the quantum efficiency (QE).\nPhotoelectrons accumulate in each bucket until it’s time for readout, when all of the photoelectrons are relayed from one bucket to the next down each row of pixels.\nThe charge is gathered pixel-by-pixel—serially—into a container at the end of the relay.\nOnce in the container, the photoelectrons are converted into voltage and processed into an image on the camera circuit board.\nBecause the photoelectrons are converted into signal (voltage) at a common port, the speed of image acquisition is limited."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#emccd-camera",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#emccd-camera",
+    "title": "What Is an Image?",
+    "section": "EMCCD camera",
+    "text": "EMCCD camera\n\nhttps://www.teledynevisionsolutions.com\n\n\n\n\n\nSimilar to CCD except that they have an on-chip electron multiplication register that amplifies the signal before readout, allowing for detection of very low light levels.\nBecause the photoelectrons are converted into signal (voltage) at a common port, the speed of image acquisition is limited."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#scmos-camera",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#scmos-camera",
+    "title": "What Is an Image?",
+    "section": "sCMOS camera",
+    "text": "sCMOS camera\n\nhttps://camera.hamamatsu.com\n\n\n\n\n\nIn contrast with CCD and EMCCD sensors, each pixel of a CMOS image sensor is composed of a photodiode-amplifier pair.\nUnlike a CCD sensor, photoelectrons are converted into voltage by each pixel’s photodiode-amplifier pair.\nBecause conversion to voltage happens in parallel instead of serially (CCD), image acquisition can be much faster for CMOS sensors.\nscientific CMOS sensors combines high QE with fast frame rates and low noise, which translates into high speed, high-resolution biological images, even in low light situations.\nFor almost all applications, newer sCMOS cameras are a great choice, but for ultra-low light (single fluorescent molecules) EMCCDs may still be better."
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#camera-noise",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#camera-noise",
     "title": "What Is an Image?",
     "section": "Camera noise",
-    "text": "Camera noise\n\nRead noise\nDark noise\nShot noise"
+    "text": "Camera noise\nRandom degradation of any image due to the inherent uncertainty of photon detection.\n Mainly three types of noises in microscopy cameras:\n\n\nShot noise\nDark noise\nRead noise"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#shot-noise",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#shot-noise",
+    "title": "What Is an Image?",
+    "section": "Shot noise",
+    "text": "Shot noise\n\n\n\n\nUncertainty in the arrival of photons\nArrival of any given photon is independent and cannot be precisely predicted\nThe probability of its arrival is governed by a Poisson distribution\nIt is most apparent at low signal levels, where the number of detected photons is small\nShot noise can be reduced by collecting more photons, either with longer exposure times or by combining multiple frames, but this may not always be feasible due to photobleaching or phototoxicity in live samples."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#dark-noise",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#dark-noise",
+    "title": "What Is an Image?",
+    "section": "Dark noise",
+    "text": "Dark noise\n\n\n\n\nUncertainty in the photon-to-electron conversion process.\nGenerated by thermal electrons in the camera sensor even in the absence of light.\nAlso governed by a Poisson distribution.\nBecomes a problem for long exposure such as in bioluminescence imaging.\nTemperature-dependent: can be reduced by cooling the camera sensor."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#read-noise",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#read-noise",
+    "title": "What Is an Image?",
+    "section": "Read noise",
+    "text": "Read noise\n\nResource\nhttps://andor.oxinst.com/learning/view/article/sensitivity-and-noise-of-ccd-emccd-and-scmos-sensors\n\n\n\n\n\nUncertainty in the electronic readout process of the camera\nInherent to the process of converting CCD charge into a voltage signal and the subsequent analog-to-digital conversion\nadded uniformly to all pixels\nCan be reduced by using a camera with low read noise specifications and optimizing the readout settings\nRead noise is negligible in high signal applications\nEMCCD: signal amplification happens before readout, so read noise is effectively reduced to near zero, making EMCCD ideal for low-light imaging.\n\n\n\n\n\nCCD\nEMCCD\nsCMOS\n\n\n\n\nRead noise\n2-6 e-\n&lt;1 e-\n1-2 e-"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-1",
@@ -133,7 +182,21 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#bit-depth",
     "title": "What Is an Image?",
     "section": "Bit depth",
-    "text": "Bit depth\n\n\n\nNumber of bits (N) determine the range of intensity levels\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBit depth (N)\n# shades (2N)\nLookup table (LUT)\n\n\n\n\n1\n2\n\n\n\n2\n4\n\n\n\n3\n8\n\n\n\n4\n16\n\n\n\n5\n32\n\n\n\n6\n64\n\n\n\n7\n128\n\n\n\n8\n256"
+    "text": "Bit depth\n\n\n\n\nNumber of available grey levels used the represent the signal intensity\n\nDetermines how “finely” the signal is slices into discrete intensity levels\nNumber of bits (N) determine the range of intensity levels\n\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBit depth (N)\n# shades (2N)\nLookup table (LUT)\n\n\n\n\n1\n2\n\n\n\n2\n4\n\n\n\n3\n8\n\n\n\n4\n16\n\n\n\n5\n32\n\n\n\n6\n64\n\n\n\n7\n128\n\n\n\n8\n256"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#dynamic-range-vs-bit-depth",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#dynamic-range-vs-bit-depth",
+    "title": "What Is an Image?",
+    "section": "Dynamic range vs bit depth",
+    "text": "Dynamic range vs bit depth\n\nDynamic range is the ratio between the maximum and minimum signals that can be measured by the camera\n\\[\\text{Dynamic Range} = \\frac{\\text{Full Well Capacity}}{\\text{Read Noise}}\\]\n\nFull well capacity is the maximum number of electrons a sensor can hold before saturation\nRead noise is the minimum detectable signal above the noise floor\n\nDynamic range is about the sensor’s ability to capture extreme differences in light.\n Bit depth is about the digital resolution used to display those differences.\n\nAnalogy\n\n\nThink of Dynamic Range as the total height of a staircase (from the floor to the ceiling).\n\nThink of Bit Depth as the number of steps in that staircase.\n\nA higher bit depth means more steps, making the transition from floor to ceiling smoother, but it doesn’t necessarily make the ceiling any higher.\n\n\n\nResources\nhttps://www.teledynevisionsolutions.com/learn/learning-center/imaging-fundamentals/bit-depth-full-well-and-dynamic-range/"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#how-do-grey-intensity-values-relate-to-photons",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#how-do-grey-intensity-values-relate-to-photons",
+    "title": "What Is an Image?",
+    "section": "How do grey intensity values relate to photons",
+    "text": "How do grey intensity values relate to photons\n\nResources\nhttps://www.teledynevisionsolutions.com/learn/learning-center/imaging-fundamentals/camera-gain/\nhttps://www.teledynevisionsolutions.com/learn/learning-center/imaging-fundamentals/camera-sensitivity/\nhttps://www.azom.com/article.aspx?ArticleID=20215\n\n\n\n\nIntensity values/grey levels/Analog-to-Digital Units (ADU) are proportional to the number of photons detected by the camera sensor\n\nConvert grey levels to electrons \\[\\text{Photoelectrons} = (\\text{Grey levels} - \\text{Offset}) \\times \\text{Gain}\\]\nConvert electrons to photons \\[\\text{Photons} = \\frac{\\text{Photoelectrons}}{\\text{QE}}\\]\n\nneed to know the camera offset, gain and quantum efficiency (QE) of the camera sensor for the specific wavelength"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis",
@@ -147,7 +210,7 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis-1",
     "title": "What Is an Image?",
     "section": "Image display vs image analysis",
-    "text": "Image display vs image analysis\nImage analysis\n\n\nquantitative measurement of features of interest\n\nCell/nuclei counting, fluorescence intensity, shape etc.\n\nIt’s best to avoid any photo editing software (Photoshop, GIMP etc.)\nAny visual enhancement (pixel value change) is prohibited, except…\nCaveats: certain image enhancements are allowed:\n\nimage processing filters (e.g. Gaussian blur, median filter etc.). Original image must be used for intensity measurement.\ndeconvolution, de-noising\n\nmake sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias"
+    "text": "Image display vs image analysis\nImage analysis\n\n\nquantitative measurement of features of interest\n\nCell/nuclei counting, fluorescence intensity, shape etc.\n\nIt’s best to avoid any photo editing software (Photoshop, GIMP etc.)\nAny visual enhancement (pixel value change) is prohibited, except…\nCaveats: certain image enhancements are allowed:\n\nimage processing filters (e.g. Gaussian blur, median filter, gamma etc.). Original image must be used for intensity measurement.\ndeconvolution\n\nmake sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias\nall this steps should be properly described in the methods section and/or fig legend of the paper."
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
@@ -168,7 +231,7 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depth",
     "title": "What Is an Image?",
     "section": "Changing image bit-depth",
-    "text": "Changing image bit-depth\n\nWhy would you want to change the bit-depth of an image?\n\nto save space (rarely)\nBecause a particular plugin only works on 8/16/32-bit images (most common reason)\nso that a large image could be loaded into RAM/opened and I can quickly take a look at it.\n\n\nin Fiji, go to Edit &gt; Options &gt; Conversions...\n\n\n\n\n \n\n\n\nBy default this setting is checked ON.\n\n\n \n\n\n\n\n\n\n\n\n\n\n\nthere are many old imageJ plugins that only work on 8-bit images.\nIf you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background"
+    "text": "Changing image bit-depth\n\nWhy would you want to change the bit-depth of an image?\n\nto save space (rarely)\nBecause a particular ImageJ/Fiji plugin only works with 8/16/32-bit images (most common reason!)\nso that a large image could be loaded into RAM/opened and I can quickly take a look at it.\n\n\nin Fiji, go to Edit &gt; Options &gt; Conversions...\n\n\n\n\n \n\n\n\nBy default this setting is checked ON.\n\n\n \n\n\n\n\n\n\n\n\n\n\n\nthere are many old imageJ plugins that only work on 8-bit images.\nIf you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",
@@ -225,6 +288,27 @@
     "title": "What Is an Image?",
     "section": "File format",
     "text": "File format\nIt is important to save images in a format that preserves the original pixel intensity values and metadata for accurate analysis.\n Common microscopy file formats: TIFF, OME-TIFF, CZI (Zeiss), ND2 (Nikon), LIF (Leica), etc.\n What is the difference between TIFF, PNG and JPEG?\nWhat is compression and how it affects image quality and analysis?"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources---camera-websites",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources---camera-websites",
+    "title": "What Is an Image?",
+    "section": "Resources - camera websites",
+    "text": "Resources - camera websites"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#acknowledgements",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#acknowledgements",
+    "title": "What Is an Image?",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\n\nAlison North\nTom Carroll\nJames Hudspeth\n\n\n\nTao Tong\nBehzad Khajavi\nPriyam Banerjee\nMaria Belen Harreguy Alfonso\nIvan Rey Suarez"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#end",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#end",
+    "title": "What Is an Image?",
+    "section": "END",
+    "text": "END"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources",
@@ -882,7 +966,7 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/images/F-actin_phalloidin_MTLn3_MEF/info.html",
     "title": "",
     "section": "",
-    "text": "original image location: /mnt/bircdata08/home-birc/vsharma01/Einstein_Backup_20211015/Condeelis Lab/Data/1D nanofiber project_Dec2018Backup/2016.01.28_actinCaps_MEF_MTLn3_2D\nFigure S4 from Sharma et al. nanofiber paper MTLn3 and MEF cells stained with phalloidin"
+    "text": "original image location: /mnt/bircdata08/home-birc/vsharma01/Einstein_Backup_20211015/Condeelis Lab/Data/1D nanofiber project_Dec2018Backup/2016.01.28_actinCaps_MEF_MTLn3_2D\nFigure S4 from Sharma et al. nanofiber paper MTLn3 and MEF cells stained with phalloidin\nslide 3: a box saying detectors can be cameras as well as confocal style detectors such as PMTs, GASPs, APDs and SilVIR detectors will be discussed later\nslide #6 put the image at the end\ncapital with full stops small with semi-colon\nfor low light applications\nSlide 13: for almost all application, 1 or 2 flu proteins , EMCCD might be better than CMOS, check for the graph\n16: becomes a problme for long exposure such as bioluminascence, neeed to use cooled camera 17: mention emccd read noise\nafter 21: a slide about dynamic range\nslide after cmos: different QE graph\nafter bit depth - equation stepahnie lecture 67, 68 , link to a website can work out\nRessouces - camera websites pic of teledyne of camera fundamentals hamamatshu - photon to intensity conversion - image processing and image fig reporting"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/index.html",
