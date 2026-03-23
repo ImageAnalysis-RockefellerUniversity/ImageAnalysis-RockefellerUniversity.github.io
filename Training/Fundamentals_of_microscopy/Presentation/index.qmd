@@ -21,11 +21,14 @@ format:
       numbers: true
     width: 1280
     height: 720
+    background-image: images/watermark_v8.png
+    background-size: cover
+    background-repeat: no-repeat    
     
     min-scale: 0.2
     max-scale: 2.0
     fig-cap-location: top
-    footer: "Bio-Imaging Resource Center, The Rockefeller University"
+    footer: "Fundamentals of Microscopy workshop 2026&emsp;-&emsp;Bio-Imaging Resource Center, The Rockefeller University"
     # theme: dark
     theme: styles_presentation.scss # defining css/scss as theme: and not as a css: is imp for correct html rendering (quarto render)
     slide-number: 'c'
@@ -35,6 +38,8 @@ format:
     chalkboard: 
       buttons: true
     preview-links: auto
+    resources: 
+      - images/watermark_v*.png
 # resources:
 #   - demo.pdf
 ---
@@ -114,14 +119,14 @@ Detectors can be cameras or confocal-style detectors such as:
 ### Part 2 - What is an image and how to work with it.
 
 - bit depth
+- dynamic range
 - metadata
 - histogram
-- display settings
-- deconvolution vs AI-denoising
-- image processing filters
+- display settings (Lookup tables, brightness/contrast)
+- Noise reduction (deconvolution vs AI-denoising)
 :::
 
-## Sensor vs Detector vs Camera {.custom_indent4}
+## Sensor vs Detector vs Camera {.custom_indent4 visibility="hidden"}
 
 ::: {.fragment .smallerFont1}
 ### Sensor{.text-blue}
@@ -251,7 +256,7 @@ from https://camera.hamamatsu.com
 ::: {.smallerFont1}
 
 - Each pixel of the CCD image sensor is composed of a photodiode and a potential well, which can be thought of as a bucket for photoelectrons.
-- This wavelength dependent conversion of light to photoelectrons is specified as  the quantum efficiency (QE).
+- This wavelength dependent conversion of light to photoelectrons is specified as  the [quantum efficiency (QE)]{.text-red}.
 - Photoelectrons accumulate in each bucket until it’s time for readout, when all of the photoelectrons are relayed from one bucket to the next down each row of pixels.
 - The charge is gathered pixel-by-pixel—serially—into a container at the end of the relay.
 - Once in the container, the photoelectrons are converted into voltage and processed into an image on the camera circuit board.
@@ -259,11 +264,13 @@ from https://camera.hamamatsu.com
 :::
 
 ::: {.element-center}
-<br><br>
-![](images/CCD_image%20sensor2.jpeg)
 
 :::
 :::
+
+![](images/CCD_image%20sensor2.jpeg){.absolute top=0 left=850 width="30%"}
+![](images/SS_QE_wavelength_dependence.png){.absolute top=460 left=850 width="30%" .fragment}
+
 
 ## EMCCD camera {.custom_indent2}
 
@@ -370,7 +377,7 @@ Mainly three types of noises in microscopy cameras:
 
 ## Read noise {.custom_indent2}
 
-::: {.smallerFont1 .absolute top="620" left="5"}
+::: {.smallerFont45 .absolute top="620" left="5"}
 [Resource]{.underline}  
 https://andor.oxinst.com/learning/view/article/sensitivity-and-noise-of-ccd-emccd-and-scmos-sensors
 :::
@@ -397,6 +404,42 @@ https://andor.oxinst.com/learning/view/article/sensitivity-and-noise-of-ccd-emcc
 
 :::
 
+## Signal-to-noise ratio (SNR)
+
+::: {layout="[50,40]"}
+::: {.smallerFont1}
+- SNR measures the strength of the signal relative to the noise in an image.
+- SNR is dependent on the input light levels and camera specifications (QE, various sources of noise etc.)
+- Noise is not the same as background
+  - [Noise]{.text-red}: random corruption of any image due to inherent uncertainty of photon detection
+  - [Background]{.text-red}: any detected signal that is [biologically]{.underline} non-informative
+
+:::
+
+::: {.element-center .smallerFont45}
+![](images/SS_SNR_equation3.png)
+Source: Hamamatsu white paper
+:::
+:::
+
+::: {.smallerFont45 .absolute top="620" left="5"}
+[Resource]{.underline}  
+Checkout SNR of different cameras under various conditions:  
+https://www.hamamatsu.com/sp/sys/en/camera_simulator/index.html
+
+:::
+
+## Signal-to-background ratio (SBR) {.smaller .loose-lines}
+- SBR is a measure of signal strength relative to background signal.
+- [Sample dependent]{.text-red}, not camera dependent.
+- Higher SBR indicates better contrast between the object of interest and the background.
+- SBR can be improved by using specific stains, optimizing imaging conditions, and applying image processing techniques.
+
+
+## Resources - camera websites
+
+![](images/SS_camera_resources.png){fig-align="center"}
+
 ## 
 :::{.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.4em; width: 100%; color: blue; text-align: center;"}
 Part 2<br>What is an image and how to analyze it.
@@ -420,6 +463,10 @@ Hallucinations in AI image processing are common and can be very misleading. Und
 
 
 ## Images as pixels {.smaller}
+
+::: {.smallerFont55 .absolute top="700" left="5"}
+Sharma et al. 2021, PMID: 34205257
+:::
 
 - Images are composed of a grid of pixels
 - Each pixel contains intensity information
@@ -541,7 +588,7 @@ need to know the [camera offset, gain and quantum efficiency (QE)]{.text-red} of
 ## Image display vs image analysis
 #### Image analysis{.text-blue}
 
-::: {.smallerFont2}
+::: {.smallerFont7}
 - [quantitative]{.text-red} measurement of features of interest
   - Cell/nuclei counting, fluorescence intensity, shape etc.
 - It's best to avoid any photo editing software (Photoshop, GIMP etc.)
@@ -550,8 +597,11 @@ need to know the [camera offset, gain and quantum efficiency (QE)]{.text-red} of
   - image processing filters (e.g. Gaussian blur, median filter, gamma etc.). Original image must be used for intensity measurement.
   - deconvolution
 - make sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias
-- all this steps should be properly described in the methods section and/or fig legend of the paper.
+- All image processing steps should be properly described in the methods section and/or figure legend of the paper.
 :::
+
+## Resource: preparing images and describing image analyses for publication
+![](images/SS_Nat_Meths_paper.png){fig-align="center"}
 
 ## 
 :::{.absolute top="50%" left="50%" style="transform: translate(-50%, -50%); font-size: 1.2em; width: 100%; color: blue; text-align: center;"}
@@ -657,7 +707,7 @@ When in doubt, check:
 
 - to save space (rarely)
 - Because a particular ImageJ/Fiji plugin only works with 8/16/32-bit images (most common reason!)
-- so that a large image could be loaded into RAM/opened  and I can quickly take a look at it.   
+- so that a large image could be completely loaded into RAM for quick visualization.   
 
 ::: {.fragment}
 in Fiji, go to `Edit > Options > Conversions...`
@@ -737,26 +787,67 @@ metadata as key/value pairs
 metadata in OME-XML format
 ![](images/Screenshot_OME-XML_metadata.png)
 
-## Signal-to-noise ratio (SNR) {.smaller .loose-lines}
-- SNR is a measure of signal strength relative to background noise
-- Higher SNR indicates clearer images with less noise
-- SNR can be improved by optimizing imaging conditions, using better cameras, and applying image processing techniques
+## Noise reduction: AI-Denoising
 
-## Signal-to-background ratio (SBR) {.smaller .loose-lines}
-- SBR is a measure of signal strength relative to background signal
-- Higher SBR indicates better contrast between the object of interest and the background
-- SBR can be improved by using specific stains, optimizing imaging conditions, and applying image processing techniques
+::: {layout="[50,30]"}
+:::{.smallerFont65}
+- Various AI-denoising methods have been developed by training deep learning models on:
+  - pairs of noisy (low SNR) and clean (high SNR) images 
+    - [CARE]{.text-red} (Content-Aware Image Restoration)
+    - [RCAN]{.text-red} (Residual Channel Attention Networks, from AIVIA)
+  - pairs of noisy images - [Noise2Noise]{.text-red} (N2N)
+  - Single noisy images - [Noise2Void]{.text-red} (N2V)
 
-## Noise reduction - Deonvolution vs AI-Denoising
+:::{.fragment}
+- Problems with AI-denoising:
+  - AI can [create, alter, or hallucinate]{.text-red} features that do not exist in the raw data, producing images that look realistic but are scientifically inaccurate.
+  - [Resource-intensive]{.text-red}: model training requires hundreds to thousands of paired (noisy/clean) images to train effectively
+  - Some methods such as Noise2Void fail to remove structured noise
+:::
+:::
+
+::: {.element-center}
+![](images/CARE_N2N_N2V_comparison.jpg)
+
+<br>
+![](images/N2V_structured%20noise2.png){.fragment}
+
+:::
+:::
+
 :::{.hidden}
-
 concept of deconvolution
 https://zeiss-campus.magnet.fsu.edu/articles/basics/psf.html
 :::
 
-sample x psf = image
+## Noise reduction: Deconvolution
 
-## File format
+::: {layout="[50,25]"}
+
+:::{.smallerFont65}
+- A mathematical operation that reverses the effects of convolution (blurring due to out of focus light) in an image, using the [point spread function (PSF)]{.text-red} of the imaging system.
+- Does not require deep learning model training, so it is [less computationally-intensive]{.text-red} than AI-denoising
+- It does require accurate estimation of the PSF for optimal results.
+- Deconvolution can improve image resolution and contrast without introducing hallucinations, as it is based on the [physical properties of the imaging system]{.text-red} rather than learned patterns from data.
+- Overall, Deconvolution is a more reliable method for noise reduction in microscopy images compared to AI-denoising.
+
+
+ 
+:::
+
+::: {.element-center .smallerFont45}
+![](images/Convolution_Huygens.png){width="50%"}
+![](images/CARE_vs_Huygens_deconvolution.jpg){.fragment}
+
+:::
+:::
+
+::: {.smallerFont0 .absolute top="620" left="10"}
+[Resource]{.underline}  
+https://svi.nl/AI-Image-Denoising
+:::
+
+## File format {visibility="hidden"}
 
 It is important to save images in a format that preserves the original pixel intensity values and metadata for accurate analysis.  
 <br>
@@ -766,13 +857,10 @@ What is the difference between TIFF, PNG and JPEG?
 
 What is compression and how it affects image quality and analysis?
 
-## Resources - camera websites
-
-![](images/SS_camera_resources.png){fig-align="center"}
-
 
 ## Acknowledgements {.custom_indent4}
 
+::: {layout="[50,50]"}
 ::: {.smallerFont2}
 - Alison North
 - Tom Carroll
@@ -781,19 +869,22 @@ What is compression and how it affects image quality and analysis?
 <br>
 
 - Tao Tong
-- Behzad Khajavi
-- Priyam Banerjee
-- Maria Belen Harreguy Alfonso
 - Ivan Rey Suarez
+- Behzad Khajavi
+- Maria Belen Harreguy Alfonso
+- Priyam Banerjee
+
 :::
 
+::: {.smallerFont2 .fragment}
+<br><br>
+Our wonderful users and collaborators!
 
+:::
 
-## END
+:::
 
-
-
-## Resources {.smaller}
+## Resources {.smaller visibility="hidden"}
 
 - [Principles of Scientific Imaging - imagej.net](https://imagej.net/imaging/principles#Pre-processing)
   - JPEG artifacts
@@ -802,287 +893,3 @@ Pete Bankhead book
 https://petebankhead.gitbooks.io/imagej-intro/content/chapters/bit_depths/bit_depths.html
 
 
-## {.custom_indent3}
-
-Seminar slides and workshop material will be made available on our GitHub page:  
-<br>
-https://github.com/ImageAnalysis-RockefellerUniversity
-
-::: {.notes}
-Speaker notes go here.
-:::
-
-## Outline {.smaller .custom_indent2}
-
-:::: {.columns}
-
-::: {.column width="40%"}
-- Segmentation
-- Cell/particle Counting and Tracking
-- Image denoising
-:::
-
-::: {.column width="60%" .fragment}
-[Open-source Softwares]{.underline}  
-ImageJ/Fiji, QuPath, Napari, CellProfiler, Icy  
-<br>
-[Commercial Softwares]{.underline}  
-Imaris, Arivis, Aivia, Huygens, MetaMorph  
-<br>
-[Machine/Deep Learning frameworks]{.underline}  
-Weka, ilastik, Labkit
-StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic  
-:::
-
-::::
-
-## What is a Raster Image?
-
-::: {layout="[44,-1,55]" .smallerFont1}
-- Raster images are composed of a grid of pixels
-- Each pixel contains intensity information
-- Number of bits (N) determine the range of intensity levels
-
-|Image Type|Range of intensity levels (0 to 2^N^-1)|
-|:---:|:---:|
-|8-bit                 |0-255|
-|16-bit                |0-4095|
-|32-bit                |0-65,535|
-|RGB color (3 x 8 bits)|0-255 per channel|
-:::
-
-
-::: {layout="[15,40,20,25]" .smallerFont2}
-  
-![Histogram](images/dew-maple-leaf-1974425_BCwindow.jpg)
-
-<div class="img-overlay">
-  ![8-bit image (256 shades)](images/dew-maple-leaf-1974425.jpg)
-  <div class="red-square"></div>
-</div>  
-
-    
-![Zoomed-in view](images/dew-maple-leaf-1974425_crop.jpg)
-
-  
-![Image as a matrix of numbers (0-255)](images/dew-maple-leaf-1974425_crop_text.jpg)
-:::
-
-## Segmentation {.smaller .loose-lines .custom_indent}
-
-Identifying object(s) of interest in an image  
-&emsp;- cells, nuclei, membrane, transcription sites etc.
-
-Segmentation is usually followed by quantitative analysis of object(s)  
-&emsp;- number of cells/nuclei, mean fluorescence intensity, shape etc.
-
-
-Divide image into areas representing object(s) of interest and background  
-
-::: {.fragment}
-[Segmentation is not an easy task to solve in most practical cases]{.mark}  
-&emsp;- Signal variability throughout the image  
-&emsp;- Noise, blur and other distortions caused by the imperfect imaging conditions  
-:::
-
-## Segmentation tools {.smaller .loose-lines}
-::: {.custom_indent}
-- Global thresholding, local thresholding
-- Image processing filters – Gaussian, Median, Sobel etc.
-- Machine learning methods (supervised learning) - Weka, Labkit, ilastik 
-- Deep Learning methods - StarDist, Cellpose
-- 3D segmentation - Imaris, Arivis
-:::
-
-## Segmentation using global thresholding
-
-::: {layout="[28, 40]"}
-![Nuclei stained with Hoechst](images/AS_09125_050116000001_A24f00d0_slice2_channel1.png)
-
-![Threshold 1](images/global_Thr2.png)
-:::
-
-::: {.smallerFont0 .absolute top="670" left="0"}
-Human HT29 colon cancer cells,  Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods
-:::
-
-
-## Segmentation using global thresholding {transition="none"}
-
-::: {layout="[28, 40]"}
-![Nuclei stained with Hoechst](images/AS_09125_050116000001_A24f00d0_slice2_channel1.png)
-
-![Threshold 2](images/global_Thr1.png)
-:::
-
-::: {.smallerFont0 .absolute top="670" left="0"}
-Human HT29 colon cancer cells,  Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods
-:::
-
-
-## Segmentation with local thresholding
-
-![Nuclei stained with Hoechst](images/AS_09125_050116000001_A24f00d0_slice2_channel1.png){.absolute top="40" left="0" width="400" height="400"}
-
-:::{.smallerFont1 .absolute top="200" left="450"}
-Auto Local <br>Threshold <br>in Fiji
-:::
-
-![](images/arrow.png){.absolute top="320" left="450" width="120" height="40"}
-
-![](images/AS_09125_050116000001_A24f00d0_slice2_channel1_autoLocalThr.png){.absolute top="65" left="620" width="640" height="640"}
-
-::: {.smallerFont0 .absolute top="600" left="0"}
-Human HT29 colon cancer cells,  Image from Broad <br>Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods
-:::
-
-## Segmentation using Machine Learning {.smaller .loose-lines .custom_indent2}
-Supervised learning - pixel classification using Random Forest classifier
-
-Fiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler
-
-Requires orders of magnitude less training data/resources than Deep Learning methods
-
-## {transition="none"}
-![](images/labkit_1.png){fig-align="center"}
-
-:::{.smallerFont3 .absolute top="692" left="74"}
-Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
-:::
-
-## {transition="none"}
-![](images/labkit_2.png){fig-align="center"}
-
-:::{.smallerFont3 .absolute top="692" left="74"}
-Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
-:::
-
-## {transition="none"}
-![](images/labkit_3.png){fig-align="center"}
-
-:::{.smallerFont3 .absolute top="692" left="74"}
-Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
-:::
-
-## Segmentation using Deep Learning {.smallerFont1 .loose-lines}
-
-:::: {.columns}
-::: {.column width="2%"}
-:::
-::: {.column width="55%"}
-Most accurate methods available for cells/nuclei segmentation  
-[Step 1: Training]{.underline}  
-Generating a Deep Learning model is resource hungry:  
-- High-end workstation  
-- Large amounts of training data (images and annotations)  
-- Training could take hours to days  
-- Good programming knowledge required - Python  
-
-[Step 2: Prediction]{.underline}  
-Using the model from step 1 to predict the segmentation results :  
-- A regular laptop is just fine  
-- Prediction takes seconds to mins  
-- Little to no programming knowledge required  
-:::
-::: {.column width="2%"}
-:::
-
-::: {.column width="40%" .fragment}
-
-<br>
-
-![StarDist (2018)](images/stardist_paper_title.png)
-
-<br>
-
-![Cellpose (2021)](images/cellpose_paper_title.png)
-:::
-::::
-
-## Segmentation using Deep Learning
-<br>
-
-::: {layout="[1,1,1]" .smallerFont2}
-  
-![Original](images/Hoechst-C42-ARv7_Dox.jpg)
-
-![StarDist plugin in Fiji](images/Hoechst-C42-ARv7_Dox_Fiji_StarDist.png)
-  
-![Cellpose](images/Hoechst-C42-ARv7_Dox_cellpose.png)
-:::
-:::{.smallerFont0 .absolute top="610" left="0"}
-Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine
-:::
-:::{.smallerFont1 .absolute top="660" left="200"}
-Workshop Exercise 1: StarDist based nuclear segmenation in a challenging image in Fiji
-:::
-
-## Segmentation using StarDist in Napari
-![](images/Hoechst-C42-ARv7_Dox_Napari_StarDist.png){fig-align="center"}
-
-## Segmentation using StarDist in Qupath
-![](images/Hoechst-C42-ARv7_Dox_QuPath_StarDist.png){fig-align="center"}
-
-## {.center}
-::: {.r-fit-text}
-[Segmentation – comparison of Deep Learning models]{style="color:#c00000;"}
-:::
-
-## {transition="none"}
-![](images/Fig%203%20-%20cellpose%20paper_cellpose%20seg.png){fig-align="center"}
-
-:::{.absolute top="20" left="50"}
-[Cellpose]{style="color:#c00000; font-size:1.2em"}
-:::
-
-:::{.smallerFont0 .absolute top="650" left="1000"}
-Stringer et al 2021, Nat Methods
-:::
-
-## {transition="none"}
-![](images/Fig%20S4%20-%20cellpose%20paper_stardist%20seg.png){fig-align="center"}
-
-:::{.absolute top="20" left="50"}
-[StarDist]{style="color:#c00000; font-size:1.2em"}
-:::
-
-:::{.smallerFont0 .absolute top="650" left="1000"}
-Stringer et al 2021, Nat Methods
-:::
-
-## {.center}
-::: {.r-fit-text}
-[&emsp;&emsp;&emsp;&emsp;Challenging cases&emsp;&emsp;&emsp;&emsp;]{style="color:#c00000;"}
-:::
-
-## 1. Cell crowding
-<br>
-
-::: {layout="[1,1]"}
-![Original image](images/022_img.png)
-
-![Cellpose segmentation](images/022_img_cp_masks_outlines.png){.fragment}
-:::
-:::{.smallerFont0 .absolute top="600" left="74"}
-Image from https://github.com/MouseLand/cellpose
-:::
-
-## 2. Cell crowding + noisy signal
-::: {layout="[1,1]"}
-![Original image](images/020_img.png)
-
-![Cellpose segmentation](images/020_img_cp_masks_outlines.png){.fragment}
-:::
-:::{.smallerFont0 .absolute top="650" left="74"}
-Image from https://github.com/MouseLand/cellpose
-:::
-
-## 3. Cell crowding + uneven illumination
-::: {layout="[1,1]"}
-![Original image](images/053_img_grey.png)
-
-![Cellpose segmentation](images/053_img_grey_cp_masks_outlines.png){.fragment}
-:::
-:::{.smallerFont0 .absolute top="710" left="25"}
-Image from https://github.com/MouseLand/cellpose
-:::

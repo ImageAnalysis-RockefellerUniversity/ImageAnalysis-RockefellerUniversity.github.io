@@ -22,40 +22,170 @@ Target audience:
 ## Prerequisite
 Participants are recommended to bring their own laptops with the latest [Fiji](https://imagej.net/software/fiji/downloads) installed.
 
-## Opening images, Image file formats, bit-depth, metadata
+We will be working with the following images:  
 
-drag and drop - TIFF, PNG  
-Bio-Formats for others  
-Opening large images with different resolutions  
-Bio-Formats - crop on import  
+- hela-cells.tif (Fiji sample image)  
+- Rat_Hippocampal_Neuron.tif (Fiji sample image)  
+- mitosis.tif (Fiji sample image)  
+- Dot_Blot.tif (Fiji sample image)  
+- MEF_phalloidin.tif  
 
-### bit-depth
-dynamic range - https://svi.nl/DynamicRange
+Download the [zip](Workshop/Fundamentals_microscopy_workshop_2026_images.zip) file containing above images, unzip and save them on your laptop before the session begins.
 
-converting between bit depths - scale when converting (image clipping https://svi.nl/Image-Clipping)
+## Exercise 1: ImageJ/Fiji user interface (Time: 30 min)
+Open HeLa cells sample image
+
+Step 1: Use Fiji Search bar to split channels. You should now have three images, one for each channel.
+
+Step 2: Tile images (`Window > Tile`)
+
+Step 3: Synchronize all three images: `Analyze > Tools > Synchronize Windows`  
+Choose the `Freehand selection tool` and draw a region-of-interest (ROI) around a cell in the green channel. This ROI should automatically appear in the red channel. Click on the red channel image window title. Press M to measure cell intensity. 
+ 
+Step 4: practice moving ROIs around (from one image to the other)
+
+- `Synchronize Windows`
+- `Edit › Selection › Restore Selection` (Shift+E)
+    - draw an ROI in one image. Click on another image and press Shift+E to transfer the ROI.
+- ROI Manager
+    - Open ROI Manager by pressing T (or go to: `Analyze › Tools › ROI Manager...`)
+    - draw an ROI in one image and press T to add it to the ROI Manager. 
+    - Click on another image and select the ROI in the ROI Manager to copy it over.
+          
+Step 5: Using Control panel
+
+Use case: to change the LUT of an image
+
+- Open Control panel: `Plugins > Utilities > Control Panel...`
+- Navigate to `Image > Lookup Tables`
+- Select Channel 1 image and click on `Magenta` in the Control panel
+- Select Channel 3 image and click on `Cyan` in the Control panel
+- Try other LUTs such as `mpl-viridis`
+
+Step 6: Shortcuts
+
+- in-built: look around in the Fiji menu. E.g. Ctrl+Shift+D to duplicate an image  
+  Tip: No need to press Ctrl (default)
+- Custom
+    - `Plugins > Shortcuts > Add Shortcut...`
+    - add F11 to open HeLa Cells image
+- Right click options – make all three channels gray
+    - right click > Startup Macros... to add
+- [Action Bar plugin](https://figshare.com/articles/dataset/Custom_toolbars_and_mini_applications_with_Action_Bar/3397603) to create custom toolbars for frequently used commands.
+
+## Exercise 2: Opening images – file formats (Time: 15 min)
+
+Native formats: TIFF, JPEG, PNG, DICOM etc.
+
+- drag and drop to open
+
+Non-native formats: - CZI, ND2, OME-TIFF etc.
+
+- need `Bio-Formats Importer` plugin (Fiji already comes with it)
+
+[Working with large images]{.underline}  
+The theoretical maximum size for a Java array is Integer.MAX_VALUE (2,147,483,647 elements)  
+=> ~ 2 gigapixel limit  
+=> ~ 2GB 8-bit grayscale TIFF images
+
+Open large images using [Virtual stacks]{.underline}
+
+- disk resident (as opposed to RAM resident). Read-only so changes made to the pixel data are not saved. 
+- Drag and drop on the >> icon.
+- `Import > Image Sequence...`
+- `Import > TIFF Virtual Stack`
+- `Use virtual stack` checkbox in `Bio-Formats Importer`
+
+Show some of the above option on the light sheet image stitched.tif (~ 50 GB, not provided)
+
+Bio-Formats - crop on import option
+
+- crop: z 800-900; x 1400, y 1200; width and height 200
+
+Opening large images with different resolutions (pyramidal data)  
+Lymph node image: “LN Uninvolved P6.qptiff” (1.6 GB, not provided)  
+Using Bio-Formats Importer, open resolution #5 and check out different channels  
+
+## Exercise 3: Understanding image metadata (Time: 5 min)
+
+Open image: mitosis.tif  
+Check metadata under `Image > Properties...`  
+
+Metadata can also be checked without opening the image using `Bio-Formats Importer` plugin with “Metadata only” option. This allows you to check metadata for large images without having to open them.  
+For image: LN Uninvolved P6.qptiff  
+use Bio-Formats Importer “Metadata only” option  
+&emsp;search for metadata such as “Objective”, “Filter”, “Compression”
+
+## Exercise 4: Displaying images (Time: 15 min)
+
+Open image: MEF_Phalloidin_staining.tif  
+Generate 6 different versions as discussed in the lecture  
+&emsp;- Duplicate image 5 times. Tile windows.  
+&emsp;- Adjust Brightness/Contrast, Histogram, LUT, bit-depth  
+
+Putting scale bar on images  
+&emsp;Open image: MEF_Phalloidin_staining.tif  
+&emsp;`Analyze > Tools > Scale Bar...`  
+
+Copying scale bar from one image to the other  
+&emsp;Open image: MEF_Phalloidin_staining.tif  
+&emsp;Duplicate image and remove scale: Analyze > Set Scale > Remove scale  
+&emsp;Select first image, then Analyze > Set Scale > check Global option  
+
+Bit-depth conversion  
+&emsp;Open image: MEF_Phalloidin_staining.tif  
+&emsp;&emsp;Convert to 8-bit image: `Image > Type > 8-bit`  
+&emsp;Open the same image again  
+&emsp;&emsp;`Edit > Options > Conversions...` uncheck `Scale when converting`  
+&emsp;&emsp;Convert again: `Image > Type > 8-bit...`  
+&emsp;compare the two results  
+
+## Exercise 5: Handling images (Time: 10 min)
+
+Working with multidimensional images (Channels, Time-series)  
+&emsp;Open image: Rat_Hippocampal_Neuron.tif  
+&emsp;`Image > Color > Channels Tool...` (Shift + Z)  
+&emsp;Check out different display modes – composite, color, grayscale  
+
+Making substack  
+&emsp;Difference between `Duplicate...` and `Make Substack...` commands  
+&emsp;Open image: mitosis.tif, extract z=4 using `Image > Duplicate...`  
+&emsp;Can not reverse the channel order or extract specific frames (e.g. 5,10,15) using Duplicate.  
+&emsp;Instead use: `Image > Stacks > Tools > Make Substack...`  
+
+## Exercise 6: Quantifying images (Time: 15 min)
+
+Open image: mitosis.tif  
+Plot line profile: `Analyze > Plot Profile` (or press K), Live view, click on `List` to get values and plot elsewhere  
+Plot Z axis profile `Image > Stacks > Plot Z-axis Profile`  
+Intensity measurements  
+&emsp;`Analyze > Measure (M)`  
+&emsp;`Analyze > Set Measurements...`  
+
+## Exercise 7: Segmentation, image processing filters and Deep Learning (Time: 30 min)
+
+Try the following segmentation methods on image: Dot_Blot.tif
+
+(a) Global threshold: `Image > Adjust > Threshold...`
+
+(b) Local threshold:  `Image > Adjust > Auto Local Threshold`  
+  Otsu gives the best result among all the methods.  
+	Need to filter detections out: `Analyze > Analyze Particles...`  
+	&emsp;area: 400-700; circularity: 0.6-1  
+	Nice results!  
+  Add ROIs as overlay: `Image > Overlay > From ROI Manager`  
+  Save image.  
+
+(c) Preprocess the image by running Gaussian blur (radius =2 ) before trying Auto Local Threshold and Analyze Particles.
+	Compare results with (b).
+
+(d) Use Deep learning method - StarDist  
+	Need to have the following Update sites checked (`Help > Update...`)  
+    • CSBDeep  
+    • StarDist  
+	Run `Plugins > StarDist/StarDist 2D`  
+	Model: Versatile (fluorescent nuclei), accept all default values  
+	Press OK.  
+	Compare results with (c)  
 
 
-
-
-## Working with multidimensional images (Channels, time series)
-
-
-## Brightness/Contrast, Histogram
-
-
-## Scale bar
-
-
-## Thresholding - binary and label images
-
-
-
-## ROIs, overlays
-
-
-## Intensity measurements
-
-
-## Image processing filters and Deep Learning
-- Gaussian
-- Edge detection (Canny)

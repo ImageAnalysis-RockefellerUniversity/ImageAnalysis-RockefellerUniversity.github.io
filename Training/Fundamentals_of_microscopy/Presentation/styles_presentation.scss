@@ -40,7 +40,7 @@
 
 /* Draw a border around each slide */
 .reveal .slides > section {
-  border: 1px solid rgba(0,0,0,0.2);
+  // border: 1px solid rgba(0,0,0,0.2);
   // border: 1px dashed rgba(0,0,0,0.2);
   // border: 3px solid #333;
   // box-sizing: border-box;
@@ -50,6 +50,12 @@
   text-align: center;
 }
 
+/* Target the footer specifically */
+.reveal .footer {
+  font-size: 0.2em;              /* Adjust size (0.5em is half standard) */
+  color: rgba(128, 128, 128, 0.5); /* Gray color with 40% transparency */
+  // font-weight: normal;           /* Optional: make it less bold */
+}
 
 // ------------------------------------------------------------
 
@@ -156,9 +162,12 @@
 
 // ------------------------------------------------------------
 .smallerFont45 {  font-size: 0.45em;}
+.smallerFont55 {  font-size: 0.55em;}
 .smallerFont0 {  font-size: 0.55em;}
 .smallerFont1 {  font-size: 0.65em;}
+.smallerFont65 {  font-size: 0.65em;}
 .smallerFont2 {  font-size: 0.8em;}
+.smallerFont7 {  font-size: 0.7em;}
 .smallerFont3 {  font-size: 0.35em;}
 
 .loose-lines p,
@@ -229,16 +238,16 @@
 
 /* This targets the container and every cell inside a Quarto layout */
 .quarto-layout-panel, .quarto-layout-cell {
-  border: 2px solid red !important;
+  // border: 2px solid red !important;
 }
 
 /* This draws a blue border specifically around the image itself */
 .quarto-layout-cell img {
-  border: 2px solid blue !important;
+  // border: 2px solid blue !important;
 }
 
 .element-center .quarto-layout-cell img {
-  border: 2px solid blue !important;
+  // border: 2px solid blue !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
