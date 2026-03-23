@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-5b9c7bc364fbd947e42abad66de11387.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-ad7d19de856aeecba0a1362700e1ac19.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -215,35 +215,15 @@
 <h3 id="part-2---what-is-an-image-and-how-to-work-with-it.">Part 2 - What is an image and how to work with it.</h3>
 <ul>
 <li>bit depth</li>
+<li>dynamic range</li>
 <li>metadata</li>
 <li>histogram</li>
-<li>display settings</li>
-<li>deconvolution vs AI-denoising</li>
-<li>image processing filters</li>
+<li>display settings (Lookup tables, brightness/contrast)</li>
+<li>Noise reduction (deconvolution vs AI-denoising)</li>
 </ul>
 </div>
 </section>
-<section id="sensor-vs-detector-vs-camera" class="slide level2 custom_indent4">
-<h2>Sensor vs Detector vs Camera</h2>
-<div class="fragment smallerFont1">
-<h3 class="text-blue" id="sensor">Sensor</h3>
-<p>The fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal</p>
-<ul>
-<li>the light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)</li>
-</ul>
-</div>
-<div class="fragment smallerFont1">
-<h3 class="text-blue" id="detector">Detector</h3>
-<p>A broader term that includes sensors and other components to detect signal</p>
-<ul>
-<li>Camera is a type of detector which captures light to form images</li>
-</ul>
-</div>
-<div class="fragment smallerFont1">
-<h3 class="text-blue" id="camera">Camera</h3>
-<p>A complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing</p>
-</div>
-</section>
+
 <section id="microscopy-cameras" class="slide level2 custom_indent4">
 <h2>Microscopy cameras</h2>
 <div class="smallerFont2">
@@ -350,7 +330,7 @@
 <div class="smallerFont1 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
 <ul>
 <li>Each pixel of the CCD image sensor is composed of a photodiode and a potential well, which can be thought of as a bucket for photoelectrons.</li>
-<li>This wavelength dependent conversion of light to photoelectrons is specified as the quantum efficiency (QE).</li>
+<li>This wavelength dependent conversion of light to photoelectrons is specified as the <span class="text-red">quantum efficiency (QE)</span>.</li>
 <li>Photoelectrons accumulate in each bucket until it’s time for readout, when all of the photoelectrons are relayed from one bucket to the next down each row of pixels.</li>
 <li>The charge is gathered pixel-by-pixel—serially—into a container at the end of the relay.</li>
 <li>Once in the container, the photoelectrons are converted into voltage and processed into an image on the camera circuit board.</li>
@@ -358,10 +338,11 @@
 </ul>
 </div>
 <div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: flex-start;">
-<p><br><br> <img data-src="images/CCD_image sensor2.jpeg"></p>
+
 </div>
 </div>
 </div>
+<p><img data-src="images/CCD_image sensor2.jpeg" class="absolute" style="top: 0px; left: 850px; width: 30%; "> <img data-src="images/SS_QE_wavelength_dependence.png" class="absolute fragment" style="top: 460px; left: 850px; width: 30%; "></p>
 </section>
 <section id="emccd-camera" class="slide level2 custom_indent2">
 <h2>EMCCD camera</h2>
@@ -457,7 +438,7 @@
 </section>
 <section id="read-noise" class="slide level2 custom_indent2">
 <h2>Read noise</h2>
-<div class="smallerFont1 absolute" style="top: 620px; left: 5px; ">
+<div class="smallerFont45 absolute" style="top: 620px; left: 5px; ">
 <p><u>Resource</u><br>
 https://andor.oxinst.com/learning/view/article/sensitivity-and-noise-of-ccd-emccd-and-scmos-sensors</p>
 </div>
@@ -497,6 +478,45 @@ https://andor.oxinst.com/learning/view/article/sensitivity-and-noise-of-ccd-emcc
 </div>
 </div>
 </section>
+<section id="signal-to-noise-ratio-snr" class="slide level2">
+<h2>Signal-to-noise ratio (SNR)</h2>
+<div class="quarto-layout-panel" data-layout="[50,40]">
+<div class="quarto-layout-row">
+<div class="smallerFont1 quarto-layout-cell" style="flex-basis: 55.6%;justify-content: flex-start;">
+<ul>
+<li>SNR measures the strength of the signal relative to the noise in an image.</li>
+<li>SNR is dependent on the input light levels and camera specifications (QE, various sources of noise etc.)</li>
+<li>Noise is not the same as background
+<ul>
+<li><span class="text-red">Noise</span>: random corruption of any image due to inherent uncertainty of photon detection</li>
+<li><span class="text-red">Background</span>: any detected signal that is <u>biologically</u> non-informative</li>
+</ul></li>
+</ul>
+</div>
+<div class="element-center smallerFont45 quarto-layout-cell" style="flex-basis: 44.4%;justify-content: flex-start;">
+<p><img data-src="images/SS_SNR_equation3.png"> Source: Hamamatsu white paper</p>
+</div>
+</div>
+</div>
+<div class="smallerFont45 absolute" style="top: 620px; left: 5px; ">
+<p><u>Resource</u><br>
+Checkout SNR of different cameras under various conditions:<br>
+https://www.hamamatsu.com/sp/sys/en/camera_simulator/index.html</p>
+</div>
+</section>
+<section id="signal-to-background-ratio-sbr" class="slide level2 smaller loose-lines">
+<h2>Signal-to-background ratio (SBR)</h2>
+<ul>
+<li>SBR is a measure of signal strength relative to background signal.</li>
+<li><span class="text-red">Sample dependent</span>, not camera dependent.</li>
+<li>Higher SBR indicates better contrast between the object of interest and the background.</li>
+<li>SBR can be improved by using specific stains, optimizing imaging conditions, and applying image processing techniques.</li>
+</ul>
+</section>
+<section id="resources---camera-websites" class="slide level2">
+<h2>Resources - camera websites</h2>
+
+<img data-src="images/SS_camera_resources.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="section-1" class="slide level2">
 <h2></h2>
 <div class="absolute" style="transform: translate(-50%, -50%); font-size: 1.4em; width: 100%; color: blue; text-align: center;top: 50%; left: 50%; ">
@@ -532,6 +552,9 @@ https://andor.oxinst.com/learning/view/article/sensitivity-and-noise-of-ccd-emcc
 </section>
 <section id="images-as-pixels" class="slide level2 smaller">
 <h2>Images as pixels</h2>
+<div class="smallerFont55 absolute" style="top: 700px; left: 5px; ">
+<p>Sharma et al.&nbsp;2021, PMID: 34205257</p>
+</div>
 <ul>
 <li>Images are composed of a grid of pixels</li>
 <li>Each pixel contains intensity information</li>
@@ -745,7 +768,7 @@ https://www.azom.com/article.aspx?ArticleID=20215</p>
 <section id="image-display-vs-image-analysis-1" class="slide level2">
 <h2>Image display vs image analysis</h2>
 <h4 class="text-blue" id="image-analysis">Image analysis</h4>
-<div class="smallerFont2">
+<div class="smallerFont7">
 <ul>
 <li><span class="text-red">quantitative</span> measurement of features of interest
 <ul>
@@ -759,10 +782,14 @@ https://www.azom.com/article.aspx?ArticleID=20215</p>
 <li>deconvolution</li>
 </ul></li>
 <li>make sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias</li>
-<li>all this steps should be properly described in the methods section and/or fig legend of the paper.</li>
+<li>All image processing steps should be properly described in the methods section and/or figure legend of the paper.</li>
 </ul>
 </div>
 </section>
+<section id="resource-preparing-images-and-describing-image-analyses-for-publication" class="slide level2">
+<h2>Resource: preparing images and describing image analyses for publication</h2>
+
+<img data-src="images/SS_Nat_Meths_paper.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="section-2" class="slide level2">
 <h2></h2>
 <div class="absolute" style="transform: translate(-50%, -50%); font-size: 1.2em; width: 100%; color: blue; text-align: center;top: 50%; left: 50%; ">
@@ -774,7 +801,7 @@ https://www.azom.com/article.aspx?ArticleID=20215</p>
 
 <!-- ::: {layout="[[1,1,1], [1,1,1]]" layout-column-gap="0" layout-row-gap="0"} -->
 <!-- ::: {layout-ncol="3" layout-nrow="2" layout-row-gap="0" layout-column-gap="0"} -->
-<div class="tight-grid element-center quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="3">
+<div class="tight-grid element-center quarto-layout-panel" data-layout-ncol="3" data-layout-nrow="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png"></p>
@@ -801,7 +828,7 @@ https://www.azom.com/article.aspx?ArticleID=20215</p>
 </section>
 <section class="slide level2">
 
-<div class="tight-grid element-center quarto-layout-panel" data-layout-nrow="1" data-layout-ncol="2">
+<div class="tight-grid element-center quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="1">
 <div class="quarto-layout-row">
 <div class="img-stack quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_BC.png" class="overlay-img2 fragment"></p>
@@ -816,7 +843,7 @@ https://www.azom.com/article.aspx?ArticleID=20215</p>
 </section>
 <section class="slide level2">
 
-<div class="tight-grid element-center quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="3">
+<div class="tight-grid element-center quarto-layout-panel" data-layout-ncol="3" data-layout-nrow="2">
 <div class="quarto-layout-row">
 <div class="img-stack quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1.png" class="base-img"> <img data-src="images/F-actin_phalloidin_MTLn3_MEF/SS_MEF-1_histo_v2.png" class="overlay-img fragment"></p>
@@ -862,7 +889,7 @@ https://www.azom.com/article.aspx?ArticleID=20215</p>
 <ul>
 <li>to save space (rarely)</li>
 <li>Because a particular ImageJ/Fiji plugin only works with 8/16/32-bit images (most common reason!)</li>
-<li>so that a large image could be loaded into RAM/opened and I can quickly take a look at it.</li>
+<li>so that a large image could be completely loaded into RAM for quick visualization.</li>
 </ul>
 <div class="fragment">
 <p>in Fiji, go to <code>Edit &gt; Options &gt; Conversions...</code></p>
@@ -958,43 +985,73 @@ https://www.azom.com/article.aspx?ArticleID=20215</p>
 <h2>Image Metadata (detailed)</h2>
 <p><br> metadata in OME-XML format <img data-src="images/Screenshot_OME-XML_metadata.png"></p>
 </section>
-<section id="signal-to-noise-ratio-snr" class="slide level2 smaller loose-lines">
-<h2>Signal-to-noise ratio (SNR)</h2>
+<section id="noise-reduction-ai-denoising" class="slide level2">
+<h2>Noise reduction: AI-Denoising</h2>
+<div class="quarto-layout-panel" data-layout="[50,30]">
+<div class="quarto-layout-row">
+<div class="smallerFont65 quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
 <ul>
-<li>SNR is a measure of signal strength relative to background noise</li>
-<li>Higher SNR indicates clearer images with less noise</li>
-<li>SNR can be improved by optimizing imaging conditions, using better cameras, and applying image processing techniques</li>
-</ul>
-</section>
-<section id="signal-to-background-ratio-sbr" class="slide level2 smaller loose-lines">
-<h2>Signal-to-background ratio (SBR)</h2>
+<li>Various AI-denoising methods have been developed by training deep learning models on:
 <ul>
-<li>SBR is a measure of signal strength relative to background signal</li>
-<li>Higher SBR indicates better contrast between the object of interest and the background</li>
-<li>SBR can be improved by using specific stains, optimizing imaging conditions, and applying image processing techniques</li>
+<li>pairs of noisy (low SNR) and clean (high SNR) images
+<ul>
+<li><span class="text-red">CARE</span> (Content-Aware Image Restoration)</li>
+<li><span class="text-red">RCAN</span> (Residual Channel Attention Networks, from AIVIA)</li>
+</ul></li>
+<li>pairs of noisy images - <span class="text-red">Noise2Noise</span> (N2N)</li>
+<li>Single noisy images - <span class="text-red">Noise2Void</span> (N2V)</li>
+</ul></li>
 </ul>
-</section>
-<section id="noise-reduction---deonvolution-vs-ai-denoising" class="slide level2">
-<h2>Noise reduction - Deonvolution vs AI-Denoising</h2>
+<div class="fragment">
+<ul>
+<li>Problems with AI-denoising:
+<ul>
+<li>AI can <span class="text-red">create, alter, or hallucinate</span> features that do not exist in the raw data, producing images that look realistic but are scientifically inaccurate.</li>
+<li><span class="text-red">Resource-intensive</span>: model training requires hundreds to thousands of paired (noisy/clean) images to train effectively</li>
+<li>Some methods such as Noise2Void fail to remove structured noise</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="element-center quarto-layout-cell" style="flex-basis: 37.5%;justify-content: center;">
+<p><img data-src="images/CARE_N2N_N2V_comparison.jpg"></p>
+<p><br> <img data-src="images/N2V_structured noise2.png" class="fragment"></p>
+</div>
+</div>
+</div>
 <div class="hidden">
 <p>concept of deconvolution https://zeiss-campus.magnet.fsu.edu/articles/basics/psf.html</p>
 </div>
-<p>sample x psf = image</p>
 </section>
-<section id="file-format" class="slide level2">
-<h2>File format</h2>
-<p>It is important to save images in a format that preserves the original pixel intensity values and metadata for accurate analysis.<br>
-<br> Common microscopy file formats: TIFF, OME-TIFF, CZI (Zeiss), ND2 (Nikon), LIF (Leica), etc.<br>
-<br> What is the difference between TIFF, PNG and JPEG?</p>
-<p>What is compression and how it affects image quality and analysis?</p>
+<section id="noise-reduction-deconvolution" class="slide level2">
+<h2>Noise reduction: Deconvolution</h2>
+<div class="quarto-layout-panel" data-layout="[50,25]">
+<div class="quarto-layout-row">
+<div class="smallerFont65 quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
+<ul>
+<li>A mathematical operation that reverses the effects of convolution (blurring due to out of focus light) in an image, using the <span class="text-red">point spread function (PSF)</span> of the imaging system.</li>
+<li>Does not require deep learning model training, so it is <span class="text-red">less computationally-intensive</span> than AI-denoising</li>
+<li>It does require accurate estimation of the PSF for optimal results.</li>
+<li>Deconvolution can improve image resolution and contrast without introducing hallucinations, as it is based on the <span class="text-red">physical properties of the imaging system</span> rather than learned patterns from data.</li>
+<li>Overall, Deconvolution is a more reliable method for noise reduction in microscopy images compared to AI-denoising.</li>
+</ul>
+</div>
+<div class="element-center smallerFont45 quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><img data-src="images/Convolution_Huygens.png" style="width:50.0%"> <img data-src="images/CARE_vs_Huygens_deconvolution.jpg" class="fragment"></p>
+</div>
+</div>
+</div>
+<div class="smallerFont0 absolute" style="top: 620px; left: 10px; ">
+<p><u>Resource</u><br>
+https://svi.nl/AI-Image-Denoising</p>
+</div>
 </section>
-<section id="resources---camera-websites" class="slide level2">
-<h2>Resources - camera websites</h2>
 
-<img data-src="images/SS_camera_resources.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="acknowledgements" class="slide level2 custom_indent4">
 <h2>Acknowledgements</h2>
-<div class="smallerFont2">
+<div class="quarto-layout-panel" data-layout="[50,50]">
+<div class="quarto-layout-row">
+<div class="smallerFont2 quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Alison North</li>
 <li>Tom Carroll</li>
@@ -1003,473 +1060,23 @@ https://www.azom.com/article.aspx?ArticleID=20215</p>
 <p><br></p>
 <ul>
 <li>Tao Tong</li>
-<li>Behzad Khajavi</li>
-<li>Priyam Banerjee</li>
-<li>Maria Belen Harreguy Alfonso</li>
 <li>Ivan Rey Suarez</li>
+<li>Behzad Khajavi</li>
+<li>Maria Belen Harreguy Alfonso</li>
+<li>Priyam Banerjee</li>
 </ul>
 </div>
+<div class="smallerFont2 fragment quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p><br><br> Our wonderful users and collaborators!</p>
+</div>
+</div>
+</div>
 </section>
-<section id="end" class="slide level2">
-<h2>END</h2>
-</section>
-<section id="resources" class="slide level2 smaller">
-<h2>Resources</h2>
-<ul>
-<li><a href="https://imagej.net/imaging/principles#Pre-processing">Principles of Scientific Imaging - imagej.net</a>
-<ul>
-<li>JPEG artifacts</li>
-</ul></li>
-</ul>
-<p>Pete Bankhead book https://petebankhead.gitbooks.io/imagej-intro/content/chapters/bit_depths/bit_depths.html</p>
-</section>
-<section id="section-3" class="slide level2 custom_indent3">
-<h2></h2>
-<p>Seminar slides and workshop material will be made available on our GitHub page:<br>
-<br> https://github.com/ImageAnalysis-RockefellerUniversity</p>
-<aside class="notes">
-<p>Speaker notes go here.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="outline-1" class="slide level2 smaller custom_indent2">
-<h2>Outline</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>Segmentation</li>
-<li>Cell/particle Counting and Tracking</li>
-<li>Image denoising</li>
-</ul>
-</div><div class="column fragment" style="width:60%;">
-<p><u>Open-source Softwares</u><br>
-ImageJ/Fiji, QuPath, Napari, CellProfiler, Icy<br>
-<br> <u>Commercial Softwares</u><br>
-Imaris, Arivis, Aivia, Huygens, MetaMorph<br>
-<br> <u>Machine/Deep Learning frameworks</u><br>
-Weka, ilastik, Labkit StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic</p>
-</div></div>
-</section>
-<section id="what-is-a-raster-image" class="slide level2">
-<h2>What is a Raster Image?</h2>
-<div class="smallerFont1 quarto-layout-panel" data-layout="[44,-1,55]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 44.0%;justify-content: flex-start;">
-<ul>
-<li>Raster images are composed of a grid of pixels</li>
-<li>Each pixel contains intensity information</li>
-<li>Number of bits (N) determine the range of intensity levels</li>
-</ul>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 1.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 55.0%;justify-content: center;">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Image Type</th>
-<th style="text-align: center;">Range of intensity levels (0 to 2<sup>N</sup>-1)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">8-bit</td>
-<td style="text-align: center;">0-255</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">16-bit</td>
-<td style="text-align: center;">0-4095</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">32-bit</td>
-<td style="text-align: center;">0-65,535</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">RGB color (3 x 8 bits)</td>
-<td style="text-align: center;">0-255 per channel</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="smallerFont2 quarto-layout-panel" data-layout="[15,40,20,25]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Histogram</figcaption>
-<p><img data-src="images/dew-maple-leaf-1974425_BCwindow.jpg"></p>
-</figure>
-</div>
-</div>
-<div class="img-overlay quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>8-bit image (256 shades)</figcaption>
-<p><img data-src="images/dew-maple-leaf-1974425.jpg"></p>
-</figure>
-</div>
-<div class="red-square">
 
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Zoomed-in view</figcaption>
-<p><img data-src="images/dew-maple-leaf-1974425_crop.jpg"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Image as a matrix of numbers (0-255)</figcaption>
-<p><img data-src="images/dew-maple-leaf-1974425_crop_text.jpg"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="segmentation" class="slide level2 smaller loose-lines custom_indent">
-<h2>Segmentation</h2>
-<p>Identifying object(s) of interest in an image<br>
- - cells, nuclei, membrane, transcription sites etc.</p>
-<p>Segmentation is usually followed by quantitative analysis of object(s)<br>
- - number of cells/nuclei, mean fluorescence intensity, shape etc.</p>
-<p>Divide image into areas representing object(s) of interest and background</p>
-<div class="fragment">
-<p><mark>Segmentation is not an easy task to solve in most practical cases</mark><br>
- - Signal variability throughout the image<br>
- - Noise, blur and other distortions caused by the imperfect imaging conditions</p>
-</div>
-</section>
-<section id="segmentation-tools" class="slide level2 smaller loose-lines">
-<h2>Segmentation tools</h2>
-<div class="custom_indent">
-<ul>
-<li>Global thresholding, local thresholding</li>
-<li>Image processing filters – Gaussian, Median, Sobel etc.</li>
-<li>Machine learning methods (supervised learning) - Weka, Labkit, ilastik</li>
-<li>Deep Learning methods - StarDist, Cellpose</li>
-<li>3D segmentation - Imaris, Arivis</li>
-</ul>
-</div>
-</section>
-<section id="segmentation-using-global-thresholding" class="slide level2">
-<h2>Segmentation using global thresholding</h2>
-<div class="quarto-layout-panel" data-layout="[28, 40]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 41.2%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Nuclei stained with Hoechst</figcaption>
-<p><img data-src="images/AS_09125_050116000001_A24f00d0_slice2_channel1.png"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 58.8%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Threshold 1</figcaption>
-<p><img data-src="images/global_Thr2.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="smallerFont0 absolute" style="top: 670px; left: 0px; ">
-<p>Human HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al.&nbsp;2012 Nat Methods</p>
-</div>
-</section>
-<section id="segmentation-using-global-thresholding-1" class="slide level2" data-transition="none">
-<h2>Segmentation using global thresholding</h2>
-<div class="quarto-layout-panel" data-layout="[28, 40]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 41.2%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Nuclei stained with Hoechst</figcaption>
-<p><img data-src="images/AS_09125_050116000001_A24f00d0_slice2_channel1.png"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 58.8%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Threshold 2</figcaption>
-<p><img data-src="images/global_Thr1.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="smallerFont0 absolute" style="top: 670px; left: 0px; ">
-<p>Human HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al.&nbsp;2012 Nat Methods</p>
-</div>
-</section>
-<section id="segmentation-with-local-thresholding" class="slide level2">
-<h2>Segmentation with local thresholding</h2>
-<div class="quarto-figure quarto-figure-center" style="top: 40px; left: 0px; width: 400px; height: 400px; ">
-<figure>
-<figcaption>Nuclei stained with Hoechst</figcaption>
-<p><img data-src="images/AS_09125_050116000001_A24f00d0_slice2_channel1.png" class="absolute"></p>
-</figure>
-</div>
-<div class="smallerFont1 absolute" style="top: 200px; left: 450px; ">
-<p>Auto Local <br>Threshold <br>in Fiji</p>
-</div>
-<p><img data-src="images/arrow.png" class="absolute" style="top: 320px; left: 450px; width: 120px; height: 40px; "></p>
-<p><img data-src="images/AS_09125_050116000001_A24f00d0_slice2_channel1_autoLocalThr.png" class="absolute" style="top: 65px; left: 620px; width: 640px; height: 640px; "></p>
-<div class="smallerFont0 absolute" style="top: 600px; left: 0px; ">
-<p>Human HT29 colon cancer cells, Image from Broad <br>Bioimage Benchmark Collection, Ljosa et al.&nbsp;2012 Nat Methods</p>
-</div>
-</section>
-<section id="segmentation-using-machine-learning" class="slide level2 smaller loose-lines custom_indent2">
-<h2>Segmentation using Machine Learning</h2>
-<p>Supervised learning - pixel classification using Random Forest classifier</p>
-<p>Fiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler</p>
-<p>Requires orders of magnitude less training data/resources than Deep Learning methods</p>
-</section>
-<section id="section-4" class="slide level2" data-transition="none">
-<h2></h2>
-
-<img data-src="images/labkit_1.png" class="quarto-figure quarto-figure-center r-stretch"><div class="smallerFont3 absolute" style="top: 692px; left: 74px; ">
-<p>Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine</p>
-</div>
-</section>
-<section id="section-5" class="slide level2" data-transition="none">
-<h2></h2>
-
-<img data-src="images/labkit_2.png" class="quarto-figure quarto-figure-center r-stretch"><div class="smallerFont3 absolute" style="top: 692px; left: 74px; ">
-<p>Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine</p>
-</div>
-</section>
-<section id="section-6" class="slide level2" data-transition="none">
-<h2></h2>
-
-<img data-src="images/labkit_3.png" class="quarto-figure quarto-figure-center r-stretch"><div class="smallerFont3 absolute" style="top: 692px; left: 74px; ">
-<p>Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine</p>
-</div>
-</section>
-<section id="segmentation-using-deep-learning" class="slide level2 smallerFont1 loose-lines">
-<h2>Segmentation using Deep Learning</h2>
-<div class="columns">
-<div class="column" style="width:2%;">
-
-</div><div class="column" style="width:55%;">
-<p>Most accurate methods available for cells/nuclei segmentation<br>
-<u>Step 1: Training</u><br>
-Generating a Deep Learning model is resource hungry:<br>
-- High-end workstation<br>
-- Large amounts of training data (images and annotations)<br>
-- Training could take hours to days<br>
-- Good programming knowledge required - Python</p>
-<p><u>Step 2: Prediction</u><br>
-Using the model from step 1 to predict the segmentation results :<br>
-- A regular laptop is just fine<br>
-- Prediction takes seconds to mins<br>
-- Little to no programming knowledge required</p>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column fragment" style="width:40%;">
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>StarDist (2018)</figcaption>
-<p><img data-src="images/stardist_paper_title.png"></p>
-</figure>
-</div>
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Cellpose (2021)</figcaption>
-<p><img data-src="images/cellpose_paper_title.png"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="segmentation-using-deep-learning-1" class="slide level2">
-<h2>Segmentation using Deep Learning</h2>
-<p><br></p>
-<div class="smallerFont2 quarto-layout-panel" data-layout="[1,1,1]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Original</figcaption>
-<p><img data-src="images/Hoechst-C42-ARv7_Dox.jpg"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>StarDist plugin in Fiji</figcaption>
-<p><img data-src="images/Hoechst-C42-ARv7_Dox_Fiji_StarDist.png"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Cellpose</figcaption>
-<p><img data-src="images/Hoechst-C42-ARv7_Dox_cellpose.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="smallerFont0 absolute" style="top: 610px; left: 0px; ">
-<p>Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine</p>
-</div>
-<div class="smallerFont1 absolute" style="top: 660px; left: 200px; ">
-<p>Workshop Exercise 1: StarDist based nuclear segmenation in a challenging image in Fiji</p>
-</div>
-</section>
-<section id="segmentation-using-stardist-in-napari" class="slide level2">
-<h2>Segmentation using StarDist in Napari</h2>
-
-<img data-src="images/Hoechst-C42-ARv7_Dox_Napari_StarDist.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="segmentation-using-stardist-in-qupath" class="slide level2">
-<h2>Segmentation using StarDist in Qupath</h2>
-
-<img data-src="images/Hoechst-C42-ARv7_Dox_QuPath_StarDist.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-7" class="slide level2 center">
-<h2></h2>
-<div class="r-fit-text">
-<p><span style="color:#c00000;">Segmentation – comparison of Deep Learning models</span></p>
-</div>
-</section>
-<section id="section-8" class="slide level2" data-transition="none">
-<h2></h2>
-
-<img data-src="images/Fig 3 - cellpose paper_cellpose seg.png" class="quarto-figure quarto-figure-center r-stretch"><div class="absolute" style="top: 20px; left: 50px; ">
-<p><span style="color:#c00000; font-size:1.2em">Cellpose</span></p>
-</div>
-<div class="smallerFont0 absolute" style="top: 650px; left: 1000px; ">
-<p>Stringer et al 2021, Nat Methods</p>
-</div>
-</section>
-<section id="section-9" class="slide level2" data-transition="none">
-<h2></h2>
-
-<img data-src="images/Fig S4 - cellpose paper_stardist seg.png" class="quarto-figure quarto-figure-center r-stretch"><div class="absolute" style="top: 20px; left: 50px; ">
-<p><span style="color:#c00000; font-size:1.2em">StarDist</span></p>
-</div>
-<div class="smallerFont0 absolute" style="top: 650px; left: 1000px; ">
-<p>Stringer et al 2021, Nat Methods</p>
-</div>
-</section>
-<section id="section-10" class="slide level2 center">
-<h2></h2>
-<div class="r-fit-text">
-<p><span style="color:#c00000;">    Challenging cases    </span></p>
-</div>
-</section>
-<section id="cell-crowding" class="slide level2">
-<h2>1. Cell crowding</h2>
-<p><br></p>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Original image</figcaption>
-<p><img data-src="images/022_img.png"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Cellpose segmentation</figcaption>
-<p><img data-src="images/022_img_cp_masks_outlines.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="smallerFont0 absolute" style="top: 600px; left: 74px; ">
-<p>Image from https://github.com/MouseLand/cellpose</p>
-</div>
-</section>
-<section id="cell-crowding-noisy-signal" class="slide level2">
-<h2>2. Cell crowding + noisy signal</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Original image</figcaption>
-<p><img data-src="images/020_img.png"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Cellpose segmentation</figcaption>
-<p><img data-src="images/020_img_cp_masks_outlines.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="smallerFont0 absolute" style="top: 650px; left: 74px; ">
-<p>Image from https://github.com/MouseLand/cellpose</p>
-</div>
-</section>
-<section id="cell-crowding-uneven-illumination" class="slide level2">
-<h2>3. Cell crowding + uneven illumination</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Original image</figcaption>
-<p><img data-src="images/053_img_grey.png"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<figcaption>Cellpose segmentation</figcaption>
-<p><img data-src="images/053_img_grey_cp_masks_outlines.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="smallerFont0 absolute" style="top: 710px; left: 25px; ">
-<p>Image from https://github.com/MouseLand/cellpose</p>
-</div>
-
-
-</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Bio-Imaging Resource Center, The Rockefeller University</p>
+<p>Fundamentals of Microscopy workshop 2026 - Bio-Imaging Resource Center, The Rockefeller University</p>
 </div>
 </div></div>
 
@@ -1645,6 +1252,9 @@ Using the model from step 1 to predict the segmentation results :<br>
         // devices. It is advisable to set this to a lower number than
         // viewDistance in order to save resources.
         mobileViewDistance: 2,
+
+       // Parallax background image
+       parallaxBackgroundImage: 'images/watermark_v8.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be

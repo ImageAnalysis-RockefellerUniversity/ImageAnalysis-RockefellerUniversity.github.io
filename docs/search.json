@@ -16,7 +16,7 @@
     "href": "Training/Fundamentals_of_microscopy/What_is_an_image.html#presentation",
     "title": "What Is an Image?",
     "section": "Presentation",
-    "text": "Presentation\nTo be added…",
+    "text": "Presentation\n\n\n\nUse Space or arrow keys to navigate the slides.\nClick here to view slides in a separate browser tab.",
     "crumbs": [
       "Training",
       "Fundamentals of Microscopy workshop",
@@ -63,14 +63,7 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline",
     "title": "What Is an Image?",
     "section": "Outline",
-    "text": "Outline\n\nPart 1 - How cameras generate an image.\n\ncamera types (CCD, EMCCD, CMOS)\ncamera noise\n\nPart 2 - What is an image and how to work with it.\n\nbit depth\nmetadata\nhistogram\ndisplay settings\ndeconvolution vs AI-denoising\nimage processing filters"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#sensor-vs-detector-vs-camera",
-    "title": "What Is an Image?",
-    "section": "Sensor vs Detector vs Camera",
-    "text": "Sensor vs Detector vs Camera\n\nSensor\nThe fundamental element that converts a physical stimulus (light, heat, sound) into an electrical signal\n\nthe light-sensitive component that converts photons into electrical signals (e.g., CCD, CMOS)\n\n\n\nDetector\nA broader term that includes sensors and other components to detect signal\n\nCamera is a type of detector which captures light to form images\n\n\n\nCamera\nA complete imaging device that includes a detector along with optics, housing, and electronics for image capture and processing"
+    "text": "Outline\n\nPart 1 - How cameras generate an image.\n\ncamera types (CCD, EMCCD, CMOS)\ncamera noise\n\nPart 2 - What is an image and how to work with it.\n\nbit depth\ndynamic range\nmetadata\nhistogram\ndisplay settings (Lookup tables, brightness/contrast)\nNoise reduction (deconvolution vs AI-denoising)"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#microscopy-cameras",
@@ -157,6 +150,27 @@
     "text": "Read noise\n\nResource\nhttps://andor.oxinst.com/learning/view/article/sensitivity-and-noise-of-ccd-emccd-and-scmos-sensors\n\n\n\n\n\nUncertainty in the electronic readout process of the camera\nInherent to the process of converting CCD charge into a voltage signal and the subsequent analog-to-digital conversion\nadded uniformly to all pixels\nCan be reduced by using a camera with low read noise specifications and optimizing the readout settings\nRead noise is negligible in high signal applications\nEMCCD: signal amplification happens before readout, so read noise is effectively reduced to near zero, making EMCCD ideal for low-light imaging.\n\n\n\n\n\nCCD\nEMCCD\nsCMOS\n\n\n\n\nRead noise\n2-6 e-\n&lt;1 e-\n1-2 e-"
   },
   {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-noise-ratio-snr",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-noise-ratio-snr",
+    "title": "What Is an Image?",
+    "section": "Signal-to-noise ratio (SNR)",
+    "text": "Signal-to-noise ratio (SNR)\n\n\n\n\nSNR measures the strength of the signal relative to the noise in an image.\nSNR is dependent on the input light levels and camera specifications (QE, various sources of noise etc.)\nNoise is not the same as background\n\nNoise: random corruption of any image due to inherent uncertainty of photon detection\nBackground: any detected signal that is biologically non-informative\n\n\n\n\n Source: Hamamatsu white paper\n\n\n\n\nResource\nCheckout SNR of different cameras under various conditions:\nhttps://www.hamamatsu.com/sp/sys/en/camera_simulator/index.html"
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-background-ratio-sbr",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-background-ratio-sbr",
+    "title": "What Is an Image?",
+    "section": "Signal-to-background ratio (SBR)",
+    "text": "Signal-to-background ratio (SBR)\n\nSBR is a measure of signal strength relative to background signal.\nSample dependent, not camera dependent.\nHigher SBR indicates better contrast between the object of interest and the background.\nSBR can be improved by using specific stains, optimizing imaging conditions, and applying image processing techniques."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources---camera-websites",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources---camera-websites",
+    "title": "What Is an Image?",
+    "section": "Resources - camera websites",
+    "text": "Resources - camera websites"
+  },
+  {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-1",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-1",
     "title": "What Is an Image?",
@@ -175,7 +189,7 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#images-as-pixels",
     "title": "What Is an Image?",
     "section": "Images as pixels",
-    "text": "Images as pixels\n\nImages are composed of a grid of pixels\nEach pixel contains intensity information\n\n\n\n\n\n\nMouse embryonic fibroblast, F-actin\n\n\n\n\n\n\n\n\nZoomed-in view\n\n\n\n\n\n\n\n\n\nImage as a matrix of numbers (intensity values)"
+    "text": "Images as pixels\n\nSharma et al. 2021, PMID: 34205257\n\n\nImages are composed of a grid of pixels\nEach pixel contains intensity information\n\n\n\n\n\n\nMouse embryonic fibroblast, F-actin\n\n\n\n\n\n\n\n\nZoomed-in view\n\n\n\n\n\n\n\n\n\nImage as a matrix of numbers (intensity values)"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#bit-depth",
@@ -210,7 +224,14 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-display-vs-image-analysis-1",
     "title": "What Is an Image?",
     "section": "Image display vs image analysis",
-    "text": "Image display vs image analysis\nImage analysis\n\n\nquantitative measurement of features of interest\n\nCell/nuclei counting, fluorescence intensity, shape etc.\n\nIt’s best to avoid any photo editing software (Photoshop, GIMP etc.)\nAny visual enhancement (pixel value change) is prohibited, except…\nCaveats: certain image enhancements are allowed:\n\nimage processing filters (e.g. Gaussian blur, median filter, gamma etc.). Original image must be used for intensity measurement.\ndeconvolution\n\nmake sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias\nall this steps should be properly described in the methods section and/or fig legend of the paper."
+    "text": "Image display vs image analysis\nImage analysis\n\n\nquantitative measurement of features of interest\n\nCell/nuclei counting, fluorescence intensity, shape etc.\n\nIt’s best to avoid any photo editing software (Photoshop, GIMP etc.)\nAny visual enhancement (pixel value change) is prohibited, except…\nCaveats: certain image enhancements are allowed:\n\nimage processing filters (e.g. Gaussian blur, median filter, gamma etc.). Original image must be used for intensity measurement.\ndeconvolution\n\nmake sure to apply the same image processing to all the images in a dataset, including controls and experimental groups, to avoid bias\nAll image processing steps should be properly described in the methods section and/or figure legend of the paper."
+  },
+  {
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#resource-preparing-images-and-describing-image-analyses-for-publication",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#resource-preparing-images-and-describing-image-analyses-for-publication",
+    "title": "What Is an Image?",
+    "section": "Resource: preparing images and describing image analyses for publication",
+    "text": "Resource: preparing images and describing image analyses for publication"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-2",
@@ -231,7 +252,7 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#changing-image-bit-depth",
     "title": "What Is an Image?",
     "section": "Changing image bit-depth",
-    "text": "Changing image bit-depth\n\nWhy would you want to change the bit-depth of an image?\n\nto save space (rarely)\nBecause a particular ImageJ/Fiji plugin only works with 8/16/32-bit images (most common reason!)\nso that a large image could be loaded into RAM/opened and I can quickly take a look at it.\n\n\nin Fiji, go to Edit &gt; Options &gt; Conversions...\n\n\n\n\n \n\n\n\nBy default this setting is checked ON.\n\n\n \n\n\n\n\n\n\n\n\n\n\n\nthere are many old imageJ plugins that only work on 8-bit images.\nIf you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background"
+    "text": "Changing image bit-depth\n\nWhy would you want to change the bit-depth of an image?\n\nto save space (rarely)\nBecause a particular ImageJ/Fiji plugin only works with 8/16/32-bit images (most common reason!)\nso that a large image could be completely loaded into RAM for quick visualization.\n\n\nin Fiji, go to Edit &gt; Options &gt; Conversions...\n\n\n\n\n \n\n\n\nBy default this setting is checked ON.\n\n\n \n\n\n\n\n\n\n\n\n\n\n\nthere are many old imageJ plugins that only work on 8-bit images.\nIf you process your images in Huygens (e.g. deconvolution), it first convert your images to 32 bit in the background"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#image-metadata",
@@ -262,221 +283,25 @@
     "text": "Image Metadata (detailed)\n metadata in OME-XML format"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-noise-ratio-snr",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-noise-ratio-snr",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction-ai-denoising",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction-ai-denoising",
     "title": "What Is an Image?",
-    "section": "Signal-to-noise ratio (SNR)",
-    "text": "Signal-to-noise ratio (SNR)\n\nSNR is a measure of signal strength relative to background noise\nHigher SNR indicates clearer images with less noise\nSNR can be improved by optimizing imaging conditions, using better cameras, and applying image processing techniques"
+    "section": "Noise reduction: AI-Denoising",
+    "text": "Noise reduction: AI-Denoising\n\n\n\n\nVarious AI-denoising methods have been developed by training deep learning models on:\n\npairs of noisy (low SNR) and clean (high SNR) images\n\nCARE (Content-Aware Image Restoration)\nRCAN (Residual Channel Attention Networks, from AIVIA)\n\npairs of noisy images - Noise2Noise (N2N)\nSingle noisy images - Noise2Void (N2V)\n\n\n\n\nProblems with AI-denoising:\n\nAI can create, alter, or hallucinate features that do not exist in the raw data, producing images that look realistic but are scientifically inaccurate.\nResource-intensive: model training requires hundreds to thousands of paired (noisy/clean) images to train effectively\nSome methods such as Noise2Void fail to remove structured noise\n\n\n\n\n\n\n \n\n\n\n\nconcept of deconvolution https://zeiss-campus.magnet.fsu.edu/articles/basics/psf.html"
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-background-ratio-sbr",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#signal-to-background-ratio-sbr",
+    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction-deconvolution",
+    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction-deconvolution",
     "title": "What Is an Image?",
-    "section": "Signal-to-background ratio (SBR)",
-    "text": "Signal-to-background ratio (SBR)\n\nSBR is a measure of signal strength relative to background signal\nHigher SBR indicates better contrast between the object of interest and the background\nSBR can be improved by using specific stains, optimizing imaging conditions, and applying image processing techniques"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction---deonvolution-vs-ai-denoising",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#noise-reduction---deonvolution-vs-ai-denoising",
-    "title": "What Is an Image?",
-    "section": "Noise reduction - Deonvolution vs AI-Denoising",
-    "text": "Noise reduction - Deonvolution vs AI-Denoising\n\nconcept of deconvolution https://zeiss-campus.magnet.fsu.edu/articles/basics/psf.html\n\nsample x psf = image"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#file-format",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#file-format",
-    "title": "What Is an Image?",
-    "section": "File format",
-    "text": "File format\nIt is important to save images in a format that preserves the original pixel intensity values and metadata for accurate analysis.\n Common microscopy file formats: TIFF, OME-TIFF, CZI (Zeiss), ND2 (Nikon), LIF (Leica), etc.\n What is the difference between TIFF, PNG and JPEG?\nWhat is compression and how it affects image quality and analysis?"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources---camera-websites",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources---camera-websites",
-    "title": "What Is an Image?",
-    "section": "Resources - camera websites",
-    "text": "Resources - camera websites"
+    "section": "Noise reduction: Deconvolution",
+    "text": "Noise reduction: Deconvolution\n\n\n\n\nA mathematical operation that reverses the effects of convolution (blurring due to out of focus light) in an image, using the point spread function (PSF) of the imaging system.\nDoes not require deep learning model training, so it is less computationally-intensive than AI-denoising\nIt does require accurate estimation of the PSF for optimal results.\nDeconvolution can improve image resolution and contrast without introducing hallucinations, as it is based on the physical properties of the imaging system rather than learned patterns from data.\nOverall, Deconvolution is a more reliable method for noise reduction in microscopy images compared to AI-denoising.\n\n\n\n \n\n\n\n\nResource\nhttps://svi.nl/AI-Image-Denoising"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#acknowledgements",
     "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#acknowledgements",
     "title": "What Is an Image?",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\n\n\nAlison North\nTom Carroll\nJames Hudspeth\n\n\n\nTao Tong\nBehzad Khajavi\nPriyam Banerjee\nMaria Belen Harreguy Alfonso\nIvan Rey Suarez"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#end",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#end",
-    "title": "What Is an Image?",
-    "section": "END",
-    "text": "END"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#resources",
-    "title": "What Is an Image?",
-    "section": "Resources",
-    "text": "Resources\n\nPrinciples of Scientific Imaging - imagej.net\n\nJPEG artifacts\n\n\nPete Bankhead book https://petebankhead.gitbooks.io/imagej-intro/content/chapters/bit_depths/bit_depths.html"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-3",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Seminar slides and workshop material will be made available on our GitHub page:\n https://github.com/ImageAnalysis-RockefellerUniversity\n\nSpeaker notes go here."
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline-1",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#outline-1",
-    "title": "What Is an Image?",
-    "section": "Outline",
-    "text": "Outline\n\n\n\nSegmentation\nCell/particle Counting and Tracking\nImage denoising\n\n\nOpen-source Softwares\nImageJ/Fiji, QuPath, Napari, CellProfiler, Icy\n Commercial Softwares\nImaris, Arivis, Aivia, Huygens, MetaMorph\n Machine/Deep Learning frameworks\nWeka, ilastik, Labkit StarDist, Cellpose, DeepImageJ, ZeroCostDL4Mic"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#what-is-a-raster-image",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#what-is-a-raster-image",
-    "title": "What Is an Image?",
-    "section": "What is a Raster Image?",
-    "text": "What is a Raster Image?\n\n\n\n\nRaster images are composed of a grid of pixels\nEach pixel contains intensity information\nNumber of bits (N) determine the range of intensity levels\n\n\n\n \n\n\n\n\n\nImage Type\nRange of intensity levels (0 to 2N-1)\n\n\n\n\n8-bit\n0-255\n\n\n16-bit\n0-4095\n\n\n32-bit\n0-65,535\n\n\nRGB color (3 x 8 bits)\n0-255 per channel\n\n\n\n\n\n\n\n\n\n\n\nHistogram\n\n\n\n\n\n\n\n8-bit image (256 shades)\n\n\n\n\n\n\n\n\n\n\nZoomed-in view\n\n\n\n\n\n\n\nImage as a matrix of numbers (0-255)"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation",
-    "title": "What Is an Image?",
-    "section": "Segmentation",
-    "text": "Segmentation\nIdentifying object(s) of interest in an image\n - cells, nuclei, membrane, transcription sites etc.\nSegmentation is usually followed by quantitative analysis of object(s)\n - number of cells/nuclei, mean fluorescence intensity, shape etc.\nDivide image into areas representing object(s) of interest and background\n\nSegmentation is not an easy task to solve in most practical cases\n - Signal variability throughout the image\n - Noise, blur and other distortions caused by the imperfect imaging conditions"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-tools",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-tools",
-    "title": "What Is an Image?",
-    "section": "Segmentation tools",
-    "text": "Segmentation tools\n\n\nGlobal thresholding, local thresholding\nImage processing filters – Gaussian, Median, Sobel etc.\nMachine learning methods (supervised learning) - Weka, Labkit, ilastik\nDeep Learning methods - StarDist, Cellpose\n3D segmentation - Imaris, Arivis"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding",
-    "title": "What Is an Image?",
-    "section": "Segmentation using global thresholding",
-    "text": "Segmentation using global thresholding\n\n\n\n\n\nNuclei stained with Hoechst\n\n\n\n\n\n\n\nThreshold 1\n\n\n\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding-1",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-global-thresholding-1",
-    "title": "What Is an Image?",
-    "section": "Segmentation using global thresholding",
-    "text": "Segmentation using global thresholding\n\n\n\n\n\nNuclei stained with Hoechst\n\n\n\n\n\n\n\nThreshold 2\n\n\n\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-with-local-thresholding",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-with-local-thresholding",
-    "title": "What Is an Image?",
-    "section": "Segmentation with local thresholding",
-    "text": "Segmentation with local thresholding\n\n\nNuclei stained with Hoechst\n\n\n\n\nAuto Local Threshold in Fiji\n\n\n\n\nHuman HT29 colon cancer cells, Image from Broad Bioimage Benchmark Collection, Ljosa et al. 2012 Nat Methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-machine-learning",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-machine-learning",
-    "title": "What Is an Image?",
-    "section": "Segmentation using Machine Learning",
-    "text": "Segmentation using Machine Learning\nSupervised learning - pixel classification using Random Forest classifier\nFiji (Weka and Labkit plugins), ilastik, QuPath, Napari, CellProfiler\nRequires orders of magnitude less training data/resources than Deep Learning methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-4",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-4",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-5",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-5",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-6",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Hoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning",
-    "title": "What Is an Image?",
-    "section": "Segmentation using Deep Learning",
-    "text": "Segmentation using Deep Learning\n\n\n\n\nMost accurate methods available for cells/nuclei segmentation\nStep 1: Training\nGenerating a Deep Learning model is resource hungry:\n- High-end workstation\n- Large amounts of training data (images and annotations)\n- Training could take hours to days\n- Good programming knowledge required - Python\nStep 2: Prediction\nUsing the model from step 1 to predict the segmentation results :\n- A regular laptop is just fine\n- Prediction takes seconds to mins\n- Little to no programming knowledge required\n\n\n\n\n\n\nStarDist (2018)\n\n\n\n\n\n\nCellpose (2021)"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning-1",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-deep-learning-1",
-    "title": "What Is an Image?",
-    "section": "Segmentation using Deep Learning",
-    "text": "Segmentation using Deep Learning\n\n\n\n\n\n\nOriginal\n\n\n\n\n\n\n\nStarDist plugin in Fiji\n\n\n\n\n\n\n\nCellpose\n\n\n\n\n\n\n\nHoechst-stained Nuclei, image courtesy of Cherie Au, Giannakakou Lab, Weill Cornell Medicine\n\n\nWorkshop Exercise 1: StarDist based nuclear segmenation in a challenging image in Fiji"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-napari",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-napari",
-    "title": "What Is an Image?",
-    "section": "Segmentation using StarDist in Napari",
-    "text": "Segmentation using StarDist in Napari"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-qupath",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#segmentation-using-stardist-in-qupath",
-    "title": "What Is an Image?",
-    "section": "Segmentation using StarDist in Qupath",
-    "text": "Segmentation using StarDist in Qupath"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-7",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-7",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Segmentation – comparison of Deep Learning models"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-8",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-8",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Cellpose\n\n\nStringer et al 2021, Nat Methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-9",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-9",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "StarDist\n\n\nStringer et al 2021, Nat Methods"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-10",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#section-10",
-    "title": "What Is an Image?",
-    "section": "",
-    "text": "Challenging cases"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding",
-    "title": "What Is an Image?",
-    "section": "1. Cell crowding",
-    "text": "1. Cell crowding\n\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-noisy-signal",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-noisy-signal",
-    "title": "What Is an Image?",
-    "section": "2. Cell crowding + noisy signal",
-    "text": "2. Cell crowding + noisy signal\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-uneven-illumination",
-    "href": "Training/Fundamentals_of_microscopy/Presentation/index.html#cell-crowding-uneven-illumination",
-    "title": "What Is an Image?",
-    "section": "3. Cell crowding + uneven illumination",
-    "text": "3. Cell crowding + uneven illumination\n\n\n\n\n\nOriginal image\n\n\n\n\n\n\n\n\nCellpose segmentation\n\n\n\n\n\n\n\n\nImage from https://github.com/MouseLand/cellpose"
+    "text": "Acknowledgements\n\n\n\n\nAlison North\nTom Carroll\nJames Hudspeth\n\n\n\nTao Tong\nIvan Rey Suarez\nBehzad Khajavi\nMaria Belen Harreguy Alfonso\nPriyam Banerjee\n\n\n\n Our wonderful users and collaborators!"
   },
   {
     "objectID": "Training/northeast_meeting_2023.html",
@@ -858,7 +683,7 @@
     "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#prerequisite",
     "title": "Image analysis workshop",
     "section": "Prerequisite",
-    "text": "Prerequisite\nParticipants are recommended to bring their own laptops with the latest Fiji installed.",
+    "text": "Prerequisite\nParticipants are recommended to bring their own laptops with the latest Fiji installed.\nWe will be working with the following images:\n\nhela-cells.tif (Fiji sample image)\n\nRat_Hippocampal_Neuron.tif (Fiji sample image)\n\nmitosis.tif (Fiji sample image)\n\nDot_Blot.tif (Fiji sample image)\n\nMEF_phalloidin.tif\n\nDownload the zip file containing above images, unzip and save them on your laptop before the session begins.",
     "crumbs": [
       "Training",
       "Fundamentals of Microscopy workshop",
@@ -866,11 +691,11 @@
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#opening-images-image-file-formats-bit-depth-metadata",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#opening-images-image-file-formats-bit-depth-metadata",
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-1-imagejfiji-user-interface-time-30-min",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-1-imagejfiji-user-interface-time-30-min",
     "title": "Image analysis workshop",
-    "section": "Opening images, Image file formats, bit-depth, metadata",
-    "text": "Opening images, Image file formats, bit-depth, metadata\ndrag and drop - TIFF, PNG\nBio-Formats for others\nOpening large images with different resolutions\nBio-Formats - crop on import\n\nbit-depth\ndynamic range - https://svi.nl/DynamicRange\nconverting between bit depths - scale when converting (image clipping https://svi.nl/Image-Clipping)",
+    "section": "Exercise 1: ImageJ/Fiji user interface (Time: 30 min)",
+    "text": "Exercise 1: ImageJ/Fiji user interface (Time: 30 min)\nOpen HeLa cells sample image\nStep 1: Use Fiji Search bar to split channels. You should now have three images, one for each channel.\nStep 2: Tile images (Window &gt; Tile)\nStep 3: Synchronize all three images: Analyze &gt; Tools &gt; Synchronize Windows\nChoose the Freehand selection tool and draw a region-of-interest (ROI) around a cell in the green channel. This ROI should automatically appear in the red channel. Click on the red channel image window title. Press M to measure cell intensity.\nStep 4: practice moving ROIs around (from one image to the other)\n\nSynchronize Windows\nEdit › Selection › Restore Selection (Shift+E)\n\ndraw an ROI in one image. Click on another image and press Shift+E to transfer the ROI.\n\nROI Manager\n\nOpen ROI Manager by pressing T (or go to: Analyze › Tools › ROI Manager...)\ndraw an ROI in one image and press T to add it to the ROI Manager.\nClick on another image and select the ROI in the ROI Manager to copy it over.\n\n\nStep 5: Using Control panel\nUse case: to change the LUT of an image\n\nOpen Control panel: Plugins &gt; Utilities &gt; Control Panel...\nNavigate to Image &gt; Lookup Tables\nSelect Channel 1 image and click on Magenta in the Control panel\nSelect Channel 3 image and click on Cyan in the Control panel\nTry other LUTs such as mpl-viridis\n\nStep 6: Shortcuts\n\nin-built: look around in the Fiji menu. E.g. Ctrl+Shift+D to duplicate an image\nTip: No need to press Ctrl (default)\nCustom\n\nPlugins &gt; Shortcuts &gt; Add Shortcut...\nadd F11 to open HeLa Cells image\n\nRight click options – make all three channels gray\n\nright click &gt; Startup Macros… to add\n\nAction Bar plugin to create custom toolbars for frequently used commands.",
     "crumbs": [
       "Training",
       "Fundamentals of Microscopy workshop",
@@ -878,11 +703,11 @@
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#working-with-multidimensional-images-channels-time-series",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#working-with-multidimensional-images-channels-time-series",
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-2-opening-images-file-formats-time-15-min",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-2-opening-images-file-formats-time-15-min",
     "title": "Image analysis workshop",
-    "section": "Working with multidimensional images (Channels, time series)",
-    "text": "Working with multidimensional images (Channels, time series)",
+    "section": "Exercise 2: Opening images – file formats (Time: 15 min)",
+    "text": "Exercise 2: Opening images – file formats (Time: 15 min)\nNative formats: TIFF, JPEG, PNG, DICOM etc.\n\ndrag and drop to open\n\nNon-native formats: - CZI, ND2, OME-TIFF etc.\n\nneed Bio-Formats Importer plugin (Fiji already comes with it)\n\nWorking with large images\nThe theoretical maximum size for a Java array is Integer.MAX_VALUE (2,147,483,647 elements)\n=&gt; ~ 2 gigapixel limit\n=&gt; ~ 2GB 8-bit grayscale TIFF images\nOpen large images using Virtual stacks\n\ndisk resident (as opposed to RAM resident). Read-only so changes made to the pixel data are not saved.\nDrag and drop on the &gt;&gt; icon.\nImport &gt; Image Sequence...\nImport &gt; TIFF Virtual Stack\nUse virtual stack checkbox in Bio-Formats Importer\n\nShow some of the above option on the light sheet image stitched.tif (~ 50 GB, not provided)\nBio-Formats - crop on import option\n\ncrop: z 800-900; x 1400, y 1200; width and height 200\n\nOpening large images with different resolutions (pyramidal data)\nLymph node image: “LN Uninvolved P6.qptiff” (1.6 GB, not provided)\nUsing Bio-Formats Importer, open resolution #5 and check out different channels",
     "crumbs": [
       "Training",
       "Fundamentals of Microscopy workshop",
@@ -890,11 +715,11 @@
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#brightnesscontrast-histogram",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#brightnesscontrast-histogram",
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-3-understanding-image-metadata-time-5-min",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-3-understanding-image-metadata-time-5-min",
     "title": "Image analysis workshop",
-    "section": "Brightness/Contrast, Histogram",
-    "text": "Brightness/Contrast, Histogram",
+    "section": "Exercise 3: Understanding image metadata (Time: 5 min)",
+    "text": "Exercise 3: Understanding image metadata (Time: 5 min)\nOpen image: mitosis.tif\nCheck metadata under Image &gt; Properties...\nMetadata can also be checked without opening the image using Bio-Formats Importer plugin with “Metadata only” option. This allows you to check metadata for large images without having to open them.\nFor image: LN Uninvolved P6.qptiff\nuse Bio-Formats Importer “Metadata only” option\n search for metadata such as “Objective”, “Filter”, “Compression”",
     "crumbs": [
       "Training",
       "Fundamentals of Microscopy workshop",
@@ -902,11 +727,11 @@
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#scale-bar",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#scale-bar",
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-4-displaying-images-time-15-min",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-4-displaying-images-time-15-min",
     "title": "Image analysis workshop",
-    "section": "Scale bar",
-    "text": "Scale bar",
+    "section": "Exercise 4: Displaying images (Time: 15 min)",
+    "text": "Exercise 4: Displaying images (Time: 15 min)\nOpen image: MEF_Phalloidin_staining.tif\nGenerate 6 different versions as discussed in the lecture\n - Duplicate image 5 times. Tile windows.\n - Adjust Brightness/Contrast, Histogram, LUT, bit-depth\nPutting scale bar on images\n Open image: MEF_Phalloidin_staining.tif\n Analyze &gt; Tools &gt; Scale Bar...\nCopying scale bar from one image to the other\n Open image: MEF_Phalloidin_staining.tif\n Duplicate image and remove scale: Analyze &gt; Set Scale &gt; Remove scale\n Select first image, then Analyze &gt; Set Scale &gt; check Global option\nBit-depth conversion\n Open image: MEF_Phalloidin_staining.tif\n  Convert to 8-bit image: Image &gt; Type &gt; 8-bit\n Open the same image again\n  Edit &gt; Options &gt; Conversions... uncheck Scale when converting\n  Convert again: Image &gt; Type &gt; 8-bit...\n compare the two results",
     "crumbs": [
       "Training",
       "Fundamentals of Microscopy workshop",
@@ -914,11 +739,11 @@
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#thresholding---binary-and-label-images",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#thresholding---binary-and-label-images",
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-5-handling-images-time-10-min",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-5-handling-images-time-10-min",
     "title": "Image analysis workshop",
-    "section": "Thresholding - binary and label images",
-    "text": "Thresholding - binary and label images",
+    "section": "Exercise 5: Handling images (Time: 10 min)",
+    "text": "Exercise 5: Handling images (Time: 10 min)\nWorking with multidimensional images (Channels, Time-series)\n Open image: Rat_Hippocampal_Neuron.tif\n Image &gt; Color &gt; Channels Tool... (Shift + Z)\n Check out different display modes – composite, color, grayscale\nMaking substack\n Difference between Duplicate... and Make Substack... commands\n Open image: mitosis.tif, extract z=4 using Image &gt; Duplicate...\n Can not reverse the channel order or extract specific frames (e.g. 5,10,15) using Duplicate.\n Instead use: Image &gt; Stacks &gt; Tools &gt; Make Substack...",
     "crumbs": [
       "Training",
       "Fundamentals of Microscopy workshop",
@@ -926,11 +751,11 @@
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#rois-overlays",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#rois-overlays",
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-6-quantifying-images-time-15-min",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-6-quantifying-images-time-15-min",
     "title": "Image analysis workshop",
-    "section": "ROIs, overlays",
-    "text": "ROIs, overlays",
+    "section": "Exercise 6: Quantifying images (Time: 15 min)",
+    "text": "Exercise 6: Quantifying images (Time: 15 min)\nOpen image: mitosis.tif\nPlot line profile: Analyze &gt; Plot Profile (or press K), Live view, click on List to get values and plot elsewhere\nPlot Z axis profile Image &gt; Stacks &gt; Plot Z-axis Profile\nIntensity measurements\n Analyze &gt; Measure (M)\n Analyze &gt; Set Measurements...",
     "crumbs": [
       "Training",
       "Fundamentals of Microscopy workshop",
@@ -938,23 +763,11 @@
     ]
   },
   {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#intensity-measurements",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#intensity-measurements",
+    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-7-segmentation-image-processing-filters-and-deep-learning-time-30-min",
+    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#exercise-7-segmentation-image-processing-filters-and-deep-learning-time-30-min",
     "title": "Image analysis workshop",
-    "section": "Intensity measurements",
-    "text": "Intensity measurements",
-    "crumbs": [
-      "Training",
-      "Fundamentals of Microscopy workshop",
-      "Session 2 - Image analysis workshop"
-    ]
-  },
-  {
-    "objectID": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#image-processing-filters-and-deep-learning",
-    "href": "Training/Fundamentals_of_microscopy/Image_analysis_workshop.html#image-processing-filters-and-deep-learning",
-    "title": "Image analysis workshop",
-    "section": "Image processing filters and Deep Learning",
-    "text": "Image processing filters and Deep Learning\n\nGaussian\nEdge detection (Canny)",
+    "section": "Exercise 7: Segmentation, image processing filters and Deep Learning (Time: 30 min)",
+    "text": "Exercise 7: Segmentation, image processing filters and Deep Learning (Time: 30 min)\nTry the following segmentation methods on image: Dot_Blot.tif\n\nGlobal threshold: Image &gt; Adjust &gt; Threshold...\nLocal threshold: Image &gt; Adjust &gt; Auto Local Threshold\nOtsu gives the best result among all the methods.\nNeed to filter detections out: Analyze &gt; Analyze Particles...\n area: 400-700; circularity: 0.6-1\nNice results!\nAdd ROIs as overlay: Image &gt; Overlay &gt; From ROI Manager\nSave image.\nPreprocess the image by running Gaussian blur (radius =2 ) before trying Auto Local Threshold and Analyze Particles. Compare results with (b).\nUse Deep learning method - StarDist\nNeed to have the following Update sites checked (Help &gt; Update...)\n• CSBDeep\n• StarDist\nRun Plugins &gt; StarDist/StarDist 2D\nModel: Versatile (fluorescent nuclei), accept all default values\nPress OK.\nCompare results with (c)",
     "crumbs": [
       "Training",
       "Fundamentals of Microscopy workshop",
@@ -966,7 +779,7 @@
     "href": "Training/Fundamentals_of_microscopy/Presentation/images/F-actin_phalloidin_MTLn3_MEF/info.html",
     "title": "",
     "section": "",
-    "text": "original image location: /mnt/bircdata08/home-birc/vsharma01/Einstein_Backup_20211015/Condeelis Lab/Data/1D nanofiber project_Dec2018Backup/2016.01.28_actinCaps_MEF_MTLn3_2D\nFigure S4 from Sharma et al. nanofiber paper MTLn3 and MEF cells stained with phalloidin\nslide 3: a box saying detectors can be cameras as well as confocal style detectors such as PMTs, GASPs, APDs and SilVIR detectors will be discussed later\nslide #6 put the image at the end\ncapital with full stops small with semi-colon\nfor low light applications\nSlide 13: for almost all application, 1 or 2 flu proteins , EMCCD might be better than CMOS, check for the graph\n16: becomes a problme for long exposure such as bioluminascence, neeed to use cooled camera 17: mention emccd read noise\nafter 21: a slide about dynamic range\nslide after cmos: different QE graph\nafter bit depth - equation stepahnie lecture 67, 68 , link to a website can work out\nRessouces - camera websites pic of teledyne of camera fundamentals hamamatshu - photon to intensity conversion - image processing and image fig reporting"
+    "text": "original image location: /mnt/bircdata08/home-birc/vsharma01/Einstein_Backup_20211015/Condeelis Lab/Data/1D nanofiber project_Dec2018Backup/2016.01.28_actinCaps_MEF_MTLn3_2D\nFigure S4 from Sharma et al. nanofiber paper MTLn3 and MEF cells stained with phalloidin"
   },
   {
     "objectID": "Training/Fundamentals_of_microscopy/index.html",
