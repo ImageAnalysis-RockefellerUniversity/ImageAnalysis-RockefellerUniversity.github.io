@@ -18,17 +18,23 @@ website:
       - section: "Training"
         contents: 
           # - text: "---"
-          - text: "Fundamentals of Microscopy workshop"
+          - text: "2026 - Fundamentals of Microscopy workshop"
             href: Training/Fundamentals_of_microscopy/index.qmd
             contents: 
-              - text: "Session 2 - Image formation and Analysis"
-                file: Training/Fundamentals_of_microscopy/What_is_an_image.qmd
-              - text: "Session 2 - Image analysis workshop"
-                file: Training/Fundamentals_of_microscopy/Image_analysis_workshop.qmd
+              - text: "1. Fluorescence and the fluorescence microscope"
+                file: Training/Fundamentals_of_microscopy/1_Fundamentals_of_fluorescence.qmd
+              - text: "2(a). Image formation and Analysis"
+                file: Training/Fundamentals_of_microscopy/2a_What_is_an_image.qmd
+              - text: "2(b). Image analysis workshop"
+                file: Training/Fundamentals_of_microscopy/2b_Image_analysis_workshop.qmd
+              - text: "3. Light Properties and Optical Principles"
+                file: Training/Fundamentals_of_microscopy/3_Light_properties_and_optical_principles.qmd
+              - text: "4. Confocal microscopy"
+                file: Training/Fundamentals_of_microscopy/4_Confocal_microscopy.qmd
           - text: "&nbsp;"
-          - text: "Image Analysis seminar - 2022"
+          - text: "2022 - Image Analysis seminar"
             file: Training/seminar_workshop/Image_analysis_seminar_2022.qmd
-          - text: "Image Analysis Workshop - 2022"
+          - text: "Image Analysis Workshop"
             href: Training/seminar_workshop/Image_analysis_workshop_2022.qmd
             contents: 
               - text: "Exercise 1 - Nuclei segmentation"
@@ -51,6 +57,8 @@ website:
           - text: "&nbsp;"
       - text: "User Group Meetings"
         href: usergroup_meetings.qmd
+      - text: "Contact"
+        href: Contact.qmd
   page-navigation: true
   # title: "nav bar title"
   navbar:

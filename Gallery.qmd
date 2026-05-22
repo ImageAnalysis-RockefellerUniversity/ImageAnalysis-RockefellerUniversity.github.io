@@ -1,0 +1,56 @@
+---
+title: "Auto-Carousel"
+title-slide-attributes:
+  data-visibility: "hidden"
+
+format: 
+  revealjs:
+    width: 1280
+    height: 720
+    margin: 0
+    min-scale: 0.2
+    max-scale: 2.0
+    theme: Training/Fundamentals_of_microscopy/Presentation/styles_presentation.scss
+    auto-slide: 3000 # Slides change every 5 seconds
+    loop: true
+    controls: true
+    controls-layout: edges
+    resources: 
+      - Gallery/resampled_v2.mp4
+      - Gallery/Combined_video_v3.mp4
+    
+---
+
+## 3D segmentation of packed bacterial colonies {style="font-size: 0.6em;"}
+<!-- {{< video Gallery/Combined_video_v2.mp4 autoplay="true" loop="true" muted="true" >}} -->
+
+::: {.video-container .video-outline}
+<video 
+  data-autoplay 
+  src="Gallery/Combined_video_v3.mp4" 
+  loop muted playsinline 
+  style="width: 100%;">
+</video>
+
+:::
+
+:::{.smallerFont2 .absolute top="680" left="830"}
+North AJ, Sharma VP et al. 2026 (PMID:  39651611)
+:::
+
+## slide 2
+
+::: {.video-container .video-outline}
+<video 
+  data-autoplay 
+  src="Gallery/Combined_video_v3.mp4" 
+  loop muted playsinline 
+  style="width: 100%;">
+</video>
+
+:::
+
+## Slide 3
+<video data-autoplay src="Gallery/resampled_v2.mp4" loop muted playsinline controls style="width: 100%; pointer-events: auto;"></video>
+
+
