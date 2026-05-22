@@ -1,0 +1,12 @@
+---
+title: "Confocal Microscopy"
+---
+## Presentation
+
+```{=html}
+<object data="Presentation/Confocal_Microscopy_Lecture_Ivan_0430.pdf" type="application/pdf" width="110%" height="700px">
+  <p>Your browser does not support viewing PDFs inline. 
+  <a href="Presentation/Confocal_Microscopy_Lecture_Ivan_0430.pdf">Click here to download the PDF instead.</a></p>
+</object>
+
+

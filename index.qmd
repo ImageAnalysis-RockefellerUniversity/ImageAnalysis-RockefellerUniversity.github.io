@@ -2,7 +2,20 @@
 title: "Image Analysis @ Bio-Imaging Resource Center"
 ---
 
-The [Bio-Imaging Resource Center](https://www.rockefeller.edu/bioimaging/) provides a variety of image analysis resources/training to our users:
+<!-- <div>
+
+```{=html}
+<iframe 
+    class="slide-deck" 
+    src="Gallery.html" 
+    style="width: 105%; margin-top: -20px;">
+  </iframe>
+```
+
+</div> -->
+
+<!-- ## Services offered -->
+The [Bio-Imaging Resource Center](https://www.rockefeller.edu/bioimaging/) provides a variety of image analysis resources/training:
 
 - One-on-one user imaging data discussion, where we suggest the best software/method/pipeline for image analysis
 - Writing of custom image analysis scripts, pipelines, batch processing
@@ -17,7 +30,7 @@ In addition, we encourage our users to contact us at the experimental design sta
 ## Software
 We have expertise in a variety of image analysis software/tools, which we use to help analyze our users' imaging data
 
-### Open-source software
+### Popular general-purpose open-source software
 <!-- ::: {layout="[40,-20,40]"} -->
 ::: {layout-nrow=1 layout-ncol=8}
 ![ImageJ](PNGs/icons/imagej-icon.png){height=70}

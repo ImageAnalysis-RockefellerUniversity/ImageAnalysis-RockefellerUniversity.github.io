@@ -13,7 +13,7 @@
 
 .reveal .date {  font-size: 0.8em;}
 
-// .reveal h2 {  outline: 3px solid red;}
+.reveal h2 {  outline: 3px solid red;}
 
 // .reveal {
 //   // font-family: "Helvetica", sans-serif;
@@ -41,7 +41,7 @@
 /* Draw a border around each slide */
 .reveal .slides > section {
   // border: 1px solid rgba(0,0,0,0.2);
-  // border: 1px dashed rgba(0,0,0,0.2);
+  border: 1px dashed rgba(0,0,0,0.2);
   // border: 3px solid #333;
   // box-sizing: border-box;
 }
@@ -57,6 +57,23 @@
   // font-weight: normal;           /* Optional: make it less bold */
 }
 
+// ------------------------------------------------------------
+
+/* Target the specific class we added to the video */
+.video-outline {
+  border: 1px solid rgb(255, 109, 109);     /* The red outline */
+  border-radius: 8px;        /* Optional: rounds the corners slightly */
+  box-sizing: border-box;    /* Ensures the border doesn't push the video off-screen */
+  display: block;            /* Prevents weird spacing at the bottom of the video */
+}
+
+.video-container {
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  // align-items: center;     /* Vertical center */
+  // height: 100%;            /* Takes up the full slide height */
+  // width: 100%;             /* Takes up the full slide width */
+}
 // ------------------------------------------------------------
 
 .img-overlay {  position: relative;  display: inline-block;
@@ -169,6 +186,7 @@
 .smallerFont2 {  font-size: 0.8em;}
 .smallerFont7 {  font-size: 0.7em;}
 .smallerFont3 {  font-size: 0.35em;}
+// .biggerFont12 {  font-size: 1.2em;}
 
 .loose-lines p,
 .loose-lines li {  line-height: 1.6;}

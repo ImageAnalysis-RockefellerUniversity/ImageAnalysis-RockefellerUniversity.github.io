@@ -1,0 +1,10 @@
+---
+title: "Contact"
+---
+<span style="font-size: 1.2em;">Ved Sharma, PhD</span>  
+Image Analyst, [Bio-Imaging Resource Center](https://www.rockefeller.edu/bioimaging/)  
+The Rockefeller University  
+New York, NY
+
+For image analysis help/collaborations or questions related to this website, please feel free to reach out: vsharma01@rockefeller.edu  
+

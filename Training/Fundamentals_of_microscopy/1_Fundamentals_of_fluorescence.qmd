@@ -1,0 +1,12 @@
+---
+title: "Fluorescence and the Fluorescence Microscope"
+---
+## Presentation
+
+```{=html}
+<object data="Presentation/Fundamentals_Fluo_and_Fluo_Microscope_ANorth_Jan_2026.pdf" type="application/pdf" width="110%" height="700px">
+  <p>Your browser does not support viewing PDFs inline. 
+  <a href="Presentation/Fundamentals_Fluo_and_Fluo_Microscope_ANorth_Jan_2026.pdf">Click here to download the PDF instead.</a></p>
+</object>
+
+
