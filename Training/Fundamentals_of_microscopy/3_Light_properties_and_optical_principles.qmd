@@ -3,5 +3,10 @@ title: "Light Properties and Optical Principles"
 ---
 ## Presentation
 
-to be added...
+```{=html}
+<object data="Presentation/Microscopy Course Light Properties and Optical Principles_Ver2.pdf" type="application/pdf" width="110%" height="700px">
+  <p>Your browser does not support viewing PDFs inline. 
+  <a href="Presentation/Microscopy Course Light Properties and Optical Principles_Ver2.pdf">Click here to download the PDF instead.</a></p>
+</object>
+
 
