@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercise 2 - Tracking cancer cell migration in time-lapse movies</title>
+<title>Light-Sheet Microscopy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.html" rel="next">
-<link href="../../Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.html" rel="prev">
+<link href="../../Training/seminar_workshop/Image_analysis_seminar_2022.html" rel="next">
+<link href="../../Training/Fundamentals_of_microscopy/4_Confocal_microscopy.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -257,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Training/Fundamentals_of_microscopy/index.html">Training</a></li><li class="breadcrumb-item"><a href="../../Training/seminar_workshop/Image_analysis_workshop_2022.html">Image Analysis Workshop</a></li><li class="breadcrumb-item"><a href="../../Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html">Exercise 2 - Cell tracking</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Training/Fundamentals_of_microscopy/index.html">Training</a></li><li class="breadcrumb-item"><a href="../../Training/Fundamentals_of_microscopy/index.html">2026 - Fundamentals of Microscopy workshop</a></li><li class="breadcrumb-item"><a href="../../Training/Fundamentals_of_microscopy/5_Light_sheet_microscopy.html">5. Light-Sheet Microscopy</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -339,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Training/Fundamentals_of_microscopy/5_Light_sheet_microscopy.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Training/Fundamentals_of_microscopy/5_Light_sheet_microscopy.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">5. Light-Sheet Microscopy</span></a>
   </div>
 </li>
@@ -371,7 +371,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 2 - Cell tracking</span></a>
   </div>
 </li>
@@ -443,9 +443,9 @@ ul.task-list li input[type="checkbox"] {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Training/Fundamentals_of_microscopy/index.html">Training</a></li><li class="breadcrumb-item"><a href="../../Training/seminar_workshop/Image_analysis_workshop_2022.html">Image Analysis Workshop</a></li><li class="breadcrumb-item"><a href="../../Training/seminar_workshop/Image_analysis_workshop_2022_Exercise2.html">Exercise 2 - Cell tracking</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Training/Fundamentals_of_microscopy/index.html">Training</a></li><li class="breadcrumb-item"><a href="../../Training/Fundamentals_of_microscopy/index.html">2026 - Fundamentals of Microscopy workshop</a></li><li class="breadcrumb-item"><a href="../../Training/Fundamentals_of_microscopy/5_Light_sheet_microscopy.html">5. Light-Sheet Microscopy</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Exercise 2 - Tracking cancer cell migration in time-lapse movies</h1>
+<h1 class="title">Light-Sheet Microscopy</h1>
 </div>
 
 
@@ -462,81 +462,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="images/P31.gif" class="img-fluid"><br>
-Cancer cell migration, image from <a href="https://doi.org/10.5281/zenodo.5206107">Zenodo</a>.</p>
-<p><a href="images/P31.tif">Download TIF file</a></p>
-<ul>
-<li><p>Open the above time-lapse sequence in Fiji and run the command: <code>Plugins › Tracking › TrackMate</code></p></li>
-<li><p>You will be presented with a <code>TrackMate</code> window. Click <code>Next</code>.</p>
-<!-- ![Segmentation detector](PNGs/TrackMate_detector.png){style="float: right" width="250"} --></li>
-<li><p>Select <code>StarDist detector</code> from the drop-down menu. Click <code>Next</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="PNGs/TrackMate_detector_v2.png" class="img-fluid figure-img"></p>
-<figcaption>Segmentation detector</figcaption>
-</figure>
-</div></li>
-<li><p>You can now click on the <code>Preview</code> tab, to check how well StarDist is detecting the nuclei on the current slice. If detections look fine, click next to detect nuclei in the whole time-lapse sequence.<br>
-</p></li>
-<li><p>Keep clicking <code>Next</code> button until you reach the <code>Select a tracker</code> window. Select <code>Simple LAP tracker</code> and click <code>Next</code>.<br>
-Choose settings as in the image below and click <code>Next</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="PNGs/TrackMate_tracker_v2.png" class="img-fluid figure-img"></p>
-<figcaption>Simple LAP tracker</figcaption>
-</figure>
-</div></li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you want to track splitting and/or merging events, then choose the <code>LAP tracker</code>, and tick the splitting/merging checkbox under settings.</p>
-</div>
-</div>
-<ul>
-<li><p>Keep clicking next until you reach the <code>Display options</code> window (see image below, left). Here, various display options for the tracks could be selected. Choose <code>Show tracks backward in time</code>. Play with different settings here and scroll through the stack to see the effect of these changes.</p>
-<p>Please explore the three tabs at the bottom - <code>TrackScheme</code>, <code>Tracks</code> and <code>Spots</code>. A lot of statistics is hidden there, such as the raw values for each nuclei in each frame of the time-lapse. All the statistics could be exported to a CSV file.<br>
-</p></li>
-<li><p>Keep clicking next until you reach the last window called <code>Select an action</code> (see image below, right). Select <code>Capture overlay</code> and click <code>Execute</code> to generate a time-lapse movie with spots and tracks overlaid on top of the original data.<br>
-</p></li>
-<li><p>A label time-lapse movie could also be generated by selecting <code>Export label image</code> from the drop-down list and clicking <code>Execute</code>.</p>
-<div class="quarto-layout-panel" data-layout-nrow="1" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="PNGs/TrackMate_displayOptions.png" class="img-fluid figure-img"></p>
-<figcaption>Display options</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="PNGs/TrackMate_generateOverlay.png" class="img-fluid figure-img"></p>
-<figcaption>Select an action</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div></li>
-</ul>
-<p>Final result:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/P31_tracked.gif" class="img-fluid figure-img"></p>
-<figcaption>Cell migration with tracks</figcaption>
-</figure>
-</div>
+<section id="presentation" class="level2">
+<h2 class="anchored" data-anchor-id="presentation">Presentation</h2>
+<object data="Presentation/RU-Microscopy-Workshop_Light-sheet_rchhetri.pdf" type="application/pdf" width="110%" height="700px">
+<p>
+Your browser does not support viewing PDFs inline. <a href="Presentation/RU-Microscopy-Workshop_Light-sheet_rchhetri.pdf">Click here to download the PDF instead.</a>
+</p>
+</object>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -954,13 +889,13 @@ Tip
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../Training/seminar_workshop/Image_analysis_workshop_2022_Exercise1.html" class="pagination-link" aria-label="Exercise 1 - Nuclei segmentation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercise 1 - Nuclei segmentation</span>
+      <a href="../../Training/Fundamentals_of_microscopy/4_Confocal_microscopy.html" class="pagination-link" aria-label="4. Confocal microscopy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">4. Confocal microscopy</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../Training/seminar_workshop/Image_analysis_workshop_2022_Exercise3.html" class="pagination-link" aria-label="Exercise 3 - Denoising">
-        <span class="nav-page-text">Exercise 3 - Denoising</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../Training/seminar_workshop/Image_analysis_seminar_2022.html" class="pagination-link" aria-label="2022 - Image Analysis seminar">
+        <span class="nav-page-text">2022 - Image Analysis seminar</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,12 @@
+---
+title: "Light-Sheet Microscopy"
+---
+## Presentation
+
+```{=html}
+<object data="Presentation/RU-Microscopy-Workshop_Light-sheet_rchhetri.pdf" type="application/pdf" width="110%" height="700px">
+  <p>Your browser does not support viewing PDFs inline. 
+  <a href="Presentation/RU-Microscopy-Workshop_Light-sheet_rchhetri.pdf">Click here to download the PDF instead.</a></p>
+</object>
+
+
