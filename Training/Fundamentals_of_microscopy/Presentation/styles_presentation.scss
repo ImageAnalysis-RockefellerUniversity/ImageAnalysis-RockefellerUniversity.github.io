@@ -13,8 +13,6 @@
 
 .reveal .date {  font-size: 0.8em;}
 
-.reveal h2 {  outline: 3px solid red;}
-
 // .reveal {
 //   // font-family: "Helvetica", sans-serif;
 //   // font-weight: 400;
@@ -23,7 +21,7 @@
 //   background-color: #333333;
 // }
 
-.reveal h2 {
+.reveal h2 { // format titles of each slide
   // display: block;
   // width: 100%;
   text-align: center !important;
@@ -32,6 +30,7 @@
   // background-color: #eeeeee;
   font-weight: normal;
   font-size: 1.4em;
+  // outline: 1px solid red;
 }
 
 .reveal h3 {
@@ -41,7 +40,7 @@
 /* Draw a border around each slide */
 .reveal .slides > section {
   // border: 1px solid rgba(0,0,0,0.2);
-  border: 1px dashed rgba(0,0,0,0.2);
+  // border: 1px dashed rgba(0,0,0,0.2);
   // border: 3px solid #333;
   // box-sizing: border-box;
 }
