@@ -1,0 +1,10 @@
+# Source documents and the extracted knowledge bundle are private — never commit them.
+database/
+backend/knowledge/
+
+# Secrets and local environment
+.env
+backend/.env
+backend/.venv/
+__pycache__/
+*.pyc
