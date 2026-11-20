@@ -90,9 +90,7 @@ format:
     # title-block-style: none
     fig-cap-location: bottom
     # page-layout: full
-    # BIRC chatbot pop-up: uncomment after the backend is deployed and
-    # _chatbot/include.html points to it (see _chatbot/README.md).
-    # include-after-body: _chatbot/include.html
+    include-after-body: _chatbot/include.html   # BIRC chatbot pop-up (see _chatbot/README.md)
     
 editor: 
   render-on-save: true
