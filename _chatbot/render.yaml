@@ -1,0 +1,22 @@
+# Render Blueprint for the BIRC chatbot backend.
+# Render only auto-detects render.yaml at the repo root; either move/copy this file
+# there, or create the service manually in the dashboard with the same settings.
+services:
+  - type: web
+    name: birc-chatbot
+    runtime: python
+    plan: free
+    rootDir: _chatbot
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: ANTHROPIC_API_KEY
+        sync: false            # enter the key in the Render dashboard
+      - key: KNOWLEDGE_PATH
+        value: /etc/secrets/knowledge.json   # upload knowledge.json as a Secret File
+      - key: ALLOWED_ORIGINS
+        value: https://imageanalysis-rockefelleruniversity.github.io
