@@ -19,14 +19,22 @@ Configuration (environment variables; a local .env file is also read):
   ALLOWED_ORIGINS     comma-separated CORS origins
   CLAUDE_MODEL        default: claude-sonnet-5-5
   RATE_LIMIT          max requests per IP per 10 minutes (default: 30)
+  LOG_WEBHOOK_URL     optional: Google Apps Script web-app URL; one row per
+                      question is appended to a Google Sheet (see sheet_log/)
+  LOG_TOKEN           shared secret checked by that script; also salts the
+                      anonymous visitor ID
 """
 
 from __future__ import annotations
 
+import asyncio
+import hashlib
 import json
 import logging
 import os
 import time
+import urllib.request
+from datetime import datetime, timezone
 from collections import defaultdict, deque
 from pathlib import Path
 from typing import Literal
@@ -62,6 +70,8 @@ RATE_WINDOW = 600  # seconds
 MAX_TURNS = 12  # messages of history kept per request
 MAX_CHARS = 2000  # per user message
 SITE_URL = "https://imageanalysis-rockefelleruniversity.github.io"
+LOG_WEBHOOK_URL = os.environ.get("LOG_WEBHOOK_URL", "").strip()
+LOG_TOKEN = os.environ.get("LOG_TOKEN", "").strip()
 
 INSTRUCTIONS = f"""You are "Ask BIRC", the help assistant on the website of the Bio-Imaging Resource Center (BIRC) at The Rockefeller University. Visitors are mostly researchers and lab members who use the BIRC microscopes, workstations and file server.
 
@@ -137,6 +147,43 @@ class Msg(BaseModel):
 
 class ChatRequest(BaseModel):
     messages: list[Msg] = Field(min_length=1, max_length=100)
+    conversation: str = Field(default="", max_length=40)  # random ID from the widget
+    page: str = Field(default="", max_length=300)  # page the question was asked on
+
+
+# --------------------------------------------------------------------------- #
+# Activity log -> Google Sheet (optional)
+# --------------------------------------------------------------------------- #
+_log_tasks: set[asyncio.Task] = set()
+
+
+def visitor_id(ip: str) -> str:
+    """Anonymous, stable per-IP ID: the IP itself is never stored."""
+    return hashlib.sha256(f"{LOG_TOKEN}:{ip}".encode()).hexdigest()[:10]
+
+
+def _post_row(row: dict) -> None:
+    body = json.dumps({"token": LOG_TOKEN, **row}).encode()
+    req = urllib.request.Request(
+        LOG_WEBHOOK_URL, data=body, headers={"Content-Type": "application/json"}, method="POST"
+    )
+    try:
+        # Apps Script answers with a redirect; urllib follows it with a GET.
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            reply = resp.read(200).decode(errors="replace")
+        if '"ok":true' not in reply.replace(" ", ""):
+            log.warning("Activity log rejected: %s", reply)
+    except Exception as e:  # logging must never break the chat
+        log.warning("Activity log failed: %s", e)
+
+
+def log_activity(row: dict) -> None:
+    """Send one row to the Google Sheet in the background."""
+    if not LOG_WEBHOOK_URL:
+        return
+    task = asyncio.create_task(asyncio.to_thread(_post_row, row))
+    _log_tasks.add(task)
+    task.add_done_callback(_log_tasks.discard)
 
 
 _hits: dict[str, deque] = defaultdict(deque)
@@ -199,10 +246,30 @@ async def widget():
 
 @app.post("/chat")
 async def chat(req: ChatRequest, request: Request):
-    check_rate_limit(client_ip(request))
+    ip = client_ip(request)
+    check_rate_limit(ip)
     messages = build_messages(req.messages)
 
+    record = {
+        "time": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "conversation": req.conversation,
+        "turn": sum(1 for m in req.messages if m.role == "user"),
+        "visitor": visitor_id(ip),
+        "page": req.page,
+        "question": req.messages[-1].content.strip()[:MAX_CHARS],
+        "answer": "",
+        "status": "cancelled",  # overwritten unless the visitor left mid-answer
+        "model": MODEL,
+        "seconds": 0.0,
+        "input_tokens": 0,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "output_tokens": 0,
+    }
+    started = time.monotonic()
+
     async def events():
+        parts: list[str] = []
         try:
             async with client.beta.messages.stream(
                 model=MODEL,
@@ -215,6 +282,7 @@ async def chat(req: ChatRequest, request: Request):
                 fallbacks="default",
             ) as stream:
                 async for text in stream.text_stream:
+                    parts.append(text)
                     yield sse({"type": "text", "text": text})
                 final = await stream.get_final_message()
 
@@ -224,6 +292,13 @@ async def chat(req: ChatRequest, request: Request):
                 final.stop_reason, u.input_tokens, u.cache_read_input_tokens,
                 u.cache_creation_input_tokens, u.output_tokens,
             )
+            record.update(
+                status="ok" if final.stop_reason in (None, "end_turn") else final.stop_reason,
+                input_tokens=u.input_tokens or 0,
+                cache_read_tokens=u.cache_read_input_tokens or 0,
+                cache_write_tokens=u.cache_creation_input_tokens or 0,
+                output_tokens=u.output_tokens or 0,
+            )
             if final.stop_reason == "refusal":
                 yield sse({"type": "text", "text": "\n\nSorry, I can't help with that request."})
             elif final.stop_reason == "max_tokens":
@@ -231,13 +306,20 @@ async def chat(req: ChatRequest, request: Request):
             yield sse({"type": "done"})
         except anthropic.RateLimitError:
             log.warning("Anthropic rate limit")
+            record["status"] = "error: rate limit"
             yield sse({"type": "error", "message": "The assistant is busy right now. Please try again in a minute."})
         except anthropic.APIStatusError as e:
             log.error("Anthropic API error %s: %s", e.status_code, e.message)
+            record["status"] = f"error: API {e.status_code}"
             yield sse({"type": "error", "message": "The assistant is temporarily unavailable. Please try again later."})
         except anthropic.APIConnectionError:
             log.error("Could not reach the Anthropic API")
+            record["status"] = "error: connection"
             yield sse({"type": "error", "message": "The assistant is temporarily unavailable. Please try again later."})
+        finally:
+            record["answer"] = "".join(parts)
+            record["seconds"] = round(time.monotonic() - started, 1)
+            log_activity(record)
 
     return StreamingResponse(
         events(),
