@@ -22,6 +22,7 @@ browser (GitHub Pages site)  ──POST /chat──▶  backend (FastAPI on Rend
 | `widget/birc-chat.js` | The pop-up itself: plain JS in a Shadow DOM, follows the site's light/dark theme |
 | `include.html` | The `<script>` tag that `_quarto.yml` adds to every page |
 | `render.yaml` | Render settings for the backend |
+| `sheet_log/apps_script.gs` | Google Apps Script that writes the activity log to a Google Sheet |
 
 The folder name starts with `_`, so Quarto doesn't render it as site pages. The only change outside this folder is one line in `../_quarto.yml`. Comment it out to remove the pop-up from the site:
 
@@ -82,6 +83,23 @@ To set it up from scratch:
 
 The free tier sleeps after about 15 minutes idle. The first question after that takes 30–60 s, and the widget shows "Waking up the assistant…" while it waits. A paid Render instance avoids the delay.
 
+## Activity log (Google Sheet)
+
+Every question can be recorded as one row in a private Google Sheet. Each row has the time, a conversation ID, the turn number, an anonymous visitor ID, the page, the question and answer, the status, the time taken, and the token counts. The visitor ID is a hash of the IP address; the IP itself is never stored. The pop-up tells visitors that questions are logged.
+
+Setup (once):
+
+1. Create a Google Sheet, for example "Ask BIRC log".
+2. In the Sheet, open **Extensions → Apps Script**. Replace the code with `sheet_log/apps_script.gs` and save.
+3. In Apps Script, open **Project Settings → Script Properties** and add `LOG_TOKEN` with a long random value. Generate one with `python3 -c "import secrets; print(secrets.token_urlsafe(32))"`.
+4. Click **Deploy → New deployment**, choose type **Web app**, set *Execute as* to **Me** and *Who has access* to **Anyone**, then click **Deploy**. Authorize it when asked, and copy the web-app URL (it ends in `/exec`).
+5. In Render, add the environment variables `LOG_WEBHOOK_URL` (the URL) and `LOG_TOKEN` (the same value), then save and redeploy.
+6. Ask the pop-up a question. A **Log** tab with a header row and your question should appear within a few seconds.
+
+*Anyone* only means anyone can call the URL. Rows are written only when the request carries the right token, and the Sheet stays private to you. If you edit the script later, use **Deploy → Manage deployments → Edit → New version** so the URL stays the same.
+
+If logging fails (wrong token, Google unavailable), the chat keeps working and Render's Logs show `Activity log rejected` or `Activity log failed`. Without `LOG_WEBHOOK_URL`, nothing is logged.
+
 ## Configuration (environment variables)
 
 | Variable | Default | |
@@ -91,5 +109,7 @@ The free tier sleeps after about 15 minutes idle. The first question after that 
 | `ALLOWED_ORIGINS` | the site plus `localhost:4200` and `localhost:8000` | comma-separated CORS origins |
 | `CLAUDE_MODEL` | `claude-sonnet-5-5` | |
 | `RATE_LIMIT` | `30` | questions per visitor IP per 10 minutes |
+| `LOG_WEBHOOK_URL` | — | optional: Apps Script web-app URL for the activity log |
+| `LOG_TOKEN` | — | shared secret for the activity log (same value as in the Apps Script) |
 
 To change how the assistant answers (tone, scope, contact info), edit `INSTRUCTIONS` in `backend/app.py`.

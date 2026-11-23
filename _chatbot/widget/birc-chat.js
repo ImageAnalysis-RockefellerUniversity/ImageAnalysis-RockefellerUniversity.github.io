@@ -29,6 +29,9 @@
   function save() {
     try { sessionStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) {}
   }
+  // Random, anonymous ID that groups the turns of one conversation in the log.
+  function newConversationId() { return Math.random().toString(36).slice(2, 10); }
+  if (!state.cid) state.cid = newConversationId();
   var busy = false;
 
   // ------------------------------------------------------------------ helpers
@@ -161,7 +164,7 @@
     '<div class="log" aria-live="polite"></div>' +
     '<form><textarea rows="1" placeholder="Ask a question…" aria-label="Your question"></textarea>' +
     '<button class="send" type="submit">Send</button></form>' +
-    '<div class="foot">AI assistant — may make mistakes. Check important details with BIRC staff.</div>' +
+    '<div class="foot">AI assistant — may make mistakes. Check important details with BIRC staff. Questions are logged to improve this service.</div>' +
     "</div>" +
     '<button class="fab" type="button" aria-expanded="false" aria-label="Open ' + esc(TITLE) + ' chat" title="' + esc(TITLE) + '">' +
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
@@ -244,7 +247,11 @@
     fetch(API + "/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ messages: state.messages.slice(-12) }),
+      body: JSON.stringify({
+        messages: state.messages.slice(-12),
+        conversation: state.cid,
+        page: location.pathname,
+      }),
     }).then(function (res) {
       if (!res.ok) {
         return res.json().catch(function () { return {}; }).then(function (j) {
@@ -305,7 +312,7 @@
   root.querySelector(".close").addEventListener("click", function () { setOpen(false); fab.focus(); });
   root.querySelector(".clear").addEventListener("click", function () {
     if (busy) return;
-    state.messages = []; save(); renderAll(); input.focus();
+    state.messages = []; state.cid = newConversationId(); save(); renderAll(); input.focus();
   });
   form.addEventListener("submit", function (e) { e.preventDefault(); send(input.value); });
   input.addEventListener("input", autosize);
@@ -314,6 +321,12 @@
   });
   root.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && state.open) { setOpen(false); fab.focus(); }
+  });
+  // Keep keystrokes inside the widget. From the page's point of view the focused
+  // element is the shadow host (a <div>), so site shortcuts such as Quarto's
+  // search keys (f, s, /) would otherwise fire while the user types here.
+  ["keydown", "keyup", "keypress"].forEach(function (type) {
+    root.addEventListener(type, function (e) { e.stopPropagation(); });
   });
 
   function mount() {

@@ -20,3 +20,7 @@ services:
         value: /etc/secrets/knowledge.json   # upload knowledge.json as a Secret File
       - key: ALLOWED_ORIGINS
         value: https://imageanalysis-rockefelleruniversity.github.io
+      - key: LOG_WEBHOOK_URL
+        sync: false            # optional: Google Sheet activity log (see README)
+      - key: LOG_TOKEN
+        sync: false
